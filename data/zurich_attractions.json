@@ -1,0 +1,2177 @@
+{
+  "meta": {
+    "language": "en",
+    "apiVersion": "v1.3.9",
+    "page": {
+      "size": 30,
+      "totalElements": 8,
+      "totalPages": 1,
+      "number": 0
+    },
+    "facets": {
+      "seasons": {
+        "spring": 4,
+        "winter": 4,
+        "summer": 3,
+        "autumn": 2
+      },
+      "areatype": {
+        "oldtown": 1,
+        "quarters": 1
+      },
+      "parktype": {
+        "zoo": 1
+      },
+      "sporttype": {
+        "bathingandswimming": 1,
+        "hike": 1
+      },
+      "neededtime": {
+        "2to4hourshalfday": 3,
+        "4to8hoursfullday": 1,
+        "between12hours": 1
+      },
+      "childrenage": {
+        "14plus": 3,
+        "10to13years": 2,
+        "6to9years": 2
+      },
+      "outgoingtype": {
+        "bar": 1,
+        "club": 1,
+        "disco": 1,
+        "pub": 1
+      },
+      "platformtype": {
+        "viewingplatform": 1,
+        "viewpoint": 1
+      },
+      "qualitylabel": {
+        "unusualvenues": 1
+      },
+      "wellnesstype": {
+        "experiencebath": 1,
+        "indoorswimmingpool": 1
+      },
+      "achitekturtyp": {
+        "castles": 1,
+        "churches": 1,
+        "monasteries": 1
+      },
+      "specialevents": {
+        "easter": 1
+      },
+      "experiencetype": {
+        "education": 3,
+        "culture": 2,
+        "active": 1,
+        "nature": 1,
+        "relax": 1
+      },
+      "suitablefortype": {
+        "children": 2,
+        "couples": 2,
+        "family": 2,
+        "group": 2,
+        "individual": 2
+      },
+      "dynamiccampaigntypes": {
+        "waterparks": 1
+      },
+      "geographicallocations": {
+        "alonggrandtour": 6,
+        "inthecity": 2
+      },
+      "toursandsightseeingtype": {
+        "citytours": 1
+      },
+      "eatingdrinkingshoppingtype": {
+        "breakfast": 1,
+        "culinary": 1,
+        "dinner": 1,
+        "gourmettour": 1,
+        "lunch": 1,
+        "shopping": 1
+      },
+      "cultureandcongresscentretype": {
+        "eventlocation": 1
+      },
+      "indooroutdoorclassifications": {
+        "indooroutdoor": 2,
+        "indoor": 1,
+        "outdoor": 1
+      }
+    },
+    "facetsTranslation": {
+      "seasons": {
+        "values": {
+          "spring": "Spring",
+          "winter": "Winter",
+          "summer": "Summer",
+          "autumn": "Autumn"
+        }
+      },
+      "areatype": {
+        "title": "Area",
+        "values": {
+          "oldtown": "Old town",
+          "quarters": "Quarters"
+        }
+      },
+      "parktype": {
+        "title": "Park type",
+        "values": {
+          "zoo": "Zoo"
+        }
+      },
+      "sporttype": {
+        "title": "Sport type",
+        "values": {
+          "bathingandswimming": "Bathing and swimming",
+          "hike": "Hike"
+        }
+      },
+      "neededtime": {
+        "title": "Needed time",
+        "values": {
+          "2to4hourshalfday": "2 to 4 hours (half day)",
+          "4to8hoursfullday": "4 to 8 hours (full day)",
+          "between12hours": "1-2 hours"
+        }
+      },
+      "childrenage": {
+        "title": "Children age",
+        "values": {
+          "14plus": "14+ years",
+          "10to13years": "10 to 13 years",
+          "6to9years": "6 to 9 years"
+        }
+      },
+      "outgoingtype": {
+        "title": "Outgoing",
+        "values": {
+          "bar": "Bar",
+          "club": "Club",
+          "disco": "Disco",
+          "pub": "Pub"
+        }
+      },
+      "platformtype": {
+        "title": "Platform type",
+        "values": {
+          "viewingplatform": "Viewing platform",
+          "viewpoint": "View point"
+        }
+      },
+      "qualitylabel": {
+        "values": {
+          "unusualvenues": "Unusual Venues"
+        }
+      },
+      "wellnesstype": {
+        "title": "Wellness type",
+        "values": {
+          "experiencebath": "Experience Bath",
+          "indoorswimmingpool": "Indoor swimming pool"
+        }
+      },
+      "achitekturtyp": {
+        "title": "Architecture",
+        "values": {
+          "castles": "Castles",
+          "churches": "Churches",
+          "monasteries": "Monastries"
+        }
+      },
+      "specialevents": {
+        "values": {
+          "easter": "Easter"
+        }
+      },
+      "experiencetype": {
+        "title": "Experience Type",
+        "values": {
+          "education": "Education",
+          "culture": "Culture",
+          "active": "Active",
+          "nature": "Nature",
+          "relax": "Relax"
+        }
+      },
+      "suitablefortype": {
+        "title": "Suitable for",
+        "values": {
+          "children": "Children",
+          "couples": "Couples",
+          "family": "Families",
+          "group": "Groups",
+          "individual": "Individual"
+        }
+      },
+      "dynamiccampaigntypes": {
+        "values": {
+          "waterparks": "Water parks"
+        }
+      },
+      "geographicallocations": {
+        "values": {
+          "alonggrandtour": "Along the Grand Tour",
+          "inthecity": "In the city"
+        }
+      },
+      "toursandsightseeingtype": {
+        "title": "Tours and Sightseeing",
+        "values": {
+          "citytours": "City Tours"
+        }
+      },
+      "eatingdrinkingshoppingtype": {
+        "title": "Eating Drinking Shopping",
+        "values": {
+          "breakfast": "Breakfast",
+          "culinary": "Culinary",
+          "dinner": "Dinner",
+          "gourmettour": "Gourmet tour",
+          "lunch": "Lunch",
+          "shopping": "Shopping"
+        }
+      },
+      "cultureandcongresscentretype": {
+        "title": "Culture and Congresscentre type",
+        "values": {
+          "eventlocation": "Event location"
+        }
+      },
+      "indooroutdoorclassifications": {
+        "values": {
+          "indooroutdoor": "Indoor and outdoor",
+          "indoor": "Indoor",
+          "outdoor": "Outdoor"
+        }
+      }
+    }
+  },
+  "links": {
+    "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+  },
+  "data": [
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+      },
+      "identifier": "a6d8b044-cbee-4d62-bd92-3536c84e844e",
+      "name": "Zurich's Old Town",
+      "abstract": "Zurich's Old Town is the historic center of the city. Here you can stroll through narrow alleyways, houses steeped in history and picturesque sights.",
+      "description": "<p>Zurich's Old Town is the historic center of Zurich and a cultural heart of the city. It consists of narrow streets, historic buildings, guild houses and picturesque squares that tell a rich history.</p>\n<p>The Old Town is home to numerous sights, including the <a href=\"https://www.myswitzerland.com/en/experiences/fraumuenster-church/\">Fraum&uuml;nster</a>&nbsp;(Minster of Our Lady), the <a href=\"https://www.myswitzerland.com/en/experiences/grossmuenster/\">Grossm&uuml;nster</a>&nbsp;(Great Minster) and the <a href=\"https://www.myswitzerland.com/en/experiences/st-peterskirche-st-peters-church/\">Peterskirche </a>(Peter's Church) with the largest clock face in Europe. The Old Town is also lined with cozy caf&eacute;s, restaurants and stores that invite you to stroll and linger.<br />\n<br />\nSome of the best photo spots for souvenir albums are also here: the M&uuml;nsterbr&uuml;cke or the Rathausbr&uuml;cke. Lake Zurich and the Alps in the background - simply perfect!</p>",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "e984fc68-1d53-4fb1-86e5-4fe447170a02",
+          "contactType": "Contact Address",
+          "name": "Zürich Tourismus",
+          "addressCountry": "CH",
+          "addressLocality": "Zürich",
+          "postalCode": "8001",
+          "streetAddress": "Im Hauptbahnhof",
+          "telephone": "+41 (0)44 215 40 00",
+          "email": "info@zuerich.com",
+          "url": "http://www.zuerich.com/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.37046134733276,
+        "longitude": 8.544308335969044
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "st0037638_zuerich.jpg",
+          "keywords": "zuerich,grossmuenster,limmatquai,zürich,rathaus,winter,city,stadt,leisure,summer",
+          "copyrightHolder": "Switzerland Tourism/Jan Geerk",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1667,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/winter/sightseeing/st0037638_zuerich_36236.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "stc3187_p.jpg",
+          "keywords": "zürich,grossmünster,münsterbrücke,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2048,
+          "height": 1366,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/sightseeing/stc3187_p_36236.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Zurich Old Town",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 4000,
+          "height": 2667,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/03/08/11/31/14/zurich-old-town.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Zurich, Old Town",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Full buy-out (no restrictions)",
+          "publisher": "Switzerland Tourism",
+          "width": 2670,
+          "height": 4000,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/03/08/11/13/04/zurich-old-town.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Zurich, Old Town morning",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 4000,
+          "height": 2670,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/03/08/11/31/06/zurich-old-town-morning.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "zurich2.jpg",
+          "keywords": "zürich,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2000,
+          "height": 1333,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/sightseeing/zurich2_36236.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "st0004720.jpg",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Schweiz Tourismus/Christof Sonderegger",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1980,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/sightseeing/st0004720_36236.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "swisstainable",
+          "values": [
+            {
+              "name": "swisstainablelevel3",
+              "title": "*** Leading"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "areatype",
+          "title": "Area",
+          "values": [
+            {
+              "name": "oldtown",
+              "title": "Old town"
+            }
+          ]
+        }
+      ],
+      "topAttraction": true,
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "87487fe3-bd11-429d-9550-61ba4ea716cd",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/87487fe3-bd11-429d-9550-61ba4ea716cd?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/zurichs-old-town/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/winter/sightseeing/st0037638_zuerich_36236.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+      },
+      "identifier": "9b00d845-c1a6-4b7f-9289-9e02ad42b42d",
+      "name": "Zürich West - from industrial to trend-setting district",
+      "touristType": [
+        "Cultural Tourism"
+      ],
+      "abstract": "In the last 10 years the industrial wasteland to the west of Zurich has grown into a new bright lights district: The blue-green shimmering Prime Tower, the University of Arts on the Toni-Areal and newly awakened life beneath the arched viaducts. And the nicest way to view all this and the constantly made changes is on foot or by bicycle.",
+      "description": "Where ships were once built and motors bolted together, today you view a colorful urban lifestyle. And undisputed highlights - in addition to Zurich&rsquo;s new <a href=\"https://www.myswitzerland.com/en/experiences/prime-tower/\">Prime Tower</a>&nbsp;in the west of course; which is Switzerland&rsquo;s second tallest building - is <a href=\"https://www.myswitzerland.com/en/experiences/food-wine/restaurant/frau-gerolds-garten-winter/\">Frau Gerolds Garten</a>: the charming city garden with restaurant and bar, with neighboring <a href=\"https://www.myswitzerland.com/en/experiences/freitag-flagship-store/\">Friday</a>&nbsp;container tower and leisure and pleasure mile to stroll beneath the <a href=\"https://www.myswitzerland.com/en/experiences/viaduct-arches/\">arched viaducts</a>. <br />\n<br />\nThose roaming the district can&rsquo;t help but notice the frequent changes and discover new and old oases: Including the large atrium of the new University of the Arts, the sprawling Josefwiese meadow with its outdoor caf&eacute; and the gigantic hall with Nietturmbar in the old <a href=\"https://www.myswitzerland.com/en/experiences/schiffbau/\">shipbuilding establishment</a>. And a peek at the cultural agenda reveals that Zurich West has something to offer for all tastes and pleasure seekers - whether in the club, cinema or theater.",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "e984fc68-1d53-4fb1-86e5-4fe447170a02",
+          "contactType": "Contact Address",
+          "name": "Zürich Tourismus",
+          "addressCountry": "CH",
+          "addressLocality": "Zürich",
+          "postalCode": "8001",
+          "streetAddress": "Im Hauptbahnhof",
+          "telephone": "+41 (0)44 215 40 00",
+          "email": "info@zuerich.com",
+          "url": "http://www.zuerich.com/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.38663332193959,
+        "longitude": 8.523571330918791
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "zuerich_west.jpg",
+          "keywords": "zürich west,night,sommer,summer,leisure",
+          "copyrightHolder": "SALVATORE VINCI",
+          "publisher": "Switzerland Tourism",
+          "width": 800,
+          "height": 600,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/culture/zuerich_west_179230.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "02_museum_fur_gestaltung_zurich_toni-areal.jpg",
+          "keywords": "museum für gestaltung,design museum,zurich,toni-areal,städte,cities,leisure,summer,winter",
+          "copyrightHolder": "Foto: Betty Fleck ©Zürcher Hochschule der Künste, 2014",
+          "publisher": "Switzerland Tourism",
+          "width": 2362,
+          "height": 1572,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/various/weekly%20top%20news/02_museum_fur_gestaltung_zurich_toni-areal_179230.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "0000075652-zuerich_17h30.jpg",
+          "keywords": "zürich,leisure,summer,winter",
+          "copyrightHolder": "© Ralph Hut",
+          "publisher": "Switzerland Tourism",
+          "width": 1024,
+          "height": 768,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/shopping/0000075652-zuerich_17h30_179230.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "zuerich_west_restaurant.jpg",
+          "keywords": "zürich,west,sommer,summer,restaurant,leisure,winter",
+          "copyrightHolder": "Copyright by Elisabeth Real",
+          "publisher": "Switzerland Tourism",
+          "width": 800,
+          "height": 533,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/bars-cafes-restaurants/zuerich_west_restaurant_179230.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "lowenbrau.jpg",
+          "keywords": "zürich,löwenbräu areal,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 3144,
+          "height": 2362,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/cities/lowenbrau_179230.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "primetower.jpg",
+          "keywords": "prime tower,zürich,hardbrücke,st0037637,leisure,summer,winter",
+          "copyrightHolder": "Switzerland Tourism/Jan Geerk",
+          "publisher": "Switzerland Tourism",
+          "width": 1257,
+          "height": 813,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/cities/primetower_179230.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "bildschirmfoto_2015-01-11_um_15.png",
+          "keywords": "löwenbräu areal zürich,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1064,
+          "height": 711,
+          "encodingFormat": "image/png",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/architecture/bildschirmfoto_2015-01-11_um_15_179230.png"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "huerlimann_zuerichwest.jpg",
+          "keywords": "huerlimann,zürich west,restaurant,night,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 800,
+          "height": 600,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/bars-cafes-restaurants/huerlimann_zuerichwest_179230.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "pt_zuerich_0001.jpg",
+          "keywords": "zürich,zurich,essen,food,viadukt,brücke,bridge,nacht,night,leisure,summer,winter",
+          "copyrightHolder": "© Ralph Hut",
+          "publisher": "Switzerland Tourism",
+          "width": 1748,
+          "height": 1240,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/food%20and%20drink/various/pt_zuerich_0001_179230.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "zrich_tourism_si_01.jpg",
+          "keywords": "freitag turm,zürich,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 3328,
+          "height": 4992,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/sightseeing/zrich_tourism_si_01_179230.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "swisstainable",
+          "values": [
+            {
+              "name": "swisstainablelevel3",
+              "title": "*** Leading"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "winter",
+              "title": "Winter"
+            },
+            {
+              "name": "spring",
+              "title": "Spring"
+            },
+            {
+              "name": "summer",
+              "title": "Summer"
+            },
+            {
+              "name": "autumn",
+              "title": "Autumn"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "outgoingtype",
+          "title": "Outgoing ",
+          "values": [
+            {
+              "name": "bar",
+              "title": "Bar"
+            },
+            {
+              "name": "pub",
+              "title": "Pub"
+            },
+            {
+              "name": "club",
+              "title": "Club"
+            },
+            {
+              "name": "disco",
+              "title": "Disco"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "areatype",
+          "title": "Area",
+          "values": [
+            {
+              "name": "quarters",
+              "title": "Quarters"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "toursandsightseeingtype",
+          "title": "Tours and Sightseeing",
+          "values": [
+            {
+              "name": "citytours",
+              "title": "City Tours"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "suitablefortype",
+          "title": "Suitable for",
+          "values": [
+            {
+              "name": "group",
+              "title": "Groups"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "values": [
+            {
+              "name": "it",
+              "title": "Italian"
+            },
+            {
+              "name": "ru",
+              "title": "Russian"
+            },
+            {
+              "name": "en",
+              "title": "English"
+            },
+            {
+              "name": "fr",
+              "title": "French"
+            },
+            {
+              "name": "de",
+              "title": "German"
+            },
+            {
+              "name": "zh",
+              "title": "Chinese"
+            },
+            {
+              "name": "es",
+              "title": "Spanish"
+            },
+            {
+              "name": "hu",
+              "title": "Hungarian"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "eatingdrinkingshoppingtype",
+          "title": "Eating Drinking Shopping",
+          "values": [
+            {
+              "name": "lunch",
+              "title": "Lunch"
+            },
+            {
+              "name": "breakfast",
+              "title": "Breakfast"
+            },
+            {
+              "name": "dinner",
+              "title": "Dinner"
+            },
+            {
+              "name": "gourmettour",
+              "title": "Gourmet tour"
+            },
+            {
+              "name": "shopping",
+              "title": "Shopping"
+            },
+            {
+              "name": "culinary",
+              "title": "Culinary"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "culture",
+              "title": "Culture"
+            }
+          ]
+        }
+      ],
+      "topAttraction": true,
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "87487fe3-bd11-429d-9550-61ba4ea716cd",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/87487fe3-bd11-429d-9550-61ba4ea716cd?lang=en"
+      },
+      "availableLanguage": [
+        {
+          "@type": "Language",
+          "alternateName": "de"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "zh"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "it"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "es"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "en"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "fr"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "ru"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "hu"
+        }
+      ],
+      "event": {
+        "@type": "Event",
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": "Groups"
+        }
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/zuerich-west-from-industrial-to-trend-setting-district/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/culture/zuerich_west_179230.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+      },
+      "identifier": "3636ccda-e7bd-474a-ba0e-712a962f260e",
+      "name": "Zoo Zurich",
+      "abstract": "Zurich Zoo, located on the Zürichberg, is home to around 350 animal species in near-natural habitats. As a modern, scientifically managed zoo, its primary goal is the preservation of nature. It works towards this goal in four equally important areas: Species conservation, nature conservation, education and research.",
+      "description": "The zoo promotes biodiversity with the high-quality, innovative keeping of endangered animal species - for example in the form of the Masoala Rainforest, the extensive Lewa Savannah and the Kaeng Krachan Elephant Park. Further habitats of this kind are being created.<br />\n<br />\nThe zoo protects nature by supporting long-term sustainable conservation projects around the world. To protect nature on its own doorstep, it is constantly working to improve its own sustainability.<br />\n<br />\nThe zoo sensitises and motivates its guests to actively protect nature. It creates an emotional bond between guests and animals and provides concrete ideas on how everyone can protect nature themselves.<br />\n<br />\nThe zoo facilitates research by providing a framework in which the diversity of the animals kept at the zoo can be studied, better understood and ultimately better protected.",
+      "additionalDescriptions": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "AdditionalDescription",
+          "description": "Zoo Zurich acts as an ambassador between people, animals and nature and offers an exceptional setting for business and private events in a unique ambience – from birthday parties and staff drinks receptions to anniversary banquets. The experienced event team advises interested parties on all available options and is also happy to take over the planning, organisation and implementation of the event on request.",
+          "keywords": "meeting, stnet"
+        }
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "7605ef42-0857-4c5a-a1ab-2aa5db1aaaee",
+          "contactType": "Contact Address",
+          "name": "Zoo Zürich",
+          "addressCountry": "CH",
+          "addressLocality": "Zürich",
+          "postalCode": "8044",
+          "streetAddress": "Zürichbergstrasse 221",
+          "telephone": "+41 (0)44 254 25 00",
+          "email": "event@zoo.ch",
+          "url": "https://www.zoo.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.38441671843941,
+        "longitude": 8.57451655930906
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "Lewa Savanne im Zoo Zürich",
+          "keywords": "zurich region,summer,zoo,wildlife park,leisure",
+          "copyrightHolder": "Partner image for editorial and touristic use / Zoo Zürich AG",
+          "publisher": "Switzerland Tourism",
+          "width": 2244,
+          "height": 1262,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/z/u/zurich%20zoo/images%20summer/54592_32001800_1.jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Zurich, Zoo Guide",
+          "keywords": "leisure,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 4000,
+          "height": 2667,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/04/22/08/47/06/zurich-zoo-guide.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Zoo, Mesoala Hall",
+          "keywords": "leisure,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 4000,
+          "height": 2667,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2023/06/19/07/28/30/zoo-mesoala-hall.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Red ruffed lemur (Varecia rubra) at Zoo Zurich",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1667,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/07/31/14/00/56/redruffedlemurvareciarubraatzoozurich.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Swimming Elephant (Elephas maximus) at Zoo Zurich",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 4000,
+          "height": 2667,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/07/31/14/01/04/swimmingelephantelephasmaximusatzoozurich.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Masoala Rainforest at Zoo Zurich",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1667,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/07/31/14/01/11/masoala-rainforest-at-zoo-zurich.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Lewa Savanna at Zoo Zurich",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1406,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/07/31/14/01/19/lewa-savanna-at-zoo-zurich.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Pinstripe damba (Paretroplus menarambo) at Zoo Zurich",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1756,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/07/31/14/01/31/pinstripedambaparetroplusmenaramboatzoozurich.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Exuma island iguana (Cyclura cyclura figginsi) at Zoo Zurich",
+          "keywords": "leisure,summer,winter",
+          "copyrightHolder": "Editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1667,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/07/31/14/01/43/exumaislandiguanacycluracyclurafigginsiatzoozurich.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "keywords": "meeting,summer",
+          "publisher": "Switzerland Tourism",
+          "encodingFormat": "image/jpeg",
+          "url": "https://static.stnet.ch/mice/images/48740-o.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "keywords": "meeting,winter",
+          "publisher": "Switzerland Tourism",
+          "encodingFormat": "image/jpeg",
+          "url": "https://static.stnet.ch/mice/images/48739-o.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "keywords": "meeting,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "encodingFormat": "image/jpeg",
+          "url": "https://static.stnet.ch/mice/images/48741-o.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "keywords": "meeting,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "encodingFormat": "image/jpeg",
+          "url": "https://static.stnet.ch/mice/images/48742-o.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "keywords": "meeting,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "encodingFormat": "image/jpeg",
+          "url": "https://static.stnet.ch/mice/images/48746-o.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            },
+            {
+              "name": "inthecity",
+              "title": "In the city"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "winter",
+              "title": "Winter"
+            },
+            {
+              "name": "spring",
+              "title": "Spring"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "qualitylabel",
+          "values": [
+            {
+              "name": "unusualvenues",
+              "title": "Unusual Venues"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "month",
+          "values": [
+            {
+              "name": "allyear",
+              "title": "All year"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "cultureandcongresscentretype",
+          "title": "Culture and Congresscentre type",
+          "values": [
+            {
+              "name": "eventlocation",
+              "title": "Event location"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "parktype",
+          "title": "Park type",
+          "values": [
+            {
+              "name": "zoo",
+              "title": "Zoo"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "indooroutdoor",
+              "title": "Indoor and outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "values": [
+            {
+              "name": "it",
+              "title": "Italian"
+            },
+            {
+              "name": "en",
+              "title": "English"
+            },
+            {
+              "name": "fr",
+              "title": "French"
+            },
+            {
+              "name": "de",
+              "title": "German"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "nature",
+              "title": "Nature"
+            },
+            {
+              "name": "education",
+              "title": "Education"
+            }
+          ]
+        }
+      ],
+      "topAttraction": true,
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "87487fe3-bd11-429d-9550-61ba4ea716cd",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/87487fe3-bd11-429d-9550-61ba4ea716cd?lang=en"
+      },
+      "availableLanguage": [
+        {
+          "@type": "Language",
+          "alternateName": "de"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "en"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "fr"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "it"
+        }
+      ],
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "recommendedSeason": "allyear",
+      "url": "https://www.myswitzerland.com/en/experiences/zurich-zoo/",
+      "photo": "https://www.myswitzerland.com/-/media/dam/resources/experience/z/u/zurich%20zoo/images%20summer/54592_32001800_1.jpeg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+      },
+      "identifier": "9fe267e6-9952-47eb-942c-fb3a3b6f5fd2",
+      "name": "Uetliberg",
+      "abstract": "The Uetliberg with its summit at the Uto Kulmo 871 metres above sea level towers above the roofs of Zurich. From the top you can enjoy a magnificent panoramic view of the city of Zurich, Lake Zurich and the Limmat Valley up as far as the Alps.",
+      "description": "The Uetliberg is particularly popular in November, as its summit is often above the blanket of fog that can cover the city at this time of year. In the winter, the hiking trails to the summit are converted into sledding runs. <br /><br /> In summer, there’s plenty to discover on well-marked hiking routes, a mountain bike route, and on the Planet Trail. This hour-and-a-half to two-hour walk from Uetliberg to the Felsenegg cableway in Adliswil takes you on a fascinating tour through a model of our solar system. <br /><br /> Directions: The S10 line of the Sihltal Zürich Uetliberg Railway SZU runs from Zurich main station to Uetliberg station, ten minutes walk from the summit.",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "b1463a78-aee2-44ef-aa7a-b1a2c9f5ee7e",
+          "contactType": "Contact Address",
+          "name": "Sihltal Zürich Uetliberg Bahn SZU AG",
+          "addressCountry": "CH",
+          "addressLocality": "Zürich",
+          "postalCode": "8045",
+          "streetAddress": "Wolframplatz 21",
+          "telephone": "+41 (0)44 206 45 11",
+          "email": "Info@szu.ch",
+          "url": "http://www.szu.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.3496190251706,
+        "longitude": 8.49135963854338
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "Uetliberg, Lake Zurich",
+          "keywords": "leisure,winter",
+          "copyrightHolder": "Full buy-out (no restrictions)",
+          "publisher": "Switzerland Tourism",
+          "width": 4000,
+          "height": 2666,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/celum%20connect/2024/05/02/12/27/08/uetliberg-lake-zurich.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "sth7602_uetliberg.jpg",
+          "keywords": "sth7602 uetliberg zuerich,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 5120,
+          "height": 3413,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/landscapes/summer/mountains/sth7602_uetliberg_154370.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "1567-sd.jpg",
+          "keywords": "zürich,uto kulm hotel,üetliberg,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 650,
+          "height": 365,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/images/experience/1567-sd_154370.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "specialevents",
+          "values": [
+            {
+              "name": "easter",
+              "title": "Easter"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "platformtype",
+          "title": "Platform type",
+          "values": [
+            {
+              "name": "viewingplatform",
+              "title": "Viewing platform"
+            },
+            {
+              "name": "viewpoint",
+              "title": "View point"
+            }
+          ]
+        }
+      ],
+      "topAttraction": true,
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "87487fe3-bd11-429d-9550-61ba4ea716cd",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/87487fe3-bd11-429d-9550-61ba4ea716cd?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/uetliberg/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/landscapes/summer/mountains/sth7602_uetliberg_154370.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+      },
+      "identifier": "bbdc7a20-9f69-4c16-a53e-73c5979f79b4",
+      "name": "Stein Castle Ruins",
+      "touristType": [
+        "Cultural Tourism"
+      ],
+      "abstract": "The locals still think of the ruins as their own Stein Castle. Standing majestically over Baden, it offers a magnificent view of the Old Town.",
+      "description": "The origins of the castle go back to the year 1000. After the Kyburg family, the Habsburgs inherited the castle in 1263.<br /> When the Aargau was conquered by the Old Swiss Confederacy in 1415, the castle went up in flames. From 1658 to 1670, the site was once again expanded substantially by the people of Baden. During the second Battle of Villmergen in 1712, Baden was forced to demolish the castle under pressure from the victorious reformed cantons of Zurich and Bern. To the humiliation of the Catholic town of Baden, the reformed church by today's Bahnhofplatz was built from the stones of the castle. <br /><br /> The shortest footpath leads via St. Niklausstiege to what is probably the most beautiful panoramic view of the Old Town and the surrounding vineyards.",
+      "address": [],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.47603542630213,
+        "longitude": 8.308230551577122
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "Baden, Ruine Stein",
+          "keywords": "zurich region,town,city,observation tower,viewing platform,couple,leisure,summer,winter",
+          "copyrightHolder": "Partner image for editorial and touristic use / © Stadt Baden",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/s/t/stein%20castle%20ruin/images%20all%20season/53698_32001800.jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Baden, Ruine Stein",
+          "keywords": "zurich region,town,city,observation tower,viewing platform,leisure,summer,winter",
+          "copyrightHolder": "Partner image for editorial and touristic use / © Stadt Baden",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/s/t/stein%20castle%20ruin/images%20all%20season/53699_32001800.jpeg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "inthecity",
+              "title": "In the city"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "achitekturtyp",
+          "title": "Architecture",
+          "values": [
+            {
+              "name": "castles",
+              "title": "Castles"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "outdoor",
+              "title": "Outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "suitablefortype",
+          "title": "Suitable for",
+          "values": [
+            {
+              "name": "children",
+              "title": "Children"
+            },
+            {
+              "name": "couples",
+              "title": "Couples"
+            },
+            {
+              "name": "family",
+              "title": "Families"
+            },
+            {
+              "name": "individual",
+              "title": "Individual"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "between12hours",
+              "title": "1-2 hours"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "childrenage",
+          "title": "Children age",
+          "values": [
+            {
+              "name": "14plus",
+              "title": "14+ years"
+            },
+            {
+              "name": "10to13years",
+              "title": "10 to 13 years"
+            },
+            {
+              "name": "6to9years",
+              "title": "6 to 9 years"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "culture",
+              "title": "Culture"
+            },
+            {
+              "name": "education",
+              "title": "Education"
+            }
+          ]
+        }
+      ],
+      "topAttraction": true,
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "c7b214a5-d32a-4321-89da-cae235a69400",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/c7b214a5-d32a-4321-89da-cae235a69400?lang=en"
+      },
+      "event": {
+        "@type": "Event",
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": [
+            "Children",
+            "Couples",
+            "Families",
+            "Individual"
+          ]
+        }
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "tourBookingPage": "http://dein.baden.ch/en/experience/activities/points-of-interest/stein-castle",
+      "url": "https://www.myswitzerland.com/en/experiences/stein-castle-ruin/",
+      "photo": "https://www.myswitzerland.com/-/media/dam/resources/experience/s/t/stein%20castle%20ruin/images%20all%20season/53698_32001800.jpeg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+      },
+      "identifier": "a7498510-44db-4b4b-bb55-bfdcd1ef1fa2",
+      "name": "Monastery of Einsiedeln",
+      "abstract": "Pilgrims have been visiting the monastery of Einsiedeln for over 1000 years. The monastery lies in the midst of a breathtaking landscape with a deep blue lake and jagged mountain tops. Today more and more nature lovers and culture-minded visitors are joining the pilgrims.",
+      "description": "<p>The monastery of Einsiedeln was built as a Baroque edifice with four inner courtyards in the 18th century. Before that time Romanesque and Gothic buildings defined the monastery, which was founded by the Benedictine monk Meinrad in the year 835. The Mercy Chapel (Gnadenkapelle), made of black marble, is located in the monastery's church, under a dome with frescoes. The famous Black Madonna dating to the 15th century is found in that chapel. <br />\n<br />\nThe monastery complex includes not only the living space for the monks but also a diocese school, ten workshops, a wine cellar for the monastery's own wine and stables for the monastery's own breed of horses. By means of concerts, guided tours, and public masses, the Benedictine monks allow everyone to take part in their lives and discover what is probably Switzerland's most impressive monastery complex.</p>\n<p><strong>Getting there:</strong>&nbsp;By train from Zurich directly to Einsiedeln. The monastery is about 15 minutes' walk from the station.&nbsp;</p>",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "a9c1862c-83eb-48fd-82d2-693701f817e8",
+          "contactType": "Contact Address",
+          "name": "Einsiedeln-Ybrig-Zürichsee AG",
+          "addressCountry": "CH",
+          "addressLocality": "Einsiedeln",
+          "postalCode": "8840",
+          "streetAddress": "Hauptstrasse 85",
+          "telephone": "+41 (0)55 418 44 88",
+          "email": "info@eyz.swiss",
+          "url": "http://www.eyz.swiss/"
+        },
+        {
+          "@type": "PostalAddress",
+          "identifier": "77c786ec-8564-454c-a4f1-759a28480b8c",
+          "contactType": "Contact Address",
+          "name": "Kloster Einsiedeln",
+          "addressCountry": "CH",
+          "addressLocality": "Einsiedeln",
+          "postalCode": "8840",
+          "telephone": "+41 55 418 61 11",
+          "email": "kloster@kloster-einsiedeln.ch",
+          "url": "http://www.kloster-einsiedeln.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.12663102138969,
+        "longitude": 8.751168869542552
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "01_kloster_einsiedeln_2013.jpg",
+          "keywords": "kloster einsiedeln,leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 1949,
+          "height": 1098,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/museum/01_kloster_einsiedeln_2013_36229.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "02_marstall_elgin_lichtenauer.jpg",
+          "keywords": "marstall elgin lichtenauer,kloster einsiedeln,leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 1624,
+          "height": 915,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/culture/02_marstall_elgin_lichtenauer_36229.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "05_kirche_innen_einsiedeln_tourismus.jpg",
+          "keywords": "kloster einsiedeln innen,leisure,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1624,
+          "height": 915,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/museum/05_kirche_innen_einsiedeln_tourismus_36229.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "03_bibliothek_einsiedeln_tourismus.jpg",
+          "keywords": "kloster bibliothek einsiedeln,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1624,
+          "height": 915,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/culture/03_bibliothek_einsiedeln_tourismus_36229.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "04_schwarze_madonna.jpg",
+          "keywords": "gnadenkapelle mit madonna,einsiedeln,kloster,schwarze madonna,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1624,
+          "height": 915,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/museum/04_schwarze_madonna_36229.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "winter",
+              "title": "Winter"
+            },
+            {
+              "name": "spring",
+              "title": "Spring"
+            },
+            {
+              "name": "summer",
+              "title": "Summer"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "month",
+          "values": [
+            {
+              "name": "allyear",
+              "title": "All year"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "achitekturtyp",
+          "title": "Architecture",
+          "values": [
+            {
+              "name": "monasteries",
+              "title": "Monastries"
+            },
+            {
+              "name": "churches",
+              "title": "Churches"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "indoor",
+              "title": "Indoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "suitablefortype",
+          "title": "Suitable for",
+          "values": [
+            {
+              "name": "couples",
+              "title": "Couples"
+            },
+            {
+              "name": "group",
+              "title": "Groups"
+            },
+            {
+              "name": "individual",
+              "title": "Individual"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "values": [
+            {
+              "name": "de",
+              "title": "German"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "childrenage",
+          "title": "Children age",
+          "values": [
+            {
+              "name": "14plus",
+              "title": "14+ years"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "education",
+              "title": "Education"
+            }
+          ]
+        }
+      ],
+      "topAttraction": true,
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "a13023fa-1dee-4953-8971-a6bbd9303751",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/a13023fa-1dee-4953-8971-a6bbd9303751?lang=en"
+      },
+      "availableLanguage": [
+        {
+          "@type": "Language",
+          "alternateName": "de"
+        }
+      ],
+      "event": {
+        "@type": "Event",
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": [
+            "Couples",
+            "Groups",
+            "Individual"
+          ]
+        },
+        "minimumAttendeeCapacity": 1,
+        "maximumAttendeeCapacity": 25
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "recommendedSeason": "allyear",
+      "url": "https://www.myswitzerland.com/en/experiences/benedictine-monastery-with-black-madonna/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/museum/01_kloster_einsiedeln_2013_36229.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+      },
+      "identifier": "4f0b7cea-fb12-4dff-832b-f12659a65fb1",
+      "name": "Jacob's Trail - Pilgrimage on Ancient Paths",
+      "abstract": "The Swiss part of the Jacob's Trail offers highlights on the part of the trail that coincides with the language border. The stretch Schwarzenburg-Fribourg includes the over 600-year-old \"Frybourgstrass,\" a path that leads through forests and over streams, past castle ruins, chapels and shrines.",
+      "description": "As early as 1000 years ago, devout people from all over Europe made a pilgrimage to the tomb of the Apostle Jacobus in Santiago de Compostela, Spain. Today the paths leading to that destination are called Jacob's Trails and are still used by pilgrims.<br /> <br /> The Swiss part of the Jacob's Trail includes several slightly diverging routes that lead from Constance or St. Gallen to Zurich, Lucerne, Interlaken, Bern, Fribourg, Lausanne and Geneva. According to tradition one concludes the Swiss section of the pilgrim's trail with a cruise from Lausanne to Geneva. Thanks to Switzerland's excellent transportation network, parts of the pilgrim's trail can also be traveled by ship, bus or train.",
+      "address": [],
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "viaJacobi.jpg",
+          "keywords": "leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 567,
+          "height": 845,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/destinations/summer/various/viajacobi_36204.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Jakobsweg_Willisau_o.jpg",
+          "keywords": "jakobsweg,pilgerweg,willisau,leisure,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 709,
+          "height": 493,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/sightseeing/jakobsweg_willisau_o_36204.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "jakobsweg.jpg",
+          "keywords": "leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1000,
+          "height": 1010,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/destinations/summer/various/jakobsweg_36204.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "stc3135_p.jpg",
+          "keywords": "jakobsweg,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2048,
+          "height": 852,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/web-team%20only/images%20from%20id%2075/stc3135_p_36204.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "sts3443_43f.jpg",
+          "keywords": "jakobsweg,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1500,
+          "height": 1128,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/web-team%20only/images%20from%20id%2075/sts3443_43f_36204.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "sporttype",
+          "title": "Sport type",
+          "values": [
+            {
+              "name": "hike",
+              "title": "Hike"
+            }
+          ]
+        }
+      ],
+      "topAttraction": true,
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "url": "https://opendata.myswitzerland.io/v1/destinations?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/jacobs-trail-pilgrimage-on-ancient-paths/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/destinations/summer/various/viajacobi_36204.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=30&lang=en&page=0&query=Zurich&striphtml=false&top=true"
+      },
+      "identifier": "2f7cfdb6-eb25-4ade-967d-c4fb4fa3cf03",
+      "name": "Fun in the water in Alpamare",
+      "abstract": "The largest covered water park in Switzerland. With the longest water slide in Central Europe amid tropical plants and Mayan temple ruins. An experience for the whole family.",
+      "description": "For fun in the water, head to Pfäffikon in the canton of Schwyz. That’s because this is the home of Alpamare, a water park of superlatives. The palm trees and other tropic features create a summer feeling all year round here. In addition to the longest and most spectacular water slide, the Jungle Run, 11 other unforgettable slides also await thrill seekers. The Rio Mare lazy river and the large jungle-style wave pool with tropical palm trees and 1.20-metre-high surf waves are also not to be missed.<br /> <br /> Relaxation is guaranteed in the Alpa-Therme with whirlpool, in the salt water thermal bath, with a massage or in the sauna. In summer, you can enjoy a fantastic view of Lake Zurich and the mountains from the sun terrace or the large sunbathing lawn with deck chairs for use free of charge.<br /> <br /> And for the youngest guests there is a toddlers’ area with five slides, a children’s paddling pool and a large selection of water play equipment.<br /> <br /> Getting there: By train to Pfäffikon Schwyz, then a 10-minute walk or by bus from Pfäffikon Schwyz to the Seedammcenter. By car on the A3 from Zürich, “Seedamm-Center” exit (parking is available in front of the adventure pool).\n",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "d52cb487-2dea-4b50-b623-6ece748491f4",
+          "contactType": "Contact Address",
+          "name": "Alpamare",
+          "addressCountry": "CH",
+          "addressLocality": "Pfäffikon SZ",
+          "postalCode": "8808",
+          "streetAddress": "Gwattstrasse 12",
+          "telephone": "+41 (0)55 415 15 15",
+          "email": "alpamare@alpamare.ch",
+          "url": "http://www.alpamare.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.19907286407317,
+        "longitude": 8.791118040749119
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "Alpamare",
+          "keywords": "zurich region,bathing,leisure,summer",
+          "copyrightHolder": "Partner image for editorial and touristic use / Alpamare",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/w/a/water%20fun%20at%20alpamare/images%20summer/54220_32001800_1.jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Alpamare",
+          "keywords": "zurich region,bathing,leisure,summer",
+          "copyrightHolder": "Partner image for editorial and touristic use / Alpamare",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/w/a/water%20fun%20at%20alpamare/images%20summer/54214_32001800.jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Alpamare",
+          "keywords": "zurich region,bathing,leisure,summer",
+          "copyrightHolder": "Partner image for editorial and touristic use",
+          "publisher": "Switzerland Tourism",
+          "width": 3000,
+          "height": 1687,
+          "encodingFormat": "image/png",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/w/a/water%20fun%20at%20alpamare/images%20summer/54219_32001800.png"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Alpamare",
+          "keywords": "zurich region,bathing,leisure,summer",
+          "copyrightHolder": "Partner image for editorial and touristic use / Alpamare",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/w/a/water%20fun%20at%20alpamare/images%20summer/54212_32001800.jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Alpamare",
+          "keywords": "zurich region,bathing,leisure,summer",
+          "copyrightHolder": "Partner image for editorial and touristic use / Alpamare",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/w/a/water%20fun%20at%20alpamare/images%20summer/54221_32001800_2.jpeg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "winter",
+              "title": "Winter"
+            },
+            {
+              "name": "spring",
+              "title": "Spring"
+            },
+            {
+              "name": "summer",
+              "title": "Summer"
+            },
+            {
+              "name": "autumn",
+              "title": "Autumn"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "month",
+          "values": [
+            {
+              "name": "allyear",
+              "title": "All year"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "indooroutdoor",
+              "title": "Indoor and outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "wellnesstype",
+          "title": "Wellness type",
+          "values": [
+            {
+              "name": "indoorswimmingpool",
+              "title": "Indoor swimming pool"
+            },
+            {
+              "name": "experiencebath",
+              "title": "Experience Bath"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "suitablefortype",
+          "title": "Suitable for",
+          "values": [
+            {
+              "name": "children",
+              "title": "Children"
+            },
+            {
+              "name": "family",
+              "title": "Families"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "sporttype",
+          "title": "Sport type",
+          "values": [
+            {
+              "name": "bathingandswimming",
+              "title": "Bathing and swimming"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "4to8hoursfullday",
+              "title": "4 to 8 hours (full day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "dynamiccampaigntypes",
+          "values": [
+            {
+              "name": "waterparks",
+              "title": "Water parks"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "childrenage",
+          "title": "Children age",
+          "values": [
+            {
+              "name": "14plus",
+              "title": "14+ years"
+            },
+            {
+              "name": "10to13years",
+              "title": "10 to 13 years"
+            },
+            {
+              "name": "6to9years",
+              "title": "6 to 9 years"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "relax",
+              "title": "Relax"
+            },
+            {
+              "name": "active",
+              "title": "Active"
+            }
+          ]
+        }
+      ],
+      "topAttraction": true,
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "349d2c36-207b-4f83-80ed-951ba3142fbc",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/349d2c36-207b-4f83-80ed-951ba3142fbc?lang=en"
+      },
+      "event": {
+        "@type": "Event",
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": [
+            "Children",
+            "Families"
+          ]
+        }
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "recommendedSeason": "allyear",
+      "url": "https://www.myswitzerland.com/en/experiences/fun-in-the-water-in-alpamare/",
+      "photo": "https://www.myswitzerland.com/-/media/dam/resources/experience/w/a/water%20fun%20at%20alpamare/images%20summer/54220_32001800_1.jpeg"
+    }
+  ]
+}

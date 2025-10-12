@@ -1,0 +1,2202 @@
+[
+  {
+    "id": "f3b0e66a-d769-47d8-aab0-627e4c6a2cd3",
+    "name": "Appenzellerland cross-country world",
+    "city": "Plaffeien",
+    "address": "Verband Schweizer Langlaufschulen, 1716, Plaffeien, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "ea1a8ebb-c364-4012-852c-30adef207b2f",
+    "name": "Appenzeller Aussichtsroute",
+    "city": "appenzell",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "e7477866-c677-4086-945c-205184335ab5",
+    "name": "Appenzell craftsmanship",
+    "city": "appenzell",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ccfd8383-4ef6-422d-9d39-110cec7131b5",
+    "name": "Appenzell Railways",
+    "city": "appenzell",
+    "address": "",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "b1f78fb0-5054-4c44-ba5a-c27720707f9c",
+    "name": "Appenzell Beer",
+    "city": "appenzell",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "spring"
+  },
+  {
+    "id": "72975669-1263-4890-81b6-c71a9ff687d2",
+    "name": "Appenzeller Cup",
+    "city": "appenzell",
+    "address": "",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "4b6d728f-f3ba-40b1-b6a0-c02daa721fd9",
+    "name": "Appenzell village tour",
+    "city": "appenzell",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "7eaae320-14b8-4dec-847f-0cbaa584df30",
+    "name": "Discover the Appenzell natural yodelling",
+    "city": "Appenzell",
+    "address": "Appenzellerland Tourismus AI, Hauptgasse 38, 9050, Appenzell, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "4e2a5449-d69b-49ab-81fb-8739b9b3d43a",
+    "name": "Visitors’ Center Brauquöll Appenzell",
+    "city": "Appenzell",
+    "address": "Brauerei Locher AG, Brauereiplatz 1, 9050, Appenzell, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "spring"
+  },
+  {
+    "id": "215db1e2-f54f-4576-93c2-6049e6691fc5",
+    "name": "Guided tour of Appenzell",
+    "city": "Appenzell",
+    "address": "Appenzellerland Tourismus AI, Hauptgasse 38, 9050, Appenzell, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "6c691ccb-feeb-45d6-bdc9-e6b02ca12fcf",
+    "name": "Biber and Bitters in Appenzell",
+    "city": "Appenzell",
+    "address": "Appenzellerland Tourismus AI, Hauptgasse 38, 9050, Appenzell, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "68c7ebf7-6d54-46ec-a6e6-64faba52c936",
+    "name": "Hoher Kasten – Top of Appenzell",
+    "city": "Brülisau",
+    "address": "Hoher Kasten Drehrestaurant und Seilbahn AG, Dorf 22, 9058, Brülisau, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "9f2554aa-b043-43e0-b6a7-3b840cb03a7d",
+    "name": "Kronberg – Mountain and valley in Appenzellerland",
+    "city": "Jakobsbad",
+    "address": "Kronberg AG, St. Josefstrasse 2, 9108, Jakobsbad, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "334a5137-fbe8-44ce-9ea9-a35be1a076b9",
+    "name": "Alp Nasen – Farming experience in Appenzell",
+    "city": "appenzell",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "b56c9054-20ef-4c34-a413-19155e85544c",
+    "name": "Cross-country dreams come true in Appenzell's high moorland",
+    "city": "Plaffeien",
+    "address": "Verband Schweizer Langlaufschulen, 1716, Plaffeien, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "46f248d5-6b68-4073-a483-a9b69152490b",
+    "name": "Visit to the Alpenbitter works",
+    "city": "Appenzell",
+    "address": "Appenzeller Alpenbitter AG, Weissbadstrasse 27, 9050, Appenzell, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ca8973c5-b00c-41ff-a1bb-043d7aeafc9a",
+    "name": "Golf in the Eastern Switzerland region",
+    "city": "appenzell",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "76590cc1-695c-4544-83c1-cc024d0e44fe",
+    "name": "Puzzle Trail",
+    "city": "Schwellbrunn",
+    "address": "Gemeinde Schwellbrunn, Dorf 5, 9103, Schwellbrunn, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "445a4159-25ba-41ee-b1fe-d496d848f5ff",
+    "name": "Excursion to the Abbey of St. Gall",
+    "city": "appenzell",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2e98c6be-1f72-4cd8-8f93-eaff96476ccc",
+    "name": "Tobogganing on the Hohen Kasten",
+    "city": "Brülisau",
+    "address": "Berggasthaus Ruhesitz, 9058, Brülisau, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "21db9c9b-d0ff-4a59-9828-e367000a311f",
+    "name": "Photo Spot Säntis",
+    "city": "appenzell",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "79b6d511-3336-4ec8-8d35-d316825500a9",
+    "name": "Lake Fälen: Fascinating Alpstein-Fjord",
+    "city": "Appenzell",
+    "address": "Appenzellerland Tourismus AI, Hauptgasse 38, 9050, Appenzell, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "11609e68-18bc-49bf-abdc-452d13fe3ec5",
+    "name": "From Säntis Malt to the Whisky Trek – follow the trail of the water of life",
+    "city": "Appenzell",
+    "address": "Brauerei Locher AG, Brauereiplatz 1, 9050, Appenzell, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "e5340e6f-0498-4c00-8e44-ed697803931b",
+    "name": "Geological hiking path Alpstein",
+    "city": "Brülisau",
+    "address": "Hoher Kasten Drehrestaurant und Seilbahn AG, Dorf 22, 9058, Brülisau, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "da2993cd-aeaf-41d3-a579-eb025c80ef2f",
+    "name": "Dulcimer / Hackbrett",
+    "city": "Herisau",
+    "address": "Hackbrettbau und Möbeldesign, Kasernenstrasse 39a, 9100, Herisau, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "c25ce5ec-4b61-4bfc-a66e-f69744fb457a",
+    "name": "Treetop path Neckertal",
+    "city": "Mogelsberg",
+    "address": "Genossenschaft Baumwipfelpfad Neckertal, Steinwäldli 2175, 9122, Mogelsberg, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a8ce875f-3849-492b-826c-0d360430e770",
+    "name": "Ebenalp",
+    "city": "Wasserauen",
+    "address": "Luftseilbahn Wasserauen-Ebenalp AG, 9057, Wasserauen, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a025a671-f46f-40eb-8a61-fbe3142a88c5",
+    "name": "Säntis cable car",
+    "city": "Säntis-Schwägalp",
+    "address": "Säntis-Schwebebahn AG, 9107, Säntis-Schwägalp, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "9d322fcd-f402-4f9e-80c9-981c717ece9c",
+    "name": "The unsung heroines of Urnäsch",
+    "city": "Urnäsch",
+    "address": "Appenzeller Brauchtumsmuseum, Dorfplatz 6, 9107, Urnäsch, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "78bc66aa-461b-46a3-8353-eab4f28bf812",
+    "name": "At “Nana” Elisabeth’s table",
+    "city": "Wald AR",
+    "address": "Swiss Tavolata, Elisabeth Müller-Frey, Dorf 710, 9044, Wald AR, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "aa53ba9e-015c-4be5-8de5-ed0e97dbb265",
+    "name": "Great St. Bernard Pass and its dogs",
+    "city": "Orsières",
+    "address": "Pays du St-Bernard, Route de la Gare 34, 1937, Orsières, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "9e75f1fc-9184-4867-b7ea-815f42191062",
+    "name": "Rhaetian Railway in the Albula / Bernina Landscapes",
+    "city": "bern",
+    "address": "UNESCO World Heritage in Switzerland, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": true,
+    "season": "summer"
+  },
+  {
+    "id": "d98a339a-5534-408c-bd2a-8ecd1c8b6a5b",
+    "name": "Seven Springs and the Simmen Falls",
+    "city": "bern",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "78848dec-e18e-4d4f-905d-a7e96cae3b82",
+    "name": "Brienz Rothorn Railway",
+    "city": "Brienz BE",
+    "address": "Brienz Rothorn Bahn AG, Hauptstrasse 149c, 3855, Brienz BE, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": true,
+    "season": "summer"
+  },
+  {
+    "id": "70ea6d76-3769-47b8-a925-6e348080d1a5",
+    "name": "Panoramic-Express – Montreux-Interlaken",
+    "city": "Montreux",
+    "address": "Compagnie du Chemin de Fer Montreux Oberland bernois SA, Rue de la Gare 22, 1820, Montreux, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "4e6d3389-4e40-48d8-b0d2-c0a9fdaac8c5",
+    "name": "Simplon Valley - Impressive Trade Route",
+    "city": "bern",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2fe4e6bf-fb92-4706-a9bc-7ac09139ef76",
+    "name": "Piz Corvatsch and Furtschellas",
+    "city": "Silvaplana-Surlej",
+    "address": "Corvatsch AG, Via dal Corvatsch 73, 7513, Silvaplana-Surlej, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "122fb38d-ddd4-405f-9ca7-e103dabfc9c6",
+    "name": "Gelmerbahn funicular railway",
+    "city": "Innertkirchen",
+    "address": "Grimselwelt, Grimselstrasse 19, 3862, Innertkirchen, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "015eaaf3-a1df-4d84-afd3-b3b3d7334595",
+    "name": "Diavolezza",
+    "city": "Silvaplana-Surlej",
+    "address": "Corvatsch AG, Via dal Corvatsch 73, 7513, Silvaplana-Surlej, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "f5efc269-3ef5-4b8f-9c3f-96b8b30cfb19",
+    "name": "Giessbach Falls and Hotel Giessbach",
+    "city": "Brienz BE",
+    "address": "Grandhotel Giessbach, 3855, Brienz BE, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "bbdc7a20-9f69-4c16-a53e-73c5979f79b4",
+    "name": "Stein Castle Ruins",
+    "city": "bern",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "4f0b7cea-fb12-4dff-832b-f12659a65fb1",
+    "name": "Jacob's Trail - Pilgrimage on Ancient Paths",
+    "city": "bern",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "3199ca99-5081-43dc-9672-7ce633279bd7",
+    "name": "Viamala Gorge",
+    "city": "Thusis",
+    "address": "Viamala Tourismus, Neudorfstrasse 46, 7430, Thusis, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "1ff8dceb-e91b-4ad8-9f62-0cec5ca72c7d",
+    "name": "Chocolate train",
+    "city": "Montreux",
+    "address": "Compagnie du Chemin de Fer Montreux Oberland bernois SA, Rue de la Gare 22, 1820, Montreux, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "e3f18528-578b-4b68-91ef-86448a5f44bb",
+    "name": "Geneva Mont Blanc Wine Tour",
+    "city": "geneva",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "cd24ca3f-9133-4eff-853e-969bd9c65578",
+    "name": "\"Geneva Tour\" Cruise",
+    "city": "geneva",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ab0e969d-5f90-460d-8b6a-614c7e3885df",
+    "name": "Geneva City Tour",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "5d93442c-c8d5-4d7f-b577-b3cc3e7d5a95",
+    "name": "Geneva Wine Trail",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "autumn"
+  },
+  {
+    "id": "4a3dfbd6-07b2-4d3c-adc8-bbc33ebec251",
+    "name": "Geneva Mystery",
+    "city": "Genève",
+    "address": "Geneva Mystery, Rue du Mont-Blanc 18, 1201, Genève, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "28d866f9-1493-4d07-82e4-c3d5cc387e87",
+    "name": "Geneva Wine Cellar",
+    "city": "geneva",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2037149e-12cf-48ae-99db-f3f721c5b2d5",
+    "name": "Geneva Watch Tour",
+    "city": "Genève",
+    "address": "Fondation Genève Tourisme & Congrès, Rue Pécolat 1, 1211, Genève, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "f8c32d33-b10f-4539-9346-89d32bca53d8",
+    "name": "Carouge - Geneva",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "7f3bf3b0-1362-44f5-9578-16d2fb3d9d2d",
+    "name": "Lake Geneva Cruises",
+    "city": "Lausanne",
+    "address": "CGN SA, Avenue de Rhodanie 17, 1007, Lausanne, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": true,
+    "season": "summer"
+  },
+  {
+    "id": "48351f62-c8f6-478f-8d95-8ab359158ec2",
+    "name": "Exploring Geneva as you run",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "46a47c5d-7635-4610-85ed-f1b6a0892ad4",
+    "name": "Touring Geneva’s vineyards",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "cbef6007-59b0-466a-b61d-eebf87847f61",
+    "name": "Paragliding over Geneva",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "c2ff8001-67c8-44e4-ad43-97c27932489c",
+    "name": "Guided tours Geneva Tourism & Conventions",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a3b2030c-9fe5-41e1-9260-f54275475d29",
+    "name": "Golf in Geneva",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "d83fa98c-ad7f-4703-acd5-68ae68756c94",
+    "name": "Photo Spot Lake Geneva",
+    "city": "geneva",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": true,
+    "season": "summer"
+  },
+  {
+    "id": "84c7d768-e4b9-43cf-958f-1f320619d230",
+    "name": "Flying over Lake Geneva",
+    "city": "geneva",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "7571c1e0-b6aa-4ce1-a490-9c5b7d6a255c",
+    "name": "Old Town of Geneva",
+    "city": "geneva",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "3b81cd76-e797-4a7f-ab67-221447075bff",
+    "name": "Reformation Walking Tour Geneva",
+    "city": "Genève",
+    "address": "Musée international de la Réforme, Rue du Cloître 4, 1204, Genève, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "fb4d55c3-9f8b-4ec9-8fc5-150b51f18c80",
+    "name": "Bains des Pâquis – The Geneva way of life",
+    "city": "geneva",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "c56fbf20-f857-4e6e-b77c-3726acccff90",
+    "name": "Trains & Trolleys Tours in Geneva",
+    "city": "Genève",
+    "address": "Swisstours Transport SA, 36 Boulevard Saint Georges, 1205, Genève, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a7f02013-d712-4c07-ab3e-7bb2665a2b0e",
+    "name": "Boat fishing on lake Geneva",
+    "city": "geneva",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "9569fb0a-27ed-4b82-a576-b6b15c715617",
+    "name": "Tandem paragliding over Lake Geneva",
+    "city": "Noville",
+    "address": "Les Ailes du Leman, Prés des Fourches, 1845, Noville, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "610bd405-2f49-491e-bf68-0f9716e8e619",
+    "name": "Fishing trip on Lake Geneva",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "49ee10c4-b003-47b3-9b65-76d1141d3272",
+    "name": "Gourmet cruises on Lake Geneva",
+    "city": "Genève",
+    "address": "CGN SA, Quai du Mont-Blanc 2, 1201, Genève, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "028aaacb-cd64-4232-be23-a3ce4fc3a295",
+    "name": "Golf in the Lake Geneva region",
+    "city": "Pully",
+    "address": "Vaud Promotion, Av. Général-Guisan 48, 1009, Pully, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "543fd4c5-f306-4b08-938a-f34f6d9b324a",
+    "name": "Auditoire de Calvin (Calvin's Auditorium) Geneva",
+    "city": "geneva",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "44ec9f44-6762-4764-a388-9c58e3f7c154",
+    "name": "E-bike tour in the Geneva vineyards",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "27440fd4-845b-4223-90b5-dfa44200e832",
+    "name": "Guided tour: The flavours of Geneva chocolate",
+    "city": "Genève",
+    "address": "Geneva Tourism, Place de Cornavin 7, 1211, Genève, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "cb125a79-dce4-44b5-8716-47a125133e4c",
+    "name": "Stand-up paddling and windsurfing in Geneva",
+    "city": "geneva",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "0e1446d6-26d0-4ed0-96eb-ddc5eaa31007",
+    "name": "Flying over Riviera Montreux and lake Geneva",
+    "city": "geneva",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "90a82f6e-ab99-43d5-90a5-bebf3376669c",
+    "name": "Interlaken Free Walking Tour",
+    "city": "Interlaken",
+    "address": "Interlaken Free Walking Tour, Alpenstrasse 16, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "ae303d42-839c-4955-8124-df0e37f4bdd7",
+    "name": "Interlaken - the paradise for water sports",
+    "city": "interlaken",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "48662e2f-0a1d-46a2-b848-8efe56c6bcc8",
+    "name": "Interlaken - First ski experience - Full-day",
+    "city": "Matten bei Interlaken",
+    "address": "Outdoor Switzerland AG, Hauptstrasse 15, 3800, Matten bei Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "0f5a075a-e19a-49da-aa11-689069d18b9e",
+    "name": "Interlaken - First ski experience - Half-day ",
+    "city": "Matten bei Interlaken",
+    "address": "Outdoor Switzerland AG, Hauptstrasse 15, 3800, Matten bei Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "db38447f-dcca-43c9-9426-62f6b594d038",
+    "name": "Funky chocolate club Interlaken",
+    "city": "Interlaken",
+    "address": "Funky Chocolate Club GmbH, Jungfraustrasse 35, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "67be75a9-d309-4dc2-8b64-b72494436833",
+    "name": "Walking tour in Interlaken",
+    "city": "Interlaken",
+    "address": "Interlaken Walking Tours GmbH, Bahnhofstrasse 37, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "71a7834b-268b-448e-81aa-edd253699b07",
+    "name": "Harderbahn",
+    "city": "Interlaken",
+    "address": "Jungfraubahnen, Harderstrasse 14, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "3b64dcd4-14cb-4c57-bb08-6dcb38e81d8b",
+    "name": "Bernese Oberland – Railway",
+    "city": "Interlaken",
+    "address": "Jungfraubahnen, Harderstrasse 14, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "d09f229d-3798-44b2-a1b3-9503d426c615",
+    "name": "Zentralbahn",
+    "city": "Stansstad",
+    "address": "zb Zentralbahn AG, Bahnhofstrasse 23, 6362, Stansstad, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "c2db00a3-bba6-4f2b-9d31-00314106466f",
+    "name": "Funky Chocolate Club",
+    "city": "interlaken",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "8e59a288-d2eb-4638-a14f-b15d9c03a97c",
+    "name": "Photo Spot St. Beatus Caves",
+    "city": "Sundlauenen",
+    "address": "Beatushöhlen-Genossenschaft, Staatsstrasse 30, 3800, Sundlauenen, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "814e1fe7-57d2-4dbf-9cc9-37c0141f214a",
+    "name": "GoldenPass Express",
+    "city": "Montreux",
+    "address": "Compagnie du Chemin de Fer Montreux Oberland bernois SA, Rue de la Gare 22, 1820, Montreux, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "27a78d61-72ea-4b1f-9b1c-54e62e3bda09",
+    "name": "Paradise for adventure and paragliding",
+    "city": "interlaken",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "11dff398-b7bb-4654-b6ec-e58069c0fb3e",
+    "name": "Raclette rafting",
+    "city": "Matten bei Interlaken",
+    "address": "Outdoor Switzerland AG, Hauptstrasse 15, 3800, Matten bei Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "981cbc28-a1ef-4b20-aa22-b4073bea768e",
+    "name": "Swiss Food and Culture Tour",
+    "city": "Interlaken",
+    "address": "Interlaken Walking Tours GmbH, Bahnhofstrasse 37, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "8e4c324b-ad94-4644-a2bf-2c1a757a2157",
+    "name": "In your element",
+    "city": "Interlaken",
+    "address": "Interlaken Tourismus, Marktgasse 1, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "693358cc-49ab-4535-9bae-77371ee15c9c",
+    "name": "By E-bike through the Oberland",
+    "city": "Interlaken",
+    "address": "Interlaken Tourismus, Marktgasse 1, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "3f5ab7e7-e5f6-4e53-83f2-e418c93cbc06",
+    "name": "Live Escape Adventure",
+    "city": "Interlaken",
+    "address": "MysteryRooms Interlaken, Bernastrasse 33, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "36829536-852a-4392-82eb-ee35b6160770",
+    "name": "Grindelwald First",
+    "city": "Interlaken",
+    "address": "Jungfraubahnen, Harderstrasse 14, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "29ce6850-7a20-43dc-8ff0-4fbe47804c38",
+    "name": "Schynige Platte",
+    "city": "Interlaken",
+    "address": "Jungfraubahnen Management AG, Höheweg 35, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "272c6b4a-c26c-4d7c-8ce3-594e00ea4997",
+    "name": "Trail of the Three Waterfalls",
+    "city": "Interlaken",
+    "address": "Interlaken Tourismus, Marktgasse 1, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "14a5c74f-eddf-4ffb-bd12-347809606562",
+    "name": "Hang-gliding",
+    "city": "Interlaken",
+    "address": "Interlaken Tourismus, Marktgasse 1, 3800, Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "fc32aec1-ad92-40e6-af0f-13e43bfcc142",
+    "name": "Eiger-Rotstock - via ferrata with a feel of the North Face",
+    "city": "interlaken",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "e1071721-e903-4226-8542-089736dac63f",
+    "name": "Sporty Lütschine",
+    "city": "Matten bei Interlaken",
+    "address": "Outdoor Switzerland AG, Hauptstrasse 15, 3800, Matten bei Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "e0638cf2-9518-4f62-81cd-5e0ad4c0ff04",
+    "name": "“Prem Patra” – the love letter",
+    "city": "Zürich",
+    "address": "Erwin Tours of Switzerland, Forchstrasse 204, 8032, Zürich, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "da4ab5bb-6d8a-40a0-802f-f3e12dd16022",
+    "name": "Fixed Rope Park on Mt. Rugen",
+    "city": "Matten bei Interlaken",
+    "address": "Outdoor Switzerland AG, Hauptstrasse 15, 3800, Matten bei Interlaken, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "c535cb18-40a9-491c-b43f-76f08c8a3b4b",
+    "name": "River rafting Lütschine",
+    "city": "Matten bei Interlaken",
+    "address": "Outdoor Switzerland AG, Hauptstrasse 15, 3800, Matten bei Interlaken, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ba1099be-cdea-45cb-b910-cdf049612362",
+    "name": "A trip for those in the know",
+    "city": "Zürich",
+    "address": "Erwin Tours of Switzerland, Forchstrasse 204, 8032, Zürich, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": true,
+    "season": "summer"
+  },
+  {
+    "id": "ac16f8d1-6521-4db7-9ee8-50c0482f2b37",
+    "name": "Heiligenschwendi's Christmas path",
+    "city": "interlaken",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "92a3a9b6-0988-4fd5-a02d-acea9f48a43a",
+    "name": "Golf in the Bernese Oberland region",
+    "city": "Kandersteg",
+    "address": "Koordinationstelle Berner Oberland, 3718, Kandersteg, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a92772d7-6f6e-484f-9433-8a81e10df771",
+    "name": "Lugano Urban Discovery",
+    "city": "Lugano",
+    "address": "Tourism Consulting & Services, 6900, Lugano, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "9f8090ba-91cc-472e-9424-ced59aa64750",
+    "name": "Lugano - Unexpected Classic Tour",
+    "city": "Lugano",
+    "address": "Lugano Region, Via Magatti 6, 6900, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "1ed0020e-6040-46b9-9ce5-2b4eb170e436",
+    "name": "Lugano and its architecture",
+    "city": "Lugano",
+    "address": "Istituto Internazionale di Architettura, Viale S. Franscini 9 – Villa Saroli, 6900, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "48a19ebc-ec89-475d-99d8-7cd78d88c77c",
+    "name": "Lugano – Monte San Salvatore",
+    "city": "Lugano-Paradiso",
+    "address": "Funicolare Monte San Salvatore SA, Via delle Scuole 7, 6902, Lugano-Paradiso, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "7428776d-ef52-4daf-8558-efdea5215b42",
+    "name": "Lake Lugano Cruises",
+    "city": "Lugano",
+    "address": "Società Navigazione del Lago di Lugano, Viale Castagnola 12, 6900, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "4db5ce56-c42c-4d6e-aae6-979e16f35d50",
+    "name": "Casino Lugano",
+    "city": "Lugano",
+    "address": "Casinò Lugano, Via Stauffacher 1, 6901, Lugano, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "8cbaa1d8-eb0f-45a1-aead-c3db9f71afe6",
+    "name": "Discover the Lugano region the environmentally friendly way ",
+    "city": "Lugano",
+    "address": "Lugano Region, Via Magatti 6, 6900, Lugano, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "6838b2c1-fb4c-4648-90f7-8d9a6a176b6b",
+    "name": "Lakeside Lido di Lugano",
+    "city": "Lugano",
+    "address": "Lido di Lugano, Via Lido, 6906, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2cd24423-b82d-4452-89e5-ffec318749cb",
+    "name": "Christmas lights in Lugano",
+    "city": "Lugano",
+    "address": "Città di Lugano – Divisione eventi e congressi, Via Trevano 55, 6900, Lugano, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "737392b6-b310-4b98-9437-499db4ea2b8d",
+    "name": "Foxtrail – fun in Lugano",
+    "city": "lugano",
+    "address": "Foxtrail (Foxtrail Schweiz GmbH), Tribschenstrasse 78, 6005, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "03cb66d2-d752-40a5-b264-df6658182659",
+    "name": "A visit to Lugano's parks and gardens",
+    "city": "lugano",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "df4abf65-8a8a-4ff7-a5dd-2ed9274c92f5",
+    "name": "Explore street art in Lugano",
+    "city": "Lugano",
+    "address": "Arte Urbana Lugano, Via Trevano 55, 6900, Lugano, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "bd5b421f-4f97-4179-bea3-6997e743dca6",
+    "name": "Culinary cruise on Lake Lugano",
+    "city": "Lugano",
+    "address": "Tourism Consulting & Services, 6900, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "692460f7-5557-4c18-a42c-7052519c4ca5",
+    "name": "Grotto tour on Lake Lugano",
+    "city": "Bellinzona",
+    "address": "Ticino Turismo, Via Canonico Ghiringhelli 7, 6501, Bellinzona, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "66bff1aa-7686-47ad-9e7f-80ca242f7209",
+    "name": "Scenic route above Lake Lugano",
+    "city": "Morcote",
+    "address": "Morcote Turismo, 6922, Morcote, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "06504657-61f1-440e-a781-3fcc923a8063",
+    "name": "Emotions fly high above Lake Lugano",
+    "city": "Lugano",
+    "address": "Balloon Team SA, Via Canonica 4, 6900, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "0aa02489-1b28-48e6-837a-ca28f69f4fea",
+    "name": "Wine cellar visits & Beer Tastings in Lugano Region",
+    "city": "Lugano",
+    "address": "Ente Turistico del Luganese, Via Giovanni Nizzola 2, 6901, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ee4c32e0-3f62-4e63-8fb1-7ecd7292db77",
+    "name": "Via Nassa",
+    "city": "Lugano",
+    "address": "Associazione Via Nassa, Via Pietro Peri 21B, 6901, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "7cefc740-c963-4b7a-a4bf-05527d2c10fd",
+    "name": "San Michele Park",
+    "city": "Lugano",
+    "address": "Lugano Region, Via Magatti 6, 6900, Lugano, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "50a9fd37-8773-470b-8c2d-c51531d84567",
+    "name": "Ciani Park",
+    "city": "Lugano",
+    "address": "Lugano Region, Via Magatti 6, 6900, Lugano, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "bde80944-ac79-498e-a2f2-99f94c8e640f",
+    "name": "Photo Spot Swissminiatur",
+    "city": "lugano",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ba120098-8292-4a7e-9cc6-e7595a67de2a",
+    "name": "ViaGottardo - It all began with the devil",
+    "city": "lugano",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ae40ee00-1859-4302-abf0-99d1d8033987",
+    "name": "Monte Generoso",
+    "city": "Capolago",
+    "address": "Ferrovia Monte Generoso SA, Via Lüera 1, 6825, Capolago, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ae28475e-9305-46d1-8eb4-1025b44deb47",
+    "name": "Ayurveda and spa",
+    "city": "Carona",
+    "address": "Shalini Centro Ayurveda, Via Lugia 44, 6914, Carona, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a26c2d92-45b1-491d-97ce-b07af6327303",
+    "name": "Hermann Hesse Foundation",
+    "city": "Montagnola",
+    "address": "Museo Hermann Hesse Montagnola, Ra Cürta 2, 6926, Montagnola, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "8f40e1d0-f563-42a2-a0e3-b2f34bede35c",
+    "name": "Lakeshore promenade",
+    "city": "lugano",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "89bbf1b3-1e5e-4d4b-a85b-d813e6027b8c",
+    "name": "Monte Lema",
+    "city": "Miglieglia",
+    "address": "Funivia Monte Lema SA, 6986, Miglieglia, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "62db100b-2689-47d9-b0b8-21fb17b107f7",
+    "name": "Monte Tamaro",
+    "city": "Rivera",
+    "address": "Monte Tamaro SA, Via Campagnole 6, 6802, Rivera, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "28d93d4a-9465-46bf-ac95-2a25e39ca74e",
+    "name": "Photo Spot Monte San Giorgio",
+    "city": "lugano",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": true,
+    "season": "summer"
+  },
+  {
+    "id": "24b3f121-6085-4d82-8390-013c310b3cb7",
+    "name": "Piazza della Riforma",
+    "city": "lugano",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "da511988-77b9-4861-8e52-e7234e016c89",
+    "name": "Montreux Ice Rink - skating on the shores of Lake Geneva",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "176517b1-af3f-4b22-a881-ba2ba98dbeee",
+    "name": "Christmas in Montreux ",
+    "city": "Montreux",
+    "address": "Montreux Noël, Grand-Rue 32, 1820, Montreux, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "7e3f0616-7c25-48a6-aadf-d6aeb2176935",
+    "name": "Quays of Montreux",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2e847586-13e1-4b0f-b3bc-73382be5e6de",
+    "name": "Old Town of Montreux",
+    "city": "Montreux",
+    "address": "Montreux-Vevey Tourisme, Rue du Théâtre 5, 1820, Montreux",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "6bd99714-856c-4a1f-b8f4-d4f84d0ca126",
+    "name": "With Sissi in Montreux",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "0e1446d6-26d0-4ed0-96eb-ddc5eaa31007",
+    "name": "Flying over Riviera Montreux and lake Geneva",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "571706df-269a-42e4-8684-742ff2572c92",
+    "name": "Lavaux vineyards",
+    "city": "Montreux",
+    "address": "Montreux-Vevey Tourisme, Rue du Théâtre 5, 1820, Montreux, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": true,
+    "season": "summer"
+  },
+  {
+    "id": "461254ee-d58e-41f3-bebb-1f1811e596c2",
+    "name": "Palais Oriental",
+    "city": "Montreux",
+    "address": "Restaurant Le Palais Oriental, Quai Ernest Ansermet 6, 1820, Montreux, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "d367c729-8c4a-4714-a61d-ca8d7b07e542",
+    "name": "Chauderon Gorge",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "79e79044-a366-4017-9b7b-5bf87e7d7225",
+    "name": "Freddie Mercury Statue",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "5872ebd8-5df7-4ac4-883f-5288c216f4ea",
+    "name": "Caux natural ice rink",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "0b6fab86-d688-4b60-855d-58d4961382f9",
+    "name": "Trains in the Swiss Riviera Region",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "00ed827c-3f3b-4eb8-9e62-b7450cc3b1bf",
+    "name": "Vernex Park",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "004af07e-f10a-4199-a802-1e110e831c8e",
+    "name": "Les Avants toboggan run",
+    "city": "montreux",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "cfb671e5-c2ce-4235-8324-337de75cb119",
+    "name": "The Cheese Train",
+    "city": "Montreux",
+    "address": "Compagnie du Chemin de Fer Montreux Oberland bernois SA, Rue de la Gare 22, 1820, Montreux, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "fef443b3-7fc5-4ad2-971f-6e4871b683ef",
+    "name": "Gaze over the Lavaux on a paddleboard",
+    "city": "Clarens",
+    "address": "kamay-tours, Rue du Lac 93, 1815, Clarens, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "f9ef3bf7-120e-4c70-8a51-19839f6bbf6d",
+    "name": "Rougemont - a via ferrata for all iron route enthusiasts",
+    "city": "montreux",
+    "address": "",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "f93a0fe5-5f23-4e32-b093-308c78807870",
+    "name": "Discover White-water Sports in Chateau d'Oex!",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "f6fc1c72-7a29-47bb-9a07-5ea905b41fbb",
+    "name": "The Col de Jaman mule track",
+    "city": "montreux",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "f4869131-1a49-4c28-abb5-3dfadf9170df",
+    "name": "Wispile",
+    "city": "Saanen",
+    "address": "Gstaad Saanenland Tourismus, Dorfstrasse 60a, 3792, Saanen, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "cd1694eb-8be9-4302-bc14-a739a760e08d",
+    "name": "Historical Points",
+    "city": "Luzern",
+    "address": "Luzern Tourismus AG, Zentralstrasse 5, 6002, Luzern, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "c36d5bff-f4f7-4bee-a709-641ae4339ba8",
+    "name": "Balloon Flights over Château-d'Oex",
+    "city": "montreux",
+    "address": "",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "ba17dfd4-96f9-4b96-98d0-2c80ed6c4191",
+    "name": "Dine on the move",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "b4098e90-ff42-499b-84ae-6e86a9c2d25f",
+    "name": "Historical Points",
+    "city": "Zürich",
+    "address": "Zürich Tourismus, Im Hauptbahnhof, 8001, Zürich, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "8c6c0c60-0a39-4612-85ce-07d7fe30e215",
+    "name": "La Videmanette – Gstaad Dolomites",
+    "city": "Rougemont",
+    "address": "Talstation La Videmanette, 1659, Rougemont, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "853ab9ac-1f62-4318-8ded-e35bba9655cc",
+    "name": "Covered Market",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "7408c6fc-0a1d-4d3b-a619-20c05f19cf63",
+    "name": "Everyone loves chocolate",
+    "city": "montreux",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "6f854450-46f2-45c8-a539-6b067fcdf18d",
+    "name": "La Rambertia Alpine Garden",
+    "city": "montreux",
+    "address": "",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "0686538c-9eae-45cf-acaf-c079501554f6",
+    "name": "Carnival culture in Schwyz",
+    "city": "schwyz",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "e47af5ec-7d87-46bf-995d-378688868134",
+    "name": "Musical radio play \"Jimmy Flitz - e Reis dür d Schwyz\"",
+    "city": "schwyz",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "d10151a7-c9ae-48f5-8227-0f985b87ea62",
+    "name": "Stoosbahn, the steepest funicular railway in the world",
+    "city": "Stoos SZ",
+    "address": "Stoosbahnen AG, Stoosplatz 1, 6433, Stoos SZ, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "b29a89aa-f761-4bdd-8dc9-109c33720d1d",
+    "name": "Photo Spot Lake Lucerne",
+    "city": "Brunnen",
+    "address": "Erlebnisregion Mythen, Bahnhofstrasse 15, 6440, Brunnen, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "6343af66-3e67-4f05-be3e-23b7a1f4b80f",
+    "name": "Photo Spot Grosser Mythen",
+    "city": "schwyz",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "5bf9ed89-d9ae-45cd-ba8f-f40a854ab20a",
+    "name": "Lake Zug Cruises",
+    "city": "Zug",
+    "address": "Schifffahrtsgesellschaft für den Zugersee AG, An der Aa 6, 6300, Zug, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2365d037-fd35-4b32-9fb8-f80d6e67a935",
+    "name": "Chamois in the Zwüschetmythen region",
+    "city": "schwyz",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "34c6c2a4-e4da-4aa6-ad4f-7eb65ba44d7f",
+    "name": "Exclusive collection of flags with flag-waving course",
+    "city": "Schwyz",
+    "address": "Bundesbriefmuseum Schwyz, Bahnhofstrasse 20, 6430, Schwyz, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "cbbca12f-1036-41ff-bbbc-b69db2a16995",
+    "name": "To the shepherd",
+    "city": "Muotathal",
+    "address": "Hüttenhotel Husky-Lodge, Balm 38, 6436, Muotathal, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "c8046544-bbc2-403a-8667-b69c7440b5bd",
+    "name": "Sunny slope",
+    "city": "Stoos SZ",
+    "address": "Stoosbahnen AG, Stoosplatz 1, 6433, Stoos SZ, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "b9f8022a-3fee-42cb-9696-386bd30a3c3e",
+    "name": "Hay soup in Sattel",
+    "city": "schwyz",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "b53a900a-6638-4013-b114-3b1f39449505",
+    "name": "Bödmeren virgin forest",
+    "city": "Muotathal",
+    "address": "Hüttenhotel Husky-Lodge, Balm 38, 6436, Muotathal, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "9fa2bcd0-0742-4e38-9236-7606b8dedd98",
+    "name": "Hölloch Parcours",
+    "city": "Muotathal",
+    "address": "Trekking Team AG, Stalden 14, 6436, Muotathal, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "9f79ea35-3ab8-4cc9-ab68-eb302568ab40",
+    "name": "One of the longest toboggan runs in central Switzerland",
+    "city": "Beckenried",
+    "address": "Gästeinformation an der Schiffstation Beckenried, Seestrasse 1, 6375, Beckenried, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "4b9ec130-b97f-48bd-85ad-fd9ed4616536",
+    "name": "Fronalpstock viewing platform",
+    "city": "Stoos SZ",
+    "address": "Stoosbahnen AG, Stoosplatz 1, 6433, Stoos SZ, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "08a09a3c-5ee0-45d0-9758-faf8ebd2fb8f",
+    "name": "Victorinox Flagship Store, Zurich",
+    "city": "Zürich",
+    "address": "Victorinox Flagship Store, Rennweg 58, 8001, Zürich, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "0246237a-d036-4fb1-991f-6a4c9895d927",
+    "name": "Activities in Sattel-Hochstuckli",
+    "city": "Sattel",
+    "address": "Sattel-Hochstuckli AG, 6417, Sattel, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ec428553-78eb-475a-bdef-3296a6f22896",
+    "name": "Historical route by canoe",
+    "city": "Schwyz",
+    "address": "Adventure Point, Grundstrasse 63, 6430, Schwyz, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "d78ba9f8-1465-43b9-9299-23fbc0cb073c",
+    "name": "Winter canoeing tours on Lake Uri",
+    "city": "Schwyz",
+    "address": "Adventure Point, Grundstrasse 63, 6430, Schwyz, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "41524aa2-f73b-4942-8713-21bbfe40a732",
+    "name": "Muotathal’s Weatherman Hiking Trail",
+    "city": "Schwyz",
+    "address": "Stoos-Muotatal Tourismus, Grundstrasse 232, 6430, Schwyz, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "dc2b782d-b1f1-40ee-aef6-2d9f9b012d05",
+    "name": "Via Ferrata in Zermatt",
+    "city": "Zermatt",
+    "address": "ZERMATTERS, Bahnhofstrasse 58, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "10752551-3a8a-401a-a984-523389c8cb75",
+    "name": "Guided tour of Zermatt and Täsch",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "57e2ab81-411c-4fa1-ae96-d67e7aaf492f",
+    "name": "Fly &amp; Dine with Air Zermatt",
+    "city": "Zermatt",
+    "address": "Air Zermatt AG, Heliport, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "20fa6f91-79f8-47a1-9e09-3e89a845b07e",
+    "name": "Forest Fun Park in Zermatt",
+    "city": "Zermatt",
+    "address": "Forest Fun Park, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "fcc12f94-e47f-4d5f-bb22-5a53e527e551",
+    "name": "Your guide to the perfect ski day",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "edaa08f9-f72f-4d30-b7fb-80785ab9b958",
+    "name": "Matterhorn Ski Paradise",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "dae395b6-fd9f-4f70-aa40-73a81d9f09dc",
+    "name": "Gorner Gorge",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "d32f18d0-b3b7-496f-ba29-0522e46d6c1c",
+    "name": "Sunnegga - Rothorn",
+    "city": "Zermatt",
+    "address": "Zermatt Bergbahnen AG, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "ce50d728-f074-4b2e-85b7-bcf0f3003cc6",
+    "name": "36 kilometres of secured freeride trails",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "c9bbb50a-81d0-40e4-901a-cd2307c61905",
+    "name": "Matterhorn Glacier Paradise",
+    "city": "Zermatt",
+    "address": "Zermatt Bergbahnen AG, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "c1fa3841-0bb7-4bc6-beed-b8af5bce3fb0",
+    "name": "Photo Spot Gornergrat-Matterhorn",
+    "city": "Zermatt",
+    "address": "Gornergrat Bahn, Bahnhof, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a883226c-654e-402c-a678-916a5524d9f8",
+    "name": "Via ferrata Schweifinen",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "9d7d1d7d-4d1d-4c1f-b797-432744466e10",
+    "name": "Wolli Adventure Park Sunnegga",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "3f07c843-f972-491b-90c0-2098a3a002fa",
+    "name": "An exclusive sunrise on the pistes",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "2491f607-81ea-4ecd-bc8e-cfcaf76d3c39",
+    "name": "Ski trip around the Matterhorn",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "ba17dfd4-96f9-4b96-98d0-2c80ed6c4191",
+    "name": "Dine on the move",
+    "city": "zermatt",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "b93a9e98-2d92-45c4-93cd-251d8f5ecfb3",
+    "name": "Monte Rosa Tour",
+    "city": "zermatt",
+    "address": "",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a237d37e-ae78-4007-ac07-12c53620dbe6",
+    "name": "Matterhorn Gotthard Bahn – the Alpine adventure railway",
+    "city": "Brig",
+    "address": "Matterhorn Gotthard Bahn, Bahnhofplatz 7, 3900, Brig, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2daefd9c-b37a-4d4d-ae17-a2caa4ecf6e7",
+    "name": "Ricola Herb Garden",
+    "city": "Laufen",
+    "address": "Ricola AG, Baselstrasse 31, 4242, Laufen, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "ec815916-a755-4f19-afae-8183ebb515d4",
+    "name": "Europe’s highest outdoor pool and spa at 2,222 metres above sea level",
+    "city": "Zermatt",
+    "address": "Hotel Riffelalp Resort 2222m, Riffelalp, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "e2285fd4-e11c-4a96-a980-988024aa3f70",
+    "name": "Photo Spot Matterhorn",
+    "city": "Zermatt",
+    "address": "Zermatt Bergbahnen AG, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "8c9fb25a-7344-42f7-a129-67f152eebdb9",
+    "name": "Glacier Palace in the Matterhorn Glacier Paradise",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "897b6c43-dcf6-40ba-8e9e-5b89c396ccd5",
+    "name": "Climbing route in Gorner Gorge",
+    "city": "Zermatt",
+    "address": "ZERMATTERS, Bahnhofstrasse 58, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "8543d735-a165-4a80-baca-fbb51c832159",
+    "name": "Gifthittli-Furi",
+    "city": "Zermatt",
+    "address": "Zermatt Bergbahnen AG, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "3e386fe3-943c-4681-9c76-557a8960fd86",
+    "name": "Run with views of the Horu",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "37f7c8d9-bbcc-4735-8867-ff0fbdd2613a",
+    "name": "Dirtscooter and Kickbike",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2f8db592-0185-40d4-a36d-e34276e81b3f",
+    "name": "Wolli and the Climate Detective",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2887ee26-f6e3-4235-beb8-ed2ef9014bcf",
+    "name": "Climbing the Breithorn",
+    "city": "Zermatt",
+    "address": "ZERMATTERS, Bahnhofstrasse 58, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "1dfb3334-4bca-49f7-9e97-e7094e6c8df8",
+    "name": "Gornergrat",
+    "city": "Zermatt",
+    "address": "Gornergrat Bahn, Bahnhof, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "1481f75f-87d7-4eef-94ca-0713d29324cc",
+    "name": "Wolli Park for Beginners at Sunnegga",
+    "city": "Zermatt",
+    "address": "Zermatt Tourismus, Bahnhofplatz 5, 3920, Zermatt, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "a6d8b044-cbee-4d62-bd92-3536c84e844e",
+    "name": "Zurich's Old Town",
+    "city": "Zürich",
+    "address": "Zürich Tourismus, Im Hauptbahnhof, 8001, Zürich, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "9b00d845-c1a6-4b7f-9289-9e02ad42b42d",
+    "name": "Zürich West - from industrial to trend-setting district",
+    "city": "Zürich",
+    "address": "Zürich Tourismus, Im Hauptbahnhof, 8001, Zürich, CH",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "3636ccda-e7bd-474a-ba0e-712a962f260e",
+    "name": "Zoo Zurich",
+    "city": "Zürich",
+    "address": "Zoo Zürich, Zürichbergstrasse 221, 8044, Zürich, CH",
+    "lake": false,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "9fe267e6-9952-47eb-942c-fb3a3b6f5fd2",
+    "name": "Uetliberg",
+    "city": "Zürich",
+    "address": "Sihltal Zürich Uetliberg Bahn SZU AG, Wolframplatz 21, 8045, Zürich, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "winter"
+  },
+  {
+    "id": "bbdc7a20-9f69-4c16-a53e-73c5979f79b4",
+    "name": "Stein Castle Ruins",
+    "city": "zurich",
+    "address": "",
+    "lake": false,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "a7498510-44db-4b4b-bb55-bfdcd1ef1fa2",
+    "name": "Monastery of Einsiedeln",
+    "city": "Einsiedeln",
+    "address": "Einsiedeln-Ybrig-Zürichsee AG, Hauptstrasse 85, 8840, Einsiedeln, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "4f0b7cea-fb12-4dff-832b-f12659a65fb1",
+    "name": "Jacob's Trail - Pilgrimage on Ancient Paths",
+    "city": "zurich",
+    "address": "",
+    "lake": true,
+    "mountain": false,
+    "heritage": false,
+    "season": "summer"
+  },
+  {
+    "id": "2f7cfdb6-eb25-4ade-967d-c4fb4fa3cf03",
+    "name": "Fun in the water in Alpamare",
+    "city": "Pfäffikon SZ",
+    "address": "Alpamare, Gwattstrasse 12, 8808, Pfäffikon SZ, CH",
+    "lake": true,
+    "mountain": true,
+    "heritage": false,
+    "season": "summer"
+  }
+]
