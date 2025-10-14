@@ -1,0 +1,530 @@
+{
+  "provider": "Google Distance Matrix API",
+  "generated_at": "2025-10-14T12:57:01.788280+00:00",
+  "units": {
+    "distance": "km",
+    "duration": "minutes"
+  },
+  "distances": {
+    "Appenzell, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 215.04,
+        "duration_minutes": 149.9,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 370.48,
+        "duration_minutes": 248.4,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 222.78,
+        "duration_minutes": 167.3,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 156.22,
+        "duration_minutes": 108.6,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 223.13,
+        "duration_minutes": 170.0,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 301.02,
+        "duration_minutes": 204.2,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 101.14,
+        "duration_minutes": 98.2,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 258.48,
+        "duration_minutes": 274.1,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 96.92,
+        "duration_minutes": 77.8,
+        "status": "OK"
+      }
+    },
+    "Bern, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 212.05,
+        "duration_minutes": 148.6,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 159.5,
+        "duration_minutes": 114.4,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 56.41,
+        "duration_minutes": 47.5,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 112.05,
+        "duration_minutes": 78.7,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 280.77,
+        "duration_minutes": 193.2,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 90.05,
+        "duration_minutes": 70.2,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 150.54,
+        "duration_minutes": 101.7,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 131.08,
+        "duration_minutes": 151.7,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 124.94,
+        "duration_minutes": 95.2,
+        "status": "OK"
+      }
+    },
+    "Geneva, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 364.74,
+        "duration_minutes": 243.4,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 159.05,
+        "duration_minutes": 111.0,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 215.61,
+        "duration_minutes": 145.3,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 264.74,
+        "duration_minutes": 173.5,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 433.46,
+        "duration_minutes": 288.0,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 93.15,
+        "duration_minutes": 74.3,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 303.23,
+        "duration_minutes": 196.5,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 231.89,
+        "duration_minutes": 172.7,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 277.63,
+        "duration_minutes": 190.0,
+        "status": "OK"
+      }
+    },
+    "Interlaken, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 217.51,
+        "duration_minutes": 166.9,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 56.53,
+        "duration_minutes": 47.5,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 215.93,
+        "duration_minutes": 149.9,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 68.24,
+        "duration_minutes": 67.9,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 188.27,
+        "duration_minutes": 166.1,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 146.47,
+        "duration_minutes": 105.7,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 112.5,
+        "duration_minutes": 94.5,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 111.58,
+        "duration_minutes": 138.8,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 118.68,
+        "duration_minutes": 102.8,
+        "status": "OK"
+      }
+    },
+    "Lucerne, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 151.35,
+        "duration_minutes": 109.8,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 110.39,
+        "duration_minutes": 81.6,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 265.83,
+        "duration_minutes": 180.1,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 68.02,
+        "duration_minutes": 68.3,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 170.18,
+        "duration_minutes": 124.2,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 196.37,
+        "duration_minutes": 135.9,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 46.35,
+        "duration_minutes": 37.4,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 176.65,
+        "duration_minutes": 188.6,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 52.52,
+        "duration_minutes": 45.6,
+        "status": "OK"
+      }
+    },
+    "Lugano, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 221.54,
+        "duration_minutes": 169.5,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 276.95,
+        "duration_minutes": 193.5,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 432.39,
+        "duration_minutes": 292.3,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 186.51,
+        "duration_minutes": 165.1,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 168.65,
+        "duration_minutes": 122.7,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 278.8,
+        "duration_minutes": 233.2,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 148.74,
+        "duration_minutes": 114.2,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 196.41,
+        "duration_minutes": 185.6,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 205.48,
+        "duration_minutes": 155.0,
+        "status": "OK"
+      }
+    },
+    "Montreux, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 296.0,
+        "duration_minutes": 204.1,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 90.31,
+        "duration_minutes": 71.7,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 94.77,
+        "duration_minutes": 79.6,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 146.87,
+        "duration_minutes": 105.9,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 196.0,
+        "duration_minutes": 134.1,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 277.46,
+        "duration_minutes": 235.6,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 234.49,
+        "duration_minutes": 157.1,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 139.17,
+        "duration_minutes": 113.1,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 208.89,
+        "duration_minutes": 150.6,
+        "status": "OK"
+      }
+    },
+    "Schwyz, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 101.93,
+        "duration_minutes": 99.2,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 146.87,
+        "duration_minutes": 102.5,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 302.31,
+        "duration_minutes": 201.0,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 111.48,
+        "duration_minutes": 94.7,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 44.92,
+        "duration_minutes": 35.9,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 150.62,
+        "duration_minutes": 115.8,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 232.85,
+        "duration_minutes": 156.8,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 157.09,
+        "duration_minutes": 180.2,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 59.44,
+        "duration_minutes": 48.7,
+        "status": "OK"
+      }
+    },
+    "Zermatt, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 258.04,
+        "duration_minutes": 273.6,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 132.04,
+        "duration_minutes": 150.5,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 232.59,
+        "duration_minutes": 174.2,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 112.48,
+        "duration_minutes": 137.6,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 195.5,
+        "duration_minutes": 186.2,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 197.22,
+        "duration_minutes": 185.1,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 139.32,
+        "duration_minutes": 110.9,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 156.51,
+        "duration_minutes": 179.5,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 213.26,
+        "duration_minutes": 220.2,
+        "status": "OK"
+      }
+    },
+    "Zurich, Switzerland": {
+      "Appenzell, Switzerland": {
+        "distance_km": 90.92,
+        "duration_minutes": 69.6,
+        "status": "OK"
+      },
+      "Bern, Switzerland": {
+        "distance_km": 121.31,
+        "duration_minutes": 92.9,
+        "status": "OK"
+      },
+      "Geneva, Switzerland": {
+        "distance_km": 276.75,
+        "duration_minutes": 191.4,
+        "status": "OK"
+      },
+      "Interlaken, Switzerland": {
+        "distance_km": 118.56,
+        "duration_minutes": 101.3,
+        "status": "OK"
+      },
+      "Lucerne, Switzerland": {
+        "distance_km": 52.0,
+        "duration_minutes": 42.6,
+        "status": "OK"
+      },
+      "Lugano, Switzerland": {
+        "distance_km": 207.17,
+        "duration_minutes": 153.2,
+        "status": "OK"
+      },
+      "Montreux, Switzerland": {
+        "distance_km": 207.3,
+        "duration_minutes": 147.2,
+        "status": "OK"
+      },
+      "Schwyz, Switzerland": {
+        "distance_km": 60.69,
+        "duration_minutes": 47.5,
+        "status": "OK"
+      },
+      "Zermatt, Switzerland": {
+        "distance_km": 213.64,
+        "duration_minutes": 217.7,
+        "status": "OK"
+      },
+      "Zurich, Switzerland": {
+        "distance_km": 0.0,
+        "duration_minutes": 0.0,
+        "status": "OK"
+      }
+    }
+  }
+}
