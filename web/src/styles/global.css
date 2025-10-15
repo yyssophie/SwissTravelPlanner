@@ -355,6 +355,19 @@ main {
   box-shadow: 0 22px 40px rgba(93, 243, 255, 0.32);
 }
 
+.btn--dark {
+  background: #111;
+  color: #f7f9fb;
+  box-shadow: none;
+  border: none;
+  text-transform: none;
+}
+
+.btn--dark:hover {
+  background: #181818;
+  box-shadow: none;
+}
+
 .btn--must {
   background: #f98c53;
   color: #2b1b0f;

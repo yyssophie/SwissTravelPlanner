@@ -45,6 +45,8 @@ const shuffle = <T,>(items: T[]): T[] => {
   return arr;
 };
 
+const INITIAL_ATTRACTIONS = shuffle(BASE_ATTRACTIONS);
+
 const CITY_OPTIONS = [
   "appenzell",
   "bern",
@@ -83,7 +85,7 @@ const PlannerPage = () => {
     food: "0",
     sport: "0",
   });
-  const [attractions, setAttractions] = useState<Attraction[]>(() => shuffle(BASE_ATTRACTIONS));
+  const [attractions, setAttractions] = useState<Attraction[]>(INITIAL_ATTRACTIONS);
 
   // Must‑visit flow state
   const [mvIndex, setMvIndex] = useState<number>(0);
@@ -495,7 +497,7 @@ const PlannerPage = () => {
 
         <div className="planner__actions">
           <button
-            className="btn btn--primary"
+            className="btn btn--primary btn--dark"
             disabled={overLimit || totalPct !== 100 || !from || !to || days < 1 || days > 21}
             onClick={startPlanning}
           >
