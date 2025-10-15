@@ -1843,7 +1843,7 @@
     ],
     "lake": false,
     "mountain": false,
-    "culture": false,
+    "culture": true,
     "food": false,
     "sport": false,
     "lake_reason": "The experience is centered around an airport, not a lake.",
@@ -16874,7 +16874,8 @@
     "season": [
       "spring",
       "summer",
-      "autumn"
+      "autumn",
+      "winter"
     ],
     "top": null,
     "classification": [
@@ -21270,124 +21271,6 @@
     "food_reason": "While there are restaurants mentioned, the focus is not on a culinary experience.",
     "culture_reason": "There is no mention of museums, churches, castles, or other cultural heritage activities.",
     "season_reason": "Summer offers hiking and cycling, while winter provides skiing and tobogganing, with the cog railway operating year-round."
-  },
-  {
-    "identifier": "cd555587-378f-4301-b968-d3708e437901",
-    "name": "Glacier Express",
-    "city": "zermatt",
-    "abstract": "The journey in what has been dubbed the world’s slowest express train takes travellers across the Alps within roughly eight hours, passing through 91 tunnels and over 291 bridges.",
-    "description": "The Glacier Express offers a journey for the senses – from Engadine right to the Matterhorn. On its relaxing drive from dazzling St. Moritz to equally sophisticated Zermatt, the Glacier Express delights travellers with scenic attractions and technical state-of-the-art achievements. With its overhight panoramic windows, the Glacier Express opens up unobstructed views of unique landscapes.\n\nExcellence Class\n\nA rail journey through the Swiss Alps has never been so luxurious. With guaranteed window seats, an exclusive bar, on-board entertainment, a concierge service and personal travel guides, the Glacier Express Excellence Class is setting new standards. The journey between St. Moritz and Zermatt is a feast for the senses: while the spectacular landscape passes by outside, guests are served champagne and amuse-bouches – followed by an exquisite five-course meal with accompanying wine.\n\nWith this new service, the Glacier Express offers one of the most exclusive rolling touristic highlights in Switzerland. Reservations for the most sought-after seats in Switzerland can be booked at glacierexpress.ch [https://www.glacierexpress.ch/en/offers/excellence-class/].\n\nFACTS GLACIER EXPRESS\nRoute: Zermatt – St. Moritz or vice versa Distance: 291 km Duration: 8 h 03 min \n\nEXCURSION TIPS\n * Matterhorn Glacier Paradise – a view of French, Italian and Swiss mountain giants from a vantage point of almost 4000 m\n * Gornergrat – a view onto the Matterhorn and 28 other four-thousand-meter-peaks from a vantage point of 3131 m\n * Rhine Gorge – Exploring the «Grand Canyon» of Switzerland between Ilanz and Reichenau on foot, by bike or by rafting boat\n * Lake Sils – at 1800 m, Europe’s highest altitude regular scheduled passenger boat service\n * Corvatsch – the eastern Alpine region’s highest altitude summit station at 3303 m. A paradise for skiers and hikers\n\nFOOD & BEVERAGES\n * 1st and 2nd class: lunch served at the seat, three-course meal CHF 49, daily menu CHF 36, à la carte options\n * Excellence Class: Champagne and aperitif platter, 5-course-menu with wine accompaniment, soft drinks, mineral and coffee included\n\nTIMETABLE\nSummer and winter timetable panoramic trains [https://www.glacierexpress.ch/en/timetable]\n\nTICKET\n This route is fully covered by the Swiss Travel Pass (Flex) and GA travel card.\nBook tickets [https://www.myswitzerland.com/en/planning/transport-accommodation/tickets-public-transport/]\n\nRESERVATION\n Apart from a valid ticket, a seat reservation is required (max. 90 days in advance).\nIn addition, the train is subject to surcharge:\n\n * Long section: CHF 49\n * Short section*: CHF 44\n * Excellence Class: CHF 490 on 1st class ticket\n\n*short sections are:\n\n * St. Moritz – Chur – St. Moritz\n * Chur – Andermatt – Chur\n * Andermatt – Brig – Andermatt\n * Brig – Zermatt – Brig\n\n Go to reservations [https://shop.glacierexpress.ch/gex_en]\n\nPlease note that no dogs are permettied onboard the Glacier Express and that only one piece of luggage is allowed per person.\n\nBROCHURE\nFascinating and comprehensive information around the Glacier Express, featuring highlights and relevant facts and figures, can be downloaded here:\nPDF brochure [https://www.mystsnet.com/?wpdmdl=16684&ind=1710344174761]",
-    "season": [
-      "summer",
-      "winter"
-    ],
-    "top": null,
-    "classification": [
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "licences",
-        "values": [
-          {
-            "name": "bysa",
-            "title": "BY-SA"
-          }
-        ]
-      }
-    ],
-    "lake": false,
-    "mountain": true,
-    "culture": false,
-    "food": true,
-    "sport": false,
-    "lake_reason": "The experience does not directly involve a lake or lakeside activities.",
-    "mountain_reason": "The journey is centered on alpine terrain, passing through the Swiss Alps and offering views of mountain peaks.",
-    "sport_reason": "The experience does not involve physical or adventure activities.",
-    "food_reason": "The experience includes a culinary aspect with a five-course meal and wine accompaniment.",
-    "culture_reason": "The experience does not focus on cultural heritage, museums, or architecture.",
-    "season_reason": "The Glacier Express operates with both summer and winter timetables, offering panoramic views and experiences suitable for both seasons."
-  },
-  {
-    "identifier": "edaa08f9-f72f-4d30-b7fb-80785ab9b958",
-    "name": "Matterhorn Ski Paradise",
-    "city": "zermatt",
-    "abstract": "The Matterhorn Ski Paradise offers an apparently endless array of pistes on which skiiers can clock an astronomical number of metres in altitude. Skiers or snowboarders hungry for adventure can even take a diversion to Italy. The Zermatt region is the perfect place to undertake a long-distance ski tour.",
-    "description": "The plateau above the Theodul Glacier is home to Europe’s highest upper station. From here, it is about 2,000 metres back down to the valley. Thankfully, the route down the mountainside is peppered with restaurants serving delicious food and providing weary guests with a place to rest and recharge their batteries. Skiing, snowboarding and winter hiking are possible throughout the year in Zermatt. In short, this ski region is up there with the best of them and it is worth staying for several days to discover all that it has to offer. We recommend a trip to the Breuil-Cervinia region in the Italian Val D’Aosta. This part of the Matterhorn region boasts 160 kilometres of pistes covering all degrees of difficulty. So if you are in search of a bit of Italianità, look no further than Zermatt.\n\nMore information [https://www.zermatt.ch/en/unique/International-Ski-Area]",
-    "season": [
-      "winter",
-      "spring",
-      "autumn",
-      "summer"
-    ],
-    "top": null,
-    "classification": [
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "swisstainable",
-        "values": [
-          {
-            "name": "swisstainablelevel1",
-            "title": "* Committed"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "geographicallocations",
-        "values": [
-          {
-            "name": "inthealpinemountains",
-            "title": "In the alpine mountains"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "seasons",
-        "values": [
-          {
-            "name": "winter",
-            "title": "Winter"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "reachabilitylocation",
-        "values": [
-          {
-            "name": "attheskislope",
-            "title": "At the ski slope"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "licences",
-        "values": [
-          {
-            "name": "bysa",
-            "title": "BY-SA"
-          }
-        ]
-      }
-    ],
-    "lake": false,
-    "mountain": true,
-    "culture": false,
-    "food": true,
-    "sport": true,
-    "lake_reason": "The experience does not involve any activities on or directly using a lake.",
-    "mountain_reason": "The experience centers on alpine terrain and mountain skiing activities.",
-    "sport_reason": "The experience includes skiing, snowboarding, and winter hiking, which are physical activities.",
-    "food_reason": "The description mentions restaurants serving delicious food along the ski route.",
-    "culture_reason": "There is no mention of museums, churches, castles, or other cultural heritage activities.",
-    "season_reason": "Skiing and snowboarding are available year-round, with winter being the most suitable season, followed by spring and autumn for winter hiking, and summer for glacier skiing."
   },
   {
     "identifier": "dae395b6-fd9f-4f70-aa40-73a81d9f09dc",
