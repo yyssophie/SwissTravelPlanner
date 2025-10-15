@@ -14,54 +14,10 @@ if __package__ is None or __package__ == "":
     CURRENT_DIR = Path(__file__).resolve().parent
     sys.path.append(str(CURRENT_DIR.parent))
     from data_store import CATEGORIES, TravelDataStore  # type: ignore
-    from poi_selection import select_pois_for_cities  # type: ignore
+    from route_planner import DayPlan, RoutePlanner  # type: ignore
 else:
     from .data_store import CATEGORIES, TravelDataStore
-    from .poi_selection import select_pois_for_cities
-
-
-def prompt_cities(datastore: TravelDataStore) -> list[str]:
-    valid_cities = datastore.cities()
-    valid_lookup = {city.lower(): city for city in valid_cities}
-    print("Available cities:", ", ".join(valid_cities))
-
-    while True:
-        raw = input("Enter the cities to visit (comma separated, e.g., zurich, bern): ").strip()
-        if not raw:
-            print("No cities provided. Please try again.", file=sys.stderr)
-            continue
-
-        requested = [city.strip() for city in raw.split(",") if city.strip()]
-        if not requested:
-            print("No valid city names found. Please try again.", file=sys.stderr)
-            continue
-
-        normalised = []
-        invalid = []
-        for city in requested:
-            key = city.lower()
-            if key in valid_lookup:
-                normalised.append(valid_lookup[key])
-            else:
-                invalid.append(city)
-
-        if invalid:
-            print(
-                f"Unrecognised city names: {', '.join(invalid)}. "
-                "Please choose from the available list.",
-                file=sys.stderr,
-            )
-            continue
-
-        # Remove duplicates while preserving order.
-        seen = set()
-        ordered_unique = []
-        for city in normalised:
-            if city not in seen:
-                seen.add(city)
-                ordered_unique.append(city)
-
-        return ordered_unique
+    from .route_planner import DayPlan, RoutePlanner
 
 
 def prompt_preferences() -> Dict[str, float]:
@@ -103,38 +59,82 @@ def prompt_season(datastore: TravelDataStore) -> str:
         return season
 
 
+def prompt_city(planner: RoutePlanner, label: str) -> str:
+    options = ", ".join(planner.available_cities())
+    print(f"Available cities: {options}")
+    while True:
+        raw = input(f"{label}: ").strip()
+        if not planner.is_known_city(raw):
+            print("Unknown city. Please choose from the available options.", file=sys.stderr)
+            continue
+        display = planner.display_for(raw)
+        return display
+
+
+def prompt_days() -> int:
+    while True:
+        raw = input("Number of travel days: ").strip()
+        try:
+            value = int(raw)
+        except ValueError:
+            print("Please enter a valid integer.", file=sys.stderr)
+            continue
+        if value <= 0:
+            print("Number of days must be positive.", file=sys.stderr)
+            continue
+        return value
+
+
+def print_itinerary(itinerary: list[DayPlan]) -> None:
+    print("\nSuggested itinerary:")
+    for day in itinerary:
+        print("=" * 60)
+        header = f"Day {day.day}: {day.display_city}"
+        if day.travel_from:
+            header += f" (travelled from {day.travel_from}, {day.travel_minutes:.0f} min)"
+        else:
+            header += " (trip start)"
+        print(header)
+        if day.note:
+            print(f"  Note: {day.note}")
+        for poi in day.pois:
+            categories = [cat for cat in CATEGORIES if poi.has_label(cat)]
+            category_text = ", ".join(categories) if categories else "no categories"
+            print(f"  • {poi.name} [{category_text}]")
+            if poi.abstract:
+                print(f"      Abstract: {poi.abstract}")
+            if poi.description:
+                print(f"      Description: {poi.description}")
+            if getattr(poi, "seasons", None):
+                seasons_text = ", ".join(poi.seasons)
+                print(f"      Seasons: {seasons_text}")
+        print()
+
+
 def main() -> None:
     datastore = TravelDataStore.from_files()
-    cities = prompt_cities(datastore)
+    planner = RoutePlanner(datastore)
+    start_city = prompt_city(planner, "Enter start city")
+    end_city = prompt_city(planner, "Enter end city")
+    num_days = prompt_days()
     preferences = prompt_preferences()
     season = prompt_season(datastore)
 
     rng = random.Random()
-    itinerary = select_pois_for_cities(datastore, cities, preferences, rng, season=season)
+    try:
+        itinerary = planner.plan_route(
+            start_city=start_city,
+            end_city=end_city,
+            num_days=num_days,
+            preference_weights=preferences,
+            season=season,
+            rng=rng,
+        )
+    except ValueError as exc:
+        print(f"Could not build itinerary: {exc}", file=sys.stderr)
+        sys.exit(1)
 
-    print("\nSuggested POIs:")
-    separator = "=" * 60
-    for city, pois in itinerary.items():
-        print(separator)
-        print(f"City: {city}")
-        print(separator)
-        if not pois:
-            print("  (No matching POIs found)\n")
-            continue
-        for poi in pois:
-            categories = [cat for cat in CATEGORIES if poi.has_label(cat)]
-            categories_text = ", ".join(categories) if categories else "no label matches"
-            print(f"  • {poi.name} ({categories_text})")
-            if poi.abstract:
-                print(f"    Abstract: {poi.abstract}")
-            if poi.description:
-                print(f"    Description: {poi.description}")
-            if poi.seasons:
-                seasons_text = ", ".join(poi.seasons)
-                print(f"    Seasons: {seasons_text}")
-            if poi.season_reason:
-                print(f"    Season reason: {poi.season_reason}")
-            print()
+    print_itinerary(itinerary)
 
 
 if __name__ == "__main__":

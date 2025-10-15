@@ -19,34 +19,40 @@ else:
     from .data_store import CATEGORIES, POI, TravelDataStore
 
 
+def _filter_pois_by_preferences(
+    pois: Sequence[POI], preference_weights: Mapping[str, float]
+) -> List[POI]:
+    positive_categories = {
+        category for category, weight in preference_weights.items() if weight > 0.0
+    }
+    if not positive_categories:
+        raise ValueError("Preference weights must contain at least one positive entry.")
+    zero_categories = {category for category in CATEGORIES if category not in positive_categories}
+
+    return [
+        poi
+        for poi in pois
+        if any(poi.has_label(category) for category in positive_categories)
+        and not any(poi.has_label(category) for category in zero_categories)
+    ]
+
+
+def has_preferred_pois(
+    pois: Sequence[POI], preference_weights: Mapping[str, float]
+) -> bool:
+    return bool(_filter_pois_by_preferences(pois, preference_weights))
+
+
 def pick_two_pois_for_city(
     pois: Sequence[POI],
     preference_weights: Mapping[str, float],
     rng: random.Random | None = None,
     season: Optional[str] = None,
 ) -> List[POI]:
-    """
-    Randomly pick up to two POIs for a city using the user's category weights.
-
-    Each selection:
-      1. Samples a category according to the remaining label weights.
-      2. Chooses a random POI that satisfies that category.
-      3. Removes the POI from consideration for the second slot.
-
-    If a sampled category has no matching POIs, it is removed from the pool and
-    another category is sampled. As a final fallback, the function selects any
-    remaining POI to ensure the result always contains two entries when possible.
-    """
+    """Randomly pick up to two POIs that satisfy the user's preferences."""
     rng = rng or random.Random()
-    remaining_pois = [
-        poi
-        for poi in pois
-        if all(
-            not poi.has_label(category)
-            or preference_weights.get(category, 0.0) > 0.0
-            for category in CATEGORIES
-        )
-    ]
+
+    remaining_pois = list(_filter_pois_by_preferences(pois, preference_weights))
     chosen: List[POI] = []
 
     if not remaining_pois:
@@ -102,6 +108,7 @@ def pick_two_pois_for_city(
             remaining_pois.remove(poi)
 
     return chosen
+
 
 
 def select_pois_for_cities(
