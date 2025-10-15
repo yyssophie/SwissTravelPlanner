@@ -16,12 +16,44 @@ const DEFAULT_INTERESTS: Interests = {
   sport: 0,
 };
 
+const CITY_OPTIONS = [
+  "appenzell",
+  "bern",
+  "geneva",
+  "interlaken",
+  "lucerne",
+  "lugano",
+  "montreux",
+  "schwyz",
+  "zermatt",
+  "zurich",
+] as const;
+
+function labelForCity(slug: (typeof CITY_OPTIONS)[number] | ""): string {
+  switch (slug) {
+    case "lucerne":
+      return "Lucerne";
+    case "zurich":
+      return "Zurich";
+    default:
+      return slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : "";
+  }
+}
+
 const PlannerPage = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [days, setDays] = useState<number>(7);
+  const [daysText, setDaysText] = useState<string>("7");
   const [season, setSeason] = useState("summer");
   const [interests, setInterests] = useState<Interests>({ ...DEFAULT_INTERESTS });
+  const [interestText, setInterestText] = useState<Record<keyof Interests, string>>({
+    lake: "0",
+    mountain: "0",
+    culture: "0",
+    food: "0",
+    sport: "0",
+  });
 
   const totalPct = useMemo(
     () =>
@@ -32,16 +64,54 @@ const PlannerPage = () => {
   const remainingPct = 100 - totalPct;
   const overLimit = remainingPct < 0;
 
-  function updateInterest(key: keyof Interests, value: number) {
-    setInterests((prev) => ({ ...prev, [key]: Math.max(0, Math.min(100, value)) }));
+  function sanitizePercent(raw: string): number {
+    // Keep digits only
+    const digits = (raw || "").replace(/\D+/g, "");
+    // Remove leading zeros but keep a single zero
+    const noLead = digits.replace(/^0+(?=\d)/, "");
+    const parsed = parseInt(noLead || "0", 10);
+    if (isNaN(parsed)) return 0;
+    return Math.max(0, Math.min(100, parsed));
+  }
+
+  function sanitizePercentText(raw: string, allowEmpty: boolean): string {
+    const digits = (raw || "").replace(/\D+/g, "");
+    if (digits === "") return allowEmpty ? "" : "0";
+    const noLead = digits.replace(/^0+(?=\d)/, "");
+    const n = Math.max(0, Math.min(100, parseInt(noLead, 10)));
+    return String(n);
+  }
+
+  function updateInterest(key: keyof Interests, value: string, allowEmpty = true) {
+    const text = sanitizePercentText(value, allowEmpty);
+    setInterestText((prev) => ({ ...prev, [key]: text }));
+    const numeric = sanitizePercent(text);
+    setInterests((prev) => ({ ...prev, [key]: numeric }));
+  }
+
+  function sanitizeDaysText(raw: string, allowEmpty: boolean): string {
+    const digits = (raw || "").replace(/\D+/g, "");
+    if (digits === "") return allowEmpty ? "" : "1";
+    const noLead = digits.replace(/^0+(?=\d)/, "");
+    const n = Math.max(1, Math.min(21, parseInt(noLead || "1", 10)));
+    return String(n);
+  }
+
+  function updateDays(value: string, allowEmpty = true) {
+    const text = sanitizeDaysText(value, allowEmpty);
+    setDaysText(text);
+    const n = parseInt(text || "0", 10);
+    setDays(isNaN(n) ? 1 : Math.max(1, Math.min(21, n)));
   }
 
   function resetAll() {
     setFrom("");
     setTo("");
     setDays(7);
+    setDaysText("7");
     setSeason("summer");
     setInterests({ ...DEFAULT_INTERESTS });
+    setInterestText({ lake: "0", mountain: "0", culture: "0", food: "0", sport: "0" });
   }
 
   function startPlanning() {
@@ -64,44 +134,42 @@ const PlannerPage = () => {
 
         <div className="row fromto">
           <label>From</label>
-          <input
+          <select
             className="input-lg"
-            placeholder="Starting point (e.g., Zurich)"
             value={from}
             onChange={(e) => setFrom(e.target.value)}
-          />
+          >
+            <option value="">Select city</option>
+            {CITY_OPTIONS.map((c) => (
+              <option key={c} value={c}>
+                {labelForCity(c)}
+              </option>
+            ))}
+          </select>
           <label>To</label>
-          <input
+          <select
             className="input-lg"
-            placeholder="Destination (e.g., Zermatt)"
             value={to}
             onChange={(e) => setTo(e.target.value)}
-          />
+          >
+            <option value="">Select city</option>
+            {CITY_OPTIONS.map((c) => (
+              <option key={c} value={c}>
+                {labelForCity(c)}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="row">
           <label>Total travel days</label>
           <input
-            type="number"
-            min={1}
-            max={21}
-            step={1}
+            type="text"
             inputMode="numeric"
             pattern="[0-9]*"
-            value={days}
-            onChange={(e) => {
-              const raw = e.target.value;
-              const parsed = parseInt(raw, 10);
-              if (isNaN(parsed)) { setDays(1); return; }
-              const clamped = Math.max(1, Math.min(21, parsed));
-              setDays(clamped);
-            }}
-            onBlur={(e) => {
-              const parsed = parseInt(e.target.value, 10);
-              if (isNaN(parsed)) { setDays(1); return; }
-              const clamped = Math.max(1, Math.min(21, parsed));
-              setDays(clamped);
-            }}
+            value={daysText}
+            onChange={(e) => updateDays(e.target.value, true)}
+            onBlur={(e) => updateDays(e.target.value, false)}
           />
         </div>
 
@@ -124,11 +192,12 @@ const PlannerPage = () => {
                 <div className="interest" key={key}>
                   <span className="interest__label">{k}</span>
                   <input
-                    type="number"
-                    min={0}
-                    max={100}
-                    value={interests[k]}
-                    onChange={(e) => updateInterest(k, parseInt(e.target.value || "0", 10))}
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    value={interestText[k]}
+                    onChange={(e) => updateInterest(k, e.target.value, true)}
+                    onBlur={(e) => updateInterest(k, e.target.value, false)}
                   />
                   <span className="interest__pct">%</span>
                 </div>
@@ -139,10 +208,10 @@ const PlannerPage = () => {
         </div>
 
         <div className="planner__actions">
-          <button className="link" onClick={resetAll}>Clear all</button>
+          <button type="button" className="link" onClick={resetAll}>Clear all</button>
           <button
             className="btn btn--primary"
-            disabled={overLimit || totalPct !== 100 || !from || !to || days <= 0}
+            disabled={overLimit || totalPct !== 100 || !from || !to || days < 1 || days > 21}
             onClick={startPlanning}
           >
             Start planning
