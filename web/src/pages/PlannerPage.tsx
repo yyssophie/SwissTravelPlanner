@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { getMustVisitDetail } from "../data/mustVisitDetails";
 
 type Interests = {
   lake: number;
@@ -23,13 +24,26 @@ type Attraction = {
   image: string;
 };
 
-const MUST_VISIT: Attraction[] = [
+const BASE_ATTRACTIONS: Attraction[] = [
   { slug: "faelensee", name: "Fälensee", city: "Appenzell", image: "/attractions/faelensee.jpg" },
   { slug: "old-city-of-bern", name: "Old City of Bern", city: "Bern", image: "/attractions/old-city-of-bern.jpg" },
   { slug: "stoos", name: "Stoos", city: "Schwyz", image: "/attractions/stoos.jpg" },
   { slug: "muerrenbahn", name: "Mürrenbahn", city: "Interlaken", image: "/attractions/muerrenbahn.jpg" },
   { slug: "gornergrat", name: "Gornergrat", city: "Zermatt", image: "/attractions/gornergrat.jpg" },
+  { slug: "grosser-mythen", name: "Grosser Mythen", city: "Schwyz", image: "/attractions/grosser-mythen.jpg" },
+  { slug: "mount-rigi", name: "Mount Rigi", city: "Lucerne", image: "/attractions/mount-rigi.jpg" },
+  { slug: "interlaken-water-sports", name: "Interlaken Water Sports", city: "Interlaken", image: "/attractions/interlaken-water-sports.jpg" },
+  { slug: "gurten", name: "Gurten", city: "Bern", image: "/attractions/gurten.jpg" },
 ];
+
+const shuffle = <T,>(items: T[]): T[] => {
+  const arr = [...items];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+};
 
 const CITY_OPTIONS = [
   "appenzell",
@@ -69,6 +83,7 @@ const PlannerPage = () => {
     food: "0",
     sport: "0",
   });
+  const [attractions, setAttractions] = useState<Attraction[]>(() => shuffle(BASE_ATTRACTIONS));
 
   // Must‑visit flow state
   const [mvIndex, setMvIndex] = useState<number>(0);
@@ -76,6 +91,7 @@ const PlannerPage = () => {
   const [mvConfirming, setMvConfirming] = useState<boolean>(false);
   const [mvMessage, setMvMessage] = useState<string | null>(null);
   const [mvDone, setMvDone] = useState<boolean>(false);
+  const [detailSlug, setDetailSlug] = useState<string | null>(null);
 
   const totalPct = useMemo(
     () =>
@@ -87,6 +103,7 @@ const PlannerPage = () => {
   const overLimit = remainingPct < 0;
   const maxMust = Math.max(0, days - 2);
   const canAddMore = mvSelected.length < maxMust;
+  const currentAttraction = attractions[mvIndex] ?? attractions[0];
 
   function sanitizePercent(raw: string): number {
     // Keep digits only
@@ -124,68 +141,74 @@ const PlannerPage = () => {
 
   // Must‑visit controls
   function nextAttraction() {
-    if (mvIndex < MUST_VISIT.length - 1) {
-      setMvIndex((i) => i + 1);
-    }
+    if (attractions.length === 0) return;
+    setMvIndex((i) => (i + 1) % attractions.length);
   }
 
   function addCurrentAttraction() {
-    const current = MUST_VISIT[mvIndex];
+    const current = attractions[mvIndex];
     if (!current) return;
-    if (mvSelected.length >= maxMust) {
+    if (maxMust <= 0) {
+      setMvMessage("Increase your total travel days to unlock Must‑Visits for this trip.");
+      return;
+    }
+
+    const alreadySelected = mvSelected.includes(current.slug);
+    const tentativeLength = alreadySelected ? mvSelected.length : mvSelected.length + 1;
+    if (tentativeLength > maxMust) {
       setMvMessage(
         `Limit reached: you can add up to ${maxMust} Must‑Visits for a ${days}-day trip. Increase total days to add more.`
       );
       return;
     }
-    if (!mvSelected.includes(current.slug)) {
-      setMvSelected((prev) => [...prev, current.slug]);
-    }
+
+    const nextSelected = alreadySelected ? mvSelected : [...mvSelected, current.slug];
+    if (!alreadySelected) setMvSelected(nextSelected);
+
     setMvConfirming(true);
     setTimeout(() => {
       setMvConfirming(false);
-      // Move to next unselected item if available
-      const nextIdx = MUST_VISIT.findIndex((item, idx) =>
-        idx > mvIndex && !mvSelected.includes(item.slug) && item.slug !== current.slug
+      setMvMessage(null);
+
+      const forward = attractions.findIndex(
+        (item, idx) => idx > mvIndex && !nextSelected.includes(item.slug)
       );
-      if (nextIdx !== -1) {
-        setMvIndex(nextIdx);
+      if (forward !== -1) {
+        setMvIndex(forward);
       } else {
-        // Otherwise try earlier items
-        const prevIdx = [...MUST_VISIT.keys()].reverse().find((idx) =>
-          idx < mvIndex && !mvSelected.includes(MUST_VISIT[idx].slug)
-        );
-        if (prevIdx !== undefined && prevIdx >= 0) {
-          setMvIndex(prevIdx);
+        const backward = Array.from(attractions.keys())
+          .reverse()
+          .find((idx) => idx !== mvIndex && !nextSelected.includes(attractions[idx].slug));
+        if (backward !== undefined && backward >= 0) {
+          setMvIndex(backward);
+        } else {
+          const firstUnselected = attractions.findIndex((item) => !nextSelected.includes(item.slug));
+          if (firstUnselected !== -1) setMvIndex(firstUnselected);
         }
       }
-      if (mvSelected.length + 1 >= maxMust || mvSelected.length + 1 === MUST_VISIT.length) {
-        setMvMessage(
-          "Must‑Visits saved. You can finish now or keep adjusting other inputs."
-        );
+
+      if (nextSelected.length >= maxMust || nextSelected.length === attractions.length) {
+        setMvMessage("Must‑Visits saved. You can finish now or keep adjusting other inputs.");
       }
     }, 1200);
   }
 
-  function skipCurrentAttraction() {
-    setMvMessage(null);
-    nextAttraction();
-  }
-
   function prevAttraction() {
     setMvMessage(null);
-    setMvIndex((i) => Math.max(0, i - 1));
+    if (attractions.length === 0) return;
+    setMvIndex((i) => (i - 1 + attractions.length) % attractions.length);
   }
 
   function removeSelected(slug: string) {
     setMvSelected((prev) => prev.filter((s) => s !== slug));
+    setMvMessage(null);
   }
 
   function reopenMustVisits() {
     setMvDone(false);
     setMvMessage(null);
     setMvConfirming(false);
-    const nextIdx = MUST_VISIT.findIndex((a) => !mvSelected.includes(a.slug));
+    const nextIdx = attractions.findIndex((a) => !mvSelected.includes(a.slug));
     setMvIndex(nextIdx === -1 ? 0 : nextIdx);
   }
 
@@ -199,6 +222,14 @@ const PlannerPage = () => {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [mvDone, mvConfirming, mvIndex]);
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setDetailSlug(null);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   function sanitizeDaysText(raw: string, allowEmpty: boolean): string {
     const digits = (raw || "").replace(/\D+/g, "");
@@ -223,11 +254,13 @@ const PlannerPage = () => {
     setSeason("summer");
     setInterests({ ...DEFAULT_INTERESTS });
     setInterestText({ lake: "0", mountain: "0", culture: "0", food: "0", sport: "0" });
+    setAttractions(shuffle(BASE_ATTRACTIONS));
     setMvIndex(0);
     setMvSelected([]);
     setMvConfirming(false);
     setMvMessage(null);
     setMvDone(false);
+    setDetailSlug(null);
   }
 
   function startPlanning() {
@@ -242,10 +275,7 @@ const PlannerPage = () => {
       <div className="planner__card">
         <div className="planner__header">
           <h2>Plan your route</h2>
-          <div className="planner__tabs">
-            <button className="active">Routes</button>
-            <button disabled>Places</button>
-          </div>
+          <div className="planner__mode">Routes</div>
         </div>
 
         <div className="row fromto">
@@ -335,53 +365,61 @@ const PlannerPage = () => {
 
           {!mvDone ? (
             <>
-              <div
-                className={`mv-card ${mvConfirming ? "mv-added" : ""}`}
-                style={{ backgroundImage: `url(${MUST_VISIT[mvIndex].image})` }}
-              >
-                <div className="mv-card__top">
-                  <span className="mv-pill">View details</span>
-                  <span className="mv-count">{mvIndex + 1}/{MUST_VISIT.length}</span>
-                </div>
-                <div className="mv-card__overlay"></div>
-                <div className="mv-card__bottom">
-                  <div className="mv-text">
-                    <div className="mv-city">{MUST_VISIT[mvIndex].city}</div>
-                    <div className="mv-title">{MUST_VISIT[mvIndex].name}</div>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  className="mv-arrow mv-arrow--left"
-                  onClick={prevAttraction}
-                  disabled={mvIndex === 0}
-                  aria-label="Previous"
+              {currentAttraction && (
+                <div
+                  className={`mv-card ${mvConfirming ? "mv-added" : ""}`}
+                  style={{ backgroundImage: `url(${currentAttraction.image})` }}
                 >
-                  ‹
-                </button>
-                <button
-                  type="button"
-                  className="mv-arrow mv-arrow--right"
-                  onClick={nextAttraction}
-                  disabled={mvIndex === MUST_VISIT.length - 1}
-                  aria-label="Next"
-                >
-                  ›
-                </button>
-                {mvConfirming && (
-                  <div className="mv-confirm">
-                    <div className="mv-tick">✓</div>
-                    <div className="mv-msg">Added to your trip</div>
+                  <div className="mv-card__top">
+                    <button
+                      type="button"
+                      className="mv-pill mv-pill--button"
+                      onClick={() => setDetailSlug(currentAttraction.slug)}
+                    >
+                      View details
+                    </button>
+                    <span className="mv-count">{mvIndex + 1}/{attractions.length}</span>
                   </div>
-                )}
-              </div>
+                  <div className="mv-card__overlay"></div>
+                  <div className="mv-card__bottom">
+                    <div className="mv-text">
+                      <div className="mv-city">{currentAttraction.city}</div>
+                      <div className="mv-title">{currentAttraction.name}</div>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    className="mv-arrow mv-arrow--left"
+                    onClick={prevAttraction}
+                    disabled={attractions.length <= 1}
+                    aria-label="Previous"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    type="button"
+                    className="mv-arrow mv-arrow--right"
+                    onClick={nextAttraction}
+                    disabled={attractions.length <= 1}
+                    aria-label="Next"
+                  >
+                    ›
+                  </button>
+                  {mvConfirming && (
+                    <div className="mv-confirm">
+                      <div className="mv-tick">✓</div>
+                      <div className="mv-msg">Added to your trip</div>
+                    </div>
+                  )}
+                </div>
+              )}
 
               <div className="mv-actions">
                 <button
                   type="button"
-                  className="btn btn--primary"
+                  className="btn btn--must"
                   onClick={addCurrentAttraction}
-                  disabled={!canAddMore}
+                  disabled={!canAddMore || mvConfirming}
                 >
                   Add to Must‑Visits
                 </button>
@@ -398,7 +436,7 @@ const PlannerPage = () => {
                   <div className="mv-selected__label">Added so far:</div>
                   <ul className="mv-selected__list">
                     {mvSelected.map((slug) => {
-                      const a = MUST_VISIT.find((x) => x.slug === slug);
+                      const a = attractions.find((x) => x.slug === slug);
                       if (!a) return null;
                       return (
                         <li key={slug} className="mv-chip">
@@ -426,7 +464,7 @@ const PlannerPage = () => {
                 ) : (
                   <ul className="mv-selected__list">
                     {mvSelected.map((slug) => {
-                      const a = MUST_VISIT.find((x) => x.slug === slug);
+                      const a = attractions.find((x) => x.slug === slug);
                       if (!a) return null;
                       return (
                         <li key={slug} className="mv-chip">
@@ -456,7 +494,6 @@ const PlannerPage = () => {
         </div>
 
         <div className="planner__actions">
-          <button type="button" className="link" onClick={resetAll}>Clear all</button>
           <button
             className="btn btn--primary"
             disabled={overLimit || totalPct !== 100 || !from || !to || days < 1 || days > 21}
@@ -464,10 +501,47 @@ const PlannerPage = () => {
           >
             Start planning
           </button>
+          <button type="button" className="link" onClick={resetAll}>Clear all</button>
         </div>
       </div>
+      {detailSlug && (
+        <DetailModal slug={detailSlug} onClose={() => setDetailSlug(null)} />
+      )}
     </section>
   );
 };
 
 export default PlannerPage;
+
+type DetailModalProps = {
+  slug: string;
+  onClose: () => void;
+};
+
+const DetailModal = ({ slug, onClose }: DetailModalProps) => {
+  const detail = getMustVisitDetail(slug);
+  if (!detail) return null;
+  return (
+    <div className="mv-modal" role="dialog" aria-modal="true">
+      <div className="mv-modal__backdrop" onClick={onClose} />
+      <div className="mv-modal__card">
+        <button className="mv-modal__close" onClick={onClose} aria-label="Close details">
+          ×
+        </button>
+        <div className="mv-modal__header">
+          <h3>{detail.name}</h3>
+          <span className="mv-modal__city">{detail.city}</span>
+        </div>
+        <p className="mv-modal__intro">{detail.intro}</p>
+        <div className="mv-modal__seasons">
+          Best seasons: <span>{detail.seasons.join(" · ")}</span>
+        </div>
+        <div className="mv-modal__body">
+          {detail.description.map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};

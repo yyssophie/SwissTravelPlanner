@@ -6,5 +6,9 @@ Expected filenames:
 - stoos.jpg
 - muerrenbahn.jpg
 - gornergrat.jpg
+- grosser-mythen.jpg
+- mount-rigi.jpg
+- interlaken-water-sports.jpg
+- gurten.jpg
 
 Recommended size: 1600x900 (16:9) JPG/WebP, ~300–800 KB.
