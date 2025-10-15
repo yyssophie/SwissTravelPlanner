@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Interests = {
   lake: number;
@@ -15,6 +15,21 @@ const DEFAULT_INTERESTS: Interests = {
   food: 0,
   sport: 0,
 };
+
+type Attraction = {
+  slug: string;
+  name: string;
+  city: string;
+  image: string;
+};
+
+const MUST_VISIT: Attraction[] = [
+  { slug: "faelensee", name: "Fälensee", city: "Appenzell", image: "/attractions/faelensee.jpg" },
+  { slug: "old-city-of-bern", name: "Old City of Bern", city: "Bern", image: "/attractions/old-city-of-bern.jpg" },
+  { slug: "stoos", name: "Stoos", city: "Schwyz", image: "/attractions/stoos.jpg" },
+  { slug: "muerrenbahn", name: "Mürrenbahn", city: "Interlaken", image: "/attractions/muerrenbahn.jpg" },
+  { slug: "gornergrat", name: "Gornergrat", city: "Zermatt", image: "/attractions/gornergrat.jpg" },
+];
 
 const CITY_OPTIONS = [
   "appenzell",
@@ -55,6 +70,13 @@ const PlannerPage = () => {
     sport: "0",
   });
 
+  // Must‑visit flow state
+  const [mvIndex, setMvIndex] = useState<number>(0);
+  const [mvSelected, setMvSelected] = useState<string[]>([]);
+  const [mvConfirming, setMvConfirming] = useState<boolean>(false);
+  const [mvMessage, setMvMessage] = useState<string | null>(null);
+  const [mvDone, setMvDone] = useState<boolean>(false);
+
   const totalPct = useMemo(
     () =>
       Object.values(interests).reduce((sum, n) => sum + (isNaN(n) ? 0 : n), 0),
@@ -63,6 +85,8 @@ const PlannerPage = () => {
 
   const remainingPct = 100 - totalPct;
   const overLimit = remainingPct < 0;
+  const maxMust = Math.max(0, days - 2);
+  const canAddMore = mvSelected.length < maxMust;
 
   function sanitizePercent(raw: string): number {
     // Keep digits only
@@ -82,12 +106,99 @@ const PlannerPage = () => {
     return String(n);
   }
 
-  function updateInterest(key: keyof Interests, value: string, allowEmpty = true) {
+  function updateInterest(
+    key: keyof Interests,
+    value: string,
+    allowEmpty = true,
+    capToRemaining = true
+  ) {
     const text = sanitizePercentText(value, allowEmpty);
-    setInterestText((prev) => ({ ...prev, [key]: text }));
-    const numeric = sanitizePercent(text);
+    let numeric = sanitizePercent(text);
+    if (capToRemaining) {
+      const cap = Math.max(0, remainingPct);
+      if (numeric > cap) numeric = cap;
+    }
+    setInterestText((prev) => ({ ...prev, [key]: String(numeric) }));
     setInterests((prev) => ({ ...prev, [key]: numeric }));
   }
+
+  // Must‑visit controls
+  function nextAttraction() {
+    if (mvIndex < MUST_VISIT.length - 1) {
+      setMvIndex((i) => i + 1);
+    }
+  }
+
+  function addCurrentAttraction() {
+    const current = MUST_VISIT[mvIndex];
+    if (!current) return;
+    if (mvSelected.length >= maxMust) {
+      setMvMessage(
+        `Limit reached: you can add up to ${maxMust} Must‑Visits for a ${days}-day trip. Increase total days to add more.`
+      );
+      return;
+    }
+    if (!mvSelected.includes(current.slug)) {
+      setMvSelected((prev) => [...prev, current.slug]);
+    }
+    setMvConfirming(true);
+    setTimeout(() => {
+      setMvConfirming(false);
+      // Move to next unselected item if available
+      const nextIdx = MUST_VISIT.findIndex((item, idx) =>
+        idx > mvIndex && !mvSelected.includes(item.slug) && item.slug !== current.slug
+      );
+      if (nextIdx !== -1) {
+        setMvIndex(nextIdx);
+      } else {
+        // Otherwise try earlier items
+        const prevIdx = [...MUST_VISIT.keys()].reverse().find((idx) =>
+          idx < mvIndex && !mvSelected.includes(MUST_VISIT[idx].slug)
+        );
+        if (prevIdx !== undefined && prevIdx >= 0) {
+          setMvIndex(prevIdx);
+        }
+      }
+      if (mvSelected.length + 1 >= maxMust || mvSelected.length + 1 === MUST_VISIT.length) {
+        setMvMessage(
+          "Must‑Visits saved. You can finish now or keep adjusting other inputs."
+        );
+      }
+    }, 1200);
+  }
+
+  function skipCurrentAttraction() {
+    setMvMessage(null);
+    nextAttraction();
+  }
+
+  function prevAttraction() {
+    setMvMessage(null);
+    setMvIndex((i) => Math.max(0, i - 1));
+  }
+
+  function removeSelected(slug: string) {
+    setMvSelected((prev) => prev.filter((s) => s !== slug));
+  }
+
+  function reopenMustVisits() {
+    setMvDone(false);
+    setMvMessage(null);
+    setMvConfirming(false);
+    const nextIdx = MUST_VISIT.findIndex((a) => !mvSelected.includes(a.slug));
+    setMvIndex(nextIdx === -1 ? 0 : nextIdx);
+  }
+
+  // Keyboard navigation for desktop
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (mvDone || mvConfirming) return;
+      if (e.key === "ArrowLeft") prevAttraction();
+      if (e.key === "ArrowRight") nextAttraction();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mvDone, mvConfirming, mvIndex]);
 
   function sanitizeDaysText(raw: string, allowEmpty: boolean): string {
     const digits = (raw || "").replace(/\D+/g, "");
@@ -112,6 +223,11 @@ const PlannerPage = () => {
     setSeason("summer");
     setInterests({ ...DEFAULT_INTERESTS });
     setInterestText({ lake: "0", mountain: "0", culture: "0", food: "0", sport: "0" });
+    setMvIndex(0);
+    setMvSelected([]);
+    setMvConfirming(false);
+    setMvMessage(null);
+    setMvDone(false);
   }
 
   function startPlanning() {
@@ -196,8 +312,8 @@ const PlannerPage = () => {
                     inputMode="numeric"
                     pattern="[0-9]*"
                     value={interestText[k]}
-                    onChange={(e) => updateInterest(k, e.target.value, true)}
-                    onBlur={(e) => updateInterest(k, e.target.value, false)}
+                    onChange={(e) => updateInterest(k, e.target.value, true, true)}
+                    onBlur={(e) => updateInterest(k, e.target.value, false, true)}
                   />
                   <span className="interest__pct">%</span>
                 </div>
@@ -205,6 +321,138 @@ const PlannerPage = () => {
             })}
           </div>
           <div className={`remaining ${overLimit ? "over" : "ok"}`}>Remaining: {Math.max(0, remainingPct)}%</div>
+        </div>
+
+        {/* Must‑Visit Recommendations Section */}
+        <div className="mv">
+          <div className="mv__header">
+            <h3>Must‑Visit Recommendations</h3>
+            <div className="mv__meta">
+              <span>Limit: {maxMust}</span>
+              <span>Selected: {mvSelected.length}</span>
+            </div>
+          </div>
+
+          {!mvDone ? (
+            <>
+              <div
+                className={`mv-card ${mvConfirming ? "mv-added" : ""}`}
+                style={{ backgroundImage: `url(${MUST_VISIT[mvIndex].image})` }}
+              >
+                <div className="mv-card__top">
+                  <span className="mv-pill">View details</span>
+                  <span className="mv-count">{mvIndex + 1}/{MUST_VISIT.length}</span>
+                </div>
+                <div className="mv-card__overlay"></div>
+                <div className="mv-card__bottom">
+                  <div className="mv-text">
+                    <div className="mv-city">{MUST_VISIT[mvIndex].city}</div>
+                    <div className="mv-title">{MUST_VISIT[mvIndex].name}</div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="mv-arrow mv-arrow--left"
+                  onClick={prevAttraction}
+                  disabled={mvIndex === 0}
+                  aria-label="Previous"
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  className="mv-arrow mv-arrow--right"
+                  onClick={nextAttraction}
+                  disabled={mvIndex === MUST_VISIT.length - 1}
+                  aria-label="Next"
+                >
+                  ›
+                </button>
+                {mvConfirming && (
+                  <div className="mv-confirm">
+                    <div className="mv-tick">✓</div>
+                    <div className="mv-msg">Added to your trip</div>
+                  </div>
+                )}
+              </div>
+
+              <div className="mv-actions">
+                <button
+                  type="button"
+                  className="btn btn--primary"
+                  onClick={addCurrentAttraction}
+                  disabled={!canAddMore}
+                >
+                  Add to Must‑Visits
+                </button>
+                <button
+                  type="button"
+                  className="btn btn--ghost"
+                  onClick={() => setMvDone(true)}
+                >
+                  Finish selecting
+                </button>
+              </div>
+              {mvSelected.length > 0 && (
+                <div className="mv-selected mv-selected--inline">
+                  <div className="mv-selected__label">Added so far:</div>
+                  <ul className="mv-selected__list">
+                    {mvSelected.map((slug) => {
+                      const a = MUST_VISIT.find((x) => x.slug === slug);
+                      if (!a) return null;
+                      return (
+                        <li key={slug} className="mv-chip">
+                          <span className="mv-chip__text">{a.name} – {a.city}</span>
+                          <button
+                            className="mv-chip__del"
+                            onClick={() => removeSelected(slug)}
+                            aria-label={`Remove ${a.name}`}
+                          >
+                            -
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
+            </>
+          ) : (
+            <>
+              <div className="mv-done">Great picks — your Must‑Visits are set!</div>
+              <div className="mv-selected">
+                {mvSelected.length === 0 ? (
+                  <div className="mv-selected__empty">No Must‑Visits selected.</div>
+                ) : (
+                  <ul className="mv-selected__list">
+                    {mvSelected.map((slug) => {
+                      const a = MUST_VISIT.find((x) => x.slug === slug);
+                      if (!a) return null;
+                      return (
+                        <li key={slug} className="mv-chip">
+                          <span className="mv-chip__text">{a.name} – {a.city}</span>
+                          <button
+                            className="mv-chip__del"
+                            onClick={() => removeSelected(slug)}
+                            aria-label={`Remove ${a.name}`}
+                          >
+                            -
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </div>
+              <div className="mv-finish-actions">
+                <button type="button" className="btn btn--ghost" onClick={reopenMustVisits}>
+                  Review attractions again
+                </button>
+              </div>
+            </>
+          )}
+
+          {mvMessage && <div className="mv-message">{mvMessage}</div>}
         </div>
 
         <div className="planner__actions">
