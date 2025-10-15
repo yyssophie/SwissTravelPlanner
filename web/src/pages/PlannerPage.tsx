@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getMustVisitDetail } from "../data/mustVisitDetails";
 
 type Interests = {
@@ -71,7 +72,12 @@ function labelForCity(slug: (typeof CITY_OPTIONS)[number] | ""): string {
   }
 }
 
+const API_BASE = import.meta.env.VITE_API_BASE ?? "";
+const PLAN_STORAGE_KEY = "alpScheduler:lastPlan";
+const PLANNER_INPUTS_KEY = "alpScheduler:lastInputs";
+
 const PlannerPage = () => {
+  const navigate = useNavigate();
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [days, setDays] = useState<number>(7);
@@ -85,6 +91,8 @@ const PlannerPage = () => {
     food: "0",
     sport: "0",
   });
+  const [percentSaved, setPercentSaved] = useState<boolean>(false);
+  const [percentError, setPercentError] = useState<string | null>(null);
   const [attractions, setAttractions] = useState<Attraction[]>(INITIAL_ATTRACTIONS);
 
   // Must‑visit flow state
@@ -94,6 +102,29 @@ const PlannerPage = () => {
   const [mvMessage, setMvMessage] = useState<string | null>(null);
   const [mvDone, setMvDone] = useState<boolean>(false);
   const [detailSlug, setDetailSlug] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  // Load previously saved inputs (so Adjust Preferences retains settings)
+  useEffect(() => {
+    const stored = sessionStorage.getItem(PLANNER_INPUTS_KEY);
+    if (!stored) return;
+    try {
+      const data = JSON.parse(stored) as {
+        from: string; to: string; days: number; season: string;
+        interests: Interests; interestText: Record<keyof Interests, string>;
+      };
+      if (data.from) setFrom(data.from);
+      if (data.to) setTo(data.to);
+      if (data.days) { setDays(data.days); setDaysText(String(data.days)); }
+      if (data.season) setSeason(data.season);
+      if (data.interests) setInterests(data.interests);
+      if (data.interestText) setInterestText(data.interestText);
+      // Mark as saved if totals == 100
+      const sum = Object.values(data.interests).reduce((a, b) => a + (b || 0), 0);
+      setPercentSaved(Math.round(sum) === 100);
+    } catch { /* ignore */ }
+  }, []);
 
   const totalPct = useMemo(
     () =>
@@ -107,38 +138,53 @@ const PlannerPage = () => {
   const canAddMore = mvSelected.length < maxMust;
   const currentAttraction = attractions[mvIndex] ?? attractions[0];
 
-  function sanitizePercent(raw: string): number {
-    // Keep digits only
-    const digits = (raw || "").replace(/\D+/g, "");
-    // Remove leading zeros but keep a single zero
-    const noLead = digits.replace(/^0+(?=\d)/, "");
-    const parsed = parseInt(noLead || "0", 10);
-    if (isNaN(parsed)) return 0;
-    return Math.max(0, Math.min(100, parsed));
+  function parseInterestText(): Interests | null {
+    const raw = interestText;
+    const toNum = (s: string) => (s.trim() === "" ? NaN : Number(s));
+    const lake = toNum(raw.lake);
+    const mountain = toNum(raw.mountain);
+    const sport = toNum(raw.sport);
+    const culture = toNum(raw.culture);
+    const food = toNum(raw.food);
+    const values = [lake, mountain, sport, culture, food];
+    if (values.some((v) => !isFinite(v))) return null;
+    return { lake, mountain, sport, culture, food } as Interests;
   }
 
-  function sanitizePercentText(raw: string, allowEmpty: boolean): string {
-    const digits = (raw || "").replace(/\D+/g, "");
-    if (digits === "") return allowEmpty ? "" : "0";
-    const noLead = digits.replace(/^0+(?=\d)/, "");
-    const n = Math.max(0, Math.min(100, parseInt(noLead, 10)));
-    return String(n);
-  }
+  const typedTotals = (() => {
+    const parsed = parseInterestText();
+    if (!parsed) return { total: NaN, remaining: NaN };
+    const total =
+      (parsed.lake || 0) +
+      (parsed.mountain || 0) +
+      (parsed.sport || 0) +
+      (parsed.culture || 0) +
+      (parsed.food || 0);
+    return { total, remaining: 100 - total };
+  })();
 
-  function updateInterest(
-    key: keyof Interests,
-    value: string,
-    allowEmpty = true,
-    capToRemaining = true
-  ) {
-    const text = sanitizePercentText(value, allowEmpty);
-    let numeric = sanitizePercent(text);
-    if (capToRemaining) {
-      const cap = Math.max(0, remainingPct);
-      if (numeric > cap) numeric = cap;
+  function savePercentages() {
+    const parsed = parseInterestText();
+    if (!parsed) {
+      setPercentError("Please enter numeric values for all interests (0–100).");
+      setPercentSaved(false);
+      return;
     }
-    setInterestText((prev) => ({ ...prev, [key]: String(numeric) }));
-    setInterests((prev) => ({ ...prev, [key]: numeric }));
+    const vals = Object.values(parsed);
+    if (vals.some((v) => v < 0 || v > 100)) {
+      setPercentError("Each interest must be between 0 and 100.");
+      setPercentSaved(false);
+      return;
+    }
+    const sum = vals.reduce((a, b) => a + b, 0);
+    if (Math.round(sum) !== 100) {
+      setPercentError("Interests must total exactly 100%.");
+      setPercentSaved(false);
+      return;
+    }
+    setPercentError(null);
+    setPercentSaved(true);
+    setInterests(parsed);
   }
 
   // Must‑visit controls
@@ -263,13 +309,64 @@ const PlannerPage = () => {
     setMvMessage(null);
     setMvDone(false);
     setDetailSlug(null);
+    sessionStorage.removeItem(PLAN_STORAGE_KEY);
   }
 
-  function startPlanning() {
-    const payload = { from, to, days, season, interests };
-    // Placeholder: integrate AI planner call here.
-    console.log("Planning payload", payload);
-    alert("Planner input captured. Check console for payload.");
+  async function startPlanning() {
+    if (!from || !to) {
+      setSubmitError("Please choose both a start and end city.");
+      return;
+    }
+    if (overLimit || totalPct !== 100) {
+      setSubmitError("Interest weights must total 100% before planning.");
+      return;
+    }
+
+    setSubmitError(null);
+    setIsSubmitting(true);
+
+    const weights = {
+      lake: interests.lake / 100,
+      mountain: interests.mountain / 100,
+      sport: interests.sport / 100,
+      culture: interests.culture / 100,
+      food: interests.food / 100,
+    };
+
+    const body = {
+      fromCity: from,
+      toCity: to,
+      days,
+      season,
+      preferences: weights,
+    };
+
+    try {
+      const response = await fetch(`${API_BASE}/api/plan`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (!response.ok) {
+        const info = await response.json().catch(() => ({}));
+        const message = info.detail || "Unable to generate itinerary. Try different inputs.";
+        throw new Error(message);
+      }
+
+      const data = await response.json();
+      sessionStorage.setItem(PLAN_STORAGE_KEY, JSON.stringify(data));
+      // persist current inputs for Adjust Preferences
+      sessionStorage.setItem(
+        PLANNER_INPUTS_KEY,
+        JSON.stringify({ from, to, days, season, interests, interestText })
+      );
+      navigate("/planner/itinerary", { state: data });
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Failed to reach the planner service.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -341,18 +438,29 @@ const PlannerPage = () => {
                   <span className="interest__label">{k}</span>
                   <input
                     type="text"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
+                    inputMode="decimal"
                     value={interestText[k]}
-                    onChange={(e) => updateInterest(k, e.target.value, true, true)}
-                    onBlur={(e) => updateInterest(k, e.target.value, false, true)}
+                    onChange={(e) => {
+                      setPercentSaved(false);
+                      setInterestText((prev) => ({ ...prev, [k]: e.target.value }));
+                    }}
                   />
                   <span className="interest__pct">%</span>
                 </div>
               );
             })}
           </div>
-          <div className={`remaining ${overLimit ? "over" : "ok"}`}>Remaining: {Math.max(0, remainingPct)}%</div>
+            <div className="interests-actions">
+              <div className={`remaining ${typedTotals.remaining < 0 ? "over" : "ok"}`}>
+                {isFinite(typedTotals.total)
+                  ? `Remaining: ${Math.max(0, Math.round(typedTotals.remaining))}%`
+                  : "Remaining: —"}
+              </div>
+            <button type="button" className="btn btn--dark" onClick={savePercentages}>
+              Save percentages
+            </button>
+          </div>
+          {percentError && <div className="form-error" role="alert">{percentError}</div>}
         </div>
 
         {/* Must‑Visit Recommendations Section */}
@@ -498,13 +606,22 @@ const PlannerPage = () => {
         <div className="planner__actions">
           <button
             className="btn btn--primary btn--dark"
-            disabled={overLimit || totalPct !== 100 || !from || !to || days < 1 || days > 21}
+            disabled={
+              isSubmitting ||
+              !percentSaved ||
+              totalPct !== 100 ||
+              !from ||
+              !to ||
+              days < 1 ||
+              days > 21
+            }
             onClick={startPlanning}
           >
-            Start planning
+            {isSubmitting ? "Planning…" : "Start planning"}
           </button>
           <button type="button" className="link" onClick={resetAll}>Clear all</button>
         </div>
+        {submitError && <p className="form-error" role="alert">{submitError}</p>}
       </div>
       {detailSlug && (
         <DetailModal slug={detailSlug} onClose={() => setDetailSlug(null)} />

@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import PlannerPage from "./pages/PlannerPage";
+import PlanResultsPage from "./pages/PlanResultsPage";
 
 const App = () => (
   <BrowserRouter>
@@ -11,6 +12,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/planner" element={<PlannerPage />} />
+          <Route path="/planner/itinerary" element={<PlanResultsPage />} />
         </Routes>
       </main>
       <footer className="footer">
