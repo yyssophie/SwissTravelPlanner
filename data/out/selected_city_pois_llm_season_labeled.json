@@ -304,6 +304,18 @@
             "title": "Old town"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -480,6 +492,18 @@
             "title": "Shopping"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -599,6 +623,18 @@
             "title": "Old town"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -648,6 +684,18 @@
           {
             "name": "bysa",
             "title": "BY-SA"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -893,6 +941,18 @@
           {
             "name": "citytours",
             "title": "City Tours"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
           }
         ]
       }
@@ -1372,6 +1432,18 @@
             "title": "Nature"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -1716,6 +1788,18 @@
           {
             "name": "wellnessandspa",
             "title": "Wellness & Spa"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -2135,6 +2219,18 @@
           {
             "name": "relax",
             "title": "Relax"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -2557,6 +2653,18 @@
             "title": "Cheese"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -2774,6 +2882,18 @@
           {
             "name": "culinary",
             "title": "Culinary"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -3684,6 +3804,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -3729,6 +3861,18 @@
           {
             "name": "bysa",
             "title": "BY-SA"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -3809,6 +3953,18 @@
             "title": "Cable railway"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -3881,6 +4037,18 @@
           {
             "name": "cablerailway",
             "title": "Cable railway"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -4482,6 +4650,18 @@
             "title": "Photo Spot"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -4673,6 +4853,18 @@
           {
             "name": "ko",
             "title": "Korean"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
           }
         ]
       }
@@ -5135,6 +5327,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -5249,6 +5453,18 @@
           {
             "name": "hike",
             "title": "Hike"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -5581,6 +5797,18 @@
           {
             "name": "culinary",
             "title": "Culinary"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
           }
         ]
       }
@@ -6299,6 +6527,18 @@
             "title": "Lakeside promenades"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -6380,6 +6620,18 @@
           {
             "name": "bysa",
             "title": "BY-SA"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -6484,6 +6736,18 @@
           {
             "name": "thermalbaths",
             "title": "Thermal baths"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -6878,6 +7142,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -6962,6 +7238,18 @@
             "title": "City Tours"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -7020,6 +7308,18 @@
           {
             "name": "sculpture",
             "title": "Sculpture"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
           }
         ]
       }
@@ -7344,6 +7644,18 @@
             "title": "Gourmet tour"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -7482,6 +7794,18 @@
           {
             "name": "culinary",
             "title": "Culinary"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -7849,6 +8173,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -7908,6 +8244,18 @@
           {
             "name": "citytours",
             "title": "City Tours"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -8004,6 +8352,18 @@
           {
             "name": "citytours",
             "title": "City Tours"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -8332,6 +8692,18 @@
             "title": "Fishing"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -8415,6 +8787,18 @@
           {
             "name": "citytours",
             "title": "City Tours"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -8586,6 +8970,18 @@
           {
             "name": "bysa",
             "title": "BY-SA"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
           }
         ]
       }
@@ -8769,6 +9165,18 @@
             "title": "Watches workshops"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -8909,6 +9317,18 @@
             "title": "Churches"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -9016,6 +9436,18 @@
           {
             "name": "worldheritage",
             "title": "World Heritage"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -9685,6 +10117,18 @@
             "title": "Relax"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -9904,6 +10348,18 @@
             "title": "Active"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -10012,6 +10468,18 @@
             "title": "Quarters"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -10071,133 +10539,6 @@
       }
     ],
     "photo": "/poi_photos/9b0243d6-66dc-4992-9830-c088d8c782fc.jpg"
-  },
-  {
-    "identifier": "a8ca04a9-8860-4e06-9eaf-dc65c265a668",
-    "name": "Weekly market Bern",
-    "city": "bern",
-    "abstract": "Weekly market Bern",
-    "description": "Every Tuesday and Saturday from May to October the Waisenplatz, Bärenplatz, Bundesplatz and the adjacent side streets feature a market selling fruit, vegetables and flowers. From May to October, the market is held every day except on Sunday on Bärenplatz. Enjoy the lively atmosphere on a leisurely and tasty stroll past the many stalls.\nFurther information and opening hours:",
-    "season": [
-      "spring",
-      "summer",
-      "autumn"
-    ],
-    "top": null,
-    "classification": [
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "licences",
-        "values": [
-          {
-            "name": "bysa",
-            "title": "BY-SA"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "month",
-        "values": [
-          {
-            "name": "allyear",
-            "title": "All year"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "toursandsightseeingtype",
-        "title": "Tours and Sightseeing",
-        "values": [
-          {
-            "name": "villagetour",
-            "title": "Village tour"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "suitablefortype",
-        "title": "Suitable for",
-        "values": [
-          {
-            "name": "couples",
-            "title": "Couples"
-          },
-          {
-            "name": "individual",
-            "title": "Individual"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "neededtime",
-        "title": "Needed time",
-        "values": [
-          {
-            "name": "2to4hourshalfday",
-            "title": "2 to 4 hours (half day)"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "values": [
-          {
-            "name": "de",
-            "title": "German"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "eatingdrinkingshoppingtype",
-        "title": "Eating Drinking Shopping",
-        "values": [
-          {
-            "name": "shopping",
-            "title": "Shopping"
-          },
-          {
-            "name": "culinary",
-            "title": "Culinary"
-          }
-        ]
-      }
-    ],
-    "lake": false,
-    "mountain": false,
-    "culture": true,
-    "food": true,
-    "sport": false,
-    "lake_reason": "The market is not located near a lake and does not involve any lake-related activities.",
-    "mountain_reason": "The market is in an urban setting and does not involve any mountain-related activities.",
-    "sport_reason": "The market does not involve any physical or adventure activities.",
-    "food_reason": "The market features culinary experiences with stalls selling fruit, vegetables, and other food items.",
-    "culture_reason": "The market offers a cultural experience through local produce and traditional market atmosphere.",
-    "season_reason": "The market operates from May to October, covering spring, summer, and autumn.",
-    "image": [
-      {
-        "@type": "ImageObject",
-        "name": "Bern_Gemuesemarkt.jpg",
-        "keywords": "leisure,summer",
-        "publisher": "Switzerland Tourism",
-        "width": 1300,
-        "height": 1211,
-        "encodingFormat": "image/jpeg",
-        "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/food%20and%20drink/various/bern_gemuesemarkt_40370.jpg"
-      }
-    ],
-    "photo": "/poi_photos/a8ca04a9-8860-4e06-9eaf-dc65c265a668.jpg"
   },
   {
     "identifier": "0541f675-f4eb-45e0-bc18-cc0f3e14f1f7",
@@ -10285,6 +10626,18 @@
           {
             "name": "oldtown",
             "title": "Old town"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -10617,6 +10970,18 @@
           {
             "name": "culinary",
             "title": "Culinary"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -11433,6 +11798,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -11582,6 +11959,18 @@
             "title": "Symbolic Ceremony"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -11688,6 +12077,18 @@
           {
             "name": "viewingplatform",
             "title": "Viewing platform"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -13005,6 +13406,18 @@
             "title": "Adventure trail"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -13302,6 +13715,18 @@
             "title": "Paragliding"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -13499,6 +13924,18 @@
           {
             "name": "active",
             "title": "Active"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -13959,6 +14396,18 @@
             "title": "Train"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -13971,7 +14420,8 @@
     "sport_reason": "The experience does not involve any physical or adventure activities.",
     "food_reason": "There are no explicit culinary experiences mentioned.",
     "culture_reason": "There is no mention of museums, churches, castles, or other cultural heritage activities.",
-    "season_reason": "The Mürrenbahn operates year-round, providing access to Mürren via cable car and train regardless of the season."
+    "season_reason": "The Mürrenbahn operates year-round, providing access to Mürren via cable car and train regardless of the season.",
+    "photo": "/poi_photos/14586645-e603-4e15-8b22-0bc88389cd06.jpg"
   },
   {
     "identifier": "db38447f-dcca-43c9-9426-62f6b594d038",
@@ -14928,6 +15378,18 @@
             "title": "Train Rides"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -15056,6 +15518,18 @@
           {
             "name": "sculpture",
             "title": "Sculpture"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
           }
         ]
       }
@@ -15409,6 +15883,18 @@
             "title": "Active"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -15505,6 +15991,18 @@
             "title": "City Tours"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -15575,6 +16073,18 @@
           {
             "name": "weeklymarket",
             "title": "Weekly market"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -15679,6 +16189,18 @@
           {
             "name": "skate",
             "title": "Ice skating"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
           }
         ]
       }
@@ -16114,6 +16636,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -16244,6 +16778,18 @@
           {
             "name": "culinary",
             "title": "Culinary"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -16515,6 +17061,18 @@
           {
             "name": "de",
             "title": "German"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -16800,6 +17358,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -16876,6 +17446,18 @@
           {
             "name": "building",
             "title": "Building"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
           }
         ]
       }
@@ -16976,6 +17558,18 @@
           {
             "name": "cablerailway",
             "title": "Cable railway"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -18149,6 +18743,18 @@
           {
             "name": "cablerailway",
             "title": "Cable railway"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -19344,6 +19950,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -19925,6 +20543,18 @@
           {
             "name": "gourmettour",
             "title": "Gourmet tour"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -20574,6 +21204,18 @@
           {
             "name": "en",
             "title": "English"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -21979,6 +22621,18 @@
             "title": "World Heritage"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -22514,6 +23168,18 @@
             "title": "Parks"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -22771,6 +23437,18 @@
           {
             "name": "bysa",
             "title": "BY-SA"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -23471,6 +24149,18 @@
             "title": "Lakeside promenades"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -23959,6 +24649,18 @@
           {
             "name": "weeklymarket",
             "title": "Weekly market"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -24484,6 +25186,18 @@
           {
             "name": "education",
             "title": "Education"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
           }
         ]
       }
@@ -25283,6 +25997,18 @@
             "title": "Photo Spot"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -26049,6 +26775,18 @@
             "title": "Photo Spot"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -26164,6 +26902,18 @@
           {
             "name": "photospot",
             "title": "Photo Spot"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
           }
         ]
       }
@@ -26812,6 +27562,18 @@
             "title": "Bobsledding"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -26920,6 +27682,18 @@
           {
             "name": "toboggan",
             "title": "Toboggan"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -27920,6 +28694,18 @@
             "title": "Skiing or snowboarding"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -28002,6 +28788,18 @@
           {
             "name": "historical",
             "title": "Historical"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -28491,6 +29289,18 @@
           {
             "name": "nature",
             "title": "Nature"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
           }
         ]
       }
@@ -29471,6 +30281,18 @@
             "title": "Train Rides"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -29565,6 +30387,18 @@
             "title": "BY-SA"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -29645,6 +30479,18 @@
           {
             "name": "photospot",
             "title": "Photo Spot"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -29730,6 +30576,18 @@
           {
             "name": "photospot",
             "title": "Photo Spot"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
           }
         ]
       }
@@ -30165,6 +31023,18 @@
           {
             "name": "bysa",
             "title": "BY-SA"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -31141,6 +32011,18 @@
             "title": "Autumn"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -31153,7 +32035,8 @@
     "sport_reason": "The POI does not involve any physical or adventure activities.",
     "food_reason": "There is no mention of culinary experiences related to the castle.",
     "culture_reason": "The castle is a historic site with medieval architecture, dungeons, and exhibitions, making it a cultural experience.",
-    "season_reason": "Chillon Castle is accessible year-round with indoor exhibits and scenic views suitable for all seasons."
+    "season_reason": "Chillon Castle is accessible year-round with indoor exhibits and scenic views suitable for all seasons.",
+    "photo": "/poi_photos/synthetic-chillon-castle.jpg"
   },
   {
     "identifier": "synthetic-kapellbruecke",
@@ -31190,6 +32073,18 @@
             "title": "In the city"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
+          }
+        ]
       }
     ],
     "lake": false,
@@ -31202,7 +32097,8 @@
     "sport_reason": "The POI does not involve any physical or adventure activities.",
     "food_reason": "There is no mention of culinary experiences or food-related activities.",
     "culture_reason": "The Chapel Bridge is a historic landmark with cultural significance, featuring painted panels and architectural heritage.",
-    "season_reason": "Chapel Bridge is a city landmark accessible year-round, with seasonal highlights like spring flowers and winter illuminations."
+    "season_reason": "Chapel Bridge is a city landmark accessible year-round, with seasonal highlights like spring flowers and winter illuminations.",
+    "photo": "poi_photos/synthetic-kapellbruecke.jpg"
   },
   {
     "identifier": "synthetic-lion-monument",
@@ -31226,6 +32122,18 @@
           {
             "name": "memorial",
             "title": "Memorial"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "lessthan1hour",
+            "title": "Less than 1 hour"
           }
         ]
       }
@@ -31281,6 +32189,18 @@
             "title": "Active"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "4to8hoursfullday",
+            "title": "4 to 8 hours (full day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -31317,6 +32237,18 @@
           {
             "name": "reformation",
             "title": "Reformation site"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "between1to2hours",
+            "title": "1-2 hours"
           }
         ]
       }
@@ -31356,6 +32288,18 @@
             "title": "Panoramic view"
           }
         ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
+          }
+        ]
       }
     ],
     "lake": true,
@@ -31391,6 +32335,18 @@
           {
             "name": "inthealpinemountains",
             "title": "In the alpine mountains"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
@@ -31439,6 +32395,18 @@
           {
             "name": "bythelake",
             "title": "By the lake"
+          }
+        ]
+      },
+      {
+        "@context": "https://myswitzerland.io/",
+        "@type": "Classification",
+        "name": "neededtime",
+        "title": "Needed time",
+        "values": [
+          {
+            "name": "2to4hourshalfday",
+            "title": "2 to 4 hours (half day)"
           }
         ]
       }
