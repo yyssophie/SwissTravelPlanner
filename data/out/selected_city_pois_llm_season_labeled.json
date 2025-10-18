@@ -1267,7 +1267,7 @@
     "name": "Hürlimannbad & Spa Zurich",
     "city": "zurich",
     "abstract": "At the Hürlimannbad & Spa Zurich, you bathe in century-old vaults that offer peace and relaxation.",
-    "description": "he central bathing area consists of a large, open stainless steel pool with invigorating massage jets, bubble loungers, massage and bubble rings. \n\nOther highlights include the emerald bath with underwater music and an exciting light show, a steam bath, a course bath and a rain shower. On the roof, the infinity pool offers a spectacular panoramic view over Zurich. The rooms - with many playful elements and details - are reminiscent of the former brewery. In the Roman-Irish spa ritual, the body is warmed, cleansed, relaxed and cooled down again in 10 successive stations - a source of soothing relaxation, health and vitality. \n\nIn between, the bistro invites you to relax, rest and enjoy. You will find an always fresh selection of various hot and cold delicacies as well as exquisite drinks.",
+    "description": "The central bathing area consists of a large, open stainless steel pool with invigorating massage jets, bubble loungers, massage and bubble rings. \n\nOther highlights include the emerald bath with underwater music and an exciting light show, a steam bath, a course bath and a rain shower. On the roof, the infinity pool offers a spectacular panoramic view over Zurich. The rooms - with many playful elements and details - are reminiscent of the former brewery. In the Roman-Irish spa ritual, the body is warmed, cleansed, relaxed and cooled down again in 10 successive stations - a source of soothing relaxation, health and vitality. \n\nIn between, the bistro invites you to relax, rest and enjoy. You will find an always fresh selection of various hot and cold delicacies as well as exquisite drinks.",
     "season": [
       "winter",
       "autumn",
@@ -1336,9 +1336,9 @@
     ],
     "lake": false,
     "mountain": false,
-    "culture": false,
+    "culture": true,
     "food": false,
-    "sport": true,
+    "sport": false,
     "lake_reason": "The experience is centered around a spa and thermal baths, not a lake.",
     "mountain_reason": "There is no mention of alpine terrain or mountain-related activities.",
     "sport_reason": "The spa includes bathing and swimming, which are considered physical activities.",
@@ -2803,7 +2803,7 @@
     "name": "Funicular, cliff walk and mechanical lifton the Bürgenstock",
     "city": "luzern",
     "abstract": "The funicular, cliff walk and mechanical lift on the Bürgenstock represent a triple tribute to the art and technology of the belle époque. The Bürgenstock Bahn, built in 1888, is the oldest electric funicular railway in Switzerland.",
-    "description": "The panoramic cliff walk, meanwhile, has been described as “the most beautiful mountain promenade in the world”. From 1900 to 1905, its creators blasted and tunnelled their way through the rock to create a spectacular path 2.5 kilometres long, 500 metres above Lake Lucerne. The year of its completion also saw the open ing of the Hammetschwand Lift. The highest outdoor elevator in Europe travels through the rock and up an elegant tower in just under a minute, offering thrilling and giddying views on its way to the panoramic lookout point at the top of the Bürgenstock plateau, the Hammetschwand (1,132m a.s.l.).\nOpen: Cliff walk and lift: approx. May to Oct. \nDue for completion in 2017 Central Switzerland is witnessing the emergence of a premier resort – the Bürgenstock Resort. Therefore the Bürgenstock Bahn is closed.",
+    "description": "The panoramic cliff walk, meanwhile, has been described as “the most beautiful mountain promenade in the world”. From 1900 to 1905, its creators blasted and tunnelled their way through the rock to create a spectacular path 2.5 kilometres long, 500 metres above Lake Lucerne. The year of its completion also saw the open ing of the Hammetschwand Lift. The highest outdoor elevator in Europe travels through the rock and up an elegant tower in just under a minute, offering thrilling and giddying views on its way to the panoramic lookout point at the top of the Bürgenstock plateau, the Hammetschwand (1,132m a.s.l.).\nOpen: Cliff walk and lift: approx. May to Oct.",
     "season": [
       "summer",
       "spring",
@@ -4664,7 +4664,7 @@
     "name": "Beginner golf lessons overlooking Lake Lucerne",
     "city": "luzern",
     "abstract": "The nine-hole golf course at the Bürgenstock Resort in the foothills of the Alps boasts enchantingly unique mountain views and makes the perfect place for beginners to try their hand at golf.",
-    "description": "In addition to three hotels, various restaurants, a 10,000 m2 spa and many other amenities, the new Bürgenstock Resort offers beginner golf lessons on its own golf course. Why not learn to play the game of games at an altitude of 500 metres? Participants learn to tee off, putt and follow golf course etiquette. And all this with a breathtaking view from 500 metres above Lake Lucerne.Info and registration [golf@burgenstockresort.com]",
+    "description": "In addition to three hotels, various restaurants, a 10,000 m2 spa and many other amenities, the new Bürgenstock Resort offers beginner golf lessons on its own golf course. Why not learn to play the game of games at an altitude of 500 metres? Participants learn to tee off, putt and follow golf course etiquette. And all this with a breathtaking view from 500 metres above Lake Lucerne. Info and registration [golf@burgenstockresort.com]",
     "season": [
       "summer",
       "spring",
@@ -9890,143 +9890,6 @@
     "season_reason": "The funicular railway and surrounding attractions are best experienced in spring, summer, and autumn when the weather is favorable for outdoor activities and the hotel is open, while winter access is limited to special occasions."
   },
   {
-    "identifier": "814e1fe7-57d2-4dbf-9cc9-37c0141f214a",
-    "name": "GoldenPass Express",
-    "city": "interlaken",
-    "abstract": "The GoldenPass Express redefines the travel experience between Interlaken and Montreux.",
-    "description": "SEAMLESS TRAVEL EXPERIENCE\nThe GoldenPass Express provides a seamless and even more comfortable travel experience on one of Switzerland’s most picturesque train routes. The panoramic train will connect Interlaken with Montreux up to four times a day, offering uninterrupted views of the breathtaking panorama.PRESTIGE\nThe travel class “Prestige” is the centrepiece of the train. It offers everything you would expect from an unforgettable train journey: plenty of privacy, maximum comfort in a small compartment, and an exceptional culinary offering.\n\nMake yourself comfortable on the luxurious and heated leather seats, which can be rotated 180 degrees upon request. The travel class is also elevated by 40 cm compared to the other travel classes, offering you an even better view of the fascinating scenery.\n\nCULINARY DELIGHTS ON THE GOLDENPASS EXPRESS\nLocal and international delicacies can be ordered in advance, ensuring a perfect start to an exciting journey. For example, how about a glass of champagne and a portion of the finest caviar from Frutigen in Switzerland?\n\nIf you prefer to pamper your palate with regional delicacies, you won’t be disappointed with a traditional apéro-plate or a vegetarian alternative. While champagne and caviar are served exclusively in “Prestige” and 1st class, you can enjoy selected dishes from the small but exquisite menu in all travel classes.\n\nWORLD-FAMOUS PLACES, THREE REGIONS\nThe journey on the GoldenPass Express is like a foray through Switzerland. The trip starts in picturesque Interlaken and continues via Gstaad, Château-d’Oex and Montbovon to Montreux, the journey’s final stop. Of course, you can also start your trip in Montreux.\n\nInterlaken is a great base for numerous activities and boasts incredible views of Eiger, Mönch and Jungfrau. Luxurious Gstaad is known for its charming chalets and is a favourite holiday spot among stars and winter sports enthusiasts alike. Château-d’Oex is known for its hot air balloons and, with a little luck, you might spot one aloft. Montreux, of course, is home to the annual Montreux Jazz Festival [https://www.montreuxjazzfestival.com/en/].\n\n\nSWISSNESS\nThe GoldenPass Express is a world-first and a Swiss masterstroke. After all, the idea of connecting Interlaken and Montreux without needing to change trains originated more than 100 years ago. The project never materialised, however, because of the different track gauges of the respective sections of the line. But this seemingly impossible challenge could now be solved by an ingenious invention: adjustable bogies.\nGOLDENPASS EXPRESS TIMETABLE\n\n\nThe current timetable as well as additional information can be found here [https://www.gpx.swiss/en/pages/timetable].\n\n\nRESERVATIONS AND SURCHARGES\nDue to limited seating capacity, reservations are mandatory in “Prestige” (CHF 49) and strongly recommended for 1st and 2nd class travel. This is in addition to a valid ticket for the selected travel class.\n\nThe only thing you might find disappointing? The entire trip lasts just 3 hours 15 minutes. With those stunning views and unrivalled comfort, the journey is just as spectacular as the destination.\n\n\nSWISS TRAVEL PASS\nThis route is fully included in the Swiss Travel Pass (Flex) / GA Travelcard, though seat reservations must be paid for separately. \nBook tickets [https://www.myswitzerland.com/en/planning/transport-accommodation/tickets-public-transport/]",
-    "season": [
-      "spring",
-      "summer",
-      "autumn",
-      "winter"
-    ],
-    "top": null,
-    "classification": [
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "views",
-        "values": [
-          {
-            "name": "panorama",
-            "title": "Panorama"
-          },
-          {
-            "name": "mountainview",
-            "title": "Mountain view"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "swisstainable",
-        "values": [
-          {
-            "name": "swisstainablelevel1",
-            "title": "* Committed"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "geographicallocations",
-        "values": [
-          {
-            "name": "inthecountryside",
-            "title": "In the countryside"
-          },
-          {
-            "name": "inthemountains",
-            "title": "In the mountains"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "seasons",
-        "values": [
-          {
-            "name": "winter",
-            "title": "Winter"
-          },
-          {
-            "name": "spring",
-            "title": "Spring"
-          },
-          {
-            "name": "summer",
-            "title": "Summer"
-          },
-          {
-            "name": "autumn",
-            "title": "Autumn"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "reachabilitylocation",
-        "values": [
-          {
-            "name": "closetopublictransport",
-            "title": "Close to public transport"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "licences",
-        "values": [
-          {
-            "name": "bysa",
-            "title": "BY-SA"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "transporttype",
-        "title": "Transport type",
-        "values": [
-          {
-            "name": "train",
-            "title": "Train"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "toursandsightseeingtype",
-        "title": "Tours and Sightseeing",
-        "values": [
-          {
-            "name": "trainrides",
-            "title": "Train Rides"
-          }
-        ]
-      }
-    ],
-    "lake": false,
-    "mountain": true,
-    "culture": false,
-    "food": true,
-    "sport": false,
-    "lake_reason": "The experience is a train journey and does not involve any activities on or directly using a lake.",
-    "mountain_reason": "The train route offers mountain views and travels through alpine terrain, making it a mountain-centric experience.",
-    "sport_reason": "The experience is a scenic train ride and does not involve any physical or adventure sports activities.",
-    "food_reason": "The train offers a culinary experience with local and international delicacies, including champagne and caviar.",
-    "culture_reason": "While the train passes through culturally significant areas, the experience itself is not focused on cultural activities or heritage sites.",
-    "season_reason": "The GoldenPass Express is a panoramic train ride that operates year-round, offering stunning views and a comfortable travel experience in all seasons."
-  },
-  {
     "identifier": "90a82f6e-ab99-43d5-90a5-bebf3376669c",
     "name": "Interlaken Free Walking Tour",
     "city": "interlaken",
@@ -11679,143 +11542,6 @@
     "food_reason": "The experience involves wine tasting and learning about wine production, which are explicit culinary activities.",
     "culture_reason": "The experience includes learning about local viticulture and the UNESCO World Heritage status of the vineyards.",
     "season_reason": "The Lavaux vineyards are best experienced in summer and autumn for optimal weather and wine activities, with spring also suitable for outdoor exploration."
-  },
-  {
-    "identifier": "814e1fe7-57d2-4dbf-9cc9-37c0141f214a",
-    "name": "GoldenPass Express",
-    "city": "montreux",
-    "abstract": "The GoldenPass Express redefines the travel experience between Interlaken and Montreux.",
-    "description": "SEAMLESS TRAVEL EXPERIENCE\nThe GoldenPass Express provides a seamless and even more comfortable travel experience on one of Switzerland’s most picturesque train routes. The panoramic train will connect Interlaken with Montreux up to four times a day, offering uninterrupted views of the breathtaking panorama.PRESTIGE\nThe travel class “Prestige” is the centrepiece of the train. It offers everything you would expect from an unforgettable train journey: plenty of privacy, maximum comfort in a small compartment, and an exceptional culinary offering.\n\nMake yourself comfortable on the luxurious and heated leather seats, which can be rotated 180 degrees upon request. The travel class is also elevated by 40 cm compared to the other travel classes, offering you an even better view of the fascinating scenery.\n\nCULINARY DELIGHTS ON THE GOLDENPASS EXPRESS\nLocal and international delicacies can be ordered in advance, ensuring a perfect start to an exciting journey. For example, how about a glass of champagne and a portion of the finest caviar from Frutigen in Switzerland?\n\nIf you prefer to pamper your palate with regional delicacies, you won’t be disappointed with a traditional apéro-plate or a vegetarian alternative. While champagne and caviar are served exclusively in “Prestige” and 1st class, you can enjoy selected dishes from the small but exquisite menu in all travel classes.\n\nWORLD-FAMOUS PLACES, THREE REGIONS\nThe journey on the GoldenPass Express is like a foray through Switzerland. The trip starts in picturesque Interlaken and continues via Gstaad, Château-d’Oex and Montbovon to Montreux, the journey’s final stop. Of course, you can also start your trip in Montreux.\n\nInterlaken is a great base for numerous activities and boasts incredible views of Eiger, Mönch and Jungfrau. Luxurious Gstaad is known for its charming chalets and is a favourite holiday spot among stars and winter sports enthusiasts alike. Château-d’Oex is known for its hot air balloons and, with a little luck, you might spot one aloft. Montreux, of course, is home to the annual Montreux Jazz Festival [https://www.montreuxjazzfestival.com/en/].\n\n\nSWISSNESS\nThe GoldenPass Express is a world-first and a Swiss masterstroke. After all, the idea of connecting Interlaken and Montreux without needing to change trains originated more than 100 years ago. The project never materialised, however, because of the different track gauges of the respective sections of the line. But this seemingly impossible challenge could now be solved by an ingenious invention: adjustable bogies.\nGOLDENPASS EXPRESS TIMETABLE\n\n\nThe current timetable as well as additional information can be found here [https://www.gpx.swiss/en/pages/timetable].\n\n\nRESERVATIONS AND SURCHARGES\nDue to limited seating capacity, reservations are mandatory in “Prestige” (CHF 49) and strongly recommended for 1st and 2nd class travel. This is in addition to a valid ticket for the selected travel class.\n\nThe only thing you might find disappointing? The entire trip lasts just 3 hours 15 minutes. With those stunning views and unrivalled comfort, the journey is just as spectacular as the destination.\n\n\nSWISS TRAVEL PASS\nThis route is fully included in the Swiss Travel Pass (Flex) / GA Travelcard, though seat reservations must be paid for separately. \nBook tickets [https://www.myswitzerland.com/en/planning/transport-accommodation/tickets-public-transport/]",
-    "season": [
-      "spring",
-      "summer",
-      "autumn",
-      "winter"
-    ],
-    "top": null,
-    "classification": [
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "views",
-        "values": [
-          {
-            "name": "panorama",
-            "title": "Panorama"
-          },
-          {
-            "name": "mountainview",
-            "title": "Mountain view"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "swisstainable",
-        "values": [
-          {
-            "name": "swisstainablelevel1",
-            "title": "* Committed"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "geographicallocations",
-        "values": [
-          {
-            "name": "inthecountryside",
-            "title": "In the countryside"
-          },
-          {
-            "name": "inthemountains",
-            "title": "In the mountains"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "seasons",
-        "values": [
-          {
-            "name": "winter",
-            "title": "Winter"
-          },
-          {
-            "name": "spring",
-            "title": "Spring"
-          },
-          {
-            "name": "summer",
-            "title": "Summer"
-          },
-          {
-            "name": "autumn",
-            "title": "Autumn"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "reachabilitylocation",
-        "values": [
-          {
-            "name": "closetopublictransport",
-            "title": "Close to public transport"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "licences",
-        "values": [
-          {
-            "name": "bysa",
-            "title": "BY-SA"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "transporttype",
-        "title": "Transport type",
-        "values": [
-          {
-            "name": "train",
-            "title": "Train"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "toursandsightseeingtype",
-        "title": "Tours and Sightseeing",
-        "values": [
-          {
-            "name": "trainrides",
-            "title": "Train Rides"
-          }
-        ]
-      }
-    ],
-    "lake": false,
-    "mountain": true,
-    "culture": true,
-    "food": true,
-    "sport": false,
-    "lake_reason": "The experience is a train journey and does not involve any activities on or directly using a lake.",
-    "mountain_reason": "The train route offers mountain views and travels through alpine terrain, as indicated by the 'mountainview' classification.",
-    "sport_reason": "The experience is a train ride and does not involve any physical or adventure activities.",
-    "food_reason": "The train offers a culinary experience with local and international delicacies, including champagne and caviar.",
-    "culture_reason": "The journey passes through culturally significant areas like Montreux, known for its jazz festival, and offers a scenic tour of Swiss landscapes.",
-    "season_reason": "The GoldenPass Express is a panoramic train ride offering stunning views and operates year-round, making it suitable for all seasons."
   },
   {
     "identifier": "79e79044-a366-4017-9b7b-5bf87e7d7225",
@@ -19191,76 +18917,6 @@
     "food_reason": "The cruises include culinary experiences such as the Sushi Cruise, Dessert Cruise, and Crêpes Cruise.",
     "culture_reason": "The focus is on lake cruises and not on cultural activities like museums or historical sites.",
     "season_reason": "Lake Zug Cruises operate from April to October, making spring, summer, and autumn the suitable seasons."
-  },
-  {
-    "identifier": "b29a89aa-f761-4bdd-8dc9-109c33720d1d",
-    "name": "Photo Spot Lake Lucerne",
-    "city": "schwyz",
-    "abstract": "In the distance you can see the Rütli meadow, the historic place where the forming of Switzerland is said to have occurred in 1291. With its 2,928 m (9,606 ft), the pyramidal peak of Urirotstock can be made out even farther in the back. The village of Seelisberg lies on a sunny terrace at 850 m.a.s.l. (2.788 ft), beneath the two mountains Niederbauen and Oberbauen. Lake Lucerne, in German literally ‘Four Forested Settlements Lake’, got its name because it is embedded in the four forest cantons of Uri, Schwyz, Obwalden and Nidwalden, and Lucerne.",
-    "description": "Address:\nAxenstrasse / Bellevuequai\n6440 Brunnen\n\nParking: \nAxenstrasse 9, 6440 Brunnen\nopposite Restaurant Mezcalito\nsubject to charge\n\nFootpath: \n0 minutes",
-    "season": [
-      "spring",
-      "summer",
-      "autumn"
-    ],
-    "top": null,
-    "classification": [
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "swisstainable",
-        "values": [
-          {
-            "name": "swisstainablelevel1",
-            "title": "* Committed"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "geographicallocations",
-        "values": [
-          {
-            "name": "alonggrandtour",
-            "title": "Along the Grand Tour"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "licences",
-        "values": [
-          {
-            "name": "bysa",
-            "title": "BY-SA"
-          }
-        ]
-      },
-      {
-        "@context": "https://myswitzerland.io/",
-        "@type": "Classification",
-        "name": "dynamiccampaigntypes",
-        "values": [
-          {
-            "name": "photospot",
-            "title": "Photo Spot"
-          }
-        ]
-      }
-    ],
-    "lake": true,
-    "mountain": true,
-    "culture": false,
-    "food": false,
-    "sport": false,
-    "lake_reason": "The POI is a photo spot at Lake Lucerne, directly involving the lake.",
-    "mountain_reason": "The description mentions the Urirotstock peak and the surrounding mountains, indicating a focus on alpine terrain.",
-    "sport_reason": "There are no physical or adventure activities mentioned.",
-    "food_reason": "There is no mention of culinary experiences.",
-    "culture_reason": "There is no mention of museums, churches, or other cultural heritage elements.",
-    "season_reason": "The photo spot at Lake Lucerne is accessible year-round, but the best views and weather conditions for photography are during spring, summer, and autumn."
   },
   {
     "identifier": "6343af66-3e67-4f05-be3e-23b7a1f4b80f",
