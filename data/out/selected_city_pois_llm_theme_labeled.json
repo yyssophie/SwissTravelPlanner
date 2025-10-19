@@ -43253,11 +43253,11 @@
     ],
     "nature": false,
     "nature_reason": "While the landscape is scenic, the focus is on paragliding as an activity.",
-    "culture": true,
+    "culture": false,
     "culture_reason": "There is no mention of cultural experiences or historical significance.",
     "food": false,
     "food_reason": "There are no culinary experiences or food-related activities mentioned.",
-    "sport": false,
+    "sport": true,
     "sport_reason": "The experience aligns more with culture than sport.",
     "season": [
       "spring",

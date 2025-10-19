@@ -10,6 +10,21 @@ from .data_store import CATEGORIES, TravelDataStore
 from .route_planner import DayPlan, RoutePlanner
 
 
+def format_city_label(value: str | None) -> str:
+    if not value:
+        return ""
+    raw = value.replace("_", " ").replace("-", " ").strip()
+    parts = [p for p in raw.split() if p]
+    formatted: List[str] = []
+    for part in parts:
+        lower = part.lower()
+        if lower in {"st", "st.", "saint"}:
+            formatted.append("St.")
+        else:
+            formatted.append(part[0].upper() + part[1:].lower())
+    return " ".join(formatted)
+
+
 class PreferenceWeights(BaseModel):
     nature: float = Field(..., ge=0.0)
     culture: float = Field(..., ge=0.0)
@@ -68,14 +83,16 @@ class PlanResponse(BaseModel):
 
 
 def _format_day(day: DayPlan) -> PlanDay:
-    from_city = day.travel_from
-    to_city = day.display_city
+    from_city_raw = day.travel_from
+    to_city_raw = day.display_city
+    from_city = format_city_label(from_city_raw) if from_city_raw else None
+    to_city = format_city_label(to_city_raw)
     summary = [poi.name for poi in day.pois]
     pois = [
         PlanPOI(
             identifier=poi.identifier,
             name=poi.name,
-            city=poi.city,
+            city=format_city_label(poi.city),
             labels=[category for category in CATEGORIES if poi.has_label(category)],
             description=poi.description or None,
             abstract=poi.abstract or None,
