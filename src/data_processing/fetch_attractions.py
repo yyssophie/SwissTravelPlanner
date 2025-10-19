@@ -27,55 +27,84 @@ COMMON_PARAMS: Dict[str, str] = {
 
 # Mapping of output slug -> API query string.
 CITY_QUERIES: Dict[str, str] = {
-    "zurich": "Zurich",
-    "lucerne": "Luzern",  # API results cover Lucerne attractions
-    "geneva": "Geneva",
-    "bern": "Bern",
-    "interlaken": "Interlaken",
-    "montreux": "Montreux",
-    "appenzell": "Appenzell",
-    "lugano": "Lugano",
-    "schwyz": "Schwyz",
-    "zermatt": "Zermatt",
+    # "zurich": "Zurich",
+    # "lucerne": "Luzern",  # API results cover Lucerne attractions
+    # "geneva": "Geneva",
+    # "bern": "Bern",
+    # "interlaken": "Interlaken",
+    "lausanne": "Lausanne",
+    # "montreux": "Montreux",
+    # "appenzell": "Appenzell",
+    # "lugano": "Lugano",
+    "sion": "Sion",
+    "st_gallen": "St. Gallen",
+    "st_moritz": "St. Moritz",
+    "kandersteg": "Kandersteg",
+    # "schwyz": "Schwyz",
+    # "zermatt": "Zermatt",
 }
 
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "in"
+OUTPUT_DIR = Path("/Users/yuanyusi/Desktop/CS3263/project/SwissTravelPlan/data/in")
 
 # Additional icon-specific queries to ensure signature attractions are captured.
 ICON_QUERIES: Dict[str, List[str]] = {
-    "zurich": [
-        "Kunsthaus Zürich",
-        "Swiss National Museum",
-        "Lindenhof",
-        "Uetliberg",
+    # "zurich": [
+    #     "Kunsthaus Zürich",
+    #     "Swiss National Museum",
+    #     "Lindenhof",
+    #     "Uetliberg",
+    # ],
+    # "lucerne": [
+    #     "Chapel Bridge",
+    #     "Kapellbrücke",
+    #     "Lion Monument",
+    #     "Mount Rigi",
+    #     "Lake Lucerne",
+    #     "Old Town of Lucerne",
+    #     "Swiss Museum of Transport",
+    # ],
+    # "geneva": [
+    #     "Palais des Nations",
+    #     "United Nations Office at Geneva",
+    # ],
+    "lausanne": [
+        "Olympic Museum",
+        "Lausanne Cathedral",
+        "Collection de l'Art Brut",
     ],
-    "lucerne": [
-        "Chapel Bridge",
-        "Kapellbrücke",
-        "Lion Monument",
-        "Mount Rigi",
-        "Lake Lucerne",
-        "Old Town of Lucerne",
-        "Swiss Museum of Transport",
+    # "montreux": [
+    #     "Chillon Castle",
+    #     "Château de Chillon",
+    # ],
+    # "appenzell": [
+    #     "Seealpsee",
+    #     "Aescher",
+    #     "Appenzeller Schaukaserei",
+    # ],
+    # "lugano": [
+    #     "Monte Brè",
+    #     "Parco Ciani",
+    #     "Gandria",
+    #     "LAC Lugano",
+    # ],
+    "sion": [
+        "Valère Basilica",
+        "Tourbillon Castle",
     ],
-    "geneva": [
-        "Palais des Nations",
-        "United Nations Office at Geneva",
+    "st_gallen": [
+        "Abbey Library of Saint Gall",
+        "Stiftsbibliothek St. Gallen",
+        "Textilmuseum St. Gallen",
     ],
-    "montreux": [
-        "Chillon Castle",
-        "Château de Chillon",
+    "st_moritz": [
+        "Corviglia",
+        "Muottas Muragl",
+        "Lake St. Moritz",
     ],
-    "appenzell": [
-        "Seealpsee",
-        "Aescher",
-        "Appenzeller Schaukaserei",
-    ],
-    "lugano": [
-        "Monte Brè",
-        "Parco Ciani",
-        "Gandria",
-        "LAC Lugano",
+    "kandersteg": [
+        "Oeschinen Lake",
+        "Blausee",
+        "Gemmi Pass",
     ],
     "schwyz": [
         "Einsiedeln Monastery",
