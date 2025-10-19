@@ -11,14 +11,13 @@ from .route_planner import DayPlan, RoutePlanner
 
 
 class PreferenceWeights(BaseModel):
-    lake: float = Field(..., ge=0.0)
-    mountain: float = Field(..., ge=0.0)
-    sport: float = Field(..., ge=0.0)
+    nature: float = Field(..., ge=0.0)
     culture: float = Field(..., ge=0.0)
     food: float = Field(..., ge=0.0)
+    sport: float = Field(..., ge=0.0)
 
     def normalised(self) -> Dict[str, float]:
-        values = [self.lake, self.mountain, self.sport, self.culture, self.food]
+        values = [self.nature, self.culture, self.food, self.sport]
         total = sum(values)
         if total <= 0:
             return {category: 1.0 / len(CATEGORIES) for category in CATEGORIES}

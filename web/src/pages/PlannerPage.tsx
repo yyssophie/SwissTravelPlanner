@@ -2,21 +2,32 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMustVisitDetail } from "../data/mustVisitDetails";
 
-type Interests = {
-  lake: number;
-  mountain: number;
-  culture: number;
-  food: number;
-  sport: number;
+const INTEREST_KEYS = ["nature", "culture", "food", "sport"] as const;
+type InterestKey = (typeof INTEREST_KEYS)[number];
+type Interests = Record<InterestKey, number>;
+
+const RANK_WEIGHTS = [40, 30, 20, 10];
+
+const DEFAULT_ORDER: InterestKey[] = [...INTEREST_KEYS];
+
+const orderToMap = (order: InterestKey[]): Interests => {
+  const map = {} as Interests;
+  order.forEach((key, index) => {
+    map[key] = RANK_WEIGHTS[index];
+  });
+  return map;
 };
 
-const DEFAULT_INTERESTS: Interests = {
-  lake: 0,
-  mountain: 0,
-  culture: 0,
-  food: 0,
-  sport: 0,
+const DEFAULT_INTERESTS: Interests = orderToMap(DEFAULT_ORDER);
+
+const INTEREST_COPY: Record<InterestKey, string> = {
+  nature: "Peaks, lakes, and scenic landscapes",
+  culture: "Museums, heritage sites, and neighbourhood walks",
+  food: "Culinary experiences, tastings, and markets",
+  sport: "Adventure, adrenaline, and outdoor thrills",
 };
+
+const formatInterest = (key: InterestKey) => key.charAt(0).toUpperCase() + key.slice(1);
 
 type Attraction = {
   slug: string;
@@ -83,16 +94,9 @@ const PlannerPage = () => {
   const [days, setDays] = useState<number>(7);
   const [daysText, setDaysText] = useState<string>("7");
   const [season, setSeason] = useState("summer");
+  const [rankOrder, setRankOrder] = useState<InterestKey[]>(DEFAULT_ORDER);
   const [interests, setInterests] = useState<Interests>({ ...DEFAULT_INTERESTS });
-  const [interestText, setInterestText] = useState<Record<keyof Interests, string>>({
-    lake: "0",
-    mountain: "0",
-    culture: "0",
-    food: "0",
-    sport: "0",
-  });
-  const [percentSaved, setPercentSaved] = useState<boolean>(false);
-  const [percentError, setPercentError] = useState<string | null>(null);
+  const [percentSaved, setPercentSaved] = useState<boolean>(true);
   const [attractions, setAttractions] = useState<Attraction[]>(INITIAL_ATTRACTIONS);
 
   // Must‑visit flow state
@@ -111,18 +115,25 @@ const PlannerPage = () => {
     if (!stored) return;
     try {
       const data = JSON.parse(stored) as {
-        from: string; to: string; days: number; season: string;
-        interests: Interests; interestText: Record<keyof Interests, string>;
+        from?: string;
+        to?: string;
+        days?: number;
+        season?: string;
+        interests?: Interests;
+        rankOrder?: InterestKey[];
       };
       if (data.from) setFrom(data.from);
       if (data.to) setTo(data.to);
       if (data.days) { setDays(data.days); setDaysText(String(data.days)); }
       if (data.season) setSeason(data.season);
-      if (data.interests) setInterests(data.interests);
-      if (data.interestText) setInterestText(data.interestText);
-      // Mark as saved if totals == 100
-      const sum = Object.values(data.interests).reduce((a, b) => a + (b || 0), 0);
-      setPercentSaved(Math.round(sum) === 100);
+      if (data.interests) {
+        setInterests(data.interests);
+        const sorted = [...INTEREST_KEYS].sort(
+          (a, b) => (data.interests?.[a] ?? 0) > (data.interests?.[b] ?? 0) ? -1 : 1
+        );
+        setRankOrder(data.rankOrder && data.rankOrder.length === INTEREST_KEYS.length ? data.rankOrder : sorted);
+        setPercentSaved(true);
+      }
     } catch { /* ignore */ }
   }, []);
 
@@ -138,54 +149,24 @@ const PlannerPage = () => {
   const canAddMore = mvSelected.length < maxMust;
   const currentAttraction = attractions[mvIndex] ?? attractions[0];
 
-  function parseInterestText(): Interests | null {
-    const raw = interestText;
-    const toNum = (s: string) => (s.trim() === "" ? NaN : Number(s));
-    const lake = toNum(raw.lake);
-    const mountain = toNum(raw.mountain);
-    const sport = toNum(raw.sport);
-    const culture = toNum(raw.culture);
-    const food = toNum(raw.food);
-    const values = [lake, mountain, sport, culture, food];
-    if (values.some((v) => !isFinite(v))) return null;
-    return { lake, mountain, sport, culture, food } as Interests;
-  }
+  const displayRanks = useMemo(
+    () => rankOrder.map((key, index) => ({ key, weight: RANK_WEIGHTS[index] })),
+    [rankOrder]
+  );
 
-  const typedTotals = (() => {
-    const parsed = parseInterestText();
-    if (!parsed) return { total: NaN, remaining: NaN };
-    const total =
-      (parsed.lake || 0) +
-      (parsed.mountain || 0) +
-      (parsed.sport || 0) +
-      (parsed.culture || 0) +
-      (parsed.food || 0);
-    return { total, remaining: 100 - total };
-  })();
+  const moveInterest = (index: number, direction: number) => {
+    const nextIndex = index + direction;
+    if (nextIndex < 0 || nextIndex >= rankOrder.length) return;
+    const updated = [...rankOrder];
+    [updated[index], updated[nextIndex]] = [updated[nextIndex], updated[index]];
+    setRankOrder(updated);
+    setPercentSaved(false);
+  };
 
-  function savePercentages() {
-    const parsed = parseInterestText();
-    if (!parsed) {
-      setPercentError("Please enter numeric values for all interests (0–100).");
-      setPercentSaved(false);
-      return;
-    }
-    const vals = Object.values(parsed);
-    if (vals.some((v) => v < 0 || v > 100)) {
-      setPercentError("Each interest must be between 0 and 100.");
-      setPercentSaved(false);
-      return;
-    }
-    const sum = vals.reduce((a, b) => a + b, 0);
-    if (Math.round(sum) !== 100) {
-      setPercentError("Interests must total exactly 100%.");
-      setPercentSaved(false);
-      return;
-    }
-    setPercentError(null);
+  const savePriorities = () => {
+    setInterests(orderToMap(rankOrder));
     setPercentSaved(true);
-    setInterests(parsed);
-  }
+  };
 
   // Must‑visit controls
   function nextAttraction() {
@@ -300,8 +281,9 @@ const PlannerPage = () => {
     setDays(7);
     setDaysText("7");
     setSeason("summer");
+    setRankOrder(DEFAULT_ORDER);
     setInterests({ ...DEFAULT_INTERESTS });
-    setInterestText({ lake: "0", mountain: "0", culture: "0", food: "0", sport: "0" });
+    setPercentSaved(true);
     setAttractions(shuffle(BASE_ATTRACTIONS));
     setMvIndex(0);
     setMvSelected([]);
@@ -310,6 +292,7 @@ const PlannerPage = () => {
     setMvDone(false);
     setDetailSlug(null);
     sessionStorage.removeItem(PLAN_STORAGE_KEY);
+    sessionStorage.removeItem(PLANNER_INPUTS_KEY);
   }
 
   async function startPlanning() {
@@ -326,11 +309,10 @@ const PlannerPage = () => {
     setIsSubmitting(true);
 
     const weights = {
-      lake: interests.lake / 100,
-      mountain: interests.mountain / 100,
-      sport: interests.sport / 100,
+      nature: interests.nature / 100,
       culture: interests.culture / 100,
       food: interests.food / 100,
+      sport: interests.sport / 100,
     };
 
     const body = {
@@ -359,7 +341,7 @@ const PlannerPage = () => {
       // persist current inputs for Adjust Preferences
       sessionStorage.setItem(
         PLANNER_INPUTS_KEY,
-        JSON.stringify({ from, to, days, season, interests, interestText })
+        JSON.stringify({ from, to, days, season, interests, rankOrder })
       );
       navigate("/planner/itinerary", { state: data });
     } catch (error) {
@@ -428,39 +410,50 @@ const PlannerPage = () => {
           </select>
         </div>
 
-        <div className="row">
-          <label>Interests (total must be 100%)</label>
-          <div className="grid-2">
-            {Object.keys(interests).map((key) => {
-              const k = key as keyof Interests;
-              return (
-                <div className="interest" key={key}>
-                  <span className="interest__label">{k}</span>
-                  <input
-                    type="text"
-                    inputMode="decimal"
-                    value={interestText[k]}
-                    onChange={(e) => {
-                      setPercentSaved(false);
-                      setInterestText((prev) => ({ ...prev, [k]: e.target.value }));
-                    }}
-                  />
-                  <span className="interest__pct">%</span>
+        <div className="row row--interests">
+          <label>Prioritise interests</label>
+          <div className="interest-rank">
+            {displayRanks.map(({ key, weight }, index) => (
+              <div className="interest-rank__item" key={key}>
+                <div className="interest-rank__left">
+                  <span className="interest-rank__badge">#{index + 1}</span>
+                  <div className="interest-rank__text">
+                    <span className="interest-rank__label">{formatInterest(key)}</span>
+                    <span className="interest-rank__hint">{INTEREST_COPY[key]}</span>
+                  </div>
                 </div>
-              );
-            })}
-          </div>
-            <div className="interests-actions">
-              <div className={`remaining ${typedTotals.remaining < 0 ? "over" : "ok"}`}>
-                {isFinite(typedTotals.total)
-                  ? `Remaining: ${Math.max(0, Math.round(typedTotals.remaining))}%`
-                  : "Remaining: —"}
+                <div className="interest-rank__right">
+                  <span className="interest-rank__weight">{weight}%</span>
+                  <div className="interest-rank__actions">
+                    <button
+                      type="button"
+                      onClick={() => moveInterest(index, -1)}
+                      disabled={index === 0}
+                      aria-label={`Move ${formatInterest(key)} up`}
+                    >
+                      ↑
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => moveInterest(index, 1)}
+                      disabled={index === displayRanks.length - 1}
+                      aria-label={`Move ${formatInterest(key)} down`}
+                    >
+                      ↓
+                    </button>
+                  </div>
+                </div>
               </div>
-            <button type="button" className="btn btn--dark" onClick={savePercentages}>
-              Save percentages
+            ))}
+          </div>
+          <div className="interests-actions">
+            <span className="interests-actions__hint">
+              Top pick receives 40%, next 30%, then 20%, then 10%.
+            </span>
+            <button type="button" className="btn btn--dark" onClick={savePriorities}>
+              Save priorities
             </button>
           </div>
-          {percentError && <div className="form-error" role="alert">{percentError}</div>}
         </div>
 
         {/* Must‑Visit Recommendations Section */}

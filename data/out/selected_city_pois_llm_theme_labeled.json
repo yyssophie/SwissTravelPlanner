@@ -246,7 +246,14 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences at the Grossmünster.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Grossmünster is an indoor historical and cultural attraction in Zurich's Old Town, making it accessible and enjoyable year-round."
   },
   {
     "identifier": "ede8cfde-e316-4289-8c27-254b4914db30",
@@ -379,7 +386,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences associated with this attraction.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adventure activities."
+    "sport_reason": "The attraction does not involve any athletic or adventure activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Fraumünster Church is an indoor attraction located in Zurich's old town, making it accessible and enjoyable year-round."
   },
   {
     "identifier": "78a01f68-e741-46bc-b325-41c4a79daf4a",
@@ -547,7 +561,14 @@
     "food": false,
     "food_reason": "The description emphasizes shopping, not culinary experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities mentioned."
+    "sport_reason": "There are no athletic or adventure activities mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Bahnhofstrasse is a city shopping street accessible and enjoyable year-round."
   },
   {
     "identifier": "78411dfd-350a-49c4-b1f7-7bee3db2c0f9",
@@ -624,7 +645,14 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences at the opera house.",
     "sport": false,
-    "sport_reason": "The opera house does not involve any athletic or adventure activities."
+    "sport_reason": "The opera house does not involve any athletic or adventure activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Zürich Opera House offers year-round performances and is located in the city, making it accessible in all seasons."
   },
   {
     "identifier": "d9011452-99d6-4b33-8e2c-ed9323fc7ce3",
@@ -679,7 +707,14 @@
     "food": false,
     "food_reason": "There is no mention of food or culinary experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities involved."
+    "sport_reason": "There are no athletic or adventure activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Zurich Tonhalle offers indoor concerts and events, making it a year-round attraction."
   },
   {
     "identifier": "2d40180e-78ce-408f-b372-3a6774640eeb",
@@ -851,7 +886,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The tour does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The tour does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The guided tour of Zurich's Old Town is suitable year-round as it involves exploring city streets and historical sites, which are accessible in all seasons."
   },
   {
     "identifier": "fe55ef74-164d-4b4f-9101-38933bec6e9d",
@@ -917,7 +959,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The tour is a leisurely city tour, not involving any athletic or adrenaline-focused activities."
+    "sport_reason": "The tour is a leisurely city tour, not involving any athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Zurich Trolley Experience is a city tour suitable year-round, with open-air seating available in summer."
   },
   {
     "identifier": "3d3e6350-29e9-4073-bdf9-be1a644a7000",
@@ -1068,7 +1117,14 @@
     "food": false,
     "food_reason": "Food is not a primary focus of the Polybahn experience.",
     "sport": false,
-    "sport_reason": "The Polybahn is a transport experience, not an athletic or adrenaline-focused activity."
+    "sport_reason": "The Polybahn is a transport experience, not an athletic or adrenaline-focused activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Polybahn operates all year round, providing access to the Polyterrasse and views of Zurich in every season."
   },
   {
     "identifier": "2a14b2d6-8685-49c1-ab51-743346a6ea54",
@@ -1234,7 +1290,14 @@
     "food": false,
     "food_reason": "Although there are dining options on the cruises, the experience is not primarily focused on food.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused experience."
+    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused experience.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Lake Zurich Cruises operate year-round, offering different experiences in each season, with summer being the most popular for outdoor enjoyment."
   },
   {
     "identifier": "f0a6e103-3352-44c5-a960-e7df67cbad80",
@@ -1440,7 +1503,13 @@
     "food": false,
     "food_reason": "There is no specific mention of culinary experiences or dining as part of the attraction.",
     "sport": false,
-    "sport_reason": "The activity is leisurely and scenic, not athletic or adrenaline-focused."
+    "sport_reason": "The activity is leisurely and scenic, not athletic or adrenaline-focused.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Steamboat services on Lake Zurich are most practical and enjoyable during the warmer months of spring, summer, and autumn when the weather is conducive to outdoor activities."
   },
   {
     "identifier": "7232ebea-af3f-4219-a073-9a341bed50d9",
@@ -1621,7 +1690,13 @@
     "food": false,
     "food_reason": "There is no mention of any food or culinary experiences during the boat trip.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely boat trip, not an athletic or adrenaline-focused experience."
+    "sport_reason": "The activity is a leisurely boat trip, not an athletic or adrenaline-focused experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The boat trip around Lake Zurich is best enjoyed in spring, summer, and autumn due to favorable weather and outdoor conditions."
   },
   {
     "identifier": "20cebbdf-21cd-4e83-8c44-207333f64919",
@@ -1821,7 +1896,14 @@
     "food": false,
     "food_reason": "Food is available but not the primary focus of the experience.",
     "sport": false,
-    "sport_reason": "The activities are not athletic or adrenaline-focused, but rather for relaxation."
+    "sport_reason": "The activities are not athletic or adrenaline-focused, but rather for relaxation.",
+    "season": [
+      "winter",
+      "autumn",
+      "spring",
+      "summer"
+    ],
+    "season_reason": "The Hürlimannbad & Spa Zurich is an indoor wellness facility with thermal baths, making it suitable for year-round visits, especially appealing in colder months."
   },
   {
     "identifier": "9fac93b8-e73a-4e47-8cb3-a88a3a8082a1",
@@ -2018,7 +2100,14 @@
     "food": false,
     "food_reason": "There is no mention of culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely city walk, not an athletic or adrenaline-focused activity."
+    "sport_reason": "The activity is a leisurely city walk, not an athletic or adrenaline-focused activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Zurich walking tours are best enjoyed in spring, summer, and autumn due to favorable weather conditions for outdoor activities."
   },
   {
     "identifier": "8ad78d29-de51-4e94-a507-c71a3e1a30bb",
@@ -2168,7 +2257,14 @@
     "food": false,
     "food_reason": "There is no mention of any food-related activities or experiences.",
     "sport": false,
-    "sport_reason": "Although there are mentions of inline skaters and water sports enthusiasts, these are not the primary focus of the attraction."
+    "sport_reason": "Although there are mentions of inline skaters and water sports enthusiasts, these are not the primary focus of the attraction.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The attraction is primarily outdoor and popular in summer for activities like inline skating and water sports, with spring and autumn also suitable for enjoying the parks and gardens."
   },
   {
     "identifier": "a75495a4-1726-449c-b2aa-a77bff676978",
@@ -2424,7 +2520,14 @@
     "food": false,
     "food_reason": "While there is a restaurant, the primary focus is not on a culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this attraction."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this attraction.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Zurich Airport observation deck is a year-round attraction with both indoor and outdoor facilities, suitable for all seasons."
   },
   {
     "identifier": "8209d0a9-dfce-4983-9021-3642d630728b",
@@ -2577,12 +2680,16 @@
     "photo": "/poi_photos/8209d0a9-dfce-4983-9021-3642d630728b.jpg",
     "nature": false,
     "nature_reason": "The experience is focused on a tram ride and dining, not on scenic landscapes or natural experiences.",
-    "culture": true,
+    "culture": false,
     "culture_reason": "The experience highlights cultural, architectural, or heritage elements.",
-    "food": false,
-    "food_reason": "The experience aligns more with culture than food.",
+    "food": true,
+    "food_reason": "The experience aligns more with food than culture.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this experience."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this experience.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The Fondue Tram is a themed evening experience featuring cheese fondue, which is traditionally enjoyed in winter."
   },
   {
     "identifier": "92bf2c7c-8ed6-4bd0-a4c1-252a95b426b1",
@@ -2797,7 +2904,13 @@
     "food": true,
     "food_reason": "The primary attraction is the open-air bars, which are culinary experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The open-air bars are best enjoyed in warm weather, making summer ideal, with spring and autumn also suitable for milder temperatures."
   },
   {
     "identifier": "dfecd892-cbbe-4c9a-ab3e-4af489aa0fd3",
@@ -2989,7 +3102,13 @@
     "food": false,
     "food_reason": "While there is a restaurant, the primary attraction is the natural environment and wildlife.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned."
+    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The park is an outdoor attraction best enjoyed in mild weather, making spring, summer, and autumn ideal for visiting."
   },
   {
     "identifier": "2d9af042-f0d7-41a1-a64b-13fcf1290bc4",
@@ -3177,7 +3296,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": true,
-    "sport_reason": "The experience is classified as an adventure and involves active participation and teamwork."
+    "sport_reason": "The experience is classified as an adventure and involves active participation and teamwork.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The outdoor urban trails are best enjoyed in mild weather, making spring, summer, and autumn ideal for comfortable exploration."
   },
   {
     "identifier": "cb0ff89d-0c4a-45a0-9c71-b9d4dd020bb5",
@@ -3342,7 +3468,13 @@
     "food": true,
     "food_reason": "The primary experience is tasting honey directly from the honeycomb.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The experience involves outdoor activities with bees, which are most active and accessible in spring, summer, and autumn."
   },
   {
     "identifier": "7b689fae-f16c-4df8-bfe9-c97d09df1223",
@@ -3600,7 +3732,13 @@
     "food": false,
     "food_reason": "Food is mentioned as a secondary activity, not the main focus of the experience.",
     "sport": false,
-    "sport_reason": "The activities are not explicitly athletic or adrenaline-focused; they emphasize enjoying the landscape."
+    "sport_reason": "The activities are not explicitly athletic or adrenaline-focused; they emphasize enjoying the landscape.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Golden Roundtrip Pilatus is best experienced in summer, spring, and autumn due to favorable weather conditions and accessibility of transport options like the steamship and rack-and-pinion railway."
   },
   {
     "identifier": "fd065987-fae5-45d8-9a43-da2977c8432b",
@@ -3651,7 +3789,12 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences.",
     "sport": true,
-    "sport_reason": "Mountain climbing is an athletic and adrenaline-focused activity."
+    "sport_reason": "Mountain climbing is an athletic and adrenaline-focused activity.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Mountain climbing on Mt. Titlis is best in summer and autumn due to safer weather conditions and accessibility."
   },
   {
     "identifier": "baa4b3de-a58a-4a5e-9262-194e07306dde",
@@ -3705,7 +3848,13 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The activities described are not athletic or adrenaline-focused but rather scenic and leisurely."
+    "sport_reason": "The activities described are not athletic or adrenaline-focused but rather scenic and leisurely.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The cliff walk and lift are open approximately from May to October, making them accessible in summer, spring, and autumn."
   },
   {
     "identifier": "76db46e0-ed49-46a6-b67c-cef6858c74c0",
@@ -3799,7 +3948,13 @@
     "food": false,
     "food_reason": "Food is mentioned but not as a primary attraction; the focus is on the natural views and transport.",
     "sport": false,
-    "sport_reason": "There are no explicit athletic or adrenaline-focused activities involved in this experience."
+    "sport_reason": "There are no explicit athletic or adrenaline-focused activities involved in this experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Bürgenstock round trip is accessible via boat and railway with daily connections, making it suitable for spring, summer, and autumn when weather conditions are favorable for outdoor viewpoints and transport."
   },
   {
     "identifier": "84e8654a-2814-4340-bb13-916c941e9f33",
@@ -3865,7 +4020,13 @@
     "food": false,
     "food_reason": "Although fondue is served, the main attraction is the scenic funicular ride.",
     "sport": false,
-    "sport_reason": "The experience is not athletic or adrenaline-focused, but rather a leisurely scenic journey."
+    "sport_reason": "The experience is not athletic or adrenaline-focused, but rather a leisurely scenic journey.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The funicular and associated activities are best enjoyed in mild weather, with scenic views and outdoor dining experiences being most practical from spring to autumn."
   },
   {
     "identifier": "138de462-b0bc-45fb-a7ba-77cd959aa3d7",
@@ -4101,14 +4262,20 @@
       }
     ],
     "photo": "/poi_photos/138de462-b0bc-45fb-a7ba-77cd959aa3d7.jpg",
-    "nature": false,
-    "nature_reason": "The experience aligns more with culture than nature.",
-    "culture": true,
+    "nature": true,
+    "nature_reason": "The experience aligns more with nature than culture.",
+    "culture": false,
     "culture_reason": "The primary focus is on natural scenery rather than cultural or historical elements.",
     "food": false,
     "food_reason": "While a meal is included, the main attraction is the scenic cruise, not the culinary experience.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused experience."
+    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Lake cruises are most enjoyable and accessible during the warmer months of spring, summer, and autumn, offering pleasant weather and scenic views."
   },
   {
     "identifier": "96903c8f-421a-4f01-a5cd-eb683df45300",
@@ -4364,7 +4531,13 @@
     "food": false,
     "food_reason": "The experience does not highlight any culinary aspects.",
     "sport": true,
-    "sport_reason": "Canoeing is an athletic and adventure-focused activity, making it the best fit for the sport theme."
+    "sport_reason": "Canoeing is an athletic and adventure-focused activity, making it the best fit for the sport theme.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Canoeing on Lake Lucerne is best in summer for swimming and picnics, with spring and autumn also suitable for outdoor activities."
   },
   {
     "identifier": "b29a89aa-f761-4bdd-8dc9-109c33720d1d",
@@ -4496,7 +4669,13 @@
     "food": false,
     "food_reason": "There are no culinary experiences or dining options highlighted.",
     "sport": false,
-    "sport_reason": "No athletic or adrenaline-focused activities are mentioned."
+    "sport_reason": "No athletic or adrenaline-focused activities are mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The photo spot at Lake Lucerne is accessible year-round, but the best views and weather conditions for photography are during spring, summer, and autumn."
   },
   {
     "identifier": "6c7e22ac-06cb-44b1-b18a-df36af3addd8",
@@ -4657,7 +4836,14 @@
     "food": false,
     "food_reason": "The experience aligns more with culture than food.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Swiss Chocolate Adventure is an indoor multimedia experience suitable for all seasons."
   },
   {
     "identifier": "ab8012a4-c728-4869-87d9-7d00cdb9ce6e",
@@ -4834,7 +5020,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The tour does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The tour does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The city tour in Lucerne is best enjoyed in spring, summer, and autumn due to pleasant weather and accessibility to outdoor attractions."
   },
   {
     "identifier": "3c4a83b1-a921-46b2-adde-d8d9b329541a",
@@ -5030,7 +5223,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The experience does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The experience does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Lucerne Culture and Congress Centre is an indoor attraction suitable for year-round visits, offering cultural and educational experiences regardless of the season."
   },
   {
     "identifier": "b392b5de-bed4-4338-b2a2-31a3b0fed376",
@@ -5139,7 +5339,11 @@
     "food": false,
     "food_reason": "While food is mentioned, it is not the primary focus of the event.",
     "sport": false,
-    "sport_reason": "Winter sports are mentioned but not the main attraction of the event."
+    "sport_reason": "Winter sports are mentioned but not the main attraction of the event.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The attraction is centered around Christmas and winter activities, making it suitable only for the winter season."
   },
   {
     "identifier": "5f453929-faf3-4a2a-a1df-a73c329da372",
@@ -5216,7 +5420,12 @@
     "food": false,
     "food_reason": "There are no culinary experiences or dining highlights mentioned.",
     "sport": false,
-    "sport_reason": "The activity is a hike, which is categorized under nature rather than sport."
+    "sport_reason": "The activity is a hike, which is categorized under nature rather than sport.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The glacier trail is accessible via the Susten Pass, which is typically open in summer and autumn, and the hiking conditions are best during these seasons."
   },
   {
     "identifier": "39e11846-1ae9-4c9c-82e7-63d727085a62",
@@ -5424,7 +5633,14 @@
     "food": false,
     "food_reason": "There is no mention of any food-related activities.",
     "sport": false,
-    "sport_reason": "The activity is not explicitly athletic or adrenaline-focused."
+    "sport_reason": "The activity is not explicitly athletic or adrenaline-focused.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The outdoor nature of the Foxtrail and its reliance on good weather make it most suitable for spring, summer, and autumn."
   },
   {
     "identifier": "2a7b760a-c3ad-455d-82b7-4270d08481c1",
@@ -5573,7 +5789,13 @@
     "food": true,
     "food_reason": "The main attraction is the regional cuisine and culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities involved."
+    "sport_reason": "There are no athletic or adventure activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The restaurant emphasizes local and seasonal products, and the herb garden is best appreciated in spring, summer, and autumn."
   },
   {
     "identifier": "c39fbeec-cdcd-4fe3-89e7-0504e903d118",
@@ -5787,7 +6009,13 @@
     "food": true,
     "food_reason": "The main activity is cheesemaking, which is a culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The activity is located on alpine pastures, which are most accessible and suitable for cheesemaking from spring to autumn."
   },
   {
     "identifier": "0ad693b0-1e26-4a12-b706-2cea250b67c4",
@@ -5969,7 +6197,14 @@
     "food": true,
     "food_reason": "The primary focus is on beer tasting and the brewing process.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The brewery tour is an indoor activity available year-round, unaffected by seasonal weather conditions."
   },
   {
     "identifier": "454d9664-408c-4ac6-bd23-d1dd6a49bebb",
@@ -6141,7 +6376,13 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or dining highlights.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The outdoor golf lessons are best suited for warmer months, with summer being ideal, and spring and autumn also offering suitable weather conditions."
   },
   {
     "identifier": "86c56832-f2f0-4978-a454-68aa1de84e97",
@@ -6258,7 +6499,14 @@
     "food": false,
     "food_reason": "There is no specific focus on culinary experiences.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Jet d'Eau is an outdoor attraction best enjoyed in warmer months, with views from lakeside promenades and swimming venues, making spring, summer, and autumn ideal."
   },
   {
     "identifier": "7571c1e0-b6aa-4ce1-a490-9c5b7d6a255c",
@@ -6364,7 +6612,14 @@
     "food": false,
     "food_reason": "While there are cafés and restaurants, the primary focus is on cultural and historic experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned."
+    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Geneva's Old Town offers year-round attractions including museums, historic sites, and cultural experiences suitable for all seasons."
   },
   {
     "identifier": "fb4d55c3-9f8b-4ec9-8fc5-150b51f18c80",
@@ -6430,7 +6685,14 @@
     "food": false,
     "food_reason": "While fondue is mentioned, the primary focus is on cultural and wellness experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned."
+    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned.",
+    "season": [
+      "winter",
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Bains des Pâquis offers year-round activities including a sauna and Turkish bath, with specific winter attractions like fondue and views of Geneva's lights."
   },
   {
     "identifier": "7f3bf3b0-1362-44f5-9578-16d2fb3d9d2d",
@@ -6592,7 +6854,13 @@
     "food": false,
     "food_reason": "Food services are available but not the main attraction.",
     "sport": false,
-    "sport_reason": "The activity is leisurely cruising, not athletic or adrenaline-focused."
+    "sport_reason": "The activity is leisurely cruising, not athletic or adrenaline-focused.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Lake Geneva Cruises are best enjoyed in spring, summer, and autumn due to favorable weather and accessibility, while winter conditions may limit the experience."
   },
   {
     "identifier": "ab0e969d-5f90-460d-8b6a-614c7e3885df",
@@ -6744,7 +7012,13 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The tour does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The tour does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Geneva City Tour is best experienced in spring, summer, and autumn due to favorable weather for outdoor sightseeing and exploring the Old Town."
   },
   {
     "identifier": "7638ca2a-91e9-4152-bcd0-bd5eab4f6f9e",
@@ -6819,7 +7093,14 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences at this location.",
     "sport": false,
-    "sport_reason": "The site does not offer any athletic or adrenaline-focused activities."
+    "sport_reason": "The site does not offer any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Place des Nations is an outdoor city attraction suitable for visiting in mild weather, making spring, summer, and autumn ideal seasons."
   },
   {
     "identifier": "3b81cd76-e797-4a7f-ab67-221447075bff",
@@ -6893,7 +7174,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The tour is a walking tour focused on cultural sites, not athletic or adrenaline activities."
+    "sport_reason": "The tour is a walking tour focused on cultural sites, not athletic or adrenaline activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The walking tour is best enjoyed in spring, summer, and autumn when the weather is mild and conducive to outdoor activities."
   },
   {
     "identifier": "339d3c81-6737-4d12-9638-ec60a0bae755",
@@ -7000,7 +7288,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities associated with this attraction."
+    "sport_reason": "There are no athletic or adventure activities associated with this attraction.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Reformation Wall is an outdoor attraction in a park, best visited in mild weather during spring, summer, and autumn."
   },
   {
     "identifier": "2037149e-12cf-48ae-99db-f3f721c5b2d5",
@@ -7199,7 +7494,14 @@
     "food": false,
     "food_reason": "There is no mention of food-related activities in the tour.",
     "sport": false,
-    "sport_reason": "The tour is a leisurely walk, not an athletic or adrenaline-focused activity."
+    "sport_reason": "The tour is a leisurely walk, not an athletic or adrenaline-focused activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Geneva Watch Tour is a city tour in the Old Town, making it accessible and enjoyable year-round regardless of weather conditions."
   },
   {
     "identifier": "e3f18528-578b-4b68-91ef-86448a5f44bb",
@@ -7276,7 +7578,13 @@
     "food": true,
     "food_reason": "The tour emphasizes wine tasting, which is a culinary experience.",
     "sport": false,
-    "sport_reason": "While biking is involved, the focus is not on athletic or adrenaline activities."
+    "sport_reason": "While biking is involved, the focus is not on athletic or adrenaline activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The bike tour of vineyards is best enjoyed in spring, summer, and autumn when the weather is pleasant and vineyards are accessible."
   },
   {
     "identifier": "5d93442c-c8d5-4d7f-b577-b3cc3e7d5a95",
@@ -7451,7 +7759,13 @@
     "food": true,
     "food_reason": "The primary focus is on wine tasting and local culinary experiences.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely walk, not an athletic or adrenaline-focused sport."
+    "sport_reason": "The activity is a leisurely walk, not an athletic or adrenaline-focused sport.",
+    "season": [
+      "autumn",
+      "spring",
+      "summer"
+    ],
+    "season_reason": "The Geneva Wine Trail is best experienced in autumn for the grape harvest and vibrant foliage, spring for blooming landscapes, and summer for pleasant weather and accessibility."
   },
   {
     "identifier": "27440fd4-845b-4223-90b5-dfa44200e832",
@@ -7725,7 +8039,14 @@
     "food": true,
     "food_reason": "The tour is centered around tasting and learning about Geneva's chocolate, a culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this tour."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this tour.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The guided chocolate tour in Geneva is an urban experience suitable for all seasons, as it involves indoor activities and city exploration, unaffected by weather conditions."
   },
   {
     "identifier": "543fd4c5-f306-4b08-938a-f34f6d9b324a",
@@ -7767,7 +8088,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adventure activities."
+    "sport_reason": "The attraction does not involve any athletic or adventure activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Auditoire de Calvin is an indoor historical site in Geneva, making it accessible and suitable for visits year-round."
   },
   {
     "identifier": "f8c32d33-b10f-4539-9346-89d32bca53d8",
@@ -7867,7 +8195,13 @@
     "food": false,
     "food_reason": "While there are cafés and restaurants, the primary focus is on cultural and historic elements.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned."
+    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Carouge's outdoor markets, street cafés, and walks along the River Arve are best enjoyed in mild to warm weather."
   },
   {
     "identifier": "70bd70bd-1a27-471d-84b5-1fc0cd68c524",
@@ -7944,7 +8278,13 @@
     "food": false,
     "food_reason": "There is no mention of culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused experience."
+    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Lake cruises are most practical and enjoyable during the warmer months when the weather is favorable and the village's flower-filled lanes are in bloom."
   },
   {
     "identifier": "44ec9f44-6762-4764-a388-9c58e3f7c154",
@@ -8200,7 +8540,13 @@
     "food": true,
     "food_reason": "The tour includes a wine tasting, making it primarily a culinary experience.",
     "sport": false,
-    "sport_reason": "While e-biking is involved, the emphasis is on wine tasting rather than athletic activity."
+    "sport_reason": "While e-biking is involved, the emphasis is on wine tasting rather than athletic activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The e-bike tour in the Geneva vineyards is best enjoyed in spring, summer, and autumn when the weather is mild and the vineyards are accessible and visually appealing."
   },
   {
     "identifier": "a7f02013-d712-4c07-ab3e-7bb2665a2b0e",
@@ -8277,7 +8623,13 @@
     "food": false,
     "food_reason": "While there is an option for picnic baskets, the primary focus is on fishing.",
     "sport": true,
-    "sport_reason": "Fishing is classified as a sport activity, involving skill and equipment."
+    "sport_reason": "Fishing is classified as a sport activity, involving skill and equipment.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Fishing on Lake Geneva is practical in spring, summer, and autumn due to favorable weather and lake conditions, while winter may pose challenges with cold temperatures and potential ice."
   },
   {
     "identifier": "4a3dfbd6-07b2-4d3c-adc8-bbc33ebec251",
@@ -8354,7 +8706,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The activity is not athletic or adrenaline-focused; it is a cultural exploration."
+    "sport_reason": "The activity is not athletic or adrenaline-focused; it is a cultural exploration.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Geneva Mystery is an outdoor city tour suitable for spring, summer, and autumn when the weather is pleasant for walking and exploring the historic sites."
   },
   {
     "identifier": "ecb80e7a-f488-4292-bfda-6b1e95898c32",
@@ -8455,7 +8814,13 @@
     "food": false,
     "food_reason": "There are no culinary experiences or food-related activities mentioned.",
     "sport": false,
-    "sport_reason": "While there are activities like canoeing and kayaking, the emphasis is on tranquility and nature rather than adrenaline or athleticism."
+    "sport_reason": "While there are activities like canoeing and kayaking, the emphasis is on tranquility and nature rather than adrenaline or athleticism.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The activity involves boating and swimming, which are best suited for warmer months, making summer ideal, with spring and autumn also possible due to milder weather."
   },
   {
     "identifier": "46c3cf67-13b6-4146-9ffc-534f3a00ca01",
@@ -8560,7 +8925,14 @@
     "food": false,
     "food_reason": "While markets are mentioned, the primary focus is on the cultural and governmental aspects.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities associated with this attraction."
+    "sport_reason": "There are no athletic or adrenaline-focused activities associated with this attraction.",
+    "season": [
+      "summer",
+      "winter",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Bundeshaus offers year-round guided tours and events, with specific attractions like the fountain in summer and a light show and ice rink in winter, making it suitable for all seasons."
   },
   {
     "identifier": "f27a5205-4885-4241-a18c-0f17270cbccb",
@@ -8770,7 +9142,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The experience does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The experience does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Zytglogge tour is an indoor and city-based attraction, making it accessible and enjoyable year-round."
   },
   {
     "identifier": "916d049a-8aca-4f48-a1d2-c326f9365085",
@@ -8844,7 +9223,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences related to this attraction.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adventure activities."
+    "sport_reason": "The attraction does not involve any athletic or adventure activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Münster (Cathedral) Bern is an indoor attraction located in the city, making it accessible and suitable for visits year-round."
   },
   {
     "identifier": "09a45cf8-2676-489a-a0a3-e0cb4f4b5dbd",
@@ -9003,7 +9389,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities highlighted in the description."
+    "sport_reason": "There are no athletic or adventure activities highlighted in the description.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Old City of Bern is accessible year-round, but the best experiences are during spring, summer, and autumn when the weather is pleasant for exploring the medieval architecture and outdoor attractions."
   },
   {
     "identifier": "935f0814-2b4f-4118-86f5-969f27614127",
@@ -9174,7 +9567,13 @@
     "food": false,
     "food_reason": "There are no specific food-related experiences highlighted in the description.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The BärenPark is an outdoor attraction with green hilly terrain and river access, making it most suitable for visits in spring, summer, and autumn."
   },
   {
     "identifier": "7840a02c-91c4-4fe7-85e3-7132312dc527",
@@ -9485,7 +9884,14 @@
     "food": false,
     "food_reason": "Culinary aspects are present but not the main attraction compared to the natural views.",
     "sport": false,
-    "sport_reason": "Activities like tobogganing are available but are not the primary focus over the scenic experience."
+    "sport_reason": "Activities like tobogganing are available but are not the primary focus over the scenic experience.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Gurten offers year-round activities with summer and spring being ideal for outdoor activities and views, autumn for scenic landscapes, and winter for tobogganing and skiing when snow conditions permit."
   },
   {
     "identifier": "1ec792a3-7a1b-4e30-b722-30a4fcc67046",
@@ -9635,7 +10041,13 @@
     "food": false,
     "food_reason": "The restaurant is mentioned but not highlighted as a primary attraction.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities associated with the Rose Garden."
+    "sport_reason": "There are no athletic or adrenaline-focused activities associated with the Rose Garden.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Rose Garden is best experienced in spring, summer, and autumn when the flowers are in bloom and the weather is suitable for outdoor activities."
   },
   {
     "identifier": "930bb5d1-d8f2-4316-8dc6-f4d4a124b179",
@@ -9882,7 +10294,12 @@
     "food": false,
     "food_reason": "There are no culinary experiences highlighted.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "summer",
+      "spring"
+    ],
+    "season_reason": "The description emphasizes summer activities on the River Aare, with additional support for spring from the classification data."
   },
   {
     "identifier": "9b0243d6-66dc-4992-9830-c088d8c782fc",
@@ -9981,7 +10398,14 @@
     "food": false,
     "food_reason": "There is no mention of food-related experiences in the Museum Quarter.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities associated with the Museum Quarter."
+    "sport_reason": "There are no athletic or adventure activities associated with the Museum Quarter.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Museum Quarter Bern is an indoor cultural attraction suitable for year-round visits."
   },
   {
     "identifier": "0541f675-f4eb-45e0-bc18-cc0f3e14f1f7",
@@ -10224,7 +10648,11 @@
     "food": false,
     "food_reason": "While food is present, the primary focus is on cultural and historic experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities associated with this event."
+    "sport_reason": "There are no athletic or adrenaline-focused activities associated with this event.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The attraction is centered around Christmas markets and Advent experiences, which are specific to the winter season."
   },
   {
     "identifier": "2a9e94cb-8b20-436d-9c99-93c94bb67bf6",
@@ -10438,7 +10866,14 @@
     "food": true,
     "food_reason": "The primary focus is on experiencing local restaurants and cuisine.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The experience is urban and culinary, making it accessible and enjoyable year-round in Bern."
   },
   {
     "identifier": "7d7930b6-7eb9-40db-bd0e-52b36ca1f4bc",
@@ -10620,7 +11055,12 @@
     "food": false,
     "food_reason": "The experience does not involve any culinary activities or highlights.",
     "sport": true,
-    "sport_reason": "The activity involves river rafting, which is an athletic and adrenaline-focused adventure."
+    "sport_reason": "The activity involves river rafting, which is an athletic and adrenaline-focused adventure.",
+    "season": [
+      "summer",
+      "spring"
+    ],
+    "season_reason": "The activity is popular on hot summer days and is feasible in late spring when the weather is warm enough for water activities."
   },
   {
     "identifier": "11901574-42cc-4930-8df3-65e67f23b5a5",
@@ -10885,7 +11325,14 @@
     "food": true,
     "food_reason": "The main activity is beer tasting, which is a culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved in the tour."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved in the tour.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The guided beer tour in Bern's old town is an indoor and outdoor city tour suitable for all seasons, as it involves visiting breweries and beer bars, which are accessible year-round."
   },
   {
     "identifier": "933b041c-c53d-43dd-9309-d5853156b5af",
@@ -11030,7 +11477,13 @@
     "food": false,
     "food_reason": "There is no mention of any food-related activities.",
     "sport": false,
-    "sport_reason": "While it involves riding a scooter, the primary focus is on sightseeing rather than athletic activity."
+    "sport_reason": "While it involves riding a scooter, the primary focus is on sightseeing rather than athletic activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The city tour by scooter is best enjoyed in mild to warm weather, making spring, summer, and autumn ideal for outdoor activities and sightseeing."
   },
   {
     "identifier": "9247310f-4795-433c-98b6-ad643124269e",
@@ -11169,7 +11622,13 @@
     "food": false,
     "food_reason": "There is no mention of culinary activities or experiences.",
     "sport": true,
-    "sport_reason": "The event involves competitive and athletic activities like cow milking and blowpipe competitions."
+    "sport_reason": "The event involves competitive and athletic activities like cow milking and blowpipe competitions.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Farm Olympics is an outdoor event best suited for the milder and warmer months of spring, summer, and autumn."
   },
   {
     "identifier": "b19dcd80-0556-439f-936c-b6eb1e2f5653",
@@ -11224,14 +11683,20 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences.",
     "sport": true,
-    "sport_reason": "Biking is an athletic activity and the primary focus of this experience."
+    "sport_reason": "Biking is an athletic activity and the primary focus of this experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Cycling in Bern is practical and enjoyable in spring, summer, and autumn due to favorable weather conditions and accessibility."
   },
   {
     "identifier": "97fc1082-8cee-4bfd-b18e-9ef5384958c3",
     "name": "Jungfraujoch - Top of Europe",
     "city": "interlaken",
     "abstract": null,
-    "description": null,
+    "description": "At 3,454 metres above sea level, the railway station on the Jungfraujoch is the highest railway station in Europe. The route to the station passes through a seven-kilometre tunnel through the Eiger and Mönch. Once you reach your destination, you will find yourself in the midst of a wonderland of ice, snow and rock.",
     "top": null,
     "classification": [
       {
@@ -11421,7 +11886,14 @@
     "food": false,
     "food_reason": "There is no specific focus on culinary experiences or dining.",
     "sport": false,
-    "sport_reason": "The attraction does not emphasize athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not emphasize athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Jungfraujoch is accessible year-round due to its location in the mountains and infrastructure, offering a viewpoint and glacier gardens suitable for all seasons."
   },
   {
     "identifier": "508f2309-82e9-44e4-8dd1-932e2fe52603",
@@ -11540,7 +12012,13 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences at this location.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The high-altitude location and alpine conditions make it most accessible and enjoyable during the warmer months when weather conditions are more stable."
   },
   {
     "identifier": "64e0bd39-1438-4a0b-ada3-2b8161a6e81a",
@@ -11727,7 +12205,13 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences.",
     "sport": true,
-    "sport_reason": "The experience involves glacier hiking, which is an athletic and adventure activity."
+    "sport_reason": "The experience involves glacier hiking, which is an athletic and adventure activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The glacier hike is best suited for summer, spring, and autumn when conditions are safer and more accessible, while winter conditions may be too harsh for hiking."
   },
   {
     "identifier": "71a7834b-268b-448e-81aa-edd253699b07",
@@ -12018,7 +12502,13 @@
     "food": false,
     "food_reason": "While there is a restaurant, the main attraction is the view, not a culinary experience.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Harderbahn operates during the summer season, and the funicular's accessibility and outdoor attractions make it suitable for spring and autumn as well."
   },
   {
     "identifier": "36829536-852a-4392-82eb-ee35b6160770",
@@ -12230,7 +12720,13 @@
     "food": false,
     "food_reason": "Food is available but not a primary attraction.",
     "sport": true,
-    "sport_reason": "The attraction emphasizes adrenaline activities like ziplining and mountain carting."
+    "sport_reason": "The attraction emphasizes adrenaline activities like ziplining and mountain carting.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The attraction operates during the summer season (April to October) with activities like hiking and ziplining, which are best enjoyed in warmer months."
   },
   {
     "identifier": "29ce6850-7a20-43dc-8ff0-4fbe47804c38",
@@ -12532,14 +13028,19 @@
       }
     ],
     "photo": "/poi_photos/29ce6850-7a20-43dc-8ff0-4fbe47804c38.jpg",
-    "nature": false,
-    "nature_reason": "The experience aligns more with culture than nature.",
-    "culture": true,
+    "nature": true,
+    "nature_reason": "The experience aligns more with nature than culture.",
+    "culture": false,
     "culture_reason": "While there is a historic train, the main attraction is the natural scenery.",
     "food": false,
     "food_reason": "Food is available but not the main highlight of the experience.",
     "sport": false,
-    "sport_reason": "There are no explicit athletic or adrenaline-focused activities mentioned."
+    "sport_reason": "There are no explicit athletic or adrenaline-focused activities mentioned.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The cog railway to Schynige Platte operates only during summer and autumn, from June to October, making these the only practical seasons for visiting."
   },
   {
     "identifier": "566e36b7-a989-4fdd-9083-2dcefc20f960",
@@ -12700,7 +13201,13 @@
     "food": false,
     "food_reason": "Food is available but not the main attraction of the experience.",
     "sport": false,
-    "sport_reason": "The experience is not athletic or adrenaline-focused."
+    "sport_reason": "The experience is not athletic or adrenaline-focused.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The funicular railway and surrounding attractions are best experienced in spring, summer, and autumn when the weather is favorable for outdoor activities and the hotel is open, while winter access is limited to special occasions."
   },
   {
     "identifier": "90a82f6e-ab99-43d5-90a5-bebf3376669c",
@@ -12787,7 +13294,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The tour is not focused on athletic or adrenaline activities."
+    "sport_reason": "The tour is not focused on athletic or adrenaline activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The walking tour is outdoors and best enjoyed in mild weather, making spring, summer, and autumn ideal."
   },
   {
     "identifier": "ae303d42-839c-4955-8124-df0e37f4bdd7",
@@ -12970,7 +13484,13 @@
     "food": false,
     "food_reason": "There are no culinary experiences highlighted.",
     "sport": true,
-    "sport_reason": "The primary focus is on water sports and adventure activities."
+    "sport_reason": "The primary focus is on water sports and adventure activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Water sports in Interlaken are best enjoyed in summer, with spring and autumn also suitable due to milder weather and accessible water conditions."
   },
   {
     "identifier": "27a78d61-72ea-4b1f-9b1c-54e62e3bda09",
@@ -13093,7 +13613,13 @@
     "food": false,
     "food_reason": "There are no culinary experiences mentioned.",
     "sport": true,
-    "sport_reason": "The attraction is centered around paragliding, an adventure sport."
+    "sport_reason": "The attraction is centered around paragliding, an adventure sport.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Paragliding in Interlaken is best in summer, spring, and autumn due to favorable weather conditions and accessibility."
   },
   {
     "identifier": "272c6b4a-c26c-4d7c-8ce3-594e00ea4997",
@@ -13292,7 +13818,13 @@
     "food": false,
     "food_reason": "The trail does not highlight any food-related experiences.",
     "sport": false,
-    "sport_reason": "While the trail involves hiking, it is not described as an athletic or adrenaline-focused activity."
+    "sport_reason": "While the trail involves hiking, it is not described as an athletic or adrenaline-focused activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The trail is best experienced in summer, spring, and autumn when the weather is suitable for hiking and the boat services are operational."
   },
   {
     "identifier": "c535cb18-40a9-491c-b43f-76f08c8a3b4b",
@@ -13457,7 +13989,13 @@
     "food": false,
     "food_reason": "The activity does not involve any culinary experiences.",
     "sport": true,
-    "sport_reason": "The primary focus is on the athletic and adrenaline-pumping activity of wildwater rafting."
+    "sport_reason": "The primary focus is on the athletic and adrenaline-pumping activity of wildwater rafting.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "River rafting on the Lütschine is best during warmer months when water levels are suitable, making summer, spring, and autumn ideal."
   },
   {
     "identifier": "57f40580-6cdc-451b-a152-525887e6e2ac",
@@ -13641,7 +14179,13 @@
     "food": false,
     "food_reason": "The experience does not involve any culinary activities.",
     "sport": true,
-    "sport_reason": "The activity involves athletic and adrenaline-focused elements like climbing, sliding, and jumping."
+    "sport_reason": "The activity involves athletic and adrenaline-focused elements like climbing, sliding, and jumping.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Canyoning is best suited for warmer months due to water activities and safety, making summer the most suitable, followed by spring and autumn."
   },
   {
     "identifier": "14586645-e603-4e15-8b22-0bc88389cd06",
@@ -13695,7 +14239,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or dining highlights.",
     "sport": false,
-    "sport_reason": "The activity is not athletic or adrenaline-focused; it is a scenic transport experience."
+    "sport_reason": "The activity is not athletic or adrenaline-focused; it is a scenic transport experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Mürrenbahn operates year-round, providing access to Mürren via cable car and train regardless of the season."
   },
   {
     "identifier": "db38447f-dcca-43c9-9426-62f6b594d038",
@@ -13899,7 +14450,14 @@
     "food": true,
     "food_reason": "The main activity is producing and decorating chocolate, which is a culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "winter",
+      "autumn",
+      "spring",
+      "summer"
+    ],
+    "season_reason": "As an indoor chocolate-making experience, it is suitable year-round, with specific campaigns highlighting winter and autumn."
   },
   {
     "identifier": "11dff398-b7bb-4654-b6ec-e58069c0fb3e",
@@ -14059,7 +14617,12 @@
     "food": true,
     "food_reason": "The main attraction is enjoying raclette and wine on a rafting boat.",
     "sport": false,
-    "sport_reason": "The activity is not athletic or adrenaline-focused; it's a leisurely culinary experience."
+    "sport_reason": "The activity is not athletic or adrenaline-focused; it's a leisurely culinary experience.",
+    "season": [
+      "winter",
+      "autumn"
+    ],
+    "season_reason": "The description highlights views of snow-covered mountains and the use of warm blankets, suggesting winter and possibly late autumn as suitable seasons."
   },
   {
     "identifier": "825aed0c-5938-41d4-a61e-3eee58d5aa42",
@@ -14242,7 +14805,11 @@
     "food": false,
     "food_reason": "While fondue is included, the main attraction is the snowshoeing activity.",
     "sport": true,
-    "sport_reason": "The primary activity is snowshoeing, which is an athletic and adventure-focused experience."
+    "sport_reason": "The primary activity is snowshoeing, which is an athletic and adventure-focused experience.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The activity is a guided night-time snowshoe tour, which is only practical in winter when there is snow."
   },
   {
     "identifier": "571706df-269a-42e4-8684-742ff2572c92",
@@ -14497,7 +15064,13 @@
     "food": false,
     "food_reason": "The experience aligns more with culture than food.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "summer",
+      "autumn",
+      "spring"
+    ],
+    "season_reason": "The Lavaux vineyards are best experienced in summer and autumn for optimal weather and wine activities, with spring also suitable for outdoor exploration."
   },
   {
     "identifier": "79e79044-a366-4017-9b7b-5bf87e7d7225",
@@ -14619,7 +15192,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experience related to the statue.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adventure activities."
+    "sport_reason": "The attraction does not involve any athletic or adventure activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Freddie Mercury Statue is an outdoor sculpture accessible year-round, with no seasonal restrictions mentioned."
   },
   {
     "identifier": "7f3bf3b0-1362-44f5-9578-16d2fb3d9d2d",
@@ -14781,7 +15361,13 @@
     "food": false,
     "food_reason": "Food services are available but not the main highlight of the experience.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused activity."
+    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Lake Geneva Cruises are best enjoyed in spring, summer, and autumn due to favorable weather and accessibility, while winter conditions may limit the experience."
   },
   {
     "identifier": "cfb671e5-c2ce-4235-8324-337de75cb119",
@@ -14932,7 +15518,14 @@
     "food": true,
     "food_reason": "The experience centers around cheese-making and enjoying fondue.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "winter",
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Cheese Train operates from January to October, covering winter, spring, summer, and autumn, making it accessible in all these seasons."
   },
   {
     "identifier": "2e847586-13e1-4b0f-b3bc-73382be5e6de",
@@ -15021,7 +15614,13 @@
     "food": false,
     "food_reason": "Food experiences are not the primary focus despite the presence of bistros and cafés.",
     "sport": false,
-    "sport_reason": "No explicit athletic or adrenaline-focused activities are mentioned."
+    "sport_reason": "No explicit athletic or adrenaline-focused activities are mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The old town and hiking trails are best enjoyed in mild weather, making spring, summer, and autumn ideal for exploration and outdoor activities."
   },
   {
     "identifier": "176517b1-af3f-4b22-a881-ba2ba98dbeee",
@@ -15119,7 +15718,11 @@
     "food": false,
     "food_reason": "While there may be food at the market, the primary focus is on cultural and festive experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned in the event."
+    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned in the event.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The event is centered around a traditional Christmas Market, which is inherently a winter activity."
   },
   {
     "identifier": "da511988-77b9-4861-8e52-e7234e016c89",
@@ -15208,7 +15811,12 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experience.",
     "sport": true,
-    "sport_reason": "Ice skating is an athletic activity and the main attraction."
+    "sport_reason": "Ice skating is an athletic activity and the main attraction.",
+    "season": [
+      "winter",
+      "spring"
+    ],
+    "season_reason": "The ice rink is open from early January to mid-April, covering winter and early spring."
   },
   {
     "identifier": "0e1446d6-26d0-4ed0-96eb-ddc5eaa31007",
@@ -15361,7 +15969,13 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences.",
     "sport": true,
-    "sport_reason": "Paragliding is an adrenaline-focused, athletic activity."
+    "sport_reason": "Paragliding is an adrenaline-focused, athletic activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Paragliding is best in spring, summer, and autumn due to favorable weather conditions and visibility."
   },
   {
     "identifier": "fef443b3-7fc5-4ad2-971f-6e4871b683ef",
@@ -15551,7 +16165,13 @@
     "food": false,
     "food_reason": "While there is a mention of a vineyard tasting, the main activity is paddleboarding.",
     "sport": true,
-    "sport_reason": "Paddleboarding is an athletic and adventure-focused activity."
+    "sport_reason": "Paddleboarding is an athletic and adventure-focused activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Paddleboarding on Lake Geneva is best suited for warmer months, making summer ideal, with spring and autumn also being practical due to milder weather."
   },
   {
     "identifier": "c36d5bff-f4f7-4bee-a709-641ae4339ba8",
@@ -15626,7 +16246,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The balloon flight is not an athletic or adrenaline-focused activity."
+    "sport_reason": "The balloon flight is not an athletic or adrenaline-focused activity.",
+    "season": [
+      "winter",
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Balloon flights are available year-round, with a special event in winter."
   },
   {
     "identifier": "ba17dfd4-96f9-4b96-98d0-2c80ed6c4191",
@@ -15761,7 +16388,14 @@
     "food": false,
     "food_reason": "The experience aligns more with culture than food.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The attraction offers year-round experiences with panoramic train rides, dining options, and seasonal cuisine, making it suitable for all seasons."
   },
   {
     "identifier": "04fd6d61-b2cb-4fcf-97bb-dd347809f2d2",
@@ -15904,7 +16538,13 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences.",
     "sport": false,
-    "sport_reason": "While hiking is mentioned, it is not described as an athletic or adrenaline-focused activity."
+    "sport_reason": "While hiking is mentioned, it is not described as an athletic or adrenaline-focused activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The lake is best accessed in summer, spring, and autumn due to hiking requirements and high altitude, making winter visits impractical."
   },
   {
     "identifier": "33e366a2-2c62-4987-8446-e29070cde044",
@@ -16028,7 +16668,13 @@
     "food": false,
     "food_reason": "While food is available, it is not the main highlight of the experience.",
     "sport": false,
-    "sport_reason": "The activity is leisurely sailing, not an adrenaline-focused or athletic sport."
+    "sport_reason": "The activity is leisurely sailing, not an adrenaline-focused or athletic sport.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The yacht cruise is best suited for warmer months due to outdoor activities like swimming and paddle boarding, and it is not recommended in winter due to potential adverse weather conditions."
   },
   {
     "identifier": "30296bb6-5906-4b88-8cc4-17602b9ae472",
@@ -16242,7 +16888,13 @@
     "food": true,
     "food_reason": "The main attraction is the outdoor raclette experience, a culinary activity.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The outdoor raclette experience and hiking opportunities are best enjoyed in spring, summer, and autumn when the weather is mild and the trails are accessible."
   },
   {
     "identifier": "f2492c07-40ad-4d50-bed3-57051d5cad00",
@@ -16296,7 +16948,14 @@
     "food": true,
     "food_reason": "The bazaar highlights traditional Swiss food, making it a culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities involved in this attraction."
+    "sport_reason": "There are no athletic or adventure activities involved in this attraction.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Swiss Bazaar is an indoor market offering traditional items and food, making it accessible and enjoyable year-round."
   },
   {
     "identifier": "853ab9ac-1f62-4318-8ded-e35bba9655cc",
@@ -16377,7 +17036,14 @@
     "food": false,
     "food_reason": "The description does not highlight any culinary experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities associated with this attraction."
+    "sport_reason": "There are no athletic or adventure activities associated with this attraction.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The covered market is an indoor attraction located in the city, making it accessible and enjoyable year-round."
   },
   {
     "identifier": "68c7ebf7-6d54-46ec-a6e6-64faba52c936",
@@ -16526,7 +17192,13 @@
     "food": false,
     "food_reason": "The revolving restaurant is a secondary feature to the natural experience.",
     "sport": false,
-    "sport_reason": "There are no explicit athletic or adrenaline-focused activities mentioned."
+    "sport_reason": "There are no explicit athletic or adrenaline-focused activities mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The cable car and restaurant are open from April to February, with no winter sports, making it ideal for visits in spring, summer, and autumn."
   },
   {
     "identifier": "a8ce875f-3849-492b-826c-0d360430e770",
@@ -16872,7 +17544,14 @@
     "food": false,
     "food_reason": "Food is mentioned but not highlighted as a primary attraction.",
     "sport": false,
-    "sport_reason": "The activities are more about hiking and enjoying nature rather than adrenaline-focused sports."
+    "sport_reason": "The activities are more about hiking and enjoying nature rather than adrenaline-focused sports.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The cable car and hiking opportunities make Ebenalp accessible and enjoyable in summer, spring, and autumn, while winter sports are available during winter."
   },
   {
     "identifier": "a025a671-f46f-40eb-8a61-fbe3142a88c5",
@@ -17216,7 +17895,14 @@
     "food": false,
     "food_reason": "Food options are available but not the main highlight of the experience.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Säntis cable car operates year-round, with special summer experiences and winter accessibility, making it suitable for all seasons."
   },
   {
     "identifier": "4b6d728f-f3ba-40b1-b6a0-c02daa721fd9",
@@ -17342,7 +18028,13 @@
     "food": false,
     "food_reason": "While there are culinary tours available, the primary focus is on cultural and historical experiences.",
     "sport": false,
-    "sport_reason": "The tour does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The tour does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The village tour is best enjoyed in warmer months when outdoor exploration is comfortable, and the town's cultural and architectural features are fully accessible."
   },
   {
     "identifier": "e7477866-c677-4086-945c-205184335ab5",
@@ -17535,7 +18227,13 @@
     "food": false,
     "food_reason": "Although cheese makers are mentioned, the primary focus is on cultural craftsmanship.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The tours involve outdoor visits to artisans and cultural sites, which are best experienced in mild weather conditions from spring to autumn."
   },
   {
     "identifier": "9f2554aa-b043-43e0-b6a7-3b840cb03a7d",
@@ -17721,7 +18419,14 @@
     "food": false,
     "food_reason": "Food is mentioned but not the primary focus of the experience.",
     "sport": false,
-    "sport_reason": "Although there are adventure activities, the emphasis is on nature and views."
+    "sport_reason": "Although there are adventure activities, the emphasis is on nature and views.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Kronberg offers year-round activities such as hiking and panoramic views in summer, spring, and autumn, with winter featuring the longest tobogganing run in eastern Switzerland."
   },
   {
     "identifier": "17bb58d2-f130-431a-a48d-11ab9ee291d9",
@@ -17911,7 +18616,11 @@
     "food": false,
     "food_reason": "There are no culinary experiences mentioned.",
     "sport": true,
-    "sport_reason": "The bobsleigh run is an adventure activity with a high action and fun factor."
+    "sport_reason": "The bobsleigh run is an adventure activity with a high action and fun factor.",
+    "season": [
+      "summer"
+    ],
+    "season_reason": "The bobsleigh run is explicitly stated to be open during the summer season, weather permitting."
   },
   {
     "identifier": "79b6d511-3336-4ec8-8d35-d316825500a9",
@@ -18051,7 +18760,13 @@
     "food": false,
     "food_reason": "While Rösti is mentioned, the focus is not on a culinary experience.",
     "sport": false,
-    "sport_reason": "The hiking is not described as an athletic or adrenaline-focused activity."
+    "sport_reason": "The hiking is not described as an athletic or adrenaline-focused activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The lake is accessible for hiking and outdoor activities primarily in summer, with some accessibility in spring and autumn, but snow remnants and cold water limit winter visits."
   },
   {
     "identifier": "e5340e6f-0498-4c00-8e44-ed697803931b",
@@ -18207,7 +18922,12 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "While hiking is involved, it is not described as an athletic or adrenaline-focused activity."
+    "sport_reason": "While hiking is involved, it is not described as an athletic or adrenaline-focused activity.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The high altitude hiking trail is best suited for summer and autumn when the weather is favorable and the trail is accessible."
   },
   {
     "identifier": "4e2a5449-d69b-49ab-81fb-8739b9b3d43a",
@@ -18472,7 +19192,14 @@
     "food": true,
     "food_reason": "The main attraction is the beer tasting and learning about brewing, which is a culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved in the brewery tour."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved in the brewery tour.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Visitors’ Center Brauquöll Appenzell offers indoor tours and tastings, making it accessible and enjoyable year-round."
   },
   {
     "identifier": "46f248d5-6b68-4073-a483-a9b69152490b",
@@ -18729,7 +19456,14 @@
     "food": true,
     "food_reason": "The primary focus is on the tasting and production of Appenzeller Alpenbitter, a culinary experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this experience."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The guided tours are available all year round, making it a true year-round experience."
   },
   {
     "identifier": "f3b0e66a-d769-47d8-aab0-627e4c6a2cd3",
@@ -18793,7 +19527,11 @@
     "food": false,
     "food_reason": "There are no culinary experiences highlighted.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The attraction is a cross-country skiing area, which is only practical in winter when there is snow."
   },
   {
     "identifier": "76590cc1-695c-4544-83c1-cc024d0e44fe",
@@ -18964,7 +19702,13 @@
     "food": false,
     "food_reason": "There is no mention of food-related activities.",
     "sport": false,
-    "sport_reason": "The trail is more about hiking and puzzles than athletic activities."
+    "sport_reason": "The trail is more about hiking and puzzles than athletic activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Puzzle Trail is an outdoor hiking activity best suited for the warmer months of summer, spring, and autumn when the weather is favorable for hiking and outdoor activities."
   },
   {
     "identifier": "c25ce5ec-4b61-4bfc-a66e-f69744fb457a",
@@ -19227,7 +19971,13 @@
     "food": false,
     "food_reason": "Food is available but not a primary focus of the experience.",
     "sport": false,
-    "sport_reason": "The attraction is more about enjoying nature than engaging in athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction is more about enjoying nature than engaging in athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The treetop path is an outdoor attraction best enjoyed in mild weather, making it suitable for summer, spring, and autumn."
   },
   {
     "identifier": "11609e68-18bc-49bf-abdc-452d13fe3ec5",
@@ -19486,7 +20236,12 @@
     "food": true,
     "food_reason": "The main attraction is whisky tasting, which is a culinary experience.",
     "sport": false,
-    "sport_reason": "The trek involves hiking, but it is not focused on athletic or adrenaline activities."
+    "sport_reason": "The trek involves hiking, but it is not focused on athletic or adrenaline activities.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Whisky Trek involves hiking in the Alpstein mountains, which is most practical and safe during the warmer months of summer and early autumn."
   },
   {
     "identifier": "9d322fcd-f402-4f9e-80c9-981c717ece9c",
@@ -19648,7 +20403,13 @@
     "food": false,
     "food_reason": "There is no mention of food-related experiences in the exhibition.",
     "sport": false,
-    "sport_reason": "The exhibition does not involve any athletic or adventure activities."
+    "sport_reason": "The exhibition does not involve any athletic or adventure activities.",
+    "season": [
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The exhibition is indoors and features events like alpine ascents and New Year's Eve celebrations, making it suitable for summer, autumn, and winter."
   },
   {
     "identifier": "54fbdc92-ae8c-4799-95c7-2b73919d083f",
@@ -19824,7 +20585,13 @@
     "food": false,
     "food_reason": "There are no culinary experiences or food-related activities mentioned.",
     "sport": false,
-    "sport_reason": "The activity is not explicitly athletic or adrenaline-focused, as it is a leisurely barefoot hike."
+    "sport_reason": "The activity is not explicitly athletic or adrenaline-focused, as it is a leisurely barefoot hike.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Gonten Barefoot Trail is an outdoor activity best suited for warmer months when the ground is not frozen, making summer, spring, and autumn ideal."
   },
   {
     "identifier": "48a19ebc-ec89-475d-99d8-7cd78d88c77c",
@@ -20046,7 +20813,13 @@
     "food": false,
     "food_reason": "The restaurant is mentioned, but it is not the primary focus of the attraction.",
     "sport": false,
-    "sport_reason": "Climbing is mentioned, but the overall experience is more about enjoying nature and views."
+    "sport_reason": "Climbing is mentioned, but the overall experience is more about enjoying nature and views.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The funicular and hiking trails are accessible and enjoyable in spring, summer, and autumn, with the mountain offering year-round experiences but primarily outdoor activities."
   },
   {
     "identifier": "ae40ee00-1859-4302-abf0-99d1d8033987",
@@ -20524,7 +21297,13 @@
     "food": false,
     "food_reason": "Although there are dining options, they are not the main highlight of the attraction.",
     "sport": false,
-    "sport_reason": "Paragliding is available, but the overall experience is more about enjoying the natural landscape than engaging in sports."
+    "sport_reason": "Paragliding is available, but the overall experience is more about enjoying the natural landscape than engaging in sports.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Monte Generoso is best visited in spring, summer, and autumn due to the hiking trails, paragliding, and panoramic views, which are most accessible and enjoyable in these seasons."
   },
   {
     "identifier": "62db100b-2689-47d9-b0b8-21fb17b107f7",
@@ -21242,7 +22021,13 @@
     "food": false,
     "food_reason": "Food options are available but not the main attraction.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Monte Tamaro offers outdoor activities like hiking, biking, and a summer toboggan run, which are best enjoyed in summer, spring, and autumn, while it is closed in winter."
   },
   {
     "identifier": "960282a4-4b3e-48e9-a03f-2ae4a37180d3",
@@ -21471,7 +22256,13 @@
     "food": false,
     "food_reason": "Food experiences are not the main highlight of this attraction.",
     "sport": false,
-    "sport_reason": "There are no explicit athletic or adrenaline-focused activities mentioned."
+    "sport_reason": "There are no explicit athletic or adrenaline-focused activities mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Monte San Giorgio offers outdoor activities like hiking and vineyard strolls, best enjoyed in spring, summer, and autumn due to favorable weather and accessibility."
   },
   {
     "identifier": "89bbf1b3-1e5e-4d4b-a85b-d813e6027b8c",
@@ -21826,7 +22617,13 @@
     "food": false,
     "food_reason": "Culinary highlights are mentioned, but they are secondary to the athletic activities available.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "summer",
+      "autumn",
+      "spring"
+    ],
+    "season_reason": "Monte Lema is ideal for outdoor activities like hiking and biking, which are best enjoyed in summer, autumn, and spring when the weather is favorable and the cable car is operational."
   },
   {
     "identifier": "50a9fd37-8773-470b-8c2d-c51531d84567",
@@ -21959,7 +22756,13 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences in the park.",
     "sport": false,
-    "sport_reason": "The park does not offer any explicit athletic or adventure activities."
+    "sport_reason": "The park does not offer any explicit athletic or adventure activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Ciani Park is best experienced in spring, summer, and autumn due to its outdoor nature, flower beds, and tree-lined paths, which are most enjoyable in mild weather."
   },
   {
     "identifier": "6838b2c1-fb4c-4648-90f7-8d9a6a176b6b",
@@ -22116,7 +22919,11 @@
     "food": false,
     "food_reason": "No specific culinary experiences or dining options are mentioned.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "summer"
+    ],
+    "season_reason": "The outdoor swimming and beach activities are best suited for the warm summer months."
   },
   {
     "identifier": "a92772d7-6f6e-484f-9433-8a81e10df771",
@@ -22171,7 +22978,14 @@
     "food": false,
     "food_reason": "While local food is mentioned, the primary focus is cultural exploration.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely city tour, not an athletic or adrenaline-focused experience."
+    "sport_reason": "The activity is a leisurely city tour, not an athletic or adrenaline-focused experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The urban discovery tour in Lugano is best enjoyed in spring, summer, and autumn due to pleasant weather for strolling and outdoor activities."
   },
   {
     "identifier": "9f8090ba-91cc-472e-9424-ced59aa64750",
@@ -22389,7 +23203,13 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences in the tour.",
     "sport": false,
-    "sport_reason": "The tour is a walking tour, not an athletic or adrenaline-focused activity."
+    "sport_reason": "The tour is a walking tour, not an athletic or adrenaline-focused activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The tour is an outdoor city tour in Lugano, suitable for mild weather conditions typically found in spring, summer, and autumn."
   },
   {
     "identifier": "bd5b421f-4f97-4179-bea3-6997e743dca6",
@@ -22593,12 +23413,18 @@
     "photo": "/poi_photos/bd5b421f-4f97-4179-bea3-6997e743dca6.jpg",
     "nature": false,
     "nature_reason": "The primary focus is on culinary experience rather than the scenic aspect of the lake.",
-    "culture": true,
+    "culture": false,
     "culture_reason": "The experience highlights cultural, architectural, or heritage elements.",
-    "food": false,
-    "food_reason": "The experience aligns more with culture than food.",
+    "food": true,
+    "food_reason": "The experience aligns more with food than culture.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Lake cruises are most practical in warmer months, with summer being ideal, and spring and autumn also suitable for pleasant weather."
   },
   {
     "identifier": "715f8d6b-f822-41cb-8fef-520efe871429",
@@ -22767,7 +23593,13 @@
     "food": false,
     "food_reason": "While chocolate is involved, the primary activity is kayaking.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Kayaking is best in warmer months, making summer ideal, with spring and autumn also suitable for mild weather."
   },
   {
     "identifier": "8f40e1d0-f563-42a2-a0e3-b2f34bede35c",
@@ -22848,7 +23680,13 @@
     "food": false,
     "food_reason": "There is no specific mention of food-related activities or experiences.",
     "sport": false,
-    "sport_reason": "The promenade is intended for leisurely strolls, not athletic or adrenaline-focused activities."
+    "sport_reason": "The promenade is intended for leisurely strolls, not athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The lakeshore promenade in Lugano is ideal for strolling in spring, summer, and autumn due to its Mediterranean atmosphere and outdoor nature."
   },
   {
     "identifier": "df4abf65-8a8a-4ff7-a5dd-2ed9274c92f5",
@@ -23081,7 +23919,13 @@
     "food": false,
     "food_reason": "There is no mention of food-related activities in the tour.",
     "sport": false,
-    "sport_reason": "The tour is a leisurely walk, not an athletic or adrenaline-focused activity."
+    "sport_reason": "The tour is a leisurely walk, not an athletic or adrenaline-focused activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The street art tour is an outdoor activity best enjoyed in mild weather, making spring, summer, and autumn ideal seasons."
   },
   {
     "identifier": "03cb66d2-d752-40a5-b264-df6658182659",
@@ -23261,7 +24105,14 @@
     "food": false,
     "food_reason": "The description does not highlight any specific culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "There are no explicit athletic or adrenaline-focused activities mentioned in the park experience."
+    "sport_reason": "There are no explicit athletic or adrenaline-focused activities mentioned in the park experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Lugano's Mediterranean climate and outdoor parks are best enjoyed in spring, summer, and autumn when the weather is pleasant and the gardens are in full bloom."
   },
   {
     "identifier": "2cd24423-b82d-4452-89e5-ffec318749cb",
@@ -23361,7 +24212,11 @@
     "food": false,
     "food_reason": "While there is a market, the focus is not specifically on culinary experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this event."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved in this event.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The attraction is centered around Christmas events and markets, which are specific to the winter season."
   },
   {
     "identifier": "737392b6-b310-4b98-9437-499db4ea2b8d",
@@ -23565,7 +24420,13 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": true,
-    "sport_reason": "The experience is classified as an adventure and involves active, outdoor treasure hunting."
+    "sport_reason": "The experience is classified as an adventure and involves active, outdoor treasure hunting.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The outdoor nature of the activity and the Mediterranean-style climate of Lugano make it most suitable for spring, summer, and autumn."
   },
   {
     "identifier": "ae28475e-9305-46d1-8eb4-1025b44deb47",
@@ -23719,7 +24580,14 @@
     "food": false,
     "food_reason": "There is no mention of culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The experience is not athletic or adrenaline-focused."
+    "sport_reason": "The experience is not athletic or adrenaline-focused.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Ayurveda and spa experience is an indoor, on-demand retreat suitable for all seasons."
   },
   {
     "identifier": "174a59c5-906f-44ec-bb10-320cbdb66d72",
@@ -23961,7 +24829,13 @@
     "food": false,
     "food_reason": "While there are food trucks, the primary focus is on art, not culinary experiences.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved in the art route."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved in the art route.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The ArtiChoke urban art route is an open-air experience best enjoyed in mild weather, with the festival specifically held in summer, making it ideal for spring, summer, and autumn."
   },
   {
     "identifier": "d10151a7-c9ae-48f5-8227-0f985b87ea62",
@@ -24258,7 +25132,14 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences.",
     "sport": false,
-    "sport_reason": "The experience does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The experience does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "winter",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Stoosbahn operates year-round, offering summer hiking and lake activities, and winter skiing and snowshoeing."
   },
   {
     "identifier": "4b9ec130-b97f-48bd-85ad-fd9ed4616536",
@@ -24540,14 +25421,20 @@
       }
     ],
     "photo": "/poi_photos/4b9ec130-b97f-48bd-85ad-fd9ed4616536.jpeg",
-    "nature": false,
-    "nature_reason": "The experience aligns more with culture than nature.",
-    "culture": true,
+    "nature": true,
+    "nature_reason": "The experience aligns more with nature than culture.",
+    "culture": false,
     "culture_reason": "There is no emphasis on cultural or historical elements such as museums or architecture.",
     "food": false,
     "food_reason": "While there is a mention of a restaurant, the main attraction is the natural scenery, not a culinary experience.",
     "sport": false,
-    "sport_reason": "Although hiking is mentioned, it is not the primary focus and is not described as an athletic or adrenaline-focused activity."
+    "sport_reason": "Although hiking is mentioned, it is not the primary focus and is not described as an athletic or adrenaline-focused activity.",
+    "season": [
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Fronalpstock viewing platform is accessible via chair lifts and offers hiking in summer and autumn, with winter sports available in winter."
   },
   {
     "identifier": "3f3f65b2-892c-4820-afb7-662b585eda9d",
@@ -24623,7 +25510,13 @@
     "food": false,
     "food_reason": "While there is a winery, the main attraction is the cultural heritage of the abbey.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities associated with the abbey."
+    "sport_reason": "There are no athletic or adrenaline-focused activities associated with the abbey.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The abbey and its surroundings offer scenic views and cultural events that are best enjoyed in mild weather, making spring, summer, and autumn ideal for visits."
   },
   {
     "identifier": "4fa14e54-f84d-4415-8e71-765104b6e84e",
@@ -24765,7 +25658,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The activity is not athletic or adrenaline-focused, but rather educational and cultural."
+    "sport_reason": "The activity is not athletic or adrenaline-focused, but rather educational and cultural.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The guided tours of the monastery are available year-round as indicated by the 'allyear' classification and the indoor nature of the attraction."
   },
   {
     "identifier": "1358c45c-a1a4-4d95-a36b-15dad4bf121e",
@@ -25036,7 +25936,12 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences in the description.",
     "sport": false,
-    "sport_reason": "The hiking experience is not described as athletic or adrenaline-focused, fitting more under nature."
+    "sport_reason": "The hiking experience is not described as athletic or adrenaline-focused, fitting more under nature.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Tectonic Arena Sardona is best visited in summer and autumn due to favorable weather conditions for outdoor hiking and mountain accessibility."
   },
   {
     "identifier": "5bf9ed89-d9ae-45cd-ba8f-f40a854ab20a",
@@ -25282,7 +26187,13 @@
     "food": false,
     "food_reason": "Although there are culinary options on the cruise, the primary experience is the scenic nature of the cruise.",
     "sport": false,
-    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused experience."
+    "sport_reason": "The activity is a leisurely cruise, not an athletic or adrenaline-focused experience.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Lake Zug Cruises operate from April to October, making spring, summer, and autumn the suitable seasons."
   },
   {
     "identifier": "b29a89aa-f761-4bdd-8dc9-109c33720d1d",
@@ -25414,7 +26325,13 @@
     "food": false,
     "food_reason": "There are no food-related activities or experiences highlighted.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned."
+    "sport_reason": "There are no athletic or adrenaline-focused activities mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The photo spot at Lake Lucerne is accessible year-round, but the best views and weather conditions for photography are during spring, summer, and autumn."
   },
   {
     "identifier": "6343af66-3e67-4f05-be3e-23b7a1f4b80f",
@@ -25502,7 +26419,13 @@
     "food": false,
     "food_reason": "There are no culinary experiences or dining highlights mentioned.",
     "sport": false,
-    "sport_reason": "The activity is not explicitly athletic or adrenaline-focused, as it centers on hiking and viewpoints."
+    "sport_reason": "The activity is not explicitly athletic or adrenaline-focused, as it centers on hiking and viewpoints.",
+    "season": [
+      "summer",
+      "autumn",
+      "spring"
+    ],
+    "season_reason": "The Grosser Mythen is a high-altitude hiking destination best accessed in summer and autumn when trails are clear, with spring being possible but potentially limited by lingering snow."
   },
   {
     "identifier": "b53a900a-6638-4013-b114-3b1f39449505",
@@ -25693,7 +26616,13 @@
     "food": false,
     "food_reason": "Although dinner and wine are mentioned, they are not the main focus of the experience.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities described in the experience."
+    "sport_reason": "There are no athletic or adrenaline-focused activities described in the experience.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Bödmeren virgin forest is best explored in summer, spring, and autumn due to favorable weather conditions and accessibility in these seasons."
   },
   {
     "identifier": "9fa2bcd0-0742-4e38-9236-7606b8dedd98",
@@ -25876,7 +26805,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences.",
     "sport": true,
-    "sport_reason": "The activity involves climbing, crawling, and navigating through caves, which is athletic and adventure-focused."
+    "sport_reason": "The activity involves climbing, crawling, and navigating through caves, which is athletic and adventure-focused.",
+    "season": [
+      "winter",
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Hölloch cave system is an indoor attraction accessible year-round, unaffected by external weather conditions."
   },
   {
     "identifier": "41524aa2-f73b-4942-8713-21bbfe40a732",
@@ -26026,7 +26962,13 @@
     "food": false,
     "food_reason": "Food is not a primary focus, despite the mention of a mountain pub.",
     "sport": false,
-    "sport_reason": "The trail is not focused on athletic or adrenaline activities."
+    "sport_reason": "The trail is not focused on athletic or adrenaline activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The trail is an outdoor nature hike best suited for warmer months, with summer being ideal, and spring and autumn also offering suitable weather conditions."
   },
   {
     "identifier": "0246237a-d036-4fb1-991f-6a4c9895d927",
@@ -26127,7 +27069,13 @@
     "food": false,
     "food_reason": "There is no mention of food-related experiences.",
     "sport": true,
-    "sport_reason": "The attraction features athletic and adventure activities like the toboggan run and tubing."
+    "sport_reason": "The attraction features athletic and adventure activities like the toboggan run and tubing.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The summer toboggan run, tubing, and outdoor activities like hiking and the suspension bridge are best enjoyed in warmer months."
   },
   {
     "identifier": "9f79ea35-3ab8-4cc9-ab68-eb302568ab40",
@@ -26262,7 +27210,11 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences associated with this attraction.",
     "sport": true,
-    "sport_reason": "The toboggan run is an athletic and adrenaline-focused activity, fitting the sport theme best."
+    "sport_reason": "The toboggan run is an athletic and adrenaline-focused activity, fitting the sport theme best.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The toboggan run is specifically designed for winter use, featuring winter scenes and requiring snow for sledging."
   },
   {
     "identifier": "ec428553-78eb-475a-bdef-3296a6f22896",
@@ -26450,7 +27402,13 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences.",
     "sport": true,
-    "sport_reason": "Canoeing is an athletic and adventure-focused activity."
+    "sport_reason": "Canoeing is an athletic and adventure-focused activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The canoe trip on Lake Lucerne is best suited for warmer months due to outdoor conditions and water activities, making summer, spring, and autumn ideal."
   },
   {
     "identifier": "d78ba9f8-1465-43b9-9299-23fbc0cb073c",
@@ -26580,7 +27538,11 @@
     "food": false,
     "food_reason": "The experience does not involve any culinary activities or highlights.",
     "sport": true,
-    "sport_reason": "Canoeing is an athletic and adventure-focused activity, especially in winter conditions."
+    "sport_reason": "Canoeing is an athletic and adventure-focused activity, especially in winter conditions.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The tour is specifically designed for winter, with special equipment and a focus on the winter landscape."
   },
   {
     "identifier": "0686538c-9eae-45cf-acaf-c079501554f6",
@@ -26742,7 +27704,11 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The attraction is focused on carnival culture, which is traditionally celebrated in winter."
   },
   {
     "identifier": "b9f8022a-3fee-42cb-9696-386bd30a3c3e",
@@ -26948,7 +27914,13 @@
     "food": true,
     "food_reason": "The primary attraction is a culinary experience featuring local ingredients and a specialty dish.",
     "sport": false,
-    "sport_reason": "There are no athletic or adrenaline-focused activities involved."
+    "sport_reason": "There are no athletic or adrenaline-focused activities involved.",
+    "season": [
+      "autumn",
+      "spring",
+      "summer"
+    ],
+    "season_reason": "The culinary experience is indoor and features ingredients like hay and apples, which are typically harvested in autumn, but it is also suitable for spring and summer due to the indoor setting and availability of farm produce."
   },
   {
     "identifier": "cbbca12f-1036-41ff-bbbc-b69db2a16995",
@@ -27112,7 +28084,12 @@
     "food": false,
     "food_reason": "While lunch is mentioned, the focus is not on a culinary experience.",
     "sport": false,
-    "sport_reason": "The activity is a guided walk, not an athletic or adrenaline-focused sport."
+    "sport_reason": "The activity is a guided walk, not an athletic or adrenaline-focused sport.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The excursion involves a high-altitude outdoor hike and cable car ride, which are most accessible and safe during summer and early autumn."
   },
   {
     "identifier": "c8046544-bbc2-403a-8667-b69c7440b5bd",
@@ -27210,7 +28187,11 @@
     "food": false,
     "food_reason": "Food is available but not the main attraction or focus of the experience.",
     "sport": true,
-    "sport_reason": "The primary focus is on skiing, snowboarding, and other winter sports activities."
+    "sport_reason": "The primary focus is on skiing, snowboarding, and other winter sports activities.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The attraction is primarily a winter sports destination with skiing, sledding, and snowshoe trails, accessible by chairlift, making it suitable for winter only."
   },
   {
     "identifier": "34c6c2a4-e4da-4aa6-ad4f-7eb65ba44d7f",
@@ -27287,7 +28268,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "Flag waving is a cultural custom rather than an athletic or adrenaline-focused activity."
+    "sport_reason": "Flag waving is a cultural custom rather than an athletic or adrenaline-focused activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The activity is indoors at a museum and involves a cultural course, making it suitable year-round."
   },
   {
     "identifier": "c9bbb50a-81d0-40e4-901a-cd2307c61905",
@@ -27600,7 +28588,14 @@
     "food": false,
     "food_reason": "Food is available but not the main highlight of the experience.",
     "sport": false,
-    "sport_reason": "Although skiing is mentioned, the primary attraction is the viewing platform and natural scenery."
+    "sport_reason": "Although skiing is mentioned, the primary attraction is the viewing platform and natural scenery.",
+    "season": [
+      "winter",
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Matterhorn Glacier Paradise is accessible year-round with skiing available 365 days, making it suitable for winter, while panoramic views and hiking are ideal in summer, spring, and autumn."
   },
   {
     "identifier": "1dfb3334-4bca-49f7-9e97-e7094e6c8df8",
@@ -27837,7 +28832,14 @@
     "food": false,
     "food_reason": "Food options are available but not the main attraction compared to the natural scenery.",
     "sport": false,
-    "sport_reason": "Although there are cycling routes and winter sports, the emphasis is on the natural views and hiking."
+    "sport_reason": "Although there are cycling routes and winter sports, the emphasis is on the natural views and hiking.",
+    "season": [
+      "summer",
+      "winter",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Summer offers hiking and cycling, while winter provides skiing and tobogganing, with the cog railway operating year-round."
   },
   {
     "identifier": "dae395b6-fd9f-4f70-aa40-73a81d9f09dc",
@@ -28050,7 +29052,12 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences.",
     "sport": false,
-    "sport_reason": "While there is an adventurous tour option, the primary experience is a scenic walk, not an athletic activity."
+    "sport_reason": "While there is an adventurous tour option, the primary experience is a scenic walk, not an athletic activity.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Gorner Gorge is best visited in summer and autumn due to favorable weather conditions and the unique afternoon sunlight effect in autumn."
   },
   {
     "identifier": "2887ee26-f6e3-4235-beb8-ed2ef9014bcf",
@@ -28261,7 +29268,12 @@
     "food": false,
     "food_reason": "There is no mention of any food-related activities.",
     "sport": true,
-    "sport_reason": "The primary activity is climbing, which is an athletic and adventure-focused experience."
+    "sport_reason": "The primary activity is climbing, which is an athletic and adventure-focused experience.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Climbing the Breithorn is best in summer and autumn due to safer weather conditions and accessibility in the alpine environment."
   },
   {
     "identifier": "dc2b782d-b1f1-40ee-aef6-2d9f9b012d05",
@@ -28415,7 +29427,12 @@
     "food": false,
     "food_reason": "There are no culinary elements involved in this attraction.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Via Ferrata in Zermatt is best suited for summer and autumn due to favorable weather conditions and accessibility, as it involves outdoor climbing and exposed routes."
   },
   {
     "identifier": "d32f18d0-b3b7-496f-ba29-0522e46d6c1c",
@@ -28633,7 +29650,13 @@
     "food": false,
     "food_reason": "While there are mountain restaurants, the main attraction is the natural scenery, not culinary experiences.",
     "sport": false,
-    "sport_reason": "The activities described are not explicitly athletic or adrenaline-focused, but rather scenic and leisurely."
+    "sport_reason": "The activities described are not explicitly athletic or adrenaline-focused, but rather scenic and leisurely.",
+    "season": [
+      "summer",
+      "winter",
+      "autumn"
+    ],
+    "season_reason": "Summer is ideal for hiking and lake activities, winter for skiing and snow sports, and autumn offers scenic views and hiking opportunities."
   },
   {
     "identifier": "a237d37e-ae78-4007-ac07-12c53620dbe6",
@@ -28767,7 +29790,14 @@
     "food": false,
     "food_reason": "There is no mention of culinary experiences or dining highlights.",
     "sport": false,
-    "sport_reason": "The railway journey is not an athletic or adrenaline-focused activity."
+    "sport_reason": "The railway journey is not an athletic or adrenaline-focused activity.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Matterhorn Gotthard Bahn is a year-round train service, providing access to various destinations regardless of season, with infrastructure supporting travel through all weather conditions."
   },
   {
     "identifier": "b93a9e98-2d92-45c4-93cd-251d8f5ecfb3",
@@ -28821,7 +29851,12 @@
     "food": false,
     "food_reason": "The tour does not highlight any culinary experiences.",
     "sport": false,
-    "sport_reason": "While challenging, the tour is primarily a nature-focused hiking experience, not an adrenaline sport."
+    "sport_reason": "While challenging, the tour is primarily a nature-focused hiking experience, not an adrenaline sport.",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Monte Rosa Tour involves high-altitude hiking and mountain passes, which are safest and most accessible in summer and early autumn."
   },
   {
     "identifier": "e2285fd4-e11c-4a96-a980-988024aa3f70",
@@ -28909,7 +29944,12 @@
     "food": false,
     "food_reason": "There is no mention of any food-related activities or experiences.",
     "sport": false,
-    "sport_reason": "While there are activities like mountain carts and kick bikes, the emphasis is on enjoying the natural scenery rather than athletic or adrenaline-focused sports."
+    "sport_reason": "While there are activities like mountain carts and kick bikes, the emphasis is on enjoying the natural scenery rather than athletic or adrenaline-focused sports.",
+    "season": [
+      "summer",
+      "winter"
+    ],
+    "season_reason": "The area is a ski paradise in winter and a hiking and adventure destination in summer, with activities like mountain carts and the five-lake trail."
   },
   {
     "identifier": "c1fa3841-0bb7-4bc6-beed-b8af5bce3fb0",
@@ -28997,7 +30037,14 @@
     "food": false,
     "food_reason": "There are no food-related experiences or highlights mentioned.",
     "sport": false,
-    "sport_reason": "The experience is not athletic or adrenaline-focused; it is about enjoying the view."
+    "sport_reason": "The experience is not athletic or adrenaline-focused; it is about enjoying the view.",
+    "season": [
+      "summer",
+      "autumn",
+      "spring",
+      "winter"
+    ],
+    "season_reason": "The Gornergrat Railway and Photo Spot are open year-round, providing access to stunning views in all seasons."
   },
   {
     "identifier": "8c9fb25a-7344-42f7-a129-67f152eebdb9",
@@ -29192,7 +30239,12 @@
     "food": false,
     "food_reason": "There is no mention of any food-related experiences.",
     "sport": false,
-    "sport_reason": "The experience is not focused on athletic or adrenaline activities."
+    "sport_reason": "The experience is not focused on athletic or adrenaline activities.",
+    "season": [
+      "winter",
+      "summer"
+    ],
+    "season_reason": "The Glacier Palace is accessible year-round, but winter and summer are most suitable due to the snow and ice attractions and reliable mountain transportation."
   },
   {
     "identifier": "57e2ab81-411c-4fa1-ae96-d67e7aaf492f",
@@ -29368,7 +30420,13 @@
     "food": false,
     "food_reason": "While there is a dining component, the main attraction is the scenic flight.",
     "sport": false,
-    "sport_reason": "The helicopter flight is not an athletic or adrenaline-focused activity."
+    "sport_reason": "The helicopter flight is not an athletic or adrenaline-focused activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "Helicopter flights are best enjoyed in clear weather, making summer, spring, and autumn ideal for visibility and accessibility."
   },
   {
     "identifier": "37c15679-4881-40f2-b251-a87137310c5b",
@@ -29533,7 +30591,11 @@
     "food": false,
     "food_reason": "There are no culinary experiences highlighted.",
     "sport": true,
-    "sport_reason": "The attraction is centered around cross-country skiing, a sport activity."
+    "sport_reason": "The attraction is centered around cross-country skiing, a sport activity.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The trail is specifically designed for cross-country skiing, which is a winter activity."
   },
   {
     "identifier": "2491f607-81ea-4ecd-bc8e-cfcaf76d3c39",
@@ -29774,7 +30836,11 @@
     "food": false,
     "food_reason": "There are no culinary experiences highlighted.",
     "sport": false,
-    "sport_reason": "The experience aligns more with culture than sport."
+    "sport_reason": "The experience aligns more with culture than sport.",
+    "season": [
+      "winter"
+    ],
+    "season_reason": "The ski trip around the Matterhorn is specifically designed for skiing, which is only feasible in winter due to snow conditions and the nature of the activity."
   },
   {
     "identifier": "20fa6f91-79f8-47a1-9e09-3e89a845b07e",
@@ -29945,7 +31011,13 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences.",
     "sport": true,
-    "sport_reason": "The fixed rope park with ropeways and suspension bridges is an adventure activity."
+    "sport_reason": "The fixed rope park with ropeways and suspension bridges is an adventure activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Forest Fun Park in Zermatt is an outdoor adventure park best suited for warmer months, making summer, spring, and autumn ideal for accessibility and enjoyment."
   },
   {
     "identifier": "9d7d1d7d-4d1d-4c1f-b797-432744466e10",
@@ -30088,7 +31160,13 @@
     "food": false,
     "food_reason": "There is no specific emphasis on food or culinary experiences.",
     "sport": false,
-    "sport_reason": "While there are adventure elements, the focus is not on athletic or adrenaline-focused activities."
+    "sport_reason": "While there are adventure elements, the focus is not on athletic or adrenaline-focused activities.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Wolli Adventure Park Sunnegga is an outdoor attraction with water games and a mountain playground, making it most suitable for summer, but also accessible in spring and autumn when the weather is mild."
   },
   {
     "identifier": "2daefd9c-b37a-4d4d-ae17-a2caa4ecf6e7",
@@ -30290,7 +31368,11 @@
     "food": false,
     "food_reason": "The attraction does not emphasize culinary experiences or food-related activities.",
     "sport": false,
-    "sport_reason": "The experience is not athletic or adrenaline-focused, but rather a leisurely nature walk."
+    "sport_reason": "The experience is not athletic or adrenaline-focused, but rather a leisurely nature walk.",
+    "season": [
+      "summer"
+    ],
+    "season_reason": "The Ricola Herb Garden is open from June to September, indicating it is accessible and best experienced in summer."
   },
   {
     "identifier": "synthetic-chillon-castle",
@@ -30359,7 +31441,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences or dining options at the castle.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities."
+    "sport_reason": "The attraction does not involve any athletic or adrenaline-focused activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Chillon Castle is accessible year-round with indoor exhibits and scenic views suitable for all seasons."
   },
   {
     "identifier": "synthetic-kapellbruecke",
@@ -30412,7 +31501,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences associated with the bridge.",
     "sport": false,
-    "sport_reason": "The attraction does not involve any athletic or adventure activities."
+    "sport_reason": "The attraction does not involve any athletic or adventure activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Chapel Bridge is a city landmark accessible year-round, with seasonal highlights like spring flowers and winter illuminations."
   },
   {
     "identifier": "synthetic-lion-monument",
@@ -30453,7 +31549,15 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experience associated with the monument.",
     "sport": false,
-    "sport_reason": "The site does not involve any athletic or adventure activities."
+    "sport_reason": "The site does not involve any athletic or adventure activities.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "The Lion Monument is an outdoor memorial accessible year-round, suitable for visits in all seasons.",
+    "photo": "/poi_photos/synthetic-lion-monument.jpg"
   },
   {
     "identifier": "synthetic-mount-rigi",
@@ -30502,14 +31606,22 @@
         ]
       }
     ],
-    "nature": false,
-    "nature_reason": "The experience aligns more with culture than nature.",
-    "culture": true,
+    "nature": true,
+    "nature_reason": "The experience aligns more with nature than culture.",
+    "culture": false,
     "culture_reason": "While there are spa stops, the primary focus is on nature and scenic views.",
     "food": false,
     "food_reason": "There is no specific mention of food-related experiences.",
     "sport": false,
-    "sport_reason": "The activities mentioned are leisurely and not explicitly athletic or adrenaline-focused."
+    "sport_reason": "The activities mentioned are leisurely and not explicitly athletic or adrenaline-focused.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "Mount Rigi offers year-round activities including cogwheel rides, panoramic views, and spa visits, making it suitable for all seasons.",
+    "photo": "/poi_photos/synthetic-mount-rigi.jpg"
   },
   {
     "identifier": "synthetic-st-pierre-cathedral",
@@ -30550,7 +31662,14 @@
     "food": false,
     "food_reason": "There is no mention of any culinary experiences associated with the cathedral.",
     "sport": false,
-    "sport_reason": "There are no athletic or adventure activities related to visiting the cathedral."
+    "sport_reason": "There are no athletic or adventure activities related to visiting the cathedral.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "season_reason": "St. Pierre Cathedral is an indoor historical site with year-round accessibility, offering panoramic views and archaeological exploration regardless of the season."
   },
   {
     "identifier": "synthetic-monte-bre",
@@ -30591,7 +31710,13 @@
     "food": false,
     "food_reason": "There is no specific mention of culinary experiences.",
     "sport": false,
-    "sport_reason": "The activities mentioned are not explicitly athletic or adrenaline-focused."
+    "sport_reason": "The activities mentioned are not explicitly athletic or adrenaline-focused.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "Monte Brè is best visited in spring, summer, and autumn for its outdoor activities like hiking and biking, and to enjoy the panoramic views in favorable weather."
   },
   {
     "identifier": "synthetic-aescher-wildkirchli",
@@ -30632,7 +31757,13 @@
     "food": false,
     "food_reason": "Although Appenzeller specialities are served, the main draw is the scenic location.",
     "sport": false,
-    "sport_reason": "The experience involves a short hike, which is not considered an athletic or adrenaline-focused activity."
+    "sport_reason": "The experience involves a short hike, which is not considered an athletic or adrenaline-focused activity.",
+    "season": [
+      "summer",
+      "spring",
+      "autumn"
+    ],
+    "season_reason": "The Aescher–Wildkirchli is best visited in summer, spring, and autumn due to its alpine location and accessibility via cable car and hiking trails, which are most practical and safe during these seasons."
   },
   {
     "identifier": "synthetic-ruetli-meadow",
@@ -30684,6 +31815,12 @@
     "food": false,
     "food_reason": "There are no specific culinary experiences highlighted.",
     "sport": false,
-    "sport_reason": "No athletic or adrenaline-focused activities are mentioned."
+    "sport_reason": "No athletic or adrenaline-focused activities are mentioned.",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "season_reason": "The Rütli Meadow is best visited in spring, summer, and autumn due to its outdoor nature, lakeside location, and accessibility by boat and trails."
   }
 ]

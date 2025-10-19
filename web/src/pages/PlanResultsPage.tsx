@@ -139,7 +139,7 @@ const POICard = ({ poi }: { poi: PlanPOI }) => (
       <div className="plan-poi__labels">
         {poi.labels.map((label) => (
           <span className="plan-poi__chip" key={label}>
-            {label}
+            {formatLabel(label)}
           </span>
         ))}
       </div>
@@ -170,6 +170,11 @@ function formatCity(slug: string): string {
   const lower = slug.toLowerCase();
   if (lower === "luzerne" || lower === "lucerne") return "Lucerne";
   return lower.charAt(0).toUpperCase() + lower.slice(1);
+}
+
+function formatLabel(label: string): string {
+  if (!label) return label;
+  return label.charAt(0).toUpperCase() + label.slice(1);
 }
 
 function formatNeededTime(raw: string): string {
