@@ -5,6 +5,8 @@ export interface PlanPOI {
   labels: string[];
   description?: string | null;
   abstract?: string | null;
+  photo?: string | null;
+  needed_time?: string | null;
 }
 
 export interface PlanDay {
