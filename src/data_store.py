@@ -12,7 +12,7 @@ from typing import Dict, Iterable, List, Mapping, Optional, Tuple
 
 # Categories used throughout the planner. Centralising them here keeps ordering
 # consistent between data loading and selection logic.
-CATEGORIES = ("lake", "mountain", "sport", "culture", "food")
+CATEGORIES = ("nature", "culture", "food", "sport")
 SEASONS = ("spring", "summer", "autumn", "winter")
 
 
@@ -84,7 +84,7 @@ class TravelDataStore:
     @classmethod
     def from_files(
         cls,
-        pois_path: Path = Path("data/out/selected_city_pois_llm_season_labeled.json"),
+        pois_path: Path = Path("data/out/selected_city_pois_llm_theme_labeled.json"),
         distances_path: Path = Path("data/out/google_city_distances.json"),
     ) -> "TravelDataStore":
         pois_data = json.loads(pois_path.read_text(encoding="utf-8"))
@@ -94,16 +94,7 @@ class TravelDataStore:
 
         for entry in pois_data:
             labels = {category: bool(entry.get(category, False)) for category in CATEGORIES}
-            needed_time = None
-            for classification in entry.get("classification", []) or []:
-                if not isinstance(classification, dict):
-                    continue
-                if classification.get("name") == "neededtime":
-                    values = classification.get("values") or []
-                    if values:
-                        first = values[0]
-                        needed_time = first.get("title") or first.get("name")
-                    break
+            needed_time = _extract_needed_time(entry)
             excluded_keys = {
                 "identifier",
                 "name",
@@ -118,7 +109,7 @@ class TravelDataStore:
             excluded_keys.update(reason_keys)
             metadata = {k: v for k, v in entry.items() if k not in excluded_keys}
 
-            seasons = _parse_seasons(entry.get("season"))
+            seasons = _parse_seasons(entry)
             season_reason = entry.get("season_reason")
             season_order = {season: idx for idx, season in enumerate(seasons)}
 
@@ -205,17 +196,50 @@ class TravelDataStore:
         return candidate
 
 
-def _parse_seasons(raw_value: object) -> Tuple[str, ...]:
-    if raw_value is None:
-        return tuple()
+def _extract_needed_time(entry: Mapping[str, object]) -> Optional[str]:
+    for classification in entry.get("classification", []) or []:
+        if not isinstance(classification, dict):
+            continue
+        if classification.get("name") != "neededtime":
+            continue
+        values = classification.get("values") or []
+        if not values:
+            return None
+        first = values[0]
+        if isinstance(first, dict):
+            return first.get("title") or first.get("name")
+        return str(first)
+    return None
+
+
+def _parse_seasons(entry: Mapping[str, object]) -> Tuple[str, ...]:
+    seasons: List[str] = []
+    raw_value = entry.get("season")
     if isinstance(raw_value, str):
-        candidate = raw_value.strip().lower()
-        return (candidate,) if candidate in SEASONS else tuple()
-    if isinstance(raw_value, list):
-        normalized: List[str] = []
+        seasons.append(raw_value.strip().lower())
+    elif isinstance(raw_value, list):
         for item in raw_value:
-            text = str(item).strip().lower()
-            if text in SEASONS and text not in normalized:
-                normalized.append(text)
-        return tuple(normalized)
-    return tuple()
+            if isinstance(item, str):
+                seasons.append(item.strip().lower())
+
+    if not seasons:
+        for classification in entry.get("classification", []) or []:
+            if not isinstance(classification, dict):
+                continue
+            if classification.get("name") != "seasons":
+                continue
+            for value in classification.get("values") or []:
+                if not isinstance(value, dict):
+                    continue
+                candidate = value.get("name") or value.get("title")
+                if candidate:
+                    seasons.append(str(candidate).strip().lower())
+            if seasons:
+                break
+
+    normalized: List[str] = []
+    for season in seasons:
+        lowered = season.lower()
+        if lowered in SEASONS and lowered not in normalized:
+            normalized.append(lowered)
+    return tuple(normalized)

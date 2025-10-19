@@ -174,13 +174,31 @@ main {
   gap: 0.8rem 1rem;
 }
 
+.row--interests { align-items: flex-start; }
+.row--interests label { margin-top: 0.35rem; }
+
+.interest-rank { grid-column: 2 / span 1; display: flex; flex-direction: column; gap: 0.85rem; }
+.interest-rank__item { display: flex; justify-content: space-between; align-items: center; background: #ffffff; border: 1px solid rgba(8, 28, 45, 0.08); border-radius: 16px; padding: 0.85rem 1rem; box-shadow: 0 10px 24px rgba(8, 28, 45, 0.08); }
+.interest-rank__left { display: flex; align-items: center; gap: 0.8rem; }
+.interest-rank__badge { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(8, 28, 45, 0.85); color: #f4f7fd; font-weight: 700; font-size: 0.85rem; }
+.interest-rank__text { display: flex; flex-direction: column; gap: 0.25rem; }
+.interest-rank__label { font-weight: 700; font-size: 1rem; color: #0c2234; text-transform: capitalize; }
+.interest-rank__hint { font-size: 0.85rem; color: rgba(12, 34, 52, 0.65); }
+.interest-rank__right { display: flex; align-items: center; gap: 1rem; }
+.interest-rank__weight { font-weight: 700; color: #0a1e2f; }
+.interest-rank__actions { display: flex; flex-direction: column; gap: 0.25rem; }
+.interest-rank__actions button { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(8, 28, 45, 0.1); background: rgba(8, 28, 45, 0.05); color: #0a1e2f; font-weight: 700; cursor: pointer; transition: transform 0.15s ease, background 0.15s ease; }
+.interest-rank__actions button:hover:not(:disabled) { transform: translateY(-1px); background: rgba(8, 28, 45, 0.1); }
+.interest-rank__actions button:disabled { opacity: 0.35; cursor: default; }
+
 .interest { display: grid; grid-template-columns: 1fr 120px 30px; align-items: center; gap: 0.6rem; }
 .interest__label { text-transform: capitalize; color: #243543; font-weight: 600; }
 .interest__pct { color: #5c6d79; }
 
 .remaining { grid-column: 1 / -1; font-size: 0.9rem; color: #3a4b56; margin-top: 0.6rem; }
 .remaining.over { color: #b00020; }
-.interests-actions { grid-column: 2 / span 1; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.4rem; }
+.interests-actions { grid-column: 2 / span 1; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.8rem; }
+.interests-actions__hint { color: rgba(12,34,52,0.65); font-size: 0.85rem; }
 
 .planner__actions {
   margin-top: 1rem;

@@ -21,9 +21,9 @@ else:
 
 
 def prompt_preferences() -> Dict[str, float]:
-    print("Enter preference weights for the five categories so they sum to 1.")
+    print("Enter preference weights for the four categories so they sum to 1.")
     print("Order:", ", ".join(CATEGORIES))
-    raw = input("Provide five numbers separated by commas (e.g., 0.3,0.2,0.2,0.2,0.1): ").strip()
+    raw = input("Provide four numbers separated by commas (e.g., 0.4,0.3,0.2,0.1): ").strip()
     parts = [part.strip() for part in raw.split(",") if part.strip()]
     if len(parts) != len(CATEGORIES):
         print(f"Expected {len(CATEGORIES)} values.", file=sys.stderr)
