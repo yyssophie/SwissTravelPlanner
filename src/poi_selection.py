@@ -8,6 +8,7 @@ import random
 import re
 import sys
 import unicodedata
+from itertools import combinations
 from pathlib import Path
 from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
@@ -38,76 +39,93 @@ def _filter_pois_by_preferences(
 
 
 def has_preferred_pois(
-    pois: Sequence[POI], preference_weights: Mapping[str, float]
-) -> bool:
-    return bool(_filter_pois_by_preferences(pois, preference_weights))
-
-
-def pick_two_pois_for_city(
     pois: Sequence[POI],
     preference_weights: Mapping[str, float],
+    season: Optional[str] = None,
+) -> bool:
+    filtered = _filter_pois_by_preferences(pois, preference_weights)
+    if not season:
+        return bool(filtered)
+    return any(_is_in_season(poi, season) for poi in filtered)
+
+
+def select_pois_for_day(
+    pois: Sequence[POI],
+    preference_weights: Mapping[str, float],
+    travel_tu: int,
     rng: random.Random | None = None,
     season: Optional[str] = None,
 ) -> List[POI]:
-    """Randomly pick up to two POIs that satisfy the user's preferences."""
+    """Pick up to two POIs that fit within the TU limits while respecting preferences."""
+
     rng = rng or random.Random()
+    eligible = list(_filter_pois_by_preferences(pois, preference_weights))
+    if not eligible:
+        return []
 
-    remaining_pois = list(_filter_pois_by_preferences(pois, preference_weights))
-    chosen: List[POI] = []
-
-    if not remaining_pois:
-        return chosen
-
-    weights = {}
-    for cat in CATEGORIES:
-        if preference_weights.get(cat, 0.0) <= 0.0:
+    # Precompute activity TU and primary labels for scoring.
+    raw_info = []
+    for poi in eligible:
+        label = _primary_label(poi)
+        if not label:
             continue
-        if any(poi.has_label(cat) for poi in remaining_pois):
-            weights[cat] = float(preference_weights.get(cat, 0.0))
-    total_weight = sum(weights.values())
-    if total_weight <= 0.0:
-        weights = {cat: 1.0 for cat in CATEGORIES if cat in preference_weights}
-        total_weight = sum(weights.values())
-        if total_weight <= 0.0:
-            raise ValueError("Preference weights must contain at least one positive entry.")
-    weights = {cat: w / total_weight for cat, w in weights.items()}
+        raw_info.append((poi, label, _activity_time_units(poi)))
 
-    for _ in range(min(2, len(remaining_pois))):
-        available_weights = dict(weights)
+    if season:
+        season_info = [info for info in raw_info if _is_in_season(info[0], season)]
+        activity_info = season_info or raw_info
+    else:
+        activity_info = raw_info
 
-        while available_weights and remaining_pois:
-            categories, probs = zip(*available_weights.items())
-            probs_total = sum(probs)
-            probs = [p / probs_total for p in probs]
+    if not activity_info:
+        return []
 
-            label = rng.choices(categories, weights=probs, k=1)[0]
-            matches = [poi for poi in remaining_pois if poi.has_label(label)]
+    combos: List[Tuple[Tuple[POI, ...], int, float, float]] = []
 
-            if matches:
-                filtered_matches = _prioritise_by_season(matches, season)
-                if not filtered_matches:
-                    available_weights.pop(label, None)
-                    continue
+    if travel_tu <= 10:
+        combos.append((tuple(), travel_tu, 0.0, 0.0))
 
-                distinct_matches = _exclude_similar(filtered_matches, chosen)
-                if not distinct_matches:
-                    available_weights.pop(label, None)
-                    continue
+    for idx, (poi, label, tu) in enumerate(activity_info):
+        if travel_tu + tu <= 10:
+            pref = preference_weights.get(label, 0.0)
+            season_score = _season_score(poi, season)
+            combos.append(((poi,), travel_tu + tu, pref, season_score))
 
-                poi = rng.choice(distinct_matches)
-                chosen.append(poi)
-                remaining_pois.remove(poi)
-                break
+    for (poi_a, label_a, tu_a), (poi_b, label_b, tu_b) in combinations(activity_info, 2):
+        if _are_similar(poi_a, poi_b):
+            continue
+        total = travel_tu + tu_a + tu_b
+        if total > 10:
+            continue
+        pref = preference_weights.get(label_a, 0.0) + preference_weights.get(label_b, 0.0)
+        season_score = _season_score(poi_a, season) + _season_score(poi_b, season)
+        combos.append(((poi_a, poi_b), total, pref, season_score))
 
-            available_weights.pop(label, None)
-        else:
-            fallback = [poi for poi in remaining_pois if not any(_are_similar(poi, other) for other in chosen)]
-            pool = fallback or remaining_pois
-            poi = rng.choice(pool)
-            chosen.append(poi)
-            remaining_pois.remove(poi)
+    if not combos and travel_tu > 10:
+        combos.append((tuple(), travel_tu, 0.0, 0.0))
 
-    return chosen
+    if not combos:
+        # Travel alone already exceeds the limit; no activities.
+        return []
+
+    def combo_key(item: Tuple[Tuple[POI, ...], int, float, float]) -> Tuple[int, int, float, float]:
+        combo, total, pref_score, season_score = item
+        meets_target = 1 if 8 <= total <= 10 else 0
+        return (meets_target, total, pref_score, -season_score)
+
+    best_key = None
+    best_items: List[Tuple[Tuple[POI, ...], int, float, float]] = []
+
+    for entry in combos:
+        key = combo_key(entry)
+        if best_key is None or key > best_key:
+            best_key = key
+            best_items = [entry]
+        elif key == best_key:
+            best_items.append(entry)
+
+    chosen_combo = rng.choice(best_items)[0]
+    return list(chosen_combo)
 
 
 
@@ -133,33 +151,15 @@ def select_pois_for_cities(
             continue
         # Use a seeded RNG per city for reproducibility if desired.
         city_rng = random.Random(rng.random())
-        itinerary[city] = pick_two_pois_for_city(
+        itinerary[city] = select_pois_for_day(
             city_pois,
             preference_weights,
+            travel_tu=0,
             rng=city_rng,
             season=season,
         )
 
     return itinerary
-
-
-def _prioritise_by_season(
-    candidates: Sequence[POI], season: Optional[str]
-) -> List[POI]:
-    if season is None:
-        return list(candidates)
-
-    ranked: List[Tuple[int, POI]] = []
-    for poi in candidates:
-        priority = poi.season_priority(season)
-        if priority is not None:
-            ranked.append((priority, poi))
-
-    if not ranked:
-        return []
-
-    best_rank = min(priority for priority, _ in ranked)
-    return [poi for priority, poi in ranked if priority == best_rank]
 
 
 _TOKEN_PATTERN = re.compile(r"[a-z0-9]+")
@@ -185,12 +185,6 @@ _STOPWORDS = {
 }
 
 
-def _exclude_similar(candidates: Sequence[POI], chosen: Sequence[POI]) -> List[POI]:
-    if not chosen:
-        return list(candidates)
-    return [poi for poi in candidates if not any(_are_similar(poi, other) for other in chosen)]
-
-
 def _are_similar(poi_a: POI, poi_b: POI) -> bool:
     tokens_a = _name_tokens(poi_a.name)
     tokens_b = _name_tokens(poi_b.name)
@@ -206,3 +200,40 @@ def _name_tokens(name: str) -> set[str]:
     normalized = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii")
     tokens = {match.group(0) for match in _TOKEN_PATTERN.finditer(normalized.lower())}
     return {token for token in tokens if token not in _STOPWORDS}
+
+
+def _primary_label(poi: POI) -> Optional[str]:
+    for category in CATEGORIES:
+        if poi.has_label(category):
+            return category
+    return None
+
+
+def _activity_time_units(poi: POI) -> int:
+    needed = (getattr(poi, "needed_time", None) or "").lower()
+    if not needed:
+        return 2
+    if "4" in needed and "8" in needed:
+        return 8
+    if "2" in needed and "4" in needed:
+        return 4
+    if "1" in needed and "2" in needed:
+        return 2
+    if "less" in needed or "<" in needed:
+        return 1
+    return 2
+
+
+def _season_score(poi: POI, season: Optional[str]) -> float:
+    if season is None:
+        return 0.0
+    priority = poi.season_priority(season)
+    if priority is None:
+        return 5.0
+    return float(priority)
+
+
+def _is_in_season(poi: POI, season: Optional[str]) -> bool:
+    if season is None:
+        return True
+    return poi.season_priority(season) is not None

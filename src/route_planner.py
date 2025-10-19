@@ -19,10 +19,10 @@ if __package__ is None or __package__ == "":
     CURRENT_DIR = Path(__file__).resolve().parent
     sys.path.append(str(CURRENT_DIR.parent))
     from data_store import CATEGORIES, POI, TravelDataStore  # type: ignore
-    from poi_selection import has_preferred_pois, pick_two_pois_for_city  # type: ignore
+    from poi_selection import has_preferred_pois, select_pois_for_day  # type: ignore
 else:  # pragma: no cover
     from .data_store import CATEGORIES, POI, TravelDataStore
-    from .poi_selection import has_preferred_pois, pick_two_pois_for_city
+    from .poi_selection import has_preferred_pois, select_pois_for_day
 
 DAILY_TRAVEL_LIMIT_MINUTES = 240.0
 LONG_TRAVEL_THRESHOLD_MINUTES = 180.0
@@ -141,16 +141,14 @@ class RoutePlanner:
             visited_cities.add(current_distance_city)
             remaining_days = num_days - day_index
 
-            pois = pick_two_pois_for_city(
+            travel_tu = _travel_time_units(travel_minutes_prev)
+            pois = select_pois_for_day(
                 available_pois[current_poi_city],
                 preference_weights,
+                travel_tu=travel_tu,
                 rng=rng,
                 season=season,
             )
-            if not pois:
-                raise ValueError(
-                    f"No POIs available in {self._display_name(current_distance_city)} for the given preferences and season."
-                )
             selected_ids = {poi.identifier for poi in pois}
             if selected_ids:
                 available_pois[current_poi_city] = [
@@ -214,7 +212,7 @@ class RoutePlanner:
                         extra_stay_used[current_distance_city] = True
 
             if should_stay and not has_preferred_pois(
-                available_pois[current_poi_city], preference_weights
+                available_pois[current_poi_city], preference_weights, season
             ):
                 should_stay = False
                 stay_reasons = []
@@ -239,6 +237,7 @@ class RoutePlanner:
                 visited_cities=visited_cities,
                 available_pois=available_pois,
                 preference_weights=preference_weights,
+                season=season,
                 rng=rng,
             )
             if dest_info is None:
@@ -286,6 +285,7 @@ class RoutePlanner:
         visited_cities: Iterable[str],
         available_pois: Mapping[str, List[POI]],
         preference_weights: Mapping[str, float],
+        season: Optional[str],
         rng: random.Random,
     ) -> Optional[Tuple[str, float]]:
         remaining_days_after_move = remaining_days - 1
@@ -307,7 +307,7 @@ class RoutePlanner:
 
             dest_poi_city = self._distance_to_poi.get(dest)
             if not dest_poi_city or not has_preferred_pois(
-                available_pois.get(dest_poi_city, []), preference_weights
+                available_pois.get(dest_poi_city, []), preference_weights, season
             ):
                 continue
 
@@ -417,3 +417,9 @@ class RoutePlanner:
         normalised = unicodedata.normalize("NFKD", value or "")
         ascii_value = normalised.encode("ascii", "ignore").decode("ascii")
         return ascii_value.strip().lower()
+
+
+def _travel_time_units(minutes: float) -> int:
+    if minutes <= 0:
+        return 0
+    return max(1, math.ceil(minutes / 60.0))
