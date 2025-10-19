@@ -1,0 +1,2218 @@
+{
+  "meta": {
+    "language": "en",
+    "apiVersion": "v1.3.12",
+    "page": {
+      "size": 12,
+      "totalElements": 12,
+      "totalPages": 1,
+      "number": 0
+    },
+    "facets": {
+      "seasons": {
+        "summer": 7,
+        "winter": 3,
+        "spring": 2,
+        "autumn": 1
+      },
+      "areatype": {
+        "oldtown": 1
+      },
+      "sporttype": {
+        "climb": 3,
+        "golfing": 2,
+        "riverrafting": 1
+      },
+      "naturetype": {
+        "viaferrata": 3,
+        "caves": 1
+      },
+      "neededtime": {
+        "2to4hourshalfday": 6,
+        "4to8hoursfullday": 3
+      },
+      "childrenage": {
+        "10to13years": 3,
+        "14plus": 3,
+        "6to9years": 3
+      },
+      "buildingstype": {
+        "dam": 1
+      },
+      "experiencetype": {
+        "active": 4,
+        "nature": 4,
+        "adventure": 3,
+        "education": 2
+      },
+      "degustationtype": {
+        "wine": 1
+      },
+      "naturetrailtype": {
+        "adventuretrail": 1
+      },
+      "suitablefortype": {
+        "couples": 3,
+        "individual": 3,
+        "family": 2,
+        "group": 2
+      },
+      "geographicallocations": {
+        "alonggrandtour": 5,
+        "atthelake": 1,
+        "inthecountryside": 1
+      },
+      "toursandsightseeingtype": {
+        "citytours": 1
+      },
+      "indooroutdoorclassifications": {
+        "outdoor": 5,
+        "indooroutdoor": 1
+      },
+      "actionandfunfactorclassifications": {
+        "medium": 2,
+        "high": 1
+      }
+    },
+    "facetsTranslation": {
+      "seasons": {
+        "values": {
+          "summer": "Summer",
+          "winter": "Winter",
+          "spring": "Spring",
+          "autumn": "Autumn"
+        }
+      },
+      "areatype": {
+        "title": "Area",
+        "values": {
+          "oldtown": "Old town"
+        }
+      },
+      "sporttype": {
+        "title": "Sport type",
+        "values": {
+          "climb": "Climb",
+          "golfing": "Golfing",
+          "riverrafting": "Riverrafting"
+        }
+      },
+      "naturetype": {
+        "title": "Nature",
+        "values": {
+          "viaferrata": "Via ferrata",
+          "caves": "Caves"
+        }
+      },
+      "neededtime": {
+        "title": "Needed time",
+        "values": {
+          "2to4hourshalfday": "2 to 4 hours (half day)",
+          "4to8hoursfullday": "4 to 8 hours (full day)"
+        }
+      },
+      "childrenage": {
+        "title": "Children age",
+        "values": {
+          "10to13years": "10 to 13 years",
+          "14plus": "14+ years",
+          "6to9years": "6 to 9 years"
+        }
+      },
+      "buildingstype": {
+        "title": "Building type",
+        "values": {
+          "dam": "Dam"
+        }
+      },
+      "experiencetype": {
+        "title": "Experience Type",
+        "values": {
+          "active": "Active",
+          "nature": "Nature",
+          "adventure": "Adventure",
+          "education": "Education"
+        }
+      },
+      "degustationtype": {
+        "title": "Degustation",
+        "values": {
+          "wine": "Wine"
+        }
+      },
+      "naturetrailtype": {
+        "title": "Nature trail",
+        "values": {
+          "adventuretrail": "Adventure trail"
+        }
+      },
+      "suitablefortype": {
+        "title": "Suitable for",
+        "values": {
+          "couples": "Couples",
+          "individual": "Individual",
+          "family": "Families",
+          "group": "Groups"
+        }
+      },
+      "geographicallocations": {
+        "values": {
+          "alonggrandtour": "Along the Grand Tour",
+          "atthelake": "At the lake",
+          "inthecountryside": "In the countryside"
+        }
+      },
+      "toursandsightseeingtype": {
+        "title": "Tours and Sightseeing",
+        "values": {
+          "citytours": "City Tours"
+        }
+      },
+      "indooroutdoorclassifications": {
+        "values": {
+          "outdoor": "Outdoor",
+          "indooroutdoor": "Indoor and outdoor"
+        }
+      },
+      "actionandfunfactorclassifications": {
+        "title": "Action and Fun factor Classifications",
+        "values": {
+          "medium": "Medium",
+          "high": "High"
+        }
+      }
+    }
+  },
+  "links": {
+    "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+  },
+  "data": [
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "60005b26-79b0-43c9-ab54-f0f4c35e1e21",
+      "name": "Underground lake of St-Leonard",
+      "touristType": [
+        "Adventure Tourism"
+      ],
+      "abstract": "Europe's largest subterranean lake that can be sailed upon lies between Sion and Sierre. The water grotto is easily accessible and there is a boat tour for viewing it. The guides on the boat tell visitors about the history of the cave and its geology.",
+      "description": "Various types of stone glitter at a height of ten meters, their shapes reflected on the 6,000 square meter surface of the lake. Trout swim in the clear water and the only species that is actually native to this subterranean world, the fungus gnat, hangs its larvae upside down on the walls of the cave.\n\nViewing the subterranean lake of St-Léonard is a marvelous adventure. The 300 meter long and about 20 meter wide watery underworld is considered to be a place of special power. It has been accessible to tourists since 1949. Every year about 80,000 visitors are taken in large boats to see the lake. The famous speleologist Jean-Jacques Pittard is said to have been the first person to scientifically explore the cave.\n\nThe grotto can be hired for receptions or special occasions.",
+      "address": [],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.25622215599411,
+        "longitude": 7.425565077718911
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "lac-souterrain-006.jpg",
+          "keywords": "leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 3016,
+          "height": 988,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/nature/lac-souterrain-006_39731.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "barque1.jpg",
+          "keywords": "höhle,cave,see,lake,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1212,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/nature/barque1_39731.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "barque2.jpg",
+          "keywords": "lac souterrain,st-léonard,höhle,cave,see,lake,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1668,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/nature/barque2_39731.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "concert1.jpg",
+          "keywords": "lac souterrain,st-léonard,höhle,cave,see,lake,boot,boat,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1243,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/nature/concert1_39731.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "concert3.jpg",
+          "keywords": "lac souterrain,st-léonard,höhle,cave,see,lake,boot,boat,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1668,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/nature/concert3_39731.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "proposal1.jpg",
+          "keywords": "lac souterrain,st-léonard,höhle,cave,see,lake,bootm boat,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1668,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/nature/proposal1_39731.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "St-Leonard, Lac Souterrain",
+          "keywords": "valais,mountain,mountain lake,man,sightseeing,leisure,summer,winter",
+          "copyrightHolder": "Partner image for editorial and touristic use / PHOTO-GENIC.CH/ OLIVIER MAIRE",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/b/o/boat%20ride%20on%20a%20subterranean%20lake/images%20all%20season/36405_32001800.jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "St-Leonard, Lac Souterrain",
+          "keywords": "valais,mountain,mountain lake,leisure,summer,winter",
+          "copyrightHolder": "Partner image for editorial and touristic use / PHOTO-GENIC.CH/ OLIVIER MAIRE",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/b/o/boat%20ride%20on%20a%20subterranean%20lake/images%20all%20season/36339_32001800.jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "St-Leonard, Lac Souterrain",
+          "keywords": "valais,mountain,mountain lake,sightseeing,leisure,summer,winter",
+          "copyrightHolder": "Partner image for editorial and touristic use / PHOTO-GENIC.CH/ OLIVIER MAIRE",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/b/o/boat%20ride%20on%20a%20subterranean%20lake/images%20all%20season/36323_32001800.jpeg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "month",
+          "values": [
+            {
+              "name": "allyear",
+              "title": "All year"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "values": [
+            {
+              "name": "en",
+              "title": "English"
+            },
+            {
+              "name": "fr",
+              "title": "French"
+            },
+            {
+              "name": "de",
+              "title": "German"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "indooroutdoor",
+              "title": "Indoor and outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "suitablefortype",
+          "title": "Suitable for",
+          "values": [
+            {
+              "name": "group",
+              "title": "Groups"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "childrenage",
+          "title": "Children age",
+          "values": [
+            {
+              "name": "14plus",
+              "title": "14+ years"
+            },
+            {
+              "name": "10to13years",
+              "title": "10 to 13 years"
+            },
+            {
+              "name": "6to9years",
+              "title": "6 to 9 years"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "adventure",
+              "title": "Adventure"
+            },
+            {
+              "name": "nature",
+              "title": "Nature"
+            },
+            {
+              "name": "education",
+              "title": "Education"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "atthelake",
+              "title": "At the lake"
+            },
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            },
+            {
+              "name": "inthecountryside",
+              "title": "In the countryside"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "winter",
+              "title": "Winter"
+            },
+            {
+              "name": "spring",
+              "title": "Spring"
+            },
+            {
+              "name": "summer",
+              "title": "Summer"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "naturetype",
+          "title": "Nature",
+          "values": [
+            {
+              "name": "caves",
+              "title": "Caves"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "29596936-b61d-41e3-8e11-111db8868dae",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/29596936-b61d-41e3-8e11-111db8868dae?lang=en"
+      },
+      "availableLanguage": [
+        {
+          "@type": "Language",
+          "alternateName": "de"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "fr"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "en"
+        }
+      ],
+      "event": {
+        "@type": "Event",
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": "Groups"
+        },
+        "minimumAttendeeCapacity": 20,
+        "maximumAttendeeCapacity": 120
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "recommendedSeason": "allyear",
+      "url": "https://www.myswitzerland.com/en/experiences/boat-ride-on-a-subterranean-lake/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/nature/lac-souterrain-006_39731.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "03680f16-a4dc-4f76-9c62-b19b179bee78",
+      "name": "A great past at the crossroad of the alps",
+      "abstract": "As you explore the alleys of the Old Town, you can really feel the many centuries of history that have given Sion its very special charm.",
+      "description": "Your journey in time here, at the heart of the Alps, takes you through several periods of history. You begin in the 4th millennium BC (menhirs, dolmens), pass through the Roman era and into the Middle Ages – and a fabulous legacy including the cathedral, begun in the 12th century, and the castle of Valère, begun in the 11th – before arriving at the magnifi cent Renaissance and Baroque periods. You can discover the full story on one of the guided tours of the city, as well as in the three regional museums located in Sion.\nOpen:\nall year around",
+      "address": [],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.23180922515192,
+        "longitude": 7.360978361154917
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "62_Planta.jpg",
+          "keywords": "leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 1500,
+          "height": 1125,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/cities/62_planta_41730.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Chateaux_Sion.jpg",
+          "keywords": "leisure,winter",
+          "copyrightHolder": "(PHOTO-GENIC.CH/ OLIVIER MAIRE)",
+          "publisher": "Switzerland Tourism",
+          "width": 1242,
+          "height": 575,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/winter/cities/chateaux_sion_41730.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "month",
+          "values": [
+            {
+              "name": "allyear",
+              "title": "All year"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "values": [
+            {
+              "name": "it",
+              "title": "Italian"
+            },
+            {
+              "name": "en",
+              "title": "English"
+            },
+            {
+              "name": "fr",
+              "title": "French"
+            },
+            {
+              "name": "de",
+              "title": "German"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "toursandsightseeingtype",
+          "title": "Tours and Sightseeing",
+          "values": [
+            {
+              "name": "citytours",
+              "title": "City Tours"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "suitablefortype",
+          "title": "Suitable for",
+          "values": [
+            {
+              "name": "couples",
+              "title": "Couples"
+            },
+            {
+              "name": "group",
+              "title": "Groups"
+            },
+            {
+              "name": "individual",
+              "title": "Individual"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "winter",
+              "title": "Winter"
+            },
+            {
+              "name": "spring",
+              "title": "Spring"
+            },
+            {
+              "name": "summer",
+              "title": "Summer"
+            },
+            {
+              "name": "autumn",
+              "title": "Autumn"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "areatype",
+          "title": "Area",
+          "values": [
+            {
+              "name": "oldtown",
+              "title": "Old town"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "1d1bc37a-6119-41ba-bd8c-3a627c2b9f93",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/1d1bc37a-6119-41ba-bd8c-3a627c2b9f93?lang=en"
+      },
+      "availableLanguage": [
+        {
+          "@type": "Language",
+          "alternateName": "de"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "en"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "fr"
+        },
+        {
+          "@type": "Language",
+          "alternateName": "it"
+        }
+      ],
+      "event": {
+        "@type": "Event",
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": [
+            "Couples",
+            "Groups",
+            "Individual"
+          ]
+        },
+        "minimumAttendeeCapacity": 1,
+        "maximumAttendeeCapacity": 25
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "recommendedSeason": "allyear",
+      "url": "https://www.myswitzerland.com/en/experiences/a-great-past-at-the-crossroad-of-the-alps/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/cities/62_planta_41730.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "fb34b086-9824-413b-8514-614bc0c41e84",
+      "name": "Powerful Rhone",
+      "touristType": [
+        "Adventure Tourism"
+      ],
+      "abstract": "On rafts down the Rhone – big volume rafting in Switzerland! Two different sections to choose from.",
+      "description": "Of all Swiss rafting rivers, the Rhone has got the largest water volume. Especially on hot days, the snowmelt results in rising water levels and huge fun waves. \n\nThere are two sections with different levels of difficulty to choose from. \n\nOn the upper section, the so-called ‘adventure course’ between Sousten and Sierre you will find demanding rafting with huge waves. One hour of an adventure you won’t forget in a hurry! \n\nThe lower section, between Sierre and Sion, offers up to 20 km of cruisy and easy white water. Make use of the bathing spots along the way and enjoy a picnic break. On this section you can choose between half-day and full-day programs. Part of this section can also be run with hydro speeds. \nRiver: Rhone\nSection 1: Susten – Sierre, approx. 9 km\nActivities: rafting\nLandscape: ++\nAction factor/level of difficulty: +++\nSuited for families: +\nSuited for large groups (30+ persons): ++\nMinimum age: 16 years\nSeason: May – August/October \n\nRiver: Rhone\nSection 2: Sierre - Sion, approx. 20 km (or parts thereof)\nActivities: rafting, hydro speed\nLandscape: ++\nAction factor/level of difficulty: +\nSuited for families: +++\nSuited for large groups (30+ persons): +++\nMinimum age: 7 years\nSeason: May – August/October",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "9f3939f0-f193-4670-8dbe-72bf54ce507a",
+          "contactType": "Contact Address",
+          "name": "Office du Tourisme de Sierre, Salgesch et Environs",
+          "addressCountry": "CH",
+          "addressLocality": "Sierre",
+          "postalCode": "3960",
+          "streetAddress": "Avenue Général-Guisan 6",
+          "telephone": "+41 (0)27 455 85 35",
+          "email": "info@sierretourisme.ch",
+          "url": "http://www.sierretourisme.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.28300284011664,
+        "longitude": 7.539503180229401
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "Rhône Rafting",
+          "keywords": "valais,rafting,leisure,summer,winter",
+          "copyrightHolder": "Partner image for editorial and touristic use / al_zufferey",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/p/o/powerful%20rhone/images%20all%20season/56637_32001800.jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Rafting in Pfyn/Finges Park",
+          "keywords": "valais,rafting,leisure,summer,winter",
+          "copyrightHolder": "Partner image for editorial and touristic use / al_zufferey",
+          "publisher": "Switzerland Tourism",
+          "width": 3200,
+          "height": 1800,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/dam/resources/experience/p/o/powerful%20rhone/images%20all%20season/56636_32001800.jpeg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "month",
+          "values": [
+            {
+              "name": "may",
+              "title": "May"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "outdoor",
+              "title": "Outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "4to8hoursfullday",
+              "title": "4 to 8 hours (full day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "sporttype",
+          "title": "Sport type",
+          "values": [
+            {
+              "name": "riverrafting",
+              "title": "Riverrafting"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "actionandfunfactorclassifications",
+          "title": "Action and Fun factor Classifications",
+          "values": [
+            {
+              "name": "high",
+              "title": "High"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "childrenage",
+          "title": "Children age",
+          "values": [
+            {
+              "name": "14plus",
+              "title": "14+ years"
+            },
+            {
+              "name": "10to13years",
+              "title": "10 to 13 years"
+            },
+            {
+              "name": "6to9years",
+              "title": "6 to 9 years"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "adventure",
+              "title": "Adventure"
+            },
+            {
+              "name": "nature",
+              "title": "Nature"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "summer",
+              "title": "Summer"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "04a7ac3a-4a6e-45be-84bc-ae64e07ead18",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/04a7ac3a-4a6e-45be-84bc-ae64e07ead18?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "recommendedSeason": {
+        "start": "may",
+        "end": "october"
+      },
+      "url": "https://www.myswitzerland.com/en/experiences/powerful-rhone/",
+      "photo": "https://www.myswitzerland.com/-/media/dam/resources/experience/p/o/powerful%20rhone/images%20all%20season/56637_32001800.jpeg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "f5e0de2f-a90a-44c5-98ff-ed5e1b01721d",
+      "name": "\"Senses Trail\" - Direct contact with Nature",
+      "abstract": "The idea behind the \"Senses Trail\" is that nature should be felt, touched, tasted, smelled, heard, and seen, and learning about it should be fun.",
+      "description": "Begin the adventure at the \"Maisons de la fôret\", where there are explanatory signs explaining about the Senses Trail and giving general information about healing herbs, bee-keeping, and the local wildlife.\n\nBirdsong accompanies hikers starting out on the Senses Trail which begins along the Saxon irrigation channel. On the way, there are all sorts of activities: touching the forest ground, smelling Swiss pine bark, guessing which birds you can hear. Children and adults alike will enjoy trying to identify the various flowers and trees by smell or by touch. Signs are also in braille so that blind hikers may benefit from this trail.\n\nHow to get there:\nDrive or take public transport from Sion to Mayens-de-Riddes via Riddes.",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "3ce37bdd-3159-416d-a400-7710214b39a7",
+          "contactType": "Contact Address",
+          "name": "Office de tourisme de La Tzoumaz",
+          "addressCountry": "CH",
+          "addressLocality": "La Tzoumaz",
+          "postalCode": "1918",
+          "streetAddress": "Route de la Télécabine 18",
+          "telephone": "+41 (0)27 305 16 00",
+          "email": "info@latzoumaz.ch",
+          "url": "http://www.facebook.com/latzoumaz.ch"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.13297666295492,
+        "longitude": 7.243243514224992
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "bisse-de-la-tzoumaz1.jpg",
+          "keywords": "weg der sinne,mayens-de-riddes,leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 800,
+          "height": 533,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/family/summer/excursions/bisse-de-la-tzoumaz1_38623.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "sentiers_des_sens_site.jpg",
+          "keywords": "weg der sinne,mayens-de-riddes,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1000,
+          "height": 500,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/landscapes/summer/landscapes/sentiers_des_sens_site_38623.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "outdoor",
+              "title": "Outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "childrenage",
+          "title": "Children age",
+          "values": [
+            {
+              "name": "10to13years",
+              "title": "10 to 13 years"
+            },
+            {
+              "name": "6to9years",
+              "title": "6 to 9 years"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "nature",
+              "title": "Nature"
+            },
+            {
+              "name": "education",
+              "title": "Education"
+            },
+            {
+              "name": "active",
+              "title": "Active"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "summer",
+              "title": "Summer"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "naturetrailtype",
+          "title": "Nature trail ",
+          "values": [
+            {
+              "name": "adventuretrail",
+              "title": "Adventure trail"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "7e0a5f11-038a-4ecc-9fd1-c3ff9993a729",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/7e0a5f11-038a-4ecc-9fd1-c3ff9993a729?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/senses-trail-direct-contact-with-nature/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/family/summer/excursions/bisse-de-la-tzoumaz1_38623.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "e3764956-b273-4571-bada-ff1e914fbc5f",
+      "name": "Mauvoisin Dam",
+      "abstract": "The Mauvoisin arch dam is an impressive structure, with a height of 250 m.",
+      "description": "The Mauvoisin dam facility and the Mauvoisin-Fionnay and Fionnay-Riddes power plant stages were constructed between 1950 and 1958, and the Chanrion plant between 1959 and 1964. The Champsec power plant, which was built in 1930, was integrated into Kraftwerke Mauvoisin AG in 1992. \n\nThe Mauvoisin arch dam is an impressive structure, with a height of 250 m. It is part of the Mauvoisin dam facility, which has a maximum water level of 1975 m above sea level and a useable storage capacity of 193 million m3 of water. 43 per cent of the catchment area is glaciated. \n\nThe Mauvoisin reservoir can be reached from Sion (VS) by public transport in 1h 35 minutes or by car in 1h 5 minutes. \n\nINFORMATION\n\n * Plant visit\n * Guided tour (min. 10 people): by arrangement (Mon–Fri)\n * Entrance and guided tours are free of charge",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "19f8994a-181c-43dc-9ff2-0cc221c3a57f",
+          "contactType": "Contact Address",
+          "name": "Office du tourisme de Verbier",
+          "addressCountry": "CH",
+          "addressLocality": "Verbier",
+          "postalCode": "1936",
+          "streetAddress": "Route de Verbier Station 61",
+          "telephone": "+41 (0)27 775 38 88",
+          "email": "info@verbiertourisme.ch",
+          "url": "http://www.verbier.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.09633515055961,
+        "longitude": 7.226771877265368
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "mauvoisin_3.jpg",
+          "keywords": "staumauer mauvoisin,leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 650,
+          "height": 475,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/landscapes/summer/mountain%20lakes/mauvoisin_3_146375.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "mauvoisin_1.jpg",
+          "keywords": "mauvoisin staumauer,leisure,summer,winter",
+          "copyrightHolder": "Yves Garneau 2008 Yves Garneau",
+          "publisher": "Switzerland Tourism",
+          "width": 650,
+          "height": 475,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/cycling/mauvoisin_1_146375.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "mauvoisin_2.jpg",
+          "keywords": "mauvoisin staumauer,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 650,
+          "height": 475,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/destinations/summer/various/mauvoisin_2_146375.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "fmm2.jpg",
+          "keywords": "kraftwerk,axpo,staumauer,verbier,mauvoisin,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 402,
+          "height": 600,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/partner/teos/fmm2_146375.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "fmm3.jpg",
+          "keywords": "kraftwerk,axpo,staumauer,verbier,mauvoisin,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 800,
+          "height": 532,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/partner/teos/fmm3_146375.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "startbild_fmm.jpg",
+          "keywords": "kraftwerk,axpo,staumauer,verbier,mauvoisin,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 800,
+          "height": 531,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/partner/teos/startbild_fmm_146375.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "buildingstype",
+          "title": "Building type",
+          "values": [
+            {
+              "name": "dam",
+              "title": "Dam"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "ad6e8008-4c3f-4887-8091-7d3db10c1fd6",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/ad6e8008-4c3f-4887-8091-7d3db10c1fd6?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/mauvoisin-dam/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/landscapes/summer/mountain%20lakes/mauvoisin_3_146375.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "e2b00482-57ac-4959-90cf-aeee7b3b43de",
+      "name": "Golf in the Valais region",
+      "abstract": "Set between the Rhone Glacier and Lake Geneva and boasting 47 mighty 4000-meter-high peaks, Valais pledges guests a truly unique golfing experience.",
+      "description": "The eight golf clubs in Valais offer variety-packed golf in stunningly beautiful surroundings whether in the mountains or flatlands. Magnificent alpine decor, pristine nature, superb wines and traditional dishes along with hours of sunshine lure guests here, which is not surprising is it!GOLF COURSES\n\n18-hole golf courses: \n\nGolf Club Leuk, Susten [http://golfleuk.ch/] \nGolf Club Crans-sur-Sierre, Crans-Montana [https://www.golfcrans.ch/en/] \nGolf Club de Sierre, Granges [https://www.golfsierre.ch/] \nGolf Club de Sion, Sion [http://www.golfclubsion.ch/fr/index.php] \nGolf Club Verbier, Verbier [https://www.verbiergolfclub.ch/?lang=en] \n\n9-hole golf courses: \n\nGolfclub Riederalp, Riederalp [http://www.golfclub-riederalp.ch/]\nGolf - Source de Rhône, Obergesteln [http://www.golf-source-du-rhone.ch/]\nGolf Club Matterhorn, Zermatt [http://www.zermatt.ch/en/Media/Attractions/Matterhorn-Golf-Club]",
+      "address": [],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.23180922515192,
+        "longitude": 7.360978361154917
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "screen_shot_2012-11-16_at_13.png",
+          "keywords": "leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 547,
+          "height": 347,
+          "encodingFormat": "image/png",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/golf/screen_shot_2012-11-16_at_13_162983.png"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "outdoor",
+              "title": "Outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "suitablefortype",
+          "title": "Suitable for",
+          "values": [
+            {
+              "name": "couples",
+              "title": "Couples"
+            },
+            {
+              "name": "family",
+              "title": "Families"
+            },
+            {
+              "name": "individual",
+              "title": "Individual"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            },
+            {
+              "name": "4to8hoursfullday",
+              "title": "4 to 8 hours (full day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "sporttype",
+          "title": "Sport type",
+          "values": [
+            {
+              "name": "golfing",
+              "title": "Golfing"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "actionandfunfactorclassifications",
+          "title": "Action and Fun factor Classifications",
+          "values": [
+            {
+              "name": "medium",
+              "title": "Medium"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "active",
+              "title": "Active"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "summer",
+              "title": "Summer"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "1d1bc37a-6119-41ba-bd8c-3a627c2b9f93",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/1d1bc37a-6119-41ba-bd8c-3a627c2b9f93?lang=en"
+      },
+      "event": {
+        "@type": "Event",
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": [
+            "Couples",
+            "Families",
+            "Individual"
+          ]
+        }
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/golf-in-the-valais-region/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/golf/screen_shot_2012-11-16_at_13_162983.png"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "a9e869c3-ad9d-496e-abb0-388a80a0522c",
+      "name": "Evolène - A sports via ferrata",
+      "abstract": "A sports via ferrata in the French style, with very steep, compact rock with a few slightly overhanging passages and an airy traverse. Short walk-in (marked); the via ferrata comprises several sections, and there is a possible exit point at the end of each section.",
+      "description": " Difficulty\nK3-4/5. The first section is difficult; the traverse is technically undemanding, but very exposed; \"Grand Mur\" is very difficult and demanding.\n\nStarting-point\nEvolène (1,371m) in the Val d'Hérens, post-bus from Sion; parking is possible on the bypass.\n\nClimb\nComing out of the village, heading for Les Haudères, there is a large sign pointing to the via ferrata. Go up at the edge of the meadow, and it is a short walk through the woods to the foot of the rock wall (the starting point). The route begins off with a small overhang, which gives a hint of the challenges ahead. It then becomes very steep, coming close to perpendicular as it goes up through the compact rock, before bearing left to the ladder which can already be seen from the starting point. The ladder leads on to a fork: the right is the exit route, whilst to the left the via ferrata continues via ledges onto a steep rock wall outcrop with practically no holds. The crossing here is very airy, but is very safe and takes you via a narrow ledge to the entrance to the \"Grand Mur\" [\"Big Wall\"], where there is a second possible exit point. The tough overhang of the \"Grand Mur\" is the first challenge, and then the climber works his way from stirrup to stirrup, with ever more air beneath his feet, and largely without coming into contact with the rock. Moving up the vertical and in places slightly overhanging rock, the climber comes out on the edge of the Prés de Villaz. Time to shake out those arms!\n\nDescent\nAcross the meadows (on a marked path) with excellent views of the extensive mountainous backdrop of the Val d'Héren, down to the first via ferrata exit point, and then zigzagging down to the road. The second via ferrata exit point leads directly down to Evolène. \n\n[http://img.myswitzerland.com/gad/12879/images/k_buch.jpg]Quelle:\nEugen E. Hüsler/Daniel Anker: Wandern vertikal. Die Klettersteige der Schweiz, AT Verlag, Baden 2004\n\nRegion: Wallis Alps, Val d'Hérens \nPeaks/Highest point: Rocs de Villaz, approx. 1,700 m\nTime required: for the short circuit (first section) just under 1 hour, full via ferrata 2.30 hours.\nVariation in height: first section approx. 120 m, full tour 330 m (via ferrata 250 m)",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "7e4fe59d-c119-4dba-a309-6049a5904e97",
+          "contactType": "Contact Address",
+          "name": "Evolène Région Tourisme",
+          "addressCountry": "CH",
+          "addressLocality": "Evolène",
+          "postalCode": "1983",
+          "streetAddress": "Place Clos Lombard 6",
+          "telephone": "+41 (0)27 283 40 00",
+          "email": "info@evolene-region.ch",
+          "url": "http://www.evolene-region.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.1133411882082,
+        "longitude": 7.495729924574312
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "dh-2011-via-ferrata4.jpg",
+          "keywords": "klettersteig evolène,leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 1200,
+          "height": 797,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/adventure/dh-2011-via-ferrata4_40786.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "dh-2011-via-ferrata9.jpg",
+          "keywords": "klettersteig evolène,leisure,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1200,
+          "height": 797,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/adventure/dh-2011-via-ferrata9_40786.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "dh-2011-via-ferrata7.jpg",
+          "keywords": "klettersteig evolène,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1200,
+          "height": 797,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/adventure/dh-2011-via-ferrata7_40786.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "sporttype",
+          "title": "Sport type",
+          "values": [
+            {
+              "name": "climb",
+              "title": "Climb"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "swisstainable",
+          "values": [
+            {
+              "name": "swisstainablelevel1",
+              "title": "* Committed"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "naturetype",
+          "title": "Nature",
+          "values": [
+            {
+              "name": "viaferrata",
+              "title": "Via ferrata"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "94ac81f7-5dbd-4f0c-9300-03fb9e208ff4",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/94ac81f7-5dbd-4f0c-9300-03fb9e208ff4?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/evolene-a-sports-via-ferrata/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/adventure/dh-2011-via-ferrata4_40786.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "78f82531-e62f-4a14-b19f-b06a5652b20b",
+      "name": "Matterhorn Golf Club",
+      "abstract": "9+-hole course are 18 holes: The Golf Club Matterhorn is located in the upper Matter valley between Täsch and Randa, framed by Switzerland’s highest mountains.",
+      "description": "In the Golf Club Matterhorn, the game will be played on an altered 9+-hole course on the greens at Täsch-Randa. New and unique in Switzerland is that with this layout one can play each hole from different tee locations. This means that one can play 18 holes on a 9+-hole course. Whoever has played the course twice has played 18 holes. The lush alpine course welcomes locals and visitors alike for golf in a magnificent setting. The course offers all comforts including a clubhouse and restaurant as well as breathtaking views of the Breithorn [https://www.myswitzerland.com/en/destinations/breithorn-4164m/](4,164 m) and the Klein Matterhorn [https://www.myswitzerland.com/en/experiences/matterhorn-glacier-ride/](3,883 m) above Zermatt [https://www.myswitzerland.com/en/destinations/zermatt/]. Early bird, \"Bring a Friend\", night-time golf: the club is always coming up with original new ideas.GOLF COURSES\n\n18-hole golf courses: \n\nGolf Club Leuk, Susten [http://golfleuk.ch/] \nGolf Club Crans-sur-Sierre, Crans-Montana [http://www.golfcrans.ch/fr/index_crans.php] \nGolf Club de Sierre, Granges [http://www.golfsierre.ch/fr/] \nGolf Club de Sion, Sion [http://www.golfclubsion.ch/fr/index.php] \nGolf Club Verbier, Verbier [http://www.verbiergolfclub.ch/fr/] \n\n9-hole golf courses: \n\nGolfclub Riederalp, Riederalp [http://www.golfclub-riederalp.ch/]\nGolf - Source de Rhône, Obergesteln [http://www.golf-source-du-rhone.ch/]\nGolf Club Matterhorn, Zermatt [http://www.zermatt.ch/en/Media/Attractions/Matterhorn-Golf-Club]",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "6a729a23-3698-44f7-9749-b98b9eb3eedf",
+          "contactType": "Contact Address",
+          "name": "Golfclub Matterhorn",
+          "addressCountry": "CH",
+          "addressLocality": "Randa",
+          "postalCode": "3928",
+          "telephone": "+41 (0)27 967 70 00",
+          "email": "info@golfclubmatterhorn.ch"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.02081413658691,
+        "longitude": 7.749224182135052
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "cr-matterhorn-golf-club-59.jpg",
+          "keywords": "golf,golfclubmatterhorn,zermatt,golfer,golfschläger,golf club,leisure,summer",
+          "copyrightHolder": "Christian Pfammatter, Visp/Schweiz",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1547,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/golf/cr-matterhorn-golf-club-59_248033.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "cr-matterhorn-golf-club-84.jpg",
+          "keywords": "golf,golfclubmatterhorn,brücke,bridge,sommer,summer,zermatt,leisure,winter",
+          "copyrightHolder": "Christian Pfammatter, Visp/Schweiz",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1497,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/golf/cr-matterhorn-golf-club-84_248033.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "cr-matterhorn-golf-club-30.jpg",
+          "keywords": "golf,golfclubmatterhorn,sommer,summer,zermatt,matterhorn gotthard bahn,leisure,winter",
+          "copyrightHolder": "Christian Pfammatter, Visp/Schweiz",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1572,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/golf/cr-matterhorn-golf-club-30_248033.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "cr-matterhorn-golf-club-3.jpg",
+          "keywords": "golf,golfclubmatterhorn,ball,zermatt,summer,sommer,leisure,winter",
+          "copyrightHolder": "Christian Pfammatter, Visp/Schweiz",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1394,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/golf/cr-matterhorn-golf-club-3_248033.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "cr_golfclubmatterhorn_02.jpg",
+          "keywords": "zermatt,golfclubmatterhorn,sport,summer,golf,leisure,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 2500,
+          "height": 1875,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/golf/cr_golfclubmatterhorn_02_248033.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "outdoor",
+              "title": "Outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "suitablefortype",
+          "title": "Suitable for",
+          "values": [
+            {
+              "name": "couples",
+              "title": "Couples"
+            },
+            {
+              "name": "family",
+              "title": "Families"
+            },
+            {
+              "name": "individual",
+              "title": "Individual"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            },
+            {
+              "name": "4to8hoursfullday",
+              "title": "4 to 8 hours (full day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "sporttype",
+          "title": "Sport type",
+          "values": [
+            {
+              "name": "golfing",
+              "title": "Golfing"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "actionandfunfactorclassifications",
+          "title": "Action and Fun factor Classifications",
+          "values": [
+            {
+              "name": "medium",
+              "title": "Medium"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "active",
+              "title": "Active"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "summer",
+              "title": "Summer"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "3a75caaf-aa16-4ba1-82a9-c800ca08336d",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/3a75caaf-aa16-4ba1-82a9-c800ca08336d?lang=en"
+      },
+      "event": {
+        "@type": "Event",
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": [
+            "Couples",
+            "Families",
+            "Individual"
+          ]
+        }
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/matterhorn-golf-club/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/golf/cr-matterhorn-golf-club-59_248033.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "76855d74-fa5a-4f1e-a613-0498de54a9ce",
+      "name": "Liquid pleasure",
+      "abstract": "The caress of the wine. “It’s a pity that you cannot caress the wines,” said the satirist Kurt Tucholsky. He was a great wine lover, as so many Swiss are. It’s a great pleasure to stroll through a vineyard when the vines are budding, or when the grapes are ripening; or to visit winemakers and taste their proudest creations. The largest winegrowing areas are in Western Switzerland, on the shores of Lakes Geneva, Neuchâtel, Biel and Murten, and along the valley of the Rhone in the Valais, Switzerland’s most richly varied winegrowing canton. The Valais is home to the highest commercial vineyards in Europe, but some excellent wines flourish in Eastern Switzerland and Graubünden as well. You may not be able to caress Swiss wines, but they will certainly caress your palate.",
+      "description": "THE MOST SCENIC: LAKE GENEVA REGION\nThe setting of the Lavaux vineyards above Lake Geneva is quite simply spectacular. You can taste their wines in the Caveau des Vignerons in Lutry. www.vins-vaudois.com [http://www.vins-vaudois.com] \n\nTHE MOST OF ALL: VALAIS\nThe Valais is a canton of superlatives: the highest vineyards in Europe (Visperterminen), the highest dry-stone walls in the world (near Sion), and a wine-tasting cellar with 500 local wines (Château de Villa, Sierre). www.vinsduvalais.ch [http://www.vinsduvalais.ch] \n\nTHE MOST SOUTHERN: TICINO\nYou can explore the vineyards of Ticino in half a day, following the wine trail between Gudo and Biasca – and stop at welcoming grotti (traditional inns) along the way. www.ticino-tourism.ch [http://www.ticino-tourism.ch] \n\nTHE MOST WELCOMING: BÜNDNER HERRSCHAFT\nMaienfeld is not only the home of Heidi, but also the home of some of the country’s finest wines. Every weekend from April to November, a different winemaker opens its doors to the public, starting at 11am. www.buendnerweine.ch [http://www.buendnerweine.ch]\nASTONISHING VARIETY, SURPRISING SPECIALITIES\nMore than 50 grape varieties are cultivated in Switzerland, tempting wine lovers to explore and discover them. To the Valais, to taste the Petite Arvine and Amigne (white), the Humagne rouge and Cornalin (red); to the shores of Lake Geneva, for the rare red Petit Robert; to Lake Zürich, for the white Räuschling; or to the Bündner Herrschaft, where – alongside a magnificent Pinot noir – the age-old Completer grows. You are sure to come across the Chasselas, the main grape of Western Switzerland, as well as the Merlot of Ticino, and maybe even the new Swiss varieties, Garanoir and Diolinoir.",
+      "address": [],
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "061025_1239_neu.jpg",
+          "keywords": "leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 1600,
+          "height": 1190,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/bars-cafes-restaurants/061025_1239_neu_40011.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "0213.jpg",
+          "keywords": "leisure,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1600,
+          "height": 1071,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/destinations/summer/various/0213_40011.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "degustationtype",
+          "title": "Degustation",
+          "values": [
+            {
+              "name": "wine",
+              "title": "Wine"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "url": "https://opendata.myswitzerland.io/v1/destinations?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/liquid-pleasure/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/bars-cafes-restaurants/061025_1239_neu_40011.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "4fa0c9da-9fab-4c35-a83b-79e0cd9ccbd7",
+      "name": "Tour d'Aï - Via ferrata",
+      "abstract": "The Tour d'Aï is short and powerful. The via ferrata is difficult, highly exposed, at one point even with a slight overhang, and has excellent safety. Even on the normal route there is a ladder and points which are equipped with chains and hand-rails; it is an exposed route which in the upper section is on the side of the mountain in shade.",
+      "description": " Difficulty\nK4. Difficult.\n\nStarting-point\nFrom Aigle on the Lausanne - Sion rail line with the rack-railway to Leysin, district of Feydey (1,389 m). It is 10 minutes eastwards on foot to the valley station (approx. 1,320 m) of the gondola cable-car to Berneuse (2,045 m); this operates from May to October.\n\nWalk-in\nFrom the Berneuse mountain station, head northwards down into a hollow (1,905 m) with a chairlift valley station. On paths, climb more or less along the lift run up to the grassed ridge. Traverse to the right and over a mound of scree to the start of the via ferrata (approx. 2,190 m) on the west wall, roughly in the fall line of the left of the yellow overhangs. \n\nTour d'Aï via ferrata\nThe via ferrata follows the \"Voie des Vires\" over a series of ledges running diagonally upwards and to the right, climbs up through a chimney, conquers a vertical to overhanging wall, follows a grassed ledge to the left, and leads over an edge to the top of the Tour d'Aï.\n\nDescent\nThe descent uses an exposed, marked normal path over the south-east ridge, firstly bearing left of the cut over steep slopes, then over a sharp ridge of rock which widens out and becomes grassy. Finally, keeping to the left, you reach a rocky channel. At the foot of this, bear right to Chalets d'Aï (1,892 m) above the lake bearing the same name; from here you can climb again in 20 minutes to the Berneuse mountain station, or take hiking paths down to Leysin-Feydey in 1 hour.\n\nRegion: The Alps of Vaud, Leysin\nPeak: Tour d'Aï (2,330 m)\nTime required: climb 2 hours, descent to the Chalets d'Aï 1 hour, further climb to Berneuse 20 minutes, further descent to Leysin-Feydey 1 hour.\nVariation in height: climb 430 m, via ferrata 140 m; 1,070 m to Leysin-Feydey.",
+      "address": [],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.3414977128924,
+        "longitude": 7.0117083022506
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "leysin_ete_viaferratatourdai_11_copyright_josecrespo.jpg",
+          "keywords": "via,ferrata,tour,dai,leysin,hiking,wandern,klettern,leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 4934,
+          "height": 3242,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/hiking/leysin_ete_viaferratatourdai_11_copyright_josecrespo_40787.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "leysin_ete_viaferratatourdai_12_copyright_josecrespo.jpg",
+          "keywords": "via,ferrata,tour,dai,hiking,wandern,klettern,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 3259,
+          "height": 4946,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/hiking/leysin_ete_viaferratatourdai_12_copyright_josecrespo_40787.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "orig.jpg",
+          "keywords": "tour,daï,-,via,ferrata,leisure,summer,winter",
+          "publisher": "Switzerland Tourism",
+          "width": 1000,
+          "height": 1773,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/adventure/orig_40787.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "sporttype",
+          "title": "Sport type",
+          "values": [
+            {
+              "name": "climb",
+              "title": "Climb"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "naturetype",
+          "title": "Nature",
+          "values": [
+            {
+              "name": "viaferrata",
+              "title": "Via ferrata"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "9c2ef3b5-de51-4be9-a7df-642b1a361a82",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/9c2ef3b5-de51-4be9-a7df-642b1a361a82?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/tour-dai-via-ferrata/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/hiking/leysin_ete_viaferratatourdai_11_copyright_josecrespo_40787.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "0eaa2a49-fe69-4ea8-9d86-927d0c6d6a11",
+      "name": "Piste Nationale",
+      "abstract": "This run certainly merits its name: in 1987, the \"Piste Nationale” saw three Swiss athletes on the world championship medals podium.",
+      "description": "This run really is of national importance to Switzerland, ever since the country's crack downhill skiers swept the board at the 1987 world championships with all the medals. But the piste is also suitable for slower skiers: mesmerising views of the Lower Valais, the orchards of Sierre and Sion and the superb tracts of forest are a delight for connoisseurs. However, the steep passage at the start should not be underestimated.INFORMATION\n\nStarting point: Gangegg (2720 m a.s.l.) \n\nAccessibility of starting point: chairlift\n\nZielort: Stafel (2100 m a.s.l.) \n\nLength: 7km \n\nAltitude difference: 620 Meter \n\nLevel of difficulty: difficult (normal slope) \n\nFood and beverages: at the start and at the end",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "209d8215-adb8-4c0a-bccb-1fadec51dab2",
+          "contactType": "Contact Address",
+          "name": "Crans-Montana Tourisme & Congrès",
+          "addressCountry": "CH",
+          "addressLocality": "Crans-Montana",
+          "postalCode": "3963",
+          "streetAddress": "Route des Arolles 4",
+          "telephone": "+41 (0)27 485 04 04",
+          "email": "information@crans-montana.ch",
+          "url": "https://www.crans-montana.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.35662856374422,
+        "longitude": 7.508120354434687
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "cmtc_2014_clivazmichel_8987.jpg",
+          "keywords": "crans,montana,piste,national,ski,slope,leisure,summer",
+          "copyrightHolder": "serge lohner",
+          "publisher": "Switzerland Tourism",
+          "width": 4256,
+          "height": 2832,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/landscapes/winter/mountains/cmtc_2014_clivazmichel_8987_203850.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "cmtc_2014_clivazmichel_8974.jpg",
+          "keywords": "crans,montana,piste,nationale,ski,slope,leisure,winter",
+          "copyrightHolder": "serge lohner",
+          "publisher": "Switzerland Tourism",
+          "width": 4256,
+          "height": 2832,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/winter/ski/cmtc_2014_clivazmichel_8974_203850.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "1_mont-lachaux_nationale2.jpg",
+          "keywords": "crans,montana,ski,slope,piste,national,leisure,summer,winter",
+          "copyrightHolder": "Luciano-Miglionico",
+          "publisher": "Switzerland Tourism",
+          "width": 5760,
+          "height": 3840,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/winter/ski/1_mont-lachaux_nationale2_203850.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "1_mont-lachaux_nationale4.jpg",
+          "keywords": "crans,montana,ski,slope,piste,nationale,leisure,summer,winter",
+          "copyrightHolder": "Luciano-Miglionico",
+          "publisher": "Switzerland Tourism",
+          "width": 5760,
+          "height": 3840,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/landscapes/winter/mountains/1_mont-lachaux_nationale4_203850.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "1_mont-lachaux_nationale3.jpg",
+          "keywords": "piste nationale,crans montana,wallis,leisure,summer,winter",
+          "copyrightHolder": "Luciano-Miglionico",
+          "publisher": "Switzerland Tourism",
+          "width": 5760,
+          "height": 3840,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/winter/ski/1_mont-lachaux_nationale3_203850.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "swisstainable",
+          "values": [
+            {
+              "name": "swisstainablelevel3",
+              "title": "*** Leading"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "winter",
+              "title": "Winter"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "4f6fe05f-da35-49b2-b8e8-896a2c74fa99",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/4f6fe05f-da35-49b2-b8e8-896a2c74fa99?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/piste-nationale/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/landscapes/winter/mountains/cmtc_2014_clivazmichel_8987_203850.jpg"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "TouristAttraction",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "license": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "links": {
+        "self": "https://opendata.myswitzerland.io/v1/attractions/?expand=true&facets=*&facets.translate=true&hitsPerPage=50&lang=en&page=0&query=Sion&striphtml=true&top=false"
+      },
+      "identifier": "07928a2d-e050-4501-8086-174b24e24a96",
+      "name": "Belvédère via ferrata",
+      "touristType": [
+        "Adventure Tourism"
+      ],
+      "abstract": "Belvédère means beautiful view – a most fitting name for views from the top of the via ferrata that commences beneath Nax.",
+      "description": "As you climb up here, with a difference in altitude of 220 metres, the view over the Rhone valley will take your breath away. This via ferrata high above Sion is accessible to all, provided you have the right equipment. Depending on your climbing experience, the tour takes between 1 and 2 hours. The starting point is 30 minutes' walk from the village. There is an information notice and exercise point in the village.",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "identifier": "5be7c2dc-4a97-44b2-ab0e-0a32ad3efd28",
+          "contactType": "Contact Address",
+          "name": "Office du Tourisme de Nax Région",
+          "addressCountry": "CH",
+          "addressLocality": "Nax",
+          "postalCode": "1973",
+          "streetAddress": "La Vaye-Plane",
+          "telephone": "+41 (0)27 203 17 38",
+          "email": "nax-region@mont-noble.ch",
+          "url": "https://www.nax-region.ch/"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.22267676141192,
+        "longitude": 7.419442850916623
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "name": "via_ferrata_nax_1.jpg",
+          "keywords": "leisure,summer",
+          "publisher": "Switzerland Tourism",
+          "width": 1000,
+          "height": 673,
+          "encodingFormat": "image/jpeg",
+          "url": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/adventure/via_ferrata_nax_1_53567.jpg"
+        }
+      ],
+      "classification": [
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "indooroutdoorclassifications",
+          "values": [
+            {
+              "name": "outdoor",
+              "title": "Outdoor"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "neededtime",
+          "title": "Needed time",
+          "values": [
+            {
+              "name": "2to4hourshalfday",
+              "title": "2 to 4 hours (half day)"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "sporttype",
+          "title": "Sport type",
+          "values": [
+            {
+              "name": "climb",
+              "title": "Climb"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "childrenage",
+          "title": "Children age",
+          "values": [
+            {
+              "name": "14plus",
+              "title": "14+ years"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "experiencetype",
+          "title": "Experience Type",
+          "values": [
+            {
+              "name": "adventure",
+              "title": "Adventure"
+            },
+            {
+              "name": "nature",
+              "title": "Nature"
+            },
+            {
+              "name": "active",
+              "title": "Active"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "geographicallocations",
+          "values": [
+            {
+              "name": "alonggrandtour",
+              "title": "Along the Grand Tour"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "seasons",
+          "values": [
+            {
+              "name": "summer",
+              "title": "Summer"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "licences",
+          "values": [
+            {
+              "name": "bysa",
+              "title": "BY-SA"
+            }
+          ]
+        },
+        {
+          "@context": "https://myswitzerland.io/",
+          "@type": "Classification",
+          "name": "naturetype",
+          "title": "Nature",
+          "values": [
+            {
+              "name": "viaferrata",
+              "title": "Via ferrata"
+            }
+          ]
+        }
+      ],
+      "containedInPlace": {
+        "@type": "TouristDestination",
+        "identifier": "abe16aba-b7a0-435b-b6bc-76d53917116e",
+        "url": "https://opendata.myswitzerland.io/v1/destinations/abe16aba-b7a0-435b-b6bc-76d53917116e?lang=en"
+      },
+      "isAccessibleForFree": true,
+      "selfGuided": true,
+      "url": "https://www.myswitzerland.com/en/experiences/belvedere-via-ferrata/",
+      "photo": "https://www.myswitzerland.com/-/media/st/gadmin/images/sport/summer/adventure/via_ferrata_nax_1_53567.jpg"
+    }
+  ]
+}
