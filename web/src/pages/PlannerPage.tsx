@@ -64,23 +64,28 @@ const CITY_OPTIONS = [
   "bern",
   "geneva",
   "interlaken",
+  "kandersteg",
+  "lausanne",
   "lucerne",
   "lugano",
   "montreux",
   "schwyz",
+  "sion",
+  "st-gallen",
+  "st-moritz",
   "zermatt",
   "zurich",
 ] as const;
 
 function labelForCity(slug: (typeof CITY_OPTIONS)[number] | ""): string {
-  switch (slug) {
-    case "lucerne":
-      return "Lucerne";
-    case "zurich":
-      return "Zurich";
-    default:
-      return slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : "";
-  }
+  if (!slug) return "";
+  const label = slug
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+  if (label.toLowerCase() === "st gallen") return "St. Gallen";
+  if (label.toLowerCase() === "st moritz") return "St. Moritz";
+  return label;
 }
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "";

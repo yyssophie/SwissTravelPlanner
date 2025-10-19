@@ -18,11 +18,11 @@ from urllib.error import URLError
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
-POI_PATH = Path("data/out/selected_city_pois_llm_season_labeled.json")
+POI_PATH = Path("data/out/selected_city_pois_2_llm_theme_labeled.json")
 OUTPUT_DIR = Path("web/public/poi_photos")
 LOCAL_PREFIX = "/poi_photos"
 
-ALLOWED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
+ALLOWED_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
 CONTENT_TYPE_EXTENSION = {
     "image/jpeg": ".jpg",
     "image/jpg": ".jpg",
@@ -60,22 +60,18 @@ def existing_asset_path(safe_id: str) -> Optional[Path]:
     for ext in ALLOWED_EXTENSIONS:
         candidate = OUTPUT_DIR / f"{safe_id}{ext}"
         if candidate.exists():
+            if ext != ".jpg":
+                target = OUTPUT_DIR / f"{safe_id}.jpg"
+                try:
+                    candidate.rename(target)
+                    return target
+                except OSError:
+                    return candidate
             return candidate
     return None
 
 
 def infer_extension(url: str, content_type: str) -> str:
-    parsed = urlparse(url)
-    url_ext = Path(parsed.path).suffix.lower()
-    if url_ext in ALLOWED_EXTENSIONS:
-        return url_ext
-    if content_type:
-        ext = CONTENT_TYPE_EXTENSION.get(content_type.lower())
-        if ext:
-            return ext
-        guessed = mimetypes.guess_extension(content_type)
-        if guessed and guessed.lower() in ALLOWED_EXTENSIONS:
-            return guessed.lower()
     return ".jpg"
 
 
@@ -118,7 +114,7 @@ def main() -> None:
             failed.append(f"{identifier}: {error}")
             continue
 
-        asset_path = OUTPUT_DIR / f"{safe_id}{extension}"
+        asset_path = OUTPUT_DIR / f"{safe_id}.jpg"
         asset_path.write_bytes(data)
         poi["photo"] = f"{LOCAL_PREFIX}/{asset_path.name}"
         downloaded += 1

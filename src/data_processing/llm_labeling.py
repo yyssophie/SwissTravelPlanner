@@ -3,7 +3,7 @@ from pathlib import Path
 from openai import OpenAI  # pip install openai>=1.0.0
 
 # Use an environment variable or other secure method for your API key.
-client = OpenAI(api_key="")  # or OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
 INPUT = Path("data/out/selected_city_pois_simplify.json")
 OUTPUT = Path("data/out/selected_city_pois_llm_labeled.json")
