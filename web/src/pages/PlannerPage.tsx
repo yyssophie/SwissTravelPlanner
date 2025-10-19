@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type DragEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMustVisitDetail } from "../data/mustVisitDetails";
 
@@ -19,6 +19,12 @@ const orderToMap = (order: InterestKey[]): Interests => {
 };
 
 const DEFAULT_INTERESTS: Interests = orderToMap(DEFAULT_ORDER);
+const BALANCED_INTERESTS: Interests = {
+  nature: 25,
+  culture: 25,
+  food: 25,
+  sport: 25,
+};
 
 const INTEREST_COPY: Record<InterestKey, string> = {
   nature: "Peaks, lakes, and scenic landscapes",
@@ -101,7 +107,10 @@ const PlannerPage = () => {
   const [season, setSeason] = useState("summer");
   const [rankOrder, setRankOrder] = useState<InterestKey[]>(DEFAULT_ORDER);
   const [interests, setInterests] = useState<Interests>({ ...DEFAULT_INTERESTS });
-  const [percentSaved, setPercentSaved] = useState<boolean>(true);
+  const [balancedMode, setBalancedMode] = useState<boolean>(false);
+  const previousRankOrderRef = useRef<InterestKey[]>(DEFAULT_ORDER);
+  const [showHowWorks, setShowHowWorks] = useState<boolean>(false);
+  const dragIndexRef = useRef<number | null>(null);
   const [attractions, setAttractions] = useState<Attraction[]>(INITIAL_ATTRACTIONS);
 
   // Must‑visit flow state
@@ -129,17 +138,36 @@ const PlannerPage = () => {
       };
       if (data.from) setFrom(data.from);
       if (data.to) setTo(data.to);
-      if (data.days) { setDays(data.days); setDaysText(String(data.days)); }
+      if (data.days) {
+        setDays(data.days);
+        setDaysText(String(data.days));
+      }
       if (data.season) setSeason(data.season);
       if (data.interests) {
         setInterests(data.interests);
-        const sorted = [...INTEREST_KEYS].sort(
-          (a, b) => (data.interests?.[a] ?? 0) > (data.interests?.[b] ?? 0) ? -1 : 1
+        const storedOrder =
+          data.rankOrder && data.rankOrder.length === INTEREST_KEYS.length
+            ? (data.rankOrder as InterestKey[])
+            : [...INTEREST_KEYS];
+        const isBalancedStored = INTEREST_KEYS.every(
+          (key) => Math.abs((data.interests?.[key] ?? 0) - 25) < 0.0001
         );
-        setRankOrder(data.rankOrder && data.rankOrder.length === INTEREST_KEYS.length ? data.rankOrder : sorted);
-        setPercentSaved(true);
+        if (isBalancedStored) {
+          setBalancedMode(true);
+          previousRankOrderRef.current = storedOrder;
+          setRankOrder(storedOrder);
+        } else {
+          const sorted = [...INTEREST_KEYS].sort((a, b) =>
+            (data.interests?.[a] ?? 0) > (data.interests?.[b] ?? 0) ? -1 : 1
+          );
+          const nextOrder = storedOrder.length === INTEREST_KEYS.length ? storedOrder : sorted;
+          setRankOrder(nextOrder);
+          setBalancedMode(false);
+        }
       }
-    } catch { /* ignore */ }
+    } catch {
+      /* ignore */
+    }
   }, []);
 
   const totalPct = useMemo(
@@ -155,22 +183,57 @@ const PlannerPage = () => {
   const currentAttraction = attractions[mvIndex] ?? attractions[0];
 
   const displayRanks = useMemo(
-    () => rankOrder.map((key, index) => ({ key, weight: RANK_WEIGHTS[index] })),
+    () => rankOrder.map((key, index) => ({ key, position: index + 1 })),
     [rankOrder]
   );
 
+  const applyRankOrder = (order: InterestKey[]) => {
+    setRankOrder(order);
+    setInterests(orderToMap(order));
+  };
+
   const moveInterest = (index: number, direction: number) => {
+    if (balancedMode) return;
     const nextIndex = index + direction;
     if (nextIndex < 0 || nextIndex >= rankOrder.length) return;
     const updated = [...rankOrder];
     [updated[index], updated[nextIndex]] = [updated[nextIndex], updated[index]];
-    setRankOrder(updated);
-    setPercentSaved(false);
+    applyRankOrder(updated);
   };
 
-  const savePriorities = () => {
-    setInterests(orderToMap(rankOrder));
-    setPercentSaved(true);
+  const handleDragStart = (index: number) => (event: DragEvent<HTMLDivElement>) => {
+    if (balancedMode) return;
+    dragIndexRef.current = index;
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData("text/plain", rankOrder[index]);
+  };
+
+  const handleDragOver = (index: number) => (event: DragEvent<HTMLDivElement>) => {
+    if (balancedMode) return;
+    event.preventDefault();
+    const start = dragIndexRef.current;
+    if (start === null || start === index) return;
+    const updated = [...rankOrder];
+    const [removed] = updated.splice(start, 1);
+    updated.splice(index, 0, removed);
+    dragIndexRef.current = index;
+    applyRankOrder(updated);
+  };
+
+  const handleDragEnd = () => {
+    dragIndexRef.current = null;
+  };
+
+  const toggleBalanced = () => {
+    if (balancedMode) {
+      setBalancedMode(false);
+      const restore = previousRankOrderRef.current ?? DEFAULT_ORDER;
+      applyRankOrder(restore);
+    } else {
+      previousRankOrderRef.current = [...rankOrder];
+      setBalancedMode(true);
+      setInterests({ ...BALANCED_INTERESTS });
+    }
   };
 
   // Must‑visit controls
@@ -288,7 +351,8 @@ const PlannerPage = () => {
     setSeason("summer");
     setRankOrder(DEFAULT_ORDER);
     setInterests({ ...DEFAULT_INTERESTS });
-    setPercentSaved(true);
+    setBalancedMode(false);
+    previousRankOrderRef.current = DEFAULT_ORDER;
     setAttractions(shuffle(BASE_ATTRACTIONS));
     setMvIndex(0);
     setMvSelected([]);
@@ -357,6 +421,7 @@ const PlannerPage = () => {
   }
 
   return (
+    <>
     <section className="planner" id="planner">
       <div className="planner__card">
         <div className="planner__header">
@@ -416,47 +481,67 @@ const PlannerPage = () => {
         </div>
 
         <div className="row row--interests">
-          <label>Prioritise interests</label>
+          <div className="interests-heading">
+            <label>Prioritise interests</label>
+            <button
+              type="button"
+              className="interest-info"
+              onClick={() => setShowHowWorks(true)}
+            >
+              <span className="interest-info__icon">?</span>
+              <span>How it works</span>
+            </button>
+          </div>
           <div className="interest-rank">
-            {displayRanks.map(({ key, weight }, index) => (
-              <div className="interest-rank__item" key={key}>
+            {displayRanks.map(({ key, position }) => (
+              <div
+                key={key}
+                className="interest-rank__item"
+                draggable={!balancedMode}
+                onDragStart={handleDragStart(position - 1)}
+                onDragOver={handleDragOver(position - 1)}
+                onDragEnd={handleDragEnd}
+                onDrop={(event) => event.preventDefault()}
+              >
                 <div className="interest-rank__left">
-                  <span className="interest-rank__badge">#{index + 1}</span>
+                  <span
+                    className={`interest-rank__badge ${balancedMode ? "interest-rank__badge--dot" : ""}`}
+                  >
+                    {balancedMode ? "" : `#${position}`}
+                  </span>
                   <div className="interest-rank__text">
                     <span className="interest-rank__label">{formatInterest(key)}</span>
                     <span className="interest-rank__hint">{INTEREST_COPY[key]}</span>
                   </div>
                 </div>
-                <div className="interest-rank__right">
-                  <span className="interest-rank__weight">{weight}%</span>
-                  <div className="interest-rank__actions">
-                    <button
-                      type="button"
-                      onClick={() => moveInterest(index, -1)}
-                      disabled={index === 0}
-                      aria-label={`Move ${formatInterest(key)} up`}
-                    >
-                      ↑
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => moveInterest(index, 1)}
-                      disabled={index === displayRanks.length - 1}
-                      aria-label={`Move ${formatInterest(key)} down`}
-                    >
-                      ↓
-                    </button>
+                {!balancedMode && (
+                  <div className="interest-rank__right">
+                    <div className="interest-rank__actions">
+                      <button
+                        type="button"
+                        onClick={() => moveInterest(position - 1, -1)}
+                        disabled={position === 1}
+                        aria-label={`Move ${formatInterest(key)} up`}
+                      >
+                        ↑
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => moveInterest(position - 1, 1)}
+                        disabled={position === displayRanks.length}
+                        aria-label={`Move ${formatInterest(key)} down`}
+                      >
+                        ↓
+                      </button>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
           <div className="interests-actions">
-            <span className="interests-actions__hint">
-              Top pick receives 40%, next 30%, then 20%, then 10%.
-            </span>
-            <button type="button" className="btn btn--dark" onClick={savePriorities}>
-              Save priorities
+            <button type="button" className="btn btn--ghost" onClick={toggleBalanced}>
+              {balancedMode ? "Customise priorities" : "Balance priorities"}
             </button>
           </div>
         </div>
@@ -603,13 +688,12 @@ const PlannerPage = () => {
 
         <div className="planner__actions">
           <button
-            className="btn btn--primary btn--dark"
-            disabled={
-              isSubmitting ||
-              !percentSaved ||
-              totalPct !== 100 ||
-              !from ||
-              !to ||
+          className="btn btn--primary btn--dark"
+          disabled={
+            isSubmitting ||
+            totalPct !== 100 ||
+            !from ||
+            !to ||
               days < 1 ||
               days > 21
             }
@@ -625,6 +709,29 @@ const PlannerPage = () => {
         <DetailModal slug={detailSlug} onClose={() => setDetailSlug(null)} />
       )}
     </section>
+    {showHowWorks && (
+      <div className="planner-modal" role="dialog" aria-modal="true">
+        <div className="planner-modal__backdrop" onClick={() => setShowHowWorks(false)} />
+        <div className="planner-modal__card">
+          <h3>How prioritising interests works</h3>
+          <p>
+            Your highest ranked theme receives the strongest weighting when we pick daily
+            activities: 40% for the top choice, followed by 30%, 20%, and 10% for the remaining
+            spots. These probabilities only apply when matching attractions are available in the
+            chosen city—otherwise the planner automatically moves to the next suitable theme.
+          </p>
+          <p>
+            Selecting <strong>Balance priorities</strong> gives every theme an equal 25% share and
+            temporarily locks the ranking. Choose <strong>Customise priorities</strong> whenever you
+            want to reorder interests again and return to the weighted approach.
+          </p>
+          <button type="button" className="btn btn--dark" onClick={() => setShowHowWorks(false)}>
+            Got it
+          </button>
+        </div>
+      </div>
+    )}
+    </>
   );
 };
 
