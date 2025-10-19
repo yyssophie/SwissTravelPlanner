@@ -83,15 +83,16 @@ const CITY_OPTIONS = [
   "zurich",
 ] as const;
 
-function labelForCity(slug: (typeof CITY_OPTIONS)[number] | ""): string {
+function labelForCity(slug: string): string {
   if (!slug) return "";
-  const label = slug
-    .split("-")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+  const cleaned = slug.replace(/[_]/g, "-").trim().toLowerCase();
+  const parts = cleaned.split("-").filter(Boolean);
+  return parts
+    .map((part) => {
+      if (part === "st" || part === "st." || part === "saint") return "St.";
+      return part.charAt(0).toUpperCase() + part.slice(1);
+    })
     .join(" ");
-  if (label.toLowerCase() === "st gallen") return "St. Gallen";
-  if (label.toLowerCase() === "st moritz") return "St. Moritz";
-  return label;
 }
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "";
@@ -576,7 +577,7 @@ const PlannerPage = () => {
                   <div className="mv-card__overlay"></div>
                   <div className="mv-card__bottom">
                     <div className="mv-text">
-                      <div className="mv-city">{currentAttraction.city}</div>
+                      <div className="mv-city">{labelForCity(currentAttraction.city)}</div>
                       <div className="mv-title">{currentAttraction.name}</div>
                     </div>
                   </div>

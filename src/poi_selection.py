@@ -80,32 +80,37 @@ def select_pois_for_day(
     if not activity_info:
         return []
 
+    max_tu = 8
+    if travel_tu > max_tu:
+        return []
+
+    remaining_tu = max_tu - travel_tu
     combos: List[Tuple[Tuple[POI, ...], int, float, float]] = []
 
-    if travel_tu <= 10:
+    if travel_tu <= max_tu:
         combos.append((tuple(), travel_tu, 0.0, 0.0))
 
-    for idx, (poi, label, tu) in enumerate(activity_info):
-        if travel_tu + tu <= 10:
-            pref = preference_weights.get(label, 0.0)
-            season_score = _season_score(poi, season)
-            combos.append(((poi,), travel_tu + tu, pref, season_score))
+    def dfs(start_idx: int, chosen: List[POI], used_tu: int, pref_sum: float, season_sum: float) -> None:
+        if chosen:
+            combos.append((tuple(chosen), travel_tu + used_tu, pref_sum, season_sum))
+        for i in range(start_idx, len(activity_info)):
+            poi, label, tu = activity_info[i]
+            if tu > remaining_tu - used_tu:
+                continue
+            if any(_are_similar(poi, existing) for existing in chosen):
+                continue
+            dfs(
+                i + 1,
+                chosen + [poi],
+                used_tu + tu,
+                pref_sum + preference_weights.get(label, 0.0),
+                season_sum + _season_score(poi, season),
+            )
 
-    for (poi_a, label_a, tu_a), (poi_b, label_b, tu_b) in combinations(activity_info, 2):
-        if _are_similar(poi_a, poi_b):
-            continue
-        total = travel_tu + tu_a + tu_b
-        if total > 10:
-            continue
-        pref = preference_weights.get(label_a, 0.0) + preference_weights.get(label_b, 0.0)
-        season_score = _season_score(poi_a, season) + _season_score(poi_b, season)
-        combos.append(((poi_a, poi_b), total, pref, season_score))
-
-    if not combos and travel_tu > 10:
-        combos.append((tuple(), travel_tu, 0.0, 0.0))
+    if remaining_tu > 0 and activity_info:
+        dfs(0, [], 0, 0.0, 0.0)
 
     if not combos:
-        # Travel alone already exceeds the limit; no activities.
         return []
 
     def combo_key(item: Tuple[Tuple[POI, ...], int, float, float]) -> Tuple[int, int, float, float]:

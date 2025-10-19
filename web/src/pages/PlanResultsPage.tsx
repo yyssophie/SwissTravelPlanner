@@ -165,11 +165,22 @@ const POICard = ({ poi }: { poi: PlanPOI }) => (
   </div>
 );
 
-function formatCity(slug: string): string {
-  if (!slug) return slug;
-  const lower = slug.toLowerCase();
-  if (lower === "luzerne" || lower === "lucerne") return "Lucerne";
-  return lower.charAt(0).toUpperCase() + lower.slice(1);
+function formatCity(value: string): string {
+  if (!value) return "";
+  const cleaned = value.replace(/[_-]+/g, " ").trim();
+  const parts = cleaned.split(/\s+/);
+  return parts
+    .map((part) => {
+      const lower = part.toLowerCase();
+      if (lower === "st" || lower === "st." || lower === "saint") {
+        return "St.";
+      }
+      if (lower === "lucerne" || lower === "luzern") {
+        return "Lucerne";
+      }
+      return lower.charAt(0).toUpperCase() + lower.slice(1);
+    })
+    .join(" ");
 }
 
 function formatLabel(label: string): string {
