@@ -177,15 +177,24 @@ main {
 .row--interests { align-items: flex-start; }
 .row--interests label { margin-top: 0.35rem; }
 
+.interests-heading { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.interests-heading label { margin: 0; }
+.interest-info { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(12,34,52,0.12); border-radius: 999px; padding: 0.35rem 0.7rem; background: #f1f7fb; color: #0b1e2b; font-weight: 600; cursor: pointer; box-shadow: 0 8px 16px rgba(8, 28, 45, 0.08); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.interest-info:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(8, 28, 45, 0.12); }
+.interest-info__icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(8, 28, 45, 0.85); color: #f4f7fd; font-weight: 700; font-size: 0.85rem; }
+
 .interest-rank { grid-column: 2 / span 1; display: flex; flex-direction: column; gap: 0.85rem; }
-.interest-rank__item { display: flex; justify-content: space-between; align-items: center; background: #ffffff; border: 1px solid rgba(8, 28, 45, 0.08); border-radius: 16px; padding: 0.85rem 1rem; box-shadow: 0 10px 24px rgba(8, 28, 45, 0.08); }
+.interest-rank__item { display: flex; justify-content: space-between; align-items: center; background: #ffffff; border: 1px solid rgba(8, 28, 45, 0.08); border-radius: 16px; padding: 0.85rem 1rem; box-shadow: 0 10px 24px rgba(8, 28, 45, 0.08); cursor: grab; }
+.interest-rank__item[draggable="false"] { cursor: default; }
+.interest-rank__item:active { cursor: grabbing; }
 .interest-rank__left { display: flex; align-items: center; gap: 0.8rem; }
-.interest-rank__badge { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(8, 28, 45, 0.85); color: #f4f7fd; font-weight: 700; font-size: 0.85rem; }
+.interest-rank__badge { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(8, 28, 45, 0.85); color: #f4f7fd; font-weight: 700; font-size: 0.85rem; transition: background 0.15s ease; }
+.interest-rank__badge--dot { background: transparent; border: 2px solid rgba(8, 28, 45, 0.2); }
+.interest-rank__badge--dot::after { content: ""; display: block; width: 16px; height: 16px; border-radius: 50%; background: rgba(8, 28, 45, 0.75); }
 .interest-rank__text { display: flex; flex-direction: column; gap: 0.25rem; }
 .interest-rank__label { font-weight: 700; font-size: 1rem; color: #0c2234; text-transform: capitalize; }
 .interest-rank__hint { font-size: 0.85rem; color: rgba(12, 34, 52, 0.65); }
 .interest-rank__right { display: flex; align-items: center; gap: 1rem; }
-.interest-rank__weight { font-weight: 700; color: #0a1e2f; }
 .interest-rank__actions { display: flex; flex-direction: column; gap: 0.25rem; }
 .interest-rank__actions button { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(8, 28, 45, 0.1); background: rgba(8, 28, 45, 0.05); color: #0a1e2f; font-weight: 700; cursor: pointer; transition: transform 0.15s ease, background 0.15s ease; }
 .interest-rank__actions button:hover:not(:disabled) { transform: translateY(-1px); background: rgba(8, 28, 45, 0.1); }
@@ -197,8 +206,10 @@ main {
 
 .remaining { grid-column: 1 / -1; font-size: 0.9rem; color: #3a4b56; margin-top: 0.6rem; }
 .remaining.over { color: #b00020; }
-.interests-actions { grid-column: 2 / span 1; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.8rem; }
-.interests-actions__hint { color: rgba(12,34,52,0.65); font-size: 0.85rem; }
+.interests-actions { grid-column: 2 / span 1; display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 0.8rem; }
+.interests-actions .btn { border-radius: 999px; padding: 0.45rem 0.9rem; font-weight: 600; }
+.interests-actions .btn--ghost { background: #0b1520; color: #f6fbff; border: none; box-shadow: 0 8px 22px rgba(8, 28, 45, 0.25); }
+.interests-actions .btn--ghost:hover { background: #132538; box-shadow: 0 12px 30px rgba(8, 28, 45, 0.3); }
 
 .planner__actions {
   margin-top: 1rem;
@@ -266,6 +277,13 @@ main {
 .mv-finish-actions .btn--ghost:hover {
   background: #dae8b9;
 }
+
+.planner-modal { position: fixed; inset: 0; z-index: 35; display: flex; align-items: center; justify-content: center; padding: 1rem; }
+.planner-modal__backdrop { position: absolute; inset: 0; background: rgba(5, 20, 32, 0.55); backdrop-filter: blur(3px); }
+.planner-modal__card { position: relative; z-index: 1; background: #ffffff; color: #0c2234; border-radius: 18px; max-width: min(520px, 90vw); padding: 1.75rem; box-shadow: 0 24px 48px rgba(8, 28, 45, 0.25); display: flex; flex-direction: column; gap: 1rem; }
+.planner-modal__card h3 { margin: 0; font-size: 1.45rem; font-weight: 800; }
+.planner-modal__card p { margin: 0; line-height: 1.6; color: #1a2f3e; }
+.planner-modal__card .btn { align-self: flex-end; }
 
 .mv-modal { position: fixed; inset: 0; z-index: 30; display: flex; align-items: center; justify-content: center; }
 .mv-modal__backdrop { position: absolute; inset: 0; background: rgba(3, 18, 32, 0.65); backdrop-filter: blur(3px); }
