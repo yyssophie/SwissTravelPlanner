@@ -17,10 +17,11 @@ from typing import Dict, Iterable
 
 from openai import OpenAI
 
-INPUT_PATH = Path("data/out/selected_city_pois_llm_labeled.json")
-OUTPUT_PATH = Path("data/out/selected_city_pois_llm_season_labeled.json")
+INPUT_PATH = Path("data/out/selected_city_pois_2_llm_theme_labeled.json")
+OUTPUT_PATH = Path("data/out/selected_city_pois_2_llm_theme_labeled.json")
 
 SEASON_OPTIONS = ("spring", "summer", "autumn", "winter")
+YEAR_ROUND_KEYWORDS = {"year-round", "year round", "all year", "allyear", "all-year"}
 
 PROMPT_TEMPLATE = """You are a Swiss travel planning expert.
 
@@ -46,6 +47,8 @@ Rules for the season list:
   do not default to all four unless truly justified.
 - No duplicates; order by most suitable first.
 - Never output an empty list.
+- If the attraction is suitable all year, explicitly return ["spring", "summer", "autumn", "winter"]—do not invent synonyms like "year-round".
+- Any other value outside spring, summer, autumn, winter is invalid.
 
 Do not include extra keys or narration.
 
@@ -55,7 +58,10 @@ POI DATA:
 
 
 def load_client() -> OpenAI:
-    return OpenAI(api_key="")
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("Please set the OPENAI_API_KEY environment variable.")
+    return OpenAI(api_key=api_key)
 
 
 def build_context(poi: Dict) -> str:
@@ -81,6 +87,8 @@ def normalise_season_list(value) -> list[str]:
         raise ValueError(f"Expected 'season' to be a list, got {type(value).__name__}")
     seen = set()
     ordered: list[str] = []
+    if len(value) == 1 and str(value[0]).strip().lower() in YEAR_ROUND_KEYWORDS:
+        return list(SEASON_OPTIONS)
     for item in value:
         season = normalise_season(str(item))
         if season not in seen:

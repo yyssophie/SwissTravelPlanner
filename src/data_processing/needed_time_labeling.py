@@ -18,7 +18,7 @@ from typing import Dict, List, Optional
 
 from openai import OpenAI
 
-POI_PATH = Path("data/out/selected_city_pois_llm_season_labeled.json")
+POI_PATH = Path("data/out/selected_city_pois_llm_theme_labeled.json")
 
 
 @dataclass(frozen=True)

@@ -10,21 +10,26 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Union
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
 INPUT_GLOB = PROJECT_ROOT / "data" / "in" / "*_attractions.json"
-OUTPUT_FILE = PROJECT_ROOT / "data" / "out" / "parsed_in_attractions.json"
+OUTPUT_FILE = PROJECT_ROOT / "data" / "out" / "parsed_in_attractions_2.json"
 
 CITY_LABELS = {
-    "appenzell": "appenzell",
-    "bern": "bern",
-    "geneva": "geneva",
-    "interlaken": "interlaken",
-    "lucerne": "luzern",
-    "lugano": "lugano",
-    "montreux": "montreux",
-    "schwyz": "schwyz",
-    "zermatt": "zermatt",
-    "zurich": "zurich",
+    # "appenzell": "appenzell",
+    # "bern": "bern",
+    # "geneva": "geneva",
+    # "interlaken": "interlaken",
+    "kandersteg": "kandersteg",
+    "lausanne": "lausanne",
+    # "lucerne": "luzern",
+    # "lugano": "lugano",
+    # "montreux": "montreux",
+    # "schwyz": "schwyz",
+    "sion": "sion",
+    "st_gallen": "st_gallen",
+    "st_moritz": "st_moritz",
+    # "zermatt": "zermatt",
+    # "zurich": "zurich",
 }
 
 SeasonType = Union[List[str], Dict[str, Optional[str]]]

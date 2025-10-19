@@ -26,7 +26,7 @@ each theme applies. Interpret the themes as follows:
           and mountain or cable-car experiences focused on landscape.
 - culture: museums, castles, churches, historic architecture, guided city
            tours, cultural performances, or government buildings such as
-           parliaments.
+           parliaments, spa
 - food: vineyards, wine tastings, chocolate or cheese experiences, fondue,
         culinary workshops, markets, or dining specifically highlighted.
 - sport: explicit athletic or adventure activities (skiing, snowboarding,
@@ -36,9 +36,8 @@ each theme applies. Interpret the themes as follows:
 
 Treat any spa or wellness-focused experiences as culture. Exactly one theme
 must be marked true—the single best fit for the experience. Set the other three
-themes to false and provide a concise reason for each decision. When a theme is
-false, explain in one short sentence why it was rejected in favour of the
-primary theme. If an attraction does not perfectly match any theme, choose the
+themes to false and provide a concise reason for each decision. 
+If an attraction does not perfectly match any theme, choose the
 closest fit rather than leaving multiple true values or all false.
 
 Return compact JSON with keys:
