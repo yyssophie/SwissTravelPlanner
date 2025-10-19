@@ -299,7 +299,9 @@ main {
 .plan-poi__header h3 .plan-poi__city { color: #6a7a86; font-size: 0.95rem; font-weight: 700; margin-left: 0.25rem; }
 .plan-poi__labels { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .plan-poi__chip { background: rgba(17, 28, 39, 0.08); color: #1e3647; border-radius: 999px; padding: 0.25rem 0.6rem; font-size: 0.8rem; font-weight: 600; }
+.plan-poi__time { display: inline-flex; align-items: center; margin-top: 0.4rem; margin-bottom: 0.6rem; background: rgba(17, 28, 39, 0.1); color: #0d1d29; border-radius: 999px; padding: 0.25rem 0.7rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; width: fit-content; }
 .plan-poi p { margin: 0; color: #253546; line-height: 1.55; }
+.plan-poi__image { margin-top: 0.9rem; width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 12px 28px rgba(13, 29, 41, 0.18); }
 
 @media (max-width: 720px) {
   .plan-results { padding-top: 5rem; }

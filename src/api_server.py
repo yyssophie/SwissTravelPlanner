@@ -45,6 +45,8 @@ class PlanPOI(BaseModel):
     labels: List[str]
     description: str | None
     abstract: str | None
+    photo: str | None
+    needed_time: str | None
 
 
 class PlanDay(BaseModel):
@@ -78,6 +80,8 @@ def _format_day(day: DayPlan) -> PlanDay:
             labels=[category for category in CATEGORIES if poi.has_label(category)],
             description=poi.description or None,
             abstract=poi.abstract or None,
+            photo=getattr(poi, "photo", None),
+            needed_time=getattr(poi, "needed_time", None),
         )
         for poi in day.pois
     ]

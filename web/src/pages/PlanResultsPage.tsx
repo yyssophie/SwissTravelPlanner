@@ -144,12 +144,23 @@ const POICard = ({ poi }: { poi: PlanPOI }) => (
         ))}
       </div>
     </div>
+    {poi.needed_time && (
+      <div className="plan-poi__time">{formatNeededTime(poi.needed_time)}</div>
+    )}
     {poi.description ? (
       <p>{poi.description}</p>
     ) : poi.abstract ? (
       <p>{poi.abstract}</p>
     ) : (
       <p>No description available yet.</p>
+    )}
+    {poi.photo && (
+      <img
+        className="plan-poi__image"
+        src={poi.photo}
+        alt={poi.name}
+        loading="lazy"
+      />
     )}
   </div>
 );
@@ -159,6 +170,23 @@ function formatCity(slug: string): string {
   const lower = slug.toLowerCase();
   if (lower === "luzerne" || lower === "lucerne") return "Lucerne";
   return lower.charAt(0).toUpperCase() + lower.slice(1);
+}
+
+function formatNeededTime(raw: string): string {
+  const normalised = raw?.toLowerCase() || "";
+  if (normalised.includes("less") || normalised.includes("< 1") || normalised.includes("<1")) {
+    return "< 1 hour";
+  }
+  if (normalised.includes("1") && normalised.includes("2")) {
+    return "1 – 2 hours";
+  }
+  if (normalised.includes("2") && normalised.includes("4")) {
+    return "2 – 4 hours";
+  }
+  if (normalised.includes("4") && normalised.includes("8")) {
+    return "4 – 8 hours";
+  }
+  return raw;
 }
 
 function formatRoute(day: PlanDay): string {

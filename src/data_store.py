@@ -25,6 +25,8 @@ class POI:
     city: str
     abstract: Optional[str]
     description: Optional[str]
+    photo: Optional[str]
+    needed_time: Optional[str]
     seasons: Tuple[str, ...]
     season_reason: Optional[str]
     season_order: Mapping[str, int]
@@ -92,12 +94,23 @@ class TravelDataStore:
 
         for entry in pois_data:
             labels = {category: bool(entry.get(category, False)) for category in CATEGORIES}
+            needed_time = None
+            for classification in entry.get("classification", []) or []:
+                if not isinstance(classification, dict):
+                    continue
+                if classification.get("name") == "neededtime":
+                    values = classification.get("values") or []
+                    if values:
+                        first = values[0]
+                        needed_time = first.get("title") or first.get("name")
+                    break
             excluded_keys = {
                 "identifier",
                 "name",
                 "city",
                 "abstract",
                 "description",
+                "photo",
                 "season",
                 "season_reason",
             }
@@ -115,6 +128,8 @@ class TravelDataStore:
                 city=entry["city"],
                 abstract=entry.get("abstract"),
                 description=entry.get("description"),
+                photo=entry.get("photo"),
+                needed_time=needed_time,
                 seasons=seasons,
                 season_reason=season_reason,
                 season_order=season_order,
