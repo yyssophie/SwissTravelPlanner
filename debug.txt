@@ -1,0 +1,653 @@
+Available cities: Appenzell, Bern, Geneva, Interlaken, Kandersteg, Lausanne, Lucerne, Lugano, Montreux, Schwyz, Sion, St. Gallen, St. Moritz, Zermatt, Zurich
+Enter start city: Available cities: Appenzell, Bern, Geneva, Interlaken, Kandersteg, Lausanne, Lucerne, Lugano, Montreux, Schwyz, Sion, St. Gallen, St. Moritz, Zermatt, Zurich
+Enter end city: Number of travel days: Enter preference weights for the four categories so they sum to 1.
+Order: nature, culture, food, sport
+Provide four numbers separated by commas (e.g., 0.4,0.3,0.2,0.1): Available seasons: autumn, spring, summer, winter
+Enter desired season (spring/summer/autumn/winter): [POI-SELECT] travelTU= 0  total= 13  eligible= 13  inSeasonUsed= 4  overflowSkips= 4  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.7, 'season': 6.0, 'items': ['Underground lake of St-Leonard', 'A great past at the crossroad of the alps']}
+  - {'total_tu': 8, 'pref': 0.1, 'season': 0.0, 'items': ['Piste Nationale']}
+  - {'total_tu': 6, 'pref': 0.7, 'season': 6.0, 'items': ['Underground lake of St-Leonard', 'Valère Basilica']}
+  - {'total_tu': 6, 'pref': 0.6, 'season': 6.0, 'items': ['A great past at the crossroad of the alps', 'Valère Basilica']}
+  - {'total_tu': 4, 'pref': 0.4, 'season': 3.0, 'items': ['Underground lake of St-Leonard']}
+[POI-SELECT] chosen: ['Underground lake of St-Leonard', 'A great past at the crossroad of the alps']
+[ROUTE] Day 1 city=Sion travelTU=0 activityTU=8 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 11  eligible= 11  inSeasonUsed= 2  overflowSkips= 1  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.1, 'season': 0.0, 'items': ['Piste Nationale']}
+  - {'total_tu': 2, 'pref': 0.3, 'season': 3.0, 'items': ['Valère Basilica']}
+  - {'total_tu': 0, 'pref': 0.0, 'season': 0.0, 'items': []}
+[POI-SELECT] chosen: ['Piste Nationale']
+[ROUTE] Day 2 city=Sion travelTU=0 activityTU=8 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 10  eligible= 10  inSeasonUsed= 1  overflowSkips= 0  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 2, 'pref': 0.3, 'season': 3.0, 'items': ['Valère Basilica']}
+  - {'total_tu': 0, 'pref': 0.0, 'season': 0.0, 'items': []}
+[POI-SELECT] chosen: ['Valère Basilica']
+[ROUTE] Day 3 city=Sion travelTU=0 activityTU=2 totalTU=2 stayCandidate=False
+[POI-SELECT] travelTU= 1  total= 15  eligible= 15  inSeasonUsed= 8  overflowSkips= 10  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.8, 'season': 9.0, 'items': ['Freddie Mercury Statue', 'Swiss Bazaar', 'Chillon Castle']}
+  - {'total_tu': 8, 'pref': 0.8, 'season': 9.0, 'items': ['Swiss Bazaar', 'Covered Market', 'Chillon Castle']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 6.0, 'items': ['Montreux Ice Rink - skating on the shores of Lake Geneva', 'Freddie Mercury Statue', 'Chillon Castle']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 6.0, 'items': ['Montreux Ice Rink - skating on the shores of Lake Geneva', 'Covered Market', 'Chillon Castle']}
+  - {'total_tu': 7, 'pref': 0.9, 'season': 9.0, 'items': ['Montreux Ice Rink - skating on the shores of Lake Geneva', 'Freddie Mercury Statue', 'Swiss Bazaar', 'Covered Market']}
+[POI-SELECT] chosen: ['Freddie Mercury Statue', 'Swiss Bazaar', 'Chillon Castle']
+[ROUTE] Day 4 city=Montreux travelTU=1 activityTU=7 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 12  eligible= 12  inSeasonUsed= 5  overflowSkips= 9  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.4, 'season': 0.0, 'items': ["Balloon Flights over Château-d'Oex"]}
+  - {'total_tu': 8, 'pref': 0.3, 'season': 0.0, 'items': ['Christmas in Montreux ']}
+  - {'total_tu': 8, 'pref': 0.2, 'season': 0.0, 'items': ['The Cheese Train']}
+  - {'total_tu': 3, 'pref': 0.4, 'season': 3.0, 'items': ['Montreux Ice Rink - skating on the shores of Lake Geneva', 'Covered Market']}
+  - {'total_tu': 2, 'pref': 0.1, 'season': 0.0, 'items': ['Montreux Ice Rink - skating on the shores of Lake Geneva']}
+[POI-SELECT] chosen: ["Balloon Flights over Château-d'Oex"]
+[ROUTE] Day 5 city=Montreux travelTU=0 activityTU=8 totalTU=8 stayCandidate=False
+[POI-SELECT] travelTU= 1  total= 18  eligible= 18  inSeasonUsed= 9  overflowSkips= 45  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 1.0, 'season': 9.0, 'items': ["Collection de l'Art Brut", 'Sightseeing Flight', 'The nightwatch']}
+  - {'total_tu': 8, 'pref': 1.0, 'season': 9.0, 'items': ['Rolex Learning Center', 'Sightseeing Flight', 'The nightwatch']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ["Collection de l'Art Brut", 'Palais de Rumine & Musée cantonal des Beaux-Arts', 'The nightwatch']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ["Collection de l'Art Brut", 'AQUATIS: largest fresh water aquarium and vivarium in Europe', 'The nightwatch']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ["Collection de l'Art Brut", 'Shopping: Quartier du Flon', 'The nightwatch']}
+[POI-SELECT] chosen: ["Collection de l'Art Brut", 'Sightseeing Flight', 'The nightwatch']
+[ROUTE] Day 6 city=Lausanne travelTU=1 activityTU=7 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 15  eligible= 15  inSeasonUsed= 6  overflowSkips= 20  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.6, 'season': 6.0, 'items': ['Palais de Rumine & Musée cantonal des Beaux-Arts', 'AQUATIS: largest fresh water aquarium and vivarium in Europe']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 6.0, 'items': ['Palais de Rumine & Musée cantonal des Beaux-Arts', 'Shopping: Quartier du Flon']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 6.0, 'items': ['AQUATIS: largest fresh water aquarium and vivarium in Europe', 'Shopping: Quartier du Flon']}
+  - {'total_tu': 8, 'pref': 0.5, 'season': 6.0, 'items': ['Visit to a brewery', 'Palais de Rumine & Musée cantonal des Beaux-Arts']}
+  - {'total_tu': 8, 'pref': 0.5, 'season': 6.0, 'items': ['Visit to a brewery', 'AQUATIS: largest fresh water aquarium and vivarium in Europe']}
+[POI-SELECT] chosen: ['Palais de Rumine & Musée cantonal des Beaux-Arts', 'Shopping: Quartier du Flon']
+[ROUTE] Day 7 city=Lausanne travelTU=0 activityTU=8 totalTU=8 stayCandidate=False
+[POI-SELECT] travelTU= 1  total= 19  eligible= 19  inSeasonUsed= 11  overflowSkips= 111  similaritySkips= 63
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 1.5, 'season': 15.0, 'items': ["Jet d'Eau", 'Place des Nations', 'The Reformation Wall', 'Guided tour: The flavours of Geneva chocolate', 'St. Pierre Cathedral']}
+  - {'total_tu': 8, 'pref': 1.3, 'season': 9.0, 'items': ['Bains des Pâquis – The Geneva way of life', "Jet d'Eau", 'Place des Nations', 'The Reformation Wall']}
+  - {'total_tu': 8, 'pref': 1.3, 'season': 12.0, 'items': ["Jet d'Eau", 'Old Town of Geneva', 'Place des Nations', 'The Reformation Wall']}
+  - {'total_tu': 8, 'pref': 1.3, 'season': 12.0, 'items': ["Jet d'Eau", 'Place des Nations', 'Reformation Walking Tour Geneva', 'The Reformation Wall']}
+  - {'total_tu': 8, 'pref': 1.3, 'season': 12.0, 'items': ["Jet d'Eau", 'Place des Nations', 'The Reformation Wall', 'Geneva Watch Tour']}
+[POI-SELECT] chosen: ["Jet d'Eau", 'Place des Nations', 'The Reformation Wall', 'Guided tour: The flavours of Geneva chocolate', 'St. Pierre Cathedral']
+[ROUTE] Day 8 city=Geneva travelTU=1 activityTU=7 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 14  eligible= 14  inSeasonUsed= 6  overflowSkips= 0  similaritySkips= 15
+[POI-SELECT] top combos:
+  - {'total_tu': 4, 'pref': 0.3, 'season': 0.0, 'items': ['Bains des Pâquis – The Geneva way of life']}
+  - {'total_tu': 4, 'pref': 0.3, 'season': 3.0, 'items': ['Old Town of Geneva']}
+  - {'total_tu': 4, 'pref': 0.3, 'season': 3.0, 'items': ['Reformation Walking Tour Geneva']}
+  - {'total_tu': 4, 'pref': 0.3, 'season': 3.0, 'items': ['Geneva Watch Tour']}
+  - {'total_tu': 4, 'pref': 0.3, 'season': 3.0, 'items': ['Geneva Mystery']}
+[POI-SELECT] chosen: ['Bains des Pâquis – The Geneva way of life']
+[ROUTE] Day 9 city=Geneva travelTU=0 activityTU=4 totalTU=4 stayCandidate=False
+[POI-SELECT] travelTU= 2  total= 16  eligible= 16  inSeasonUsed= 9  overflowSkips= 61  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.9, 'season': 7.0, 'items': ['Bundeshaus', 'Tour of the Zytglogge (Clock Tower)', 'Münster (Cathedral) Bern']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 4.0, 'items': ['Bundeshaus', 'Gurten']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 6.0, 'items': ['Tour of the Zytglogge (Clock Tower)', 'Gurten']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 6.0, 'items': ['Münster (Cathedral) Bern', 'Gurten']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 4.0, 'items': ['Bundeshaus', 'Old City of Bern']}
+[POI-SELECT] chosen: ['Bundeshaus', 'Tour of the Zytglogge (Clock Tower)', 'Münster (Cathedral) Bern']
+[ROUTE] Day 10 city=Bern travelTU=2 activityTU=6 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 13  eligible= 13  inSeasonUsed= 6  overflowSkips= 15  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.7, 'season': 6.0, 'items': ['Old City of Bern', 'Gurten']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 6.0, 'items': ['Gurten', 'Discover the Museum Quarter Bern']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 6.0, 'items': ['Gurten', 'Experience Bernese neighbourhood restaurants like a local']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 6.0, 'items': ['Gurten', 'Guided beer tour through the Bernese beer culture']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 6.0, 'items': ['Old City of Bern', 'Discover the Museum Quarter Bern']}
+[POI-SELECT] chosen: ['Gurten', 'Discover the Museum Quarter Bern']
+[ROUTE] Day 11 city=Bern travelTU=0 activityTU=8 totalTU=8 stayCandidate=False
+[POI-SELECT] travelTU= 1  total= 17  eligible= 17  inSeasonUsed= 6  overflowSkips= 14  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 7, 'pref': 0.9, 'season': 6.0, 'items': ['Funky chocolate club Interlaken', 'Interlaken Free Walking Tour', 'Mürrenbahn']}
+  - {'total_tu': 7, 'pref': 0.9, 'season': 6.0, 'items': ['Raclette rafting', 'Interlaken Free Walking Tour', 'Mürrenbahn']}
+  - {'total_tu': 7, 'pref': 0.8, 'season': 3.0, 'items': ['Funky chocolate club Interlaken', 'Raclette rafting', 'Mürrenbahn']}
+  - {'total_tu': 7, 'pref': 0.7, 'season': 3.0, 'items': ['Funky chocolate club Interlaken', 'Raclette rafting', 'Interlaken Free Walking Tour']}
+  - {'total_tu': 7, 'pref': 0.5, 'season': 3.0, 'items': ['Snowshoes, moon and fondue', 'Mürrenbahn']}
+[POI-SELECT] chosen: ['Raclette rafting', 'Interlaken Free Walking Tour', 'Mürrenbahn']
+[ROUTE] Day 12 city=Interlaken travelTU=1 activityTU=6 totalTU=7 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 14  eligible= 14  inSeasonUsed= 3  overflowSkips= 3  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.4, 'season': 3.0, 'items': ['Jungfraujoch - Top of Europe']}
+  - {'total_tu': 6, 'pref': 0.3, 'season': 0.0, 'items': ['Funky chocolate club Interlaken', 'Snowshoes, moon and fondue']}
+  - {'total_tu': 4, 'pref': 0.1, 'season': 0.0, 'items': ['Snowshoes, moon and fondue']}
+  - {'total_tu': 2, 'pref': 0.2, 'season': 0.0, 'items': ['Funky chocolate club Interlaken']}
+  - {'total_tu': 0, 'pref': 0.0, 'season': 0.0, 'items': []}
+[POI-SELECT] chosen: ['Jungfraujoch - Top of Europe']
+[ROUTE] Day 13 city=Interlaken travelTU=0 activityTU=8 totalTU=8 stayCandidate=False
+[POI-SELECT] travelTU= 2  total= 18  eligible= 18  inSeasonUsed= 13  overflowSkips= 219  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ['Fraumünster Church', 'Zürich Opera House', 'The Zurich Trolley Experience - city tour']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ['Fraumünster Church', 'Zürich Opera House', 'Zurich walking tours']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ['Fraumünster Church', 'The Zurich Trolley Experience - city tour', 'Zurich walking tours']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ['Zürich Opera House', 'The Zurich Trolley Experience - city tour', 'Zurich walking tours']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 3.0, 'items': ['Hürlimannbad & Spa Zurich', 'Fraumünster Church']}
+[POI-SELECT] chosen: ['Fraumünster Church', 'Zürich Opera House', 'Zurich walking tours']
+[ROUTE] Day 14 city=Zurich travelTU=2 activityTU=6 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 15  eligible= 15  inSeasonUsed= 10  overflowSkips= 125  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.6, 'season': 3.0, 'items': ['Hürlimannbad & Spa Zurich', 'Grossmünster']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 3.0, 'items': ['Hürlimannbad & Spa Zurich', 'Bahnhofstrasse']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 3.0, 'items': ['Hürlimannbad & Spa Zurich', 'Zurich Tonhalle']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 3.0, 'items': ['Hürlimannbad & Spa Zurich', 'Stories of the Old Town']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 3.0, 'items': ['Hürlimannbad & Spa Zurich', 'Zürichhorn and the Chinese Garden']}
+[POI-SELECT] chosen: ['Hürlimannbad & Spa Zurich', 'Zürichhorn and the Chinese Garden']
+[ROUTE] Day 15 city=Zurich travelTU=0 activityTU=8 totalTU=8 stayCandidate=False
+[POI-SELECT] travelTU= 1  total= 18  eligible= 18  inSeasonUsed= 10  overflowSkips= 39  similaritySkips= 18
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 1.0, 'season': 7.0, 'items': ['Drei Weieren', 'Stiftsbibliothek (Abbey Library) St. Gallen', 'City Lounge - Red Square']}
+  - {'total_tu': 8, 'pref': 1.0, 'season': 7.0, 'items': ['Drei Weieren', 'City Lounge - Red Square', 'Textile Museum St. Gallen']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 7.0, 'items': ['Drei Weieren', 'City Lounge - Red Square', 'Chocolaterie am Klosterplatz']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ['Stiftsbibliothek (Abbey Library) St. Gallen', 'City Lounge - Red Square', 'Säntispark Olympics']}
+  - {'total_tu': 8, 'pref': 0.9, 'season': 9.0, 'items': ['City Lounge - Red Square', 'Säntispark Olympics', 'Textile Museum St. Gallen']}
+[POI-SELECT] chosen: ['Drei Weieren', 'City Lounge - Red Square', 'Textile Museum St. Gallen']
+[ROUTE] Day 16 city=St. Gallen travelTU=1 activityTU=7 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 15  eligible= 15  inSeasonUsed= 7  overflowSkips= 12  similaritySkips= 3
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.8, 'season': 9.0, 'items': ['Stiftsbibliothek (Abbey Library) St. Gallen', 'Chocolaterie am Klosterplatz', 'Säntispark Olympics']}
+  - {'total_tu': 8, 'pref': 0.6, 'season': 6.0, 'items': ['St. Gallen Theatre', 'Säntispark Olympics']}
+  - {'total_tu': 8, 'pref': 0.3, 'season': 3.0, 'items': ['Guided Tours of the Monatery']}
+  - {'total_tu': 8, 'pref': 0.1, 'season': 0.0, 'items': ['St.Gallen – city winter sports']}
+  - {'total_tu': 7, 'pref': 0.7, 'season': 9.0, 'items': ['St.Gallen Sausage', 'Chocolaterie am Klosterplatz', 'Säntispark Olympics']}
+[POI-SELECT] chosen: ['Stiftsbibliothek (Abbey Library) St. Gallen', 'Chocolaterie am Klosterplatz', 'Säntispark Olympics']
+[ROUTE] Day 17 city=St. Gallen travelTU=0 activityTU=8 totalTU=8 stayCandidate=False
+[POI-SELECT] travelTU= 1  total= 15  eligible= 15  inSeasonUsed= 7  overflowSkips= 10  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 7, 'pref': 0.7, 'season': 5.0, 'items': ['The unsung heroines of Urnäsch', 'Säntis cable car']}
+  - {'total_tu': 7, 'pref': 0.7, 'season': 8.0, 'items': ['The unsung heroines of Urnäsch', 'Visitors’ Center Brauquöll Appenzell', 'Visit to the Alpenbitter works']}
+  - {'total_tu': 7, 'pref': 0.6, 'season': 6.0, 'items': ['Säntis cable car', 'Visitors’ Center Brauquöll Appenzell']}
+  - {'total_tu': 7, 'pref': 0.6, 'season': 6.0, 'items': ['Säntis cable car', 'Visit to the Alpenbitter works']}
+  - {'total_tu': 5, 'pref': 0.5, 'season': 5.0, 'items': ['The unsung heroines of Urnäsch', 'Visitors’ Center Brauquöll Appenzell']}
+[POI-SELECT] chosen: ['The unsung heroines of Urnäsch', 'Säntis cable car']
+[ROUTE] Day 18 city=Appenzell travelTU=1 activityTU=6 totalTU=7 stayCandidate=False
+[POI-SELECT] travelTU= 4  total= 18  eligible= 18  inSeasonUsed= 9  overflowSkips= 19  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.4, 'season': 1.0, 'items': ['Lake Oeschinensee']}
+  - {'total_tu': 8, 'pref': 0.4, 'season': 2.0, 'items': ['Engstligenalp – and the Wildstrubel']}
+  - {'total_tu': 8, 'pref': 0.4, 'season': 3.0, 'items': ['BLS Lötschberg mountain line']}
+  - {'total_tu': 8, 'pref': 0.3, 'season': 2.0, 'items': ['Gemmipass']}
+  - {'total_tu': 8, 'pref': 0.3, 'season': 3.0, 'items': ['Spa in a forest clearing, Blausee']}
+[POI-SELECT] chosen: ['Lake Oeschinensee']
+[ROUTE] Day 19 city=Kandersteg travelTU=4 activityTU=4 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 17  eligible= 17  inSeasonUsed= 8  overflowSkips= 28  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.8, 'season': 5.0, 'items': ['Engstligenalp – and the Wildstrubel', 'BLS Lötschberg mountain line']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 4.0, 'items': ['Gemmipass', 'Engstligenalp – and the Wildstrubel']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 5.0, 'items': ['Gemmipass', 'BLS Lötschberg mountain line']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 5.0, 'items': ['Engstligenalp – and the Wildstrubel', 'Spa in a forest clearing, Blausee']}
+  - {'total_tu': 8, 'pref': 0.7, 'season': 6.0, 'items': ['Spa in a forest clearing, Blausee', 'BLS Lötschberg mountain line']}
+[POI-SELECT] chosen: ['Engstligenalp – and the Wildstrubel', 'BLS Lötschberg mountain line']
+[ROUTE] Day 20 city=Kandersteg travelTU=0 activityTU=8 totalTU=8 stayCandidate=True
+[POI-SELECT] travelTU= 0  total= 15  eligible= 15  inSeasonUsed= 6  overflowSkips= 13  similaritySkips= 0
+[POI-SELECT] top combos:
+  - {'total_tu': 8, 'pref': 0.6, 'season': 5.0, 'items': ['Gemmipass', 'Spa in a forest clearing, Blausee']}
+  - {'total_tu': 8, 'pref': 0.4, 'season': 0.0, 'items': ['Winter hike from Kandersteg-Sunnbüel to the Gemmi Pass ']}
+  - {'total_tu': 8, 'pref': 0.4, 'season': 2.0, 'items': ['Hahnenmoos - Geils', 'Gemmipass']}
+  - {'total_tu': 8, 'pref': 0.4, 'season': 3.0, 'items': ['Hahnenmoos - Geils', 'Spa in a forest clearing, Blausee']}
+  - {'total_tu': 8, 'pref': 0.1, 'season': 0.0, 'items': ['Ice Fishing in Lake Oeschinen']}
+[POI-SELECT] chosen: ['Gemmipass', 'Spa in a forest clearing, Blausee']
+
+Suggested itinerary:
+============================================================
+Day 1: Sion (trip start)
+  Note: target stay 2 days
+  • Underground lake of St-Leonard [nature]
+      Abstract: Europe's largest subterranean lake that can be sailed upon lies between Sion and Sierre. The water grotto is easily accessible and there is a boat tour for viewing it. The guides on the boat tell visitors about the history of the cave and its geology.
+      Description: Various types of stone glitter at a height of ten meters, their shapes reflected on the 6,000 square meter surface of the lake. Trout swim in the clear water and the only species that is actually native to this subterranean world, the fungus gnat, hangs its larvae upside down on the walls of the cave.
+
+Viewing the subterranean lake of St-Léonard is a marvelous adventure. The 300 meter long and about 20 meter wide watery underworld is considered to be a place of special power. It has been accessible to tourists since 1949. Every year about 80,000 visitors are taken in large boats to see the lake. The famous speleologist Jean-Jacques Pittard is said to have been the first person to scientifically explore the cave.
+
+The grotto can be hired for receptions or special occasions.
+      Seasons: spring, summer, autumn, winter
+  • A great past at the crossroad of the alps [culture]
+      Abstract: As you explore the alleys of the Old Town, you can really feel the many centuries of history that have given Sion its very special charm.
+      Description: Your journey in time here, at the heart of the Alps, takes you through several periods of history. You begin in the 4th millennium BC (menhirs, dolmens), pass through the Roman era and into the Middle Ages – and a fabulous legacy including the cathedral, begun in the 12th century, and the castle of Valère, begun in the 11th – before arriving at the magnifi cent Renaissance and Baroque periods. You can discover the full story on one of the guided tours of the city, as well as in the three regional museums located in Sion.
+Open:
+all year around
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 2: Sion (travelled from Sion, 0 min)
+  Note: sport-focused day
+  • Piste Nationale [sport]
+      Abstract: This run certainly merits its name: in 1987, the "Piste Nationale” saw three Swiss athletes on the world championship medals podium.
+      Description: This run really is of national importance to Switzerland, ever since the country's crack downhill skiers swept the board at the 1987 world championships with all the medals. But the piste is also suitable for slower skiers: mesmerising views of the Lower Valais, the orchards of Sierre and Sion and the superb tracts of forest are a delight for connoisseurs. However, the steep passage at the start should not be underestimated.INFORMATION
+
+Starting point: Gangegg (2720 m a.s.l.) 
+
+Accessibility of starting point: chairlift
+
+Zielort: Stafel (2100 m a.s.l.) 
+
+Length: 7km 
+
+Altitude difference: 620 Meter 
+
+Level of difficulty: difficult (normal slope) 
+
+Food and beverages: at the start and at the end
+      Seasons: winter
+
+============================================================
+Day 3: Sion (travelled from Sion, 0 min)
+  Note: moved due to low TU
+
+============================================================
+Day 4: Montreux (travelled from Sion, 49 min)
+  Note: target stay 2 days
+  • Freddie Mercury Statue [culture]
+      Abstract: Freddie Mercury, the singer of the rock band Queen, settled in Montreux where the group had bought Mountain Recording Studio and where he learnt to appreciate the peace and quiet. He recorded his last album, Queen - "Made in Heaven" at the Montreux studio.
+      Description: The son of a British official of Indian origin, Freddie Mercury (1946-1991) was born on the island of Zanzibar and moved to London where he began his fruitful collaboration with Queen in 1970. 
+
+At the Montreux Jazz Festival in 1978, the singer recorded the album "Jazz" with Queen. He fell in love with Montreux and Lake Geneva and decided to settle here. He said, among other things, "If you want peace of soul, come to Montreux". 
+
+To commemorate his time in Montreux, a bronze statue of Freddie Mercury was placed by the waterfront in 1996. And what of today? Well, his fans still come and place flowers by his monument every day.
+
+More information [https://www.montreuxriviera.com/en/P7643/freddie-mercury-and-queen-in-montreux]
+      Seasons: spring, summer, autumn, winter
+  • Swiss Bazaar [food]
+      Description: A paradise for people who want to find ethnic / traditional Swiss items and food.
+      Seasons: spring, summer, autumn, winter
+  • Chillon Castle [culture]
+      Abstract: Switzerland’s most visited historic castle stands on a rocky islet in Lake Geneva and guards the eastern gateway to Montreux.
+      Description: Perched directly on Lake Geneva between Montreux and Villeneuve, Château de Chillon blends medieval fortifications, lake views and centuries of Savoy history. Visitors explore the atmospheric dungeons that inspired Byron, climb towers for sweeping alpine panoramas and wander grand halls filled with heraldic frescos. Audio guides and seasonal exhibitions bring to life the castle’s role as both fortress and residence.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 5: Montreux (travelled from Montreux, 0 min)
+  • Balloon Flights over Château-d'Oex [nature]
+      Abstract: Château-d'Oex is a hot-air balloon paradise!
+      Description: In the last week in January every year, Château-d'Oex provides the setting for an international spectacle, which is, in fact, the leading alpine ballooning event: the "Semaine Internationale de Ballons à Air Chaud" (International Hot Air Balloon Week) involves around 90 balloon pilots and is full of fascinating colours and shapes!
+
+Opening hours:
+All year round, the professional SkyEvent pilots are available to take you on a hot air balloon flight. It is a unique experience that you can try alone or with family or friends.
+
+How to get to Chateau-d'Oex:
+By car: take the A12 motorway, exit at Bulle, follow signs for Chateau-d'Oex. Alternatively, take the A9 motorway and exit at Aigle, then follow signs for Col des Mosses and make your way down to Chateau-d'Oex. From Simmental: take the A6 motorway, exit at Spiez then follow signs for Zweisimmen, Saanen and Gstaad, then Chateau-d'Oex. 
+By train: take the MOB line from Montreux to Zweisimmen, via Rossiniere and Gstaad.
+      Seasons: winter, spring, summer, autumn
+
+============================================================
+Day 6: Lausanne (travelled from Montreux, 36 min)
+  Note: target stay 2 days
+  • Collection de l'Art Brut [culture]
+      Abstract: Jean Dubuffet’s renowned museum presents raw, self-taught artistry that challenges conventional notions of culture.
+      Description: Lausanne’s Collection de l'Art Brut houses thousands of works by visionary outsiders—self-taught artists, psychiatric patients, and folk creators. Intimate galleries, rotating exhibitions and audio guides reveal the personal stories behind these powerful sculptures, drawings and assemblages.
+      Seasons: spring, summer, autumn, winter
+  • Sightseeing Flight [nature]
+      Abstract: You will take off to fly with your family or friends and discover Lavaux, a UNESCO World Heritage Cultural Site and the Castle of Chillon.
+      Description: Heli-Lausanne is a helicopter company that gives you the opportunity to discover Switzerland and its beautiful landscapes. What a different way to enjoy your holiday stay, with the fantastic view from one of our machines.
+Do you want to live an extraordinary experience? We give you the chance to fly with us and enjoy the landscapes as you would have never imagined.
+
+ * Come aboard for a pleasure flight, reach for the sky and let you discover the lakes, mountains and incredible panoramas.
+ * Enjoy a gastronomic flight to share a friendly moment on the top of a mountain or spend an unforgettable moment at a high altitude restaurant.
+ * Put on your skis for a day , and experience some of the most beautiful ski resorts areas of Europe.
+ * Have you always dreamed of flying a helicopter? Do not hesitate anymore and come take the controls with one our instructor.
+
+
+Rate per helicopter: CHF 680.00
+      Seasons: spring, summer, autumn, winter
+  • The nightwatch [culture]
+      Abstract: The bell tower of the Gothic cathedral, high on the hill on which the Old Town is built, is home to the city’s most enigmatic resident.
+      Description: Lausanne’s nightwatch, who from his eyrie calls out the hour every night from 10pm to 2am. Perched in his den 75 metres above ground, at the heart of the high tower, the watchman sends his message to four points on the horizon across the roofs of the old town. “C’est le guet, il a sonné dix, il a sonné dix...” (This is the night watch, the hour has struck…). In so doing, he keeps alive a tradition that stretches back more than 600 years – to the Middle Ages, when his predecessors played the all-important role of raising the alarm when fire broke out in the city.
+
+This spectacle lasts twenty minutes and can be seen from some bridges and squares in the town, since the tower is illuminated especially for this purpose.
+
+More information [https://www.lausanne-tourisme.ch/en/explore/lausanne-cathedral/]
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 7: Lausanne (travelled from Lausanne, 0 min)
+  • Palais de Rumine & Musée cantonal des Beaux-Arts [culture]
+      Abstract: The palace on the edge of Lausanne's Old Town, just around the corner from the cathedral, is an architectural masterpiece, a showcase of the Florentine Renaissance – and a place full of charm.
+      Description: It feels like being in another time as you walk through the majestic palace, pause by the pool in the atrium, climb the huge stone staircase and stroll through the magnificent galleries. The Palais de Rumine is a window on the past – and worth visiting just for the architecture: with its Florentine Renaissance style and grand proportions, it dominates the Place de la Riponne on the western edge of the Old Town. Until 1970 it served as the main building of Lausanne University, and now houses five museums including the renowned Musée cantonal des Beaux-Arts. The art museum holds the largest collection by the Vaud artist, Félix Vallotton.
+
+The palace was named after Gabriel Rumine, a civil engineer of Russian origin who was born in Lausanne. He died in 1871 at the age of just 30, bequeathing 1.5 million Swiss francs to the city. As luck would have it, the gift coincided with plans to expand the Lausanne Academy into a fully-fledged university with a respectable headquarters. Opened in 1906, the building became a historic location 17 years later: it was here that the Treaty of Lausanne was signed, establishing among other things the present-day borders of Turkey and Greece.
+      Seasons: spring, summer, autumn, winter
+  • Shopping: Quartier du Flon [culture]
+      Abstract: Set in the heart of Lausanne, the Flon area has evolved in recent years into a modern and innovative district which pulsates both day and night.
+      Description: Formerly the site of storage and transhipment facilities, the Flon area has now been transformed into a gigantic collection of avant-garde-like buildings that are home to shopping malls, offices, canton administration, parking garages, apartments and nightly entertainment venues. The architects were careful to preserve the original style of this 1900’s industrial area with its rectangular building shapes and outlines and its unique character while completing the area with new buildings of modern design. 
+
+The Pépinières, the three buildings by the Basler architects Burkhardt+Partner in the heart of the Flon district, are the crowning glory of the popular quarter from a visual perspective. While buildings A and B impress with their contemporary architecture, the engraved facade of building C enchants with its Arabic look.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 8: Geneva (travelled from Lausanne, 59 min)
+  Note: target stay 2 days
+  • Jet d'Eau [nature]
+      Abstract: In Geneva harbour, known as “La Rade”, this water jet up to 140 m/460 ft high is a real eye-catcher. When you're in the area, don't miss the chance to have your photo taken with the fountain in the background... or shoot a selfie and send it there and then!
+      Description: As early as 1891, a decision was made to increase the height of the “Jet d'Eau” - originally constructed as a relief valve for the pipes supplying pressurised water to the jewellers' machinery – and illuminate it. Now a landmark of the city, it shoots 500 litres of lake water into the air every second at a speed of almost 200km/h. The airborne water in the permanent jet weighs more than five tons. 
+
+The Jet d'Eau is best viewed from the Bains des Pâquis, a popular swimming venue for the locals. In winter, they all meet here for a sauna before the obligatory fondue.
+      Seasons: spring, summer, autumn, winter
+  • Place des Nations [culture]
+      Abstract: The impressive Place des Nations is Geneva’s contribution to world peace. At the heart of international Geneva, this agora provides a forum for global citizens to challenge public opinion and diplomats.
+      Description: Located in the extension of the eastern entrance of the Palais des Nations, the Place des Nations is a decidedly contemporary work. On the ground, there is the contrast between the granite of various colours representing the diversity of nations, and the concrete strips that are the traditional building material of Geneva. A dozen water jets of varying heights shoot up directly from the ground. The square is also home to the gigantic "Broken Chair", symbol of the fight against landmines and the fresco of peace, a huge ceramic mosaic created by Swiss artist Hans Erni at the age of 100.
+      Seasons: spring, summer, autumn, winter
+  • The Reformation Wall [culture]
+      Abstract: Built into the old city walls of Geneva, the Reformation Wall overlooks the Parc des Bastions. Just a stone’s throw from the magnificent Place de Neuve in an exceptionally beautiful setting, the major figures of the Protestant Reformation are depicted as giant statues and bas-reliefs.
+      Description: The imposing Reformation Wall stands in the Parc des Bastions, portraying the major figures of the Reformation in the form of huge statues and bas-reliefs. At the centre are John Calvin, William Farel, Théodore de Bèze and John Knox. At the sides are those who spread the Reformation throughout Europe. Engraved in the wall, the motto of Geneva “Post Tenebras Lux” (After darkness, light) is a core phrase of Calvinist philosophy. At the park’s exit lies the Place de Neuve with its buildings dedicated to art and culture.
+      Seasons: spring, summer, autumn, winter
+  • Guided tour: The flavours of Geneva chocolate [food]
+      Abstract: On this guided tour, the experts from “Geneva Food Tour” present a selection of award-winning Geneva chocolate creations.
+      Description: Truffles, chocolates, the traditional Geneva chocolate kettle or an award-winning chocolate cake: this tour allows you to discover the best chocolatiers of the city and a total of eleven sweet creations.
+
+Over a period of three hours, you can try local varieties and explore every aspect of the Geneva chocolate world. The tour includes five chocolate manufacturers and confectioners – including one that has supplied Winston Churchill, Grace Kelly, J.F. Kennedy and Charles de Gaulles with chocolate delicacies.
+
+The tour is led by a passionate guide who introduces guests to all the secrets about Geneva chocolate. The itinerary also includes a boat tour and a stroll through Geneva’s old town.
+
+Local Flavours Tour [https://www.localflavourstours.com]
+      Seasons: spring, summer, autumn, winter
+  • St. Pierre Cathedral [culture]
+      Abstract: Geneva’s St. Pierre Cathedral towers over the Old Town and was the spiritual home of John Calvin and the Reformation.
+      Description: St. Pierre’s blend of Gothic nave, neoclassical façade and archaeological crypt traces 2,000 years of history. Visitors climb the north tower for a panoramic sweep of Geneva, explore Calvin’s chair inside the austere interior and descend to the foundations that reveal Roman mosaics and early Christian baptisteries.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 9: Geneva (travelled from Geneva, 0 min)
+  Note: moved due to low TU
+
+============================================================
+Day 10: Bern (travelled from Geneva, 111 min)
+  Note: target stay 2 days
+  • Bundeshaus [culture]
+      Abstract: The Swiss Parliament House is the seat of one of the world’s first modern democracies and is located in the capital, Bern. Although the Bundeshaus is Switzerland’s seat of government, it also offers a range of entertainment and event opportunities for locals and visitors alike.
+      Description: The Parliament was built in accordance with the plans of the Architect H. Auer. It was completed in 1902. In the central hall, under the cupola between the two assembly rooms, there are numerous symbolic depictions of Swiss history [https://www.myswitzerland.com/en/planning/about-switzerland/history-of-switzerland/]. After undergoing extensive renovations, the seat of Swiss government has been gleaming with new resplendence since May 2008. Guided tours are available. 
+
+Bern [https://www.myswitzerland.com/en/destinations/bern/]was chosen as the Federal Capital of Switzerland in 1848. However, the Bundeshaus, with its terrace and the Bundesplatz [https://www.myswitzerland.com/en/experiences/bundesplatz-parliament-square/]square, is much more than just the seat of the Swiss government. It is also a crowd-puller, photo opportunity and a meeting place for young and old. On the "1848 - Bern as capital city" tour, you will learn more about the 150-year history of the Federal Capital. 
+
+The Parliament House also opens its doors to regular guided tours of the premises. Outside the building there is also much to see: The terrace is an inviting place to sit as you enjoy the views of the Marzili [https://www.myswitzerland.com/en/experiences/marzili-lido/]public baths, the Aare [https://www.myswitzerland.com/en/destinations/aare/], and the Gurten [https://www.myswitzerland.com/en/experiences/gurten-views-over-berne-and-the-alps/], Bern’s iconic local mountain. Of interest are the Bundesplatz square, the fountain in summer, and a light show and ice rink in winter. There is also a variety of events and the typical Bernese markets Zibelemärit [/sitecore/service/notfound.aspx?item=master%3A%7BC7EB95D0-2656-4EDA-B1A3-03B4D3906048%7D%40en](onion market) and Christmas markets [https://www.myswitzerland.com/en/experiences/winter/christmas/], etc.).
+      Seasons: summer, winter, spring, autumn
+  • Tour of the Zytglogge (Clock Tower) [culture]
+      Abstract: The Zytglogge (clock tower): Visit the landmark of Bern's Old Town and experience the history and mechanics of the tower on a guided tour.
+      Description: Every hour on the hour, a fascinating spectacle takes place in Bern: the medieval puppet show of the Zytglogge (clock tower) begins. The dancing bear train, the cheeky jester and the crowing rooster are a delight for young and old alike.
+
+If you would like to know more about the significance of the statues, the mechanics and the history of the Zytglogge (clock tower), you can take part in the one-hour guided tour.
+
+The tour is a special experience, and not just because of the unique atmosphere inside the tower. Time seems to have stood still here many years ago, while heavy wooden beams and solid stone walls take guests on a journey into the past. In the historic rooms, only the steady ticking of the medieval mechanism accompanies visitors through history.
+
+Also part of the tour: the ascent to the viewing platform. A wonderful panoramic view over the alleyways and rooftops of the old town and the green surroundings awaits.
+
+Further information and booking:Zytglogge tour [http://www.bern.com/en/detail/berns-clock-tower-zytglogge]
+      Seasons: spring, summer, autumn, winter
+  • Münster (Cathedral) Bern [culture]
+      Abstract: Begun in 1421, Bern's Cathedral took 150 years to complete, and was erected entirely by volunteers. The cathedral was built for the purpose of housing a bishop, but Protestantism reached Bern before its bishop did. The cathedral represents the last major work of late Gothic architecture in Europe.
+      Description: The interior architecture of the Münster attests to the cathedral's construction during the city's conversion from Catholicism to Protestantism. The choir's religious symbols are strongly Catholic; coats of arms on the ceiling's keystones come from Protestant times; empty statuary niches reveal religious artworks that were removed and destroyed at the transition. Other notable design elements include unusual black ceiling flourishes, added after the Gothic had gone out of fashion; the massive granite altar taken from Lausanne Cathedral; and the 15th-century Last Judgment sculpture over the main portal. Protestant church leaders left the carving intact because of its justice theme. 234 human figures, from high and low ranks, religious leaders including the pope and lay people, are represented. Some of each group head to heaven, and some to hell.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 11: Bern (travelled from Bern, 0 min)
+  • Gurten [nature]
+      Abstract: Many may know this name thanks to the Gurten festival, but also on the other 361 days of the year Berne’s home mountain has plenty to offer to visitors, hikers and families from near and far.
+      Description: Traffic-free Gurten is reached on a ride in the red carriages of the funicular railway, departing from Waben, in just a few minutes. And impressive views over and around the Aare and city of Berne, as well as Mittelland and Jura as far as the Alps are viewed from the observation tower up here. 
+
+Since 1899, the Gurtenbahn funicular railway has climbed the 858m mountain where day-trippers relax and enjoy the view. Used as a golf course until 1959, the Gurten fields now offer free access and plenty of barbecue spots. Families appreciate the electric cars, miniature railway with steam locomotives and cog-wheel sections, climbing frame, frisbee and bowling. 
+
+In winter – given the right snow conditions – there is a toboggan run to the Grünenboden middle station and a miniature ski lift on the Gurten fields.INFORMATION
+Altitude: 856m 
+Accessibility: From Bahnhof Bern by S-Bahn to Wabern or withTram No. 9 to Wabern-Gurtenbahn, funicular railway to Gurten 
+View: Over the city of Berne, and from the viewing tower, all-round views of the Alps, Emmen Valley and Jura – and from the Ostsignal information center, across the Bernese Alps with Eiger, Mönch and Jungfrau 
+Attractions: Miniature railway, in part with steam locomotives and cog-wheel sections, large playing field (former Gurten golfing green) 
+Culinary aspects: «Tapis Rouge» self-service restaurant, Restaurant «Gurtners» with stylish interior, Brunch at the Gurten Pavilion 
+Overnight stays: only a few hotel rooms 
+Groups: Gewölbekeller, banquet facilities, up-town stage hall (between 80 and several hundred people) 
+Winter: Mountain rail in operation, toboggan-run by sufficient snow 
+Special comments: Annual Gurten Festival
+Reduced rate mountain rail ascent with the Swiss Travel Pass/GA travelcard.
+Buy your tickets on arrival at the station.
+
+
+
+MOUNTAIN DAY TRIPS
+Buy your mountain rail ascent return tickets now
+
+Timetable and tickets [https://www.sbb.ch/en/buying/pages/fahrplan/fahrplan.xhtml?&nach=GurtenKulm]
+      Seasons: summer, spring, autumn, winter
+  • Discover the Museum Quarter Bern [culture]
+      Abstract: Culture, history, science, art and innovation come together in the Museum Quarter Bern and inspire with a lively interplay of impressions and emotions.
+      Description: The Museum Quarter guides you through a lively universe. It tells stories, stores cultural assets, organises exhibitions and events. Here, learning becomes pleasure, entertainment becomes education and art becomes experience. The place is not just a destination to visit, but a world full of experiences, encounters and inspiration that invites you to join in - time and time again. With over 500,000 visitors, it is the largest cultural centre in Switzerland.
+
+In the centre of Bern, embedded in historical buildings and contemporary architecture, it is also a place of retreat and relaxation with the museum garden. A place where you can feel at ease and be enchanted. No matter how far you have travelled. Discover the diverse offerings of the eleven institutions that are part of this vibrant network The Museum Quarter [https://www.mqb.ch/en].
+
+With the Museum Quarter Pass [https://www.mqb.ch/en/pracitcal-information], you can experience the diversity of the Museum Quarter Bern for five months.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 12: Interlaken (travelled from Bern, 48 min)
+  Note: target stay 2 days
+  • Raclette rafting [food]
+      Abstract: Enjoy a tasty raclette while drifting on a rafting boat from the quay in Bönigen through the ship canal to Interlaken.
+      Description: The raft is stable and the tours take place in the evening. While the lights in the houses of Interlaken slowly go on along the banks, guests snuggle down in warm blankets to enjoy a feast of melted cheese and a glass of wine. The views of the snow-covered mountains in the background complement the idyllic cityscape. The reliable guides steer the vessel, so that guests can enjoy the time on the raclette raft.
+      Seasons: winter, autumn
+  • Interlaken Free Walking Tour [culture]
+      Abstract: Interlaken – a jewel in the midst of the Swiss Alps. A local guide shares exciting facts about Interlaken and its environs with the guests. They will visit secret spots that only the locals know, looking at them through their eyes.
+      Description: The very first tour of this kind in Switzerland has been very well received by all guests. The guides are from the region. They know the area, its history and secrets and have excellent language skills, especially in English, but they are fluent in other languages as well. In addition to the professional organisation, the tours are fresh, exciting and entertaining. The two-hour event is free, but the guests have an opportunity to tip the guide at the end.
+      Seasons: spring, summer, autumn, winter
+  • Mürrenbahn [nature]
+      Abstract: Since 2006, visitors have been able to ascend the first 685 meters of the Grütschalp (1481 meters) by aerial cable car.
+      Description: From Lauterbrunnen to Grütschalp 
+Since 2006, visitors have been able to ascend the first 685 meters of the Grütschalp (1481 meters) by aerial cable car. The cable car can accommodate 100 persons on each ride. At the same time it can carry 6,000 kilograms of freight. The ride takes 4 minutes. 
+
+From Grütschalp to Mürren 
+An adhesion railway runs on the romantic stretch across alpine meadows to Mürren. This ride traverses an additional 147 meters. 
+
+Mürren is not accessible by car. For this reason freight transport is especially important. Transportation is carried out by means of containers, which are transferred to the freight compartment of the adhesion train at the intermediate station’s ultra-modern loading facility. 
+
+The Lauterbrunnen-Mürren mountain train was opened in 1891. There is an additional means of traveling to Mürren: by aerial cable car from Stechelberg (the aerial cable car continues onward via Gimmelwald to Schilthorn).
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 13: Interlaken (travelled from Interlaken, 0 min)
+  • Jungfraujoch - Top of Europe [nature]
+      Description: At 3,454 metres above sea level, the railway station on the Jungfraujoch is the highest railway station in Europe. The route to the station passes through a seven-kilometre tunnel through the Eiger and Mönch. Once you reach your destination, you will find yourself in the midst of a wonderland of ice, snow and rock.
+      Seasons: summer, spring, autumn, winter
+
+============================================================
+Day 14: Zurich (travelled from Interlaken, 99 min)
+  Note: target stay 2 days
+  • Fraumünster Church [culture]
+      Abstract: Located on the west bank of the Limmat, the Fraumünster Church with its green steeple is one of Zurich's most prominent landmarks. Particularly renowned are the glass windows by Marc Chagall and Augusto Giacometti.
+      Description: The church was built from the middle of the 9th century on the opposite side of the river to the Grossmünster [https://www.myswitzerland.com/en/experiences/grossmuenster/]. Today, many visitors are attracted by the five stained glass windows prepared by Marc Chagall in the 1960’s as well as by the the rosette in the south transept. Another significant glass window is "The Heavenly Paradise" (1945) by Augusto Giacometti, the uncle of the famous Swiss artist Alberto Giacometti, in the north transept. 
+
+With 5793 pipes, the organ in the Fraumünster Church is the largest in the Canton of Zurich [https://www.myswitzerland.com/en/destinations/zurich-region/]. A cycle of frescos by Paul Bodmer depicts the legend of the founding of the monastery and of the city's patron saints Felix and Regula.
+      Seasons: spring, summer, autumn, winter
+  • Zürich Opera House [culture]
+      Abstract: With just 1,100 seats, Zurich’s is the smallest of the great international opera houses, and offers an exceptionally intimate experience of top performances.
+      Description: Its programme is highly varied, with 17 new productions and 26 revivals a year. Popular pieces, famous singers as well as regular premieres, children's operas and ballet are all included in the varied repertoire. Stars such as Cecilia Bartoli, Renée Fleming and Placido Domingo enjoy appearing here time and again, as do celebrated conductors including Nikolaus Harnoncourt, Christoph von Dohnányi and Carlo Rizzi.
+      Seasons: spring, summer, autumn, winter
+  • Zurich walking tours [culture]
+      Description: The volunteer guides take their guests on a free stroll through the city and show them the town they live in. Every free walking tour is personal and different: architects take guests through the Langstrasse area or Zurich-West, bankers prefer the financial centre, and students choose the university.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 15: Zurich (travelled from Zurich, 0 min)
+  • Hürlimannbad & Spa Zurich [culture]
+      Abstract: At the Hürlimannbad & Spa Zurich, you bathe in century-old vaults that offer peace and relaxation.
+      Description: The central bathing area consists of a large, open stainless steel pool with invigorating massage jets, bubble loungers, massage and bubble rings. 
+
+Other highlights include the emerald bath with underwater music and an exciting light show, a steam bath, a course bath and a rain shower. On the roof, the infinity pool offers a spectacular panoramic view over Zurich. The rooms - with many playful elements and details - are reminiscent of the former brewery. In the Roman-Irish spa ritual, the body is warmed, cleansed, relaxed and cooled down again in 10 successive stations - a source of soothing relaxation, health and vitality. 
+
+In between, the bistro invites you to relax, rest and enjoy. You will find an always fresh selection of various hot and cold delicacies as well as exquisite drinks.
+      Seasons: winter, autumn, spring, summer
+  • Zürichhorn and the Chinese Garden [culture]
+      Abstract: In the green parks around the lower basin of the lake, there’s always something going on in the summer months. Inline skaters, water sports enthusiasts, jewellery sellers and street artists all gather here to create a colourful scene. Anyone looking for peace and quiet will be able to escape the hustle and bustle on the Zürichhorn at the end of the lakeside promenade, in the wonderful Chinese Garden.
+      Description: On the Zürichhorn and in other areas by the lake in Zurich-Seefeld, you’ll find a range of popular wild bathing spots. From here, large rocks or small pebble beaches will lead you down to Lake Zurich. Shady trees and areas with lots of space on which to play or relax, such as the Blatterwiese, invite you to stop and linger awhile.
+
+Following on from the “Expo 64” in Lausanne, the “Heureka” sculpture by Jean Tinguely was given a new home on the Zürichhorn, ultimately becoming a striking new part of the lakeside promenade.
+
+The Chinese Garden was a gift from the city’s Chinese sister city of Kunming in thanks for the technical and scientific support provided for the expansion of the drinking water supply and urban drainage in Kunming. It is classed as a temple garden and is one of the highest-ranking gardens outside of China.
+      Seasons: summer, spring, autumn, winter
+
+============================================================
+Day 16: St. Gallen (travelled from Zurich, 60 min)
+  Note: target stay 2 days
+  • Drei Weieren [nature]
+      Abstract: Drei Weieren (Three Ponds) are an oasis of peace in the middle of the city. The ponds, which were originally built by the monastery for their water needs with their art nouveau bath houses, are a popular destination for outings and as swimming spot.
+      Description: A sweet pond landscape stretches out in the south of the city, on a high plateau below Mount Freuden. It is the local recreation area for the city inhabitants and part of a connecting nature protection area that runs along the entire southern slope of the city. 
+
+There are still four ponds remaining from the original five. They were dug out, or filled in as the case may be, in the period between the 17th and 20th centuries and served to provide water to put out fires during blazes and also as a water supply for the city bleaching. With the aid of a wangler, the water was pushed over the Mülegg weir into the Steinach and directed onwards into the city. 
+
+The ponds are beloved swimming areas for the locals in summer and are a meeting point in winter for lovers of ice skating. A round trip through the pond landscape is attractive at any time of the year due to the panoramic view over the entire city.
+      Seasons: summer, winter, spring, autumn
+  • City Lounge - Red Square [culture]
+      Abstract: The first public lounge in Switzerland spreads out in the St.Galler Bleichi district in the open air. It is covered in red rubber granulate and is lit by artistic lighting elements. The "city lounge" by artist Pipilotti Rist and architect Carlos Martinez invites you to relax and marvel.
+      Description: The St.Galler Bleichi district is a typical shopping and office area. That there are nevertheless still people out and about until late in the evening is thanks to the airy sitting room designed by the multimedia artist Pipilotti Rist together with the architect Carlos Martinez. The great Red Square is furnished with sofas, chairs, tables, couches and a Porsche – which, like the ground, are covered in a bright red carpet of plastic granulate. 
+
+During the day, children use the unusual city landscape for play while the employees from the surrounding businesses take breaks on the comfortable seating. In the evening, lighting elements which hang above the square like floating boulders light the scene and draw the young and young at heart into their light.
+      Seasons: spring, summer, autumn, winter
+  • Textile Museum St. Gallen [culture]
+      Abstract: A neo-Renaissance palace showcasing eastern Switzerland’s embroidery legacy, couture lace, and contemporary textile design.
+      Description: The Textile Museum illuminates St. Gallen’s storied fabric industry through shimmering embroidery, fashion archives, and hands-on exhibits. Permanent and temporary shows explore how craftsmanship and innovation shaped the city’s global reputation.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 17: St. Gallen (travelled from St. Gallen, 0 min)
+  • Stiftsbibliothek (Abbey Library) St. Gallen [culture]
+      Abstract: St. Gall's Abbey Library is one of the oldest and most beautiful in the world. The origins of the library date back to the 8th century, and many of its 160,000 priceless texts are nearly that old.
+      Description: On display are the 8th-century bill of sale for the abbey property; a Gospel of John ca 800 AD; Changing exhibitions show handwritten and illuminated texts, including Bibles, liturgical works, prayer books and biographies of saints from as early as the 9th 8th century AD; and works depicting the daily lives of resident monks, which provide insight into abbey life from the 9th century through the Middle Ages. Some early works are written in Irish, evidence of the monastery's Irish roots (hence the name, "St. Gall"). The elaborate, rococo library was constructed between 1758-67 and is worth admiration in its own right, with its magnificent burnished woodwork, undulating balconies and ceiling frescoes.
+      Seasons: spring, summer, autumn, winter
+  • Chocolaterie am Klosterplatz [food]
+      Description: The unique café is situated in the blue building - an exquisite location opposite the entrance to the cathedral. Chocolate aficionados will find everything their heart desires within the walls of the café, including hot chocolate and chocolate specialities. The chocolate factory shop is home to a wide range of sweet treats and great gift ideas. The Tourist Information is in the same building.
+      Seasons: spring, summer, autumn, winter
+  • Säntispark Olympics [culture]
+      Abstract: The amusement park in eastern Switzerland awaits you with a wide range of games.
+      Description: A wide range of games awaits you at the diverse leisure park in Abtwil near St. Gallen. Here, guests measure their skills in an Olympics. Whether bowling, billiards, snooker, table football or darts. Afterwards, there is plenty of time to sit down in the Fairplay restaurant, enjoy a drink or have a lively chat over spaghetti.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 18: Appenzell (travelled from St. Gallen, 22 min)
+  • The unsung heroines of Urnäsch [culture]
+      Abstract: The special “Intensive Times - Women and Customs” show depicts the role of women farmers, from the alpine ascent to New Year’s Eve celebrations.
+      Description: Women do not generally play a main role in the customs of Appenzell Ausserrhoden. From an outsider’s perspective, their contribution is barely visible. Very few people get the chance to hear the heartfelt call of the farmer’s wife to her husband as she sets off on the alpine ascent. Eight women of Urnäsch provide the focus in the special exhibition in the Museum of Appenzeller Traditions in Urnäsch. On the guided tour, the visitors learn how the women in Urnäsch experience alpine ascents, cattle shows, New Year’s Eve celebrations and Urnäsch string music, as well as many other surprising facts.
+      Seasons: summer, autumn, winter
+  • Säntis cable car [nature]
+      Abstract: The journey in the big Säntis cable car from Schwägalp across the rocky ridges to the mountain station is an impressive experience in itself. And once you reach the “weather mountain”, the view of six different countries will take your breath away.
+      Description: The railway line to Wasserauen constructed at the beginning of the last century was actually the first section of a planned railway up the Säntis. The railway line never got further than the valley town, however, and so the cable car from Schwägalp to the top of the Säntis was opened in 1935. From the valley station, you glide almost weightlessly up to the imposing summit in around 10 minutes. At 2,502 metres above sea level, on clear days the mountain provides breathtaking views of France, Germany, Italy, Austria, Liechtenstein and Switzerland. 
+
+The Säntis also plays a key role in weather forecasting – a weather station was first installed on the mountain way back in 1882. An experiential world brings the impressive natural phenomena and their elementary effects to life. A second experiential world – “Säntis – the Ice World” – was opened in 2020. Visitors learn all about snow, ice, ice crystals and glaciers through a series of fun activities and displays.
+
+In summer, numerous special experiences such as full moon trips, sunrise ascents or Säntis-Spitzegnoss evenings attract visitors to the mountain.INFORMATION
+Altitude: 2,502 m.a.s.l.
+How to get there: Train to Urnäsch or Nesslau, PostBus to Schwägalp, cable car to the Säntis in 10 minutes
+Views: Across the Appenzell region and the Alpstein mountain range to Lake Constance, Vorarlberg, the Graubünden Alps as far as the Bernina, in particular the Churfirsten range and beyond them the Tödi, Finsteraarhorn, Pilatus and Rigi, and across the Swiss Plateau to the Jura and Black Forest 
+Attractions: Identify mountains and valleys from the viewing terraces, enjoy splendid sunrises and sunsets, full moon trips, a night on the Säntis 
+Food and drink: Large, modern Säntisgipfel restaurant
+Alter Säntis mountain inn (summer only) 
+Accommodation: Alter Säntis mountain inn: Double and multi-bed rooms, dormitories (summer only) 
+Hotel Schwägalp: Double rooms and tourist dormitories 
+Groups: Rooms for events at the summit and at Schwägalp (extensive event brochure available online)
+Alter Säntis has space for 90 guests (function room) 
+Operating times: Säntis cable car runs all year round (brief closure for maintenance, usually in January/February, check the timetable [https://saentisbahn.ch/en/experience/cablecar/timetable/])
+Swiss Travel Pass/GA travelcard: Discounted mountain ascent with Swiss Travel Pass/GA travelcard. Buy your tickets at the station
+Special comments: Charter trips can be arranged outside of the normal timetable with advance notice
+
+
+
+DAY TRIPS TO THE MOUNTAINS
+Buy your return rail and mountain ascent tickets now
+
+Timetable and tickets [https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?nach=Säntis]
+      Seasons: summer, spring, autumn, winter
+
+============================================================
+Day 19: Kandersteg (travelled from Appenzell, 189 min)
+  • Lake Oeschinensee [nature]
+      Abstract: One of the most beautiful and perhaps most impressive mountain lakes can be reached by gondola from Kandersteg. The gondola also carries walkers looking to hike over the Hohtürli pass into the Kiental valley.
+      Description: The lake is also known as the jewel of Kandersteg: with its turquoise blue water and unique natural scenery
+, Lake Oeschinen is a top destination in the Bernese Oberland. Whether you come for the hiking, picnicking, rowing or bathing – you will be amazed at its beauty.
+
+Lake Oeschinen marks the western gateway to the Jungfrau Aletsch Unesco World Heritage site.
+
+A thrilling summer toboggan run is located right next to the upper station – quite the change of pace after the tranquillity of the mountain lake. Further information [https://www.myswitzerland.com/en/destinations/lake-oeschinen/]INFORMATION
+
+Altitude: 1,682 metres 
+How to get there: 
+Lötschberger train from Bern/Thun/Spiez directly to Kandersteg, then gondola to the Oeschinen upper station 
+Views: From the upper station: Lake Oeschinen valley basin with the Blüemlisalphorn, Fründenhorn and Dolderhorn; across the valley from Kandersteg to the Wildstrubel and Lohner 
+Attractions: Summer toboggan run next to the upper gondola station, rowing on Lake Oeschinen. 
+Food and drink: Restaurant Bergstübli (upper station), Restaurant Oeschinensee (lamb stew, fruit cakes), Berghaus Oeschinensee mountain inn (grilled cheese sandwiches, barbecue area) 
+Accommodation: Hotel Oeschinensee: 30 beds in rustic rooms, 20 sleeping spaces in dormitories
+Mountain inn: Single, double and multi-bed rooms 
+Groups: By arrangement in the mountain inns 
+Winter: Small winter sports area, winter hikes to the lake, ice fishing 
+Special comments: Lake Oeschinen is the western gateway to the Jungfrau Aletsch Unesco World Heritage site.
+      Seasons: summer, winter
+
+============================================================
+Day 20: Kandersteg (travelled from Kandersteg, 0 min)
+  • Engstligenalp – and the Wildstrubel [nature]
+      Abstract: Those who look towards Wildstrubel from Adelboden know little of the peaceful Alp that lies almost hidden at half-height in the valley basin. The entrance leads past the 600 meter-high Engstligenfälle.
+      Description: The Engstligenalp paradise is reached by cable car from Birg, via the Saumweg, from where each year 500 cows make their way to the Alp over the "Chäligang" mountain climb.
+
+An obstacle free round path, rock climbing, mountain tours to the surrounding summits and pass crossings to neighbouring valleys, mountain golf, (in autumn), tasteful enjoyment in mountain restaurants and on observing the meandering waterways all add up to make this traditional spot a genuine Alp experience. 
+Altitude: 1965m 
+Accessibility: 
+Train to Frutigen, bus to Adelboden-Oey, change of transport to the local bus heading for the Unter dem Birg valley station, cable car to the Engstligenalp 
+View: 600 meter-high Engstligen waterfalls, Adelboden and on through the Engstligen Valley as far Niesen and up to the 3243 meter-high Wildstrubel summit. 
+Attractions: Mountain pastures, meandering waterways and longstanding Alp traditions dating back to tha late Middle Ages 
+Culinary aspects: Two mountain guesthouses and the Raclette hut (as of autumn) with wholesome regional dishes 
+Overnight stays: Double and multi-bed rooms in both mountain hotels 
+Groups: Berghotel Engstligenalp 150 places, Berghaus Bärtschi small halls for 20 and 45 people 
+Winter: Winter sports region (hiking, cross country & lifts) up to 2330m 
+Special comments: Place of power and history of the Lägerstein rock
+      Seasons: summer, autumn, winter
+  • BLS Lötschberg mountain line [nature]
+      Abstract: Sometimes the indirect route is the best way to reach your destination: The mountain line over the Lötschberg connects the Bernese Oberland with Valais. As it passes through the untouched natural surroundings, the historic Lötschberg mountain route from Berne to Brig and Domodossola offers fabulous views and worthwhile stopovers.
+      Description: Since the opening of the Lötschberg Base Tunnel, you can save a lot of time on the north-south axis between Bern and Domodossola. But that means missing out on a number of things that have always made the Lötschberg mountain line so popular.
+
+Railway enthusiasts around the world appreciate the imposing viaducts, engineering structures and loops of the RegioExpress from Berne to Brig and Domodossola, Italy. The section from Kandersteg to Goppenstein follows a 100-year-old mountain line.
+
+Families will be happy to stop off at the Papiliorama [https://www.myswitzerland.com/en-ch/experiences/papiliorama-exotic-butterflies-and-more/] tropical butterfly park in Kerzers, just 40 minutes from Bern. Many day trippers will also get off at Frutigen station, which has been restored to its original state, from where they can complete the railway hiking trail to Kandersteg. At the end of the 74-kilometre mountain line in Domodossola there is one final highlight: many Swiss people enjoy a visit to the local Saturday market. So, this scenic route is a special experience at any time of year.
+
+
+
+FACTS
+ * Stage: Bern – Spiez – Kandersteg – Brig – Domodossola (Italy)
+ * Distance: 160km
+ * Journey time: 2 hrs 15 mins
+   
+   
+
+EXCURSION TIPS
+ * Bern’s old town (UNESCO World Heritage Site)
+ * Climb Niesen – Switzerland’s “natural pyramid” – by funicular or on foot
+ * Stockalper Palace, Brig
+ * Add on the Vigezzina-Centovalli stretch [https://www.myswitzerland.com/en/experiences/centovalli-express/] from Domodossola to Locarno
+   
+   
+
+ TICKET
+Attention: the Lauchernalp cable car is not included.
+
+RESERVATIONS
+Seats cannot be reserved – free choice of seating.
+      Seasons: spring, summer, autumn, winter
+
+============================================================
+Day 21: Kandersteg (travelled from Kandersteg, 0 min)
+  Note: final day at destination
+  • Gemmipass [culture]
+      Abstract: Already the Romans trod this path from the main Valais valley to the north. The historic Gemmipass crossing unites Leukerbad with Kandersteg – without roads, instead mountain rail.
+      Description: These were followed by soldiers, pilgrims and traders - and many famous people such as Mark Twain, Lenin and Pablo Picasso, also got to know this wild and rugged region. Where wealthy travellers once travelled, followed by the famous "Gemmi-Wägeli" carriages, today the modern Gemmibahn railway takes passengers over the cantonal border on the steep 900 meter climb from Leukerbad.
+
+The "Berghotel Wildstrubel" awaits guests at the top, along with two diverse via ferrata and a viewing platform at dizzying height. 
+Altitude: 2346m 
+Accessibility: 
+Train to Leuk, bus to Leukerbad, cable car to the Gemmi Pass.
+From Kandersteg with the local bus to the valley station, cable car to the Sunnbüel, 2-hour and15 minutes hike to the Gemmipass 
+View: Down to Leukerbad and through the Lonza Valley, over the Rhone Valley to the Mischabel, Monte Rosa, Weisshorn, Matterhorn and Dent Blanche mountains; as well as Wildstrubel’s Lämmerenboden 
+Attractions: Breathtaking viewing platform, adventurous Gemmi-wall via ferrata, hike to the Daubensee lake and over the Gemmi plane to Sunnebüel (to Kandersteg) 
+Culinary aspects: Rösti, toasted cheese slice, pan-fried dishes, Fondue 
+Overnight stays: Double and multi-bedrooms, dormitory 
+Groups: Panorama restaurant 160 places, plus sun terrace with views of the Valais high Alps
+Rooms for seminars and meetings 
+Winter: Facilities and mountain hotel open,16 kilometers of cross-country skiing tracks, snowshoe trails and winter hikes (by favourable conditions as far as Sunnebüel) 
+Special comments: Purest relaxation after a mountain hike at the Leukerbad thermal baths.
+      Seasons: summer, autumn, winter
+  • Spa in a forest clearing, Blausee [culture]
+      Abstract: The little blue lake in the heart of paradise. Whatever the weather, this spa offers a special experience for mind, body and soul.
+      Description: The spa is the ideal place for some well-earned rest and relaxation: The stylish interior includes a sauna, sanarium, steam grotto and a relaxation room with a view of the Blausee. Bathtubs in the spa garden and a whirlpool invite you to linger a while. This can also be booked by day guests. A special spa & dine package is also available: so you can relax in the spa before enjoying a pleasant meal.
+
+Getting there: By train to Frutigen, then by bus for Kandersteg, “Blausee” stop, or by car, Blausee is between Frutigen and Kandertal (parking available).
+      Seasons: spring, summer, autumn, winter
+

@@ -10,6 +10,7 @@ import sys
 import unicodedata
 from itertools import combinations
 from pathlib import Path
+import os
 from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
 if __package__ is None or __package__ == "":
@@ -56,9 +57,21 @@ def select_pois_for_day(
     rng: random.Random | None = None,
     season: Optional[str] = None,
 ) -> List[POI]:
-    """Pick up to two POIs that fit within the TU limits while respecting preferences."""
+    """Pick up to two POIs that fit within the TU limits while respecting preferences.
+
+    Selection aims to maximise total daily TUs in the 6–8 range (including travel),
+    without exceeding 8. Higher totals are preferred, then higher preference score,
+    then better season alignment.
+    """
 
     rng = rng or random.Random()
+    debug = os.environ.get("PLANNER_DEBUG", "").lower() in {"1", "true", "yes", "on"}
+
+    positive_categories = {
+        category for category, weight in preference_weights.items() if weight > 0.0
+    }
+    zero_categories = {category for category in CATEGORIES if category not in positive_categories}
+
     eligible = list(_filter_pois_by_preferences(pois, preference_weights))
     if not eligible:
         return []
@@ -87,17 +100,25 @@ def select_pois_for_day(
     remaining_tu = max_tu - travel_tu
     combos: List[Tuple[Tuple[POI, ...], int, float, float]] = []
 
+    # Debug accounting
+    overflow_skips = 0
+    similarity_skips = 0
+
     if travel_tu <= max_tu:
         combos.append((tuple(), travel_tu, 0.0, 0.0))
 
     def dfs(start_idx: int, chosen: List[POI], used_tu: int, pref_sum: float, season_sum: float) -> None:
+        nonlocal overflow_skips, similarity_skips
         if chosen:
             combos.append((tuple(chosen), travel_tu + used_tu, pref_sum, season_sum))
         for i in range(start_idx, len(activity_info)):
             poi, label, tu = activity_info[i]
             if tu > remaining_tu - used_tu:
+                # would exceed daily TU cap
+                overflow_skips += 1
                 continue
             if any(_are_similar(poi, existing) for existing in chosen):
+                similarity_skips += 1
                 continue
             dfs(
                 i + 1,
@@ -115,7 +136,9 @@ def select_pois_for_day(
 
     def combo_key(item: Tuple[Tuple[POI, ...], int, float, float]) -> Tuple[int, int, float, float]:
         combo, total, pref_score, season_score = item
-        meets_target = 1 if 8 <= total <= 10 else 0
+        # Prefer totals in [6,8]; never exceed 8 by construction.
+        meets_target = 1 if 6 <= total <= 8 else 0
+        # Higher total TUs wins, then higher preference score, then better season fit.
         return (meets_target, total, pref_score, -season_score)
 
     best_key = None
@@ -130,6 +153,53 @@ def select_pois_for_day(
             best_items.append(entry)
 
     chosen_combo = rng.choice(best_items)[0]
+
+    if debug:
+        # Build diagnostics
+        def poi_labels(p: POI) -> List[str]:
+            return [c for c in CATEGORIES if p.has_label(c)]
+
+        total_pois = len(pois)
+        eligible_count = len(eligible)
+        in_season_count = len(activity_info)
+
+        # Reasons for preference filtering
+        zero_weight_blocked = []
+        no_positive = []
+        for poi in pois:
+            has_positive = any(poi.has_label(c) for c in positive_categories)
+            has_zero = any(poi.has_label(c) for c in zero_categories)
+            if not has_positive:
+                no_positive.append(poi.name)
+            elif has_zero and poi not in eligible:
+                zero_weight_blocked.append(poi.name)
+
+        # Top candidate combos by key
+        show = []
+        for combo, total, pref_score, season_score in sorted(combos, key=combo_key, reverse=True)[:5]:
+            show.append({
+                "total_tu": total,
+                "pref": round(pref_score, 3),
+                "season": round(season_score, 3),
+                "items": [p.name for p in combo],
+            })
+
+        print("[POI-SELECT] travelTU=", travel_tu,
+              " total=", total_pois,
+              " eligible=", eligible_count,
+              " inSeasonUsed=", in_season_count,
+              " overflowSkips=", overflow_skips,
+              " similaritySkips=", similarity_skips,
+        )
+        if zero_weight_blocked:
+            print("[POI-SELECT] blocked by zero-weight:", "; ".join(zero_weight_blocked[:10]))
+        if no_positive:
+            print("[POI-SELECT] no positive-category:", "; ".join(no_positive[:10]))
+        print("[POI-SELECT] top combos:")
+        for entry in show:
+            print("  -", entry)
+        print("[POI-SELECT] chosen:", [p.name for p in chosen_combo])
+
     return list(chosen_combo)
 
 

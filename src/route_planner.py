@@ -5,6 +5,7 @@ Route planning logic for multi-day travel itineraries.
 from __future__ import annotations
 
 import json
+import os
 import math
 import random
 import unicodedata
@@ -113,6 +114,7 @@ class RoutePlanner:
         rng = rng or random.Random()
         start_distance, start_poi_city, start_display = self._resolve_city(start_city)
         end_distance, end_poi_city, end_display = self._resolve_city(end_city)
+        same_start_end = start_distance == end_distance
 
         if math.isinf(self._shortest_km[start_distance].get(end_distance, math.inf)):
             raise ValueError(f"No travel path between {start_display} and {end_display}.")
@@ -128,7 +130,23 @@ class RoutePlanner:
             )
             for city in self._distance_cities
         }
-        if min_days_to_end[start_distance] > max(0, num_days - 1):
+        # Determine required end-city stay days based on total trip length
+        # - 7–14 days: at least 2 days in the end city (arrive by N-1)
+        # - 15+ days: at least 3 days in the end city (arrive by N-2)
+        # - otherwise: keep prior behavior (at least last day in end city)
+        if same_start_end:
+            # Loop trips: only require being at the end city on the last day
+            required_end_stay_days = 1
+        elif num_days >= 15:
+            required_end_stay_days = 3
+        elif num_days >= 7:
+            required_end_stay_days = 2
+        else:
+            required_end_stay_days = 1
+
+        # Feasibility: must be able to reach the end city with enough days left
+        # to satisfy the required stay at the end.
+        if min_days_to_end[start_distance] > max(0, num_days - required_end_stay_days):
             raise ValueError("Not enough days to reach the destination under the travel limit.")
 
         distance_to_end = {
@@ -167,6 +185,17 @@ class RoutePlanner:
                 rng=rng,
                 season=season,
             )
+            # Compute total daily TU (travel + activities)
+            try:
+                from .poi_selection import _activity_time_units as _tu_for
+            except Exception:
+                # Fallback if relative import path differs when run directly
+                from poi_selection import _activity_time_units as _tu_for  # type: ignore
+            activity_tu_sum = sum(_tu_for(p) for p in pois)
+            total_daily_tu = travel_tu + activity_tu_sum
+
+            debug = os.environ.get("PLANNER_DEBUG", "").lower() in {"1", "true", "yes", "on"}
+
             selected_ids = {poi.identifier for poi in pois}
             if selected_ids:
                 available_pois[current_poi_city] = [
@@ -196,7 +225,14 @@ class RoutePlanner:
 
             should_stay = False
             if current_distance_city == end_distance:
-                should_stay = False
+                # If start and end are the same, do not force staying at the beginning;
+                # only ensure we are at the end city on the last day (handled by move logic).
+                # Otherwise, once we reach the end city mid‑trip, stay until required end‑stay is satisfied.
+                if same_start_end:
+                    should_stay = False
+                else:
+                    current_visits = visit_counts.get(current_distance_city, 0)
+                    should_stay = current_visits < required_end_stay_days
             else:
                 stay_reasons: List[str] = []
                 if remaining_days > 1:
@@ -220,7 +256,9 @@ class RoutePlanner:
                         should_stay = True
 
                     if should_stay:
-                        if min_days_to_end[current_distance_city] > remaining_days - 1:
+                        # Ensure staying here still leaves enough time to arrive at
+                        # the end city with the required end stay days.
+                        if min_days_to_end[current_distance_city] > max(0, (remaining_days - 1) - (required_end_stay_days - 1)):
                             should_stay = False
                             stay_reasons.clear()
 
@@ -234,6 +272,18 @@ class RoutePlanner:
             ):
                 should_stay = False
                 stay_reasons = []
+
+            # New rule: if total TU for the day is strictly less than 6, move rather than stay.
+            # Applies also to end city (unless it's the literal final day which is handled earlier).
+            low_tu_force_move = total_daily_tu < 6 and remaining_days > 0
+            if should_stay and low_tu_force_move:
+                should_stay = False
+                stay_reasons = []
+
+            if debug:
+                print(
+                    f"[ROUTE] Day {day_index} city={self._display_name(current_distance_city)} travelTU={travel_tu} activityTU={activity_tu_sum} totalTU={total_daily_tu} stayCandidate={should_stay}"
+                )
 
             if should_stay:
                 day_plan.note = "; ".join(note_parts) if note_parts else None
@@ -257,19 +307,68 @@ class RoutePlanner:
                 preference_weights=preference_weights,
                 season=season,
                 rng=rng,
+                required_end_stay_days=required_end_stay_days,
             )
             if dest_info is None:
                 raise ValueError("Unable to find a feasible next city under the constraints.")
 
             next_city, travel_minutes = dest_info
-            day_plan.note = "; ".join(note_parts) if note_parts else None
-            day_plans.append(day_plan)
 
-            previous_distance_city = current_distance_city
-            travel_from_distance = current_distance_city
-            travel_minutes_prev = travel_minutes
-            current_distance_city = next_city
-            current_poi_city = self._distance_to_poi[current_distance_city]
+            if low_tu_force_move:
+                # Rebuild the current day as a move into the next city, consuming travel TU now
+                # and selecting activities at the destination if possible.
+                origin_city = current_distance_city
+                dest_poi_city = self._distance_to_poi[next_city]
+
+                # adjust visit counts to reflect that we didn't actually spend the day in origin
+                visit_counts[origin_city] = max(0, visit_counts.get(origin_city, 1) - 1)
+                visit_counts[next_city] = visit_counts.get(next_city, 0) + 1
+
+                travel_tu_now = _travel_time_units(travel_minutes)
+                dest_pois = select_pois_for_day(
+                    available_pois[dest_poi_city],
+                    preference_weights,
+                    travel_tu=travel_tu_now,
+                    rng=rng,
+                    season=season,
+                )
+                try:
+                    from .poi_selection import _activity_time_units as _tu_for
+                except Exception:
+                    from poi_selection import _activity_time_units as _tu_for  # type: ignore
+                selected_ids_now = {poi.identifier for poi in dest_pois}
+                if selected_ids_now:
+                    available_pois[dest_poi_city] = [
+                        poi for poi in available_pois[dest_poi_city] if poi.identifier not in selected_ids_now
+                    ]
+                note_parts.append("moved due to low TU")
+
+                # Rewrite day_plan to represent the destination day with travel included
+                day_plan.distance_city = next_city
+                day_plan.poi_city = dest_poi_city
+                day_plan.display_city = self._display_name(next_city)
+                day_plan.travel_from = self._display_name(origin_city)
+                day_plan.travel_minutes = travel_minutes
+                day_plan.pois = dest_pois
+                day_plan.note = "; ".join(note_parts) if note_parts else None
+                day_plans.append(day_plan)
+
+                # Prepare for next iteration: we already travelled today
+                previous_distance_city = next_city
+                travel_from_distance = next_city
+                travel_minutes_prev = 0.0
+                current_distance_city = next_city
+                current_poi_city = dest_poi_city
+            else:
+                # Normal case: travel happens after today's activities
+                day_plan.note = "; ".join(note_parts) if note_parts else None
+                day_plans.append(day_plan)
+
+                previous_distance_city = current_distance_city
+                travel_from_distance = current_distance_city
+                travel_minutes_prev = travel_minutes
+                current_distance_city = next_city
+                current_poi_city = self._distance_to_poi[current_distance_city]
 
         return day_plans
 
@@ -305,6 +404,7 @@ class RoutePlanner:
         preference_weights: Mapping[str, float],
         season: Optional[str],
         rng: random.Random,
+        required_end_stay_days: int,
     ) -> Optional[Tuple[str, float]]:
         remaining_days_after_move = remaining_days - 1
         thresholds = [60.0, 120.0, 180.0, DAILY_TRAVEL_LIMIT_MINUTES]
@@ -330,12 +430,19 @@ class RoutePlanner:
                 continue
 
             if dest == end_city:
-                if day_index != num_days - 1:
+                # Only move into the end city on the exact day that
+                # ensures the required number of end-city stay days.
+                end_arrival_move_day = num_days - required_end_stay_days
+                if day_index != end_arrival_move_day:
                     continue
-                if remaining_days_after_move != 0:
+                # After moving, there should be (required_end_stay_days - 1) days remaining
+                if remaining_days_after_move != max(0, required_end_stay_days - 1):
                     continue
             else:
-                if remaining_days_after_move < min_days_to_end.get(dest, math.inf):
+                # For intermediate cities, ensure we can still reach the end city
+                # with enough days left for the required end stay.
+                moves_budget = remaining_days_after_move - max(0, required_end_stay_days - 1)
+                if moves_budget < min_days_to_end.get(dest, math.inf):
                     continue
 
             dist_to_end_value = distance_to_end.get(dest, math.inf)
