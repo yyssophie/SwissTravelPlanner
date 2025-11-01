@@ -26,4 +26,6 @@ export interface PlanResponse {
   num_days: number;
   season: string;
   days: PlanDay[];
+  score?: number | null;
+  score_components?: Record<string, number> | null;
 }

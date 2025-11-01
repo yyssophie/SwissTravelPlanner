@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 from typing import Dict, List
 
 from fastapi import FastAPI, HTTPException
@@ -8,6 +9,7 @@ from pydantic import BaseModel, Field, validator
 
 from .data_store import CATEGORIES, TravelDataStore
 from .route_planner import DayPlan, RoutePlanner
+from .evaluator import evaluate_itinerary
 
 
 def format_city_label(value: str | None) -> str:
@@ -46,6 +48,7 @@ class PlanRequest(BaseModel):
     days: int = Field(..., ge=1)
     season: str
     preferences: PreferenceWeights
+    max_hours_per_day: int = Field(..., alias="maxHoursPerDay", ge=4, le=10)
 
     @validator("from_city", "to_city", "season")
     def _strip(cls, value: str) -> str:
@@ -80,6 +83,8 @@ class PlanResponse(BaseModel):
     num_days: int
     season: str
     days: List[PlanDay]
+    score: float | None = None
+    score_components: Dict[str, float] | None = None
 
 
 def _format_day(day: DayPlan) -> PlanDay:
@@ -126,6 +131,14 @@ app.add_middleware(
 
 DATASTORE = TravelDataStore.from_files()
 PLANNER = RoutePlanner(DATASTORE)
+LOGGER = logging.getLogger("alp_scheduler")
+if not LOGGER.handlers:
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter("%(levelname)s:%(name)s:%(message)s")
+    handler.setFormatter(formatter)
+    LOGGER.addHandler(handler)
+LOGGER.setLevel(logging.INFO)
+LOGGER.propagate = False
 
 
 @app.post("/api/plan", response_model=PlanResponse)
@@ -152,6 +165,26 @@ def plan_trip(request: PlanRequest) -> PlanResponse:
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc))
 
+    score = evaluate_itinerary(
+        day_plans=itinerary,
+        start_city=start_display,
+        end_city=end_display,
+        interests=request.preferences.normalised(),
+        mtu=request.max_hours_per_day,
+        season=season,
+    )
+
+    if score.hard_violations:
+        LOGGER.warning(
+            "Itinerary generated with hard constraint issues: %s",
+            "; ".join(score.hard_violations),
+        )
+    LOGGER.info(
+        "Itinerary score %.2f | components=%s",
+        score.total,
+        {k: round(v, 3) for k, v in score.components.items()},
+    )
+
     days = [_format_day(day) for day in itinerary]
 
     return PlanResponse(
@@ -160,4 +193,6 @@ def plan_trip(request: PlanRequest) -> PlanResponse:
         num_days=request.days,
         season=season,
         days=days,
+        score=score.total,
+        score_components=dict(score.components),
     )
