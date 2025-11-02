@@ -161,6 +161,7 @@ def plan_trip(request: PlanRequest) -> PlanResponse:
             num_days=request.days,
             preference_weights=request.preferences.normalised(),
             season=season,
+            mtu_per_day=request.max_hours_per_day,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc))

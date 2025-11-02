@@ -5,7 +5,6 @@ from __future__ import annotations
 import json
 import math
 import unicodedata
-from copy import deepcopy
 from dataclasses import dataclass
 from heapq import heappop, heappush
 from pathlib import Path
@@ -21,12 +20,10 @@ if __package__ is None or __package__ == "":  # pragma: no cover
         _activity_time_units,
         _is_in_season,
         _primary_label,
-        select_pois_for_day,
     )
 else:  # pragma: no cover
     from .data_store import CATEGORIES, POI, TravelDataStore
-    from .poi_selection import _activity_time_units, _is_in_season, _primary_label, select_pois_for_day
-
+    from .poi_selection import _activity_time_units, _is_in_season, _primary_label
 
 
 LONG_TRAVEL_COMFORT_MINUTES = 120.0
@@ -81,19 +78,6 @@ class DayPlan:
     travel_minutes: float
     pois: List[POI]
     note: Optional[str] = None
-
-
-@dataclass
-class _ScenarioContext:
-    start_city: str
-    end_city: str
-    start_distance: str
-    end_distance: str
-    num_days: int
-    season: Optional[str]
-    mtu_per_day: int
-    preferences: Mapping[str, float]
-    earliest_arrival_day: int
 
 
 class RoutePlanner:
@@ -256,24 +240,10 @@ class RoutePlanner:
                 ]
 
             # Enforce final-day arrival
-        if day_index == num_days and current_city != end_distance:
-            raise ValueError("Planner did not reach the destination on the final day.")
+            if day_index == num_days and current_city != end_distance:
+                raise ValueError("Planner did not reach the destination on the final day.")
 
-        scenario = _ScenarioContext(
-            start_city=start_city,
-            end_city=end_city,
-            start_distance=start_distance,
-            end_distance=end_distance,
-            num_days=num_days,
-            season=season,
-            mtu_per_day=mtu_per_day,
-            preferences=target_distribution,
-            earliest_arrival_day=earliest_arrival_day,
-        )
-
-        optimised_plan = self._run_local_search(day_plans, scenario)
-        self._renumber_days(optimised_plan)
-        return optimised_plan
+        return day_plans
 
     def available_cities(self) -> List[str]:
         return sorted({self._display_name(distance_name) for distance_name in self._distance_to_poi.keys()})
@@ -441,18 +411,14 @@ class RoutePlanner:
             new_stay_streak = stay_streak + 1
             stay_penalty = -0.04 * max(0, new_stay_streak - 1) ** 2
 
-        long_excess = max(0.0, action.travel_minutes - LONG_TRAVEL_COMFORT_MINUTES)
-        extra_long_penalty = -0.25 * (long_excess / 60.0) ** 2
-
         total_gain = (
             0.35 * interest_gain
             + 0.20 * tu_score
             + 0.15 * city_gain
             + 0.15 * coverage_gain
-            + 0.20 * travel_score
+            + 0.15 * travel_score
             + travel_penalty
             + stay_penalty
-            + extra_long_penalty
         )
 
         day_plan = DayPlan(
@@ -543,364 +509,6 @@ class RoutePlanner:
         if minutes <= 0:
             return 0
         return max(1, math.ceil(minutes / 60.0))
-
-    # ------------------------------------------------------------------ local search helpers
-
-    def _run_local_search(self, initial_plan: List[DayPlan], scenario: _ScenarioContext) -> List[DayPlan]:
-        try:  # pragma: no cover - support both package and script imports
-            from .evaluator import evaluate_itinerary  # type: ignore
-        except ImportError:  # pragma: no cover
-            from evaluator import evaluate_itinerary  # type: ignore
-
-        max_iterations = 10
-        improvement_threshold = 1e-7
-        config = {
-            "swap_limit": 8,
-            "poi_candidates": 4,
-            "insert_limit": 12,
-        }
-
-        best_plan = [self._clone_day(day) for day in initial_plan]
-        best_eval = evaluate_itinerary(
-            best_plan,
-            start_city=scenario.start_city,
-            end_city=scenario.end_city,
-            interests=scenario.preferences,
-            mtu=scenario.mtu_per_day,
-            season=scenario.season,
-        )
-        if best_eval.hard_violations:
-            return best_plan
-
-        iterations = 0
-        while iterations < max_iterations:
-            iterations += 1
-            improved = False
-            best_neighbor_plan: Optional[List[DayPlan]] = None
-            best_neighbor_score = best_eval.total
-
-            for candidate in self._generate_neighbors(best_plan, scenario, config):
-                self._renumber_days(candidate)
-                evaluation = evaluate_itinerary(
-                    candidate,
-                    start_city=scenario.start_city,
-                    end_city=scenario.end_city,
-                    interests=scenario.preferences,
-                    mtu=scenario.mtu_per_day,
-                    season=scenario.season,
-                )
-                if evaluation.hard_violations:
-                    continue
-                if evaluation.total > best_neighbor_score + improvement_threshold:
-                    best_neighbor_score = evaluation.total
-                    best_neighbor_plan = candidate
-                    best_eval = evaluation
-                    improved = True
-
-            if not improved or best_neighbor_plan is None:
-                break
-
-            best_plan = best_neighbor_plan
-
-        return best_plan
-
-    def _generate_neighbors(
-        self,
-        plan: List[DayPlan],
-        scenario: _ScenarioContext,
-        config: Mapping[str, int],
-    ) -> Iterable[List[DayPlan]]:
-        yield from self._swap_city_blocks(plan, scenario, config.get("swap_limit", 0))
-        yield from self._substitute_pois(plan, scenario, config.get("poi_candidates", 0))
-        yield from self._insert_new_city(plan, scenario, config.get("insert_limit", 0))
-
-    def _swap_city_blocks(
-        self,
-        plan: List[DayPlan],
-        scenario: _ScenarioContext,
-        swap_limit: int,
-    ) -> Iterable[List[DayPlan]]:
-        if swap_limit <= 0:
-            return
-        blocks = self._city_blocks(plan)
-        interior_blocks = [block for block in blocks if block[0] != 0 and block[2] != len(plan) - 1]
-        if len(interior_blocks) < 2:
-            return
-
-        proposals: List[Tuple[int, int]] = []
-        for i in range(len(interior_blocks)):
-            for j in range(i + 1, len(interior_blocks)):
-                proposals.append((interior_blocks[i][0], interior_blocks[j][0]))
-                if len(proposals) >= swap_limit:
-                    break
-            if len(proposals) >= swap_limit:
-                break
-
-        for start_i, start_j in proposals:
-            block_i = next(block for block in blocks if block[0] == start_i)
-            block_j = next(block for block in blocks if block[0] == start_j)
-            new_plan = [self._clone_day(day) for day in plan]
-            new_plan[block_i[0] : block_i[2] + 1], new_plan[block_j[0] : block_j[2] + 1] = (
-                new_plan[block_j[0] : block_j[2] + 1],
-                new_plan[block_i[0] : block_i[2] + 1],
-            )
-            self._recompute_travel(new_plan)
-            if not self._is_valid_sequence(new_plan, scenario):
-                continue
-            yield new_plan
-
-    def _substitute_pois(
-        self,
-        plan: List[DayPlan],
-        scenario: _ScenarioContext,
-        poi_candidates: int,
-    ) -> Iterable[List[DayPlan]]:
-        if poi_candidates <= 0:
-            return
-
-        all_pois_map = {
-            city: list(self._datastore.pois_for_city(city, season=scenario.season))
-            for city in self._datastore.cities()
-        }
-
-        counts = self._label_counts(plan)
-        total_pois = sum(counts.values())
-        targets = scenario.preferences
-
-        excess_labels = {
-            label
-            for label, observed in counts.items()
-            if total_pois > 0 and observed / total_pois > targets.get(label, 0.0)
-        }
-        deficit_labels = {
-            label
-            for label, observed in counts.items()
-            if total_pois == 0 or observed / total_pois < targets.get(label, 0.0)
-        }
-
-        attempts = 0
-        used_ids = {poi.identifier for day in plan for poi in day.pois}
-
-        for idx, day in enumerate(plan):
-            if attempts >= poi_candidates:
-                break
-            candidates = [
-                poi
-                for poi in all_pois_map.get(day.poi_city, [])
-                if poi.identifier not in used_ids and _primary_label(poi) in deficit_labels
-            ]
-            if not candidates:
-                continue
-
-            removable = None
-            for poi in day.pois:
-                if _primary_label(poi) in excess_labels:
-                    removable = poi
-                    break
-            if removable is None and day.pois:
-                removable = day.pois[-1]
-            if removable is None:
-                continue
-
-            removable_tu = _activity_time_units(removable)
-            remaining_tu = scenario.mtu_per_day - self._travel_time_units(day.travel_minutes) + removable_tu
-
-            for candidate in candidates:
-                candidate_tu = _activity_time_units(candidate)
-                if candidate_tu > remaining_tu:
-                    continue
-                new_plan = [self._clone_day(d) for d in plan]
-                new_pois = [p for p in new_plan[idx].pois if p.identifier != removable.identifier]
-                new_pois.append(candidate)
-                new_plan[idx].pois = new_pois
-                if not self._is_valid_day(new_plan[idx], scenario.mtu_per_day):
-                    continue
-                if not self._is_valid_sequence(new_plan, scenario):
-                    continue
-                attempts += 1
-                yield new_plan
-                break
-
-    def _insert_new_city(
-        self,
-        plan: List[DayPlan],
-        scenario: _ScenarioContext,
-        insert_limit: int,
-    ) -> Iterable[List[DayPlan]]:
-        if insert_limit <= 0:
-            return
-
-        existing_cities = {day.distance_city for day in plan}
-        candidate_cities = [
-            city for city in self._graph.keys() if city not in existing_cities and city != scenario.end_distance
-        ]
-        if not candidate_cities:
-            return
-
-        generated = 0
-        max_minutes = scenario.mtu_per_day * 60
-
-        for idx in range(1, len(plan) - 1):
-            if generated >= insert_limit:
-                break
-            current_city = plan[idx].distance_city
-            if current_city in {scenario.start_distance, scenario.end_distance}:
-                continue
-            prev_city = plan[idx - 1].distance_city
-            next_city = plan[idx + 1].distance_city
-
-            original_ids = {poi.identifier for poi in plan[idx].pois}
-            used_ids = {poi.identifier for day in plan for poi in day.pois if day.distance_city != current_city}
-
-            for candidate_city in candidate_cities:
-                if generated >= insert_limit:
-                    break
-                if candidate_city == scenario.end_distance and (idx + 1) < scenario.earliest_arrival_day - 1:
-                    continue
-
-                payload_prev = self._graph.get(prev_city, {}).get(candidate_city)
-                payload_next = self._graph.get(candidate_city, {}).get(next_city)
-                if not payload_prev or not payload_next:
-                    continue
-                travel_prev = float(payload_prev.get("duration_minutes", math.inf))
-                travel_next = float(payload_next.get("duration_minutes", math.inf))
-                if any(math.isinf(t) or t > max_minutes for t in (travel_prev, travel_next)):
-                    continue
-
-                new_day = self._build_day(candidate_city, prev_city, travel_prev, scenario, used_ids)
-                if new_day is None:
-                    continue
-
-                new_plan = [self._clone_day(day) for day in plan]
-                new_plan[idx] = new_day
-                self._recompute_travel(new_plan)
-                if not self._is_valid_sequence(new_plan, scenario):
-                    continue
-                generated += 1
-                yield new_plan
-
-    def _build_day(
-        self,
-        distance_city: str,
-        prev_distance_city: str,
-        travel_minutes: float,
-        scenario: _ScenarioContext,
-        used_ids: set[str],
-    ) -> Optional[DayPlan]:
-        poi_city = self._distance_to_poi.get(distance_city)
-        if not poi_city:
-            return None
-
-        candidates = [
-            poi
-            for poi in self._datastore.pois_for_city(poi_city, season=scenario.season)
-            if poi.identifier not in used_ids
-        ]
-
-        travel_tu = self._travel_time_units(travel_minutes)
-        if travel_tu > scenario.mtu_per_day:
-            return None
-
-        selected: List[POI] = []
-        if candidates:
-            selected = select_pois_for_day(
-                candidates,
-                scenario.preferences,
-                travel_tu=travel_tu,
-                season=scenario.season,
-            )
-            total_tu = travel_tu + sum(_activity_time_units(p) for p in selected)
-            while selected and total_tu > scenario.mtu_per_day:
-                selected.pop()
-                total_tu = travel_tu + sum(_activity_time_units(p) for p in selected)
-            if total_tu > scenario.mtu_per_day:
-                return None
-
-        return DayPlan(
-            day=0,
-            distance_city=distance_city,
-            poi_city=poi_city,
-            display_city=self._display_name(distance_city),
-            travel_from=self._display_name(prev_distance_city),
-            travel_minutes=travel_minutes,
-            pois=selected,
-            note=None,
-        )
-
-    def _recompute_travel(self, plan: List[DayPlan]) -> None:
-        for idx, day in enumerate(plan):
-            if idx == 0:
-                day.travel_from = None
-                day.travel_minutes = 0.0
-                continue
-            prev_city = plan[idx - 1].distance_city
-            current_city = day.distance_city
-            payload = self._graph.get(prev_city, {}).get(current_city)
-            day.travel_from = self._display_name(prev_city)
-            day.travel_minutes = float(payload.get("duration_minutes", math.inf)) if payload else math.inf
-
-    @staticmethod
-    def _city_blocks(plan: Sequence[DayPlan]) -> List[Tuple[int, str, int]]:
-        blocks: List[Tuple[int, str, int]] = []
-        start = 0
-        current_city = plan[0].distance_city
-        for idx in range(1, len(plan)):
-            if plan[idx].distance_city != current_city:
-                blocks.append((start, current_city, idx - 1))
-                start = idx
-                current_city = plan[idx].distance_city
-        blocks.append((start, current_city, len(plan) - 1))
-        return blocks
-
-    @staticmethod
-    def _label_counts(plan: Sequence[DayPlan]) -> Dict[str, int]:
-        counts = {label: 0 for label in CATEGORIES}
-        for day in plan:
-            for poi in day.pois:
-                label = _primary_label(poi)
-                if label in counts:
-                    counts[label] += 1
-        return counts
-
-    @staticmethod
-    def _is_valid_sequence(plan: List[DayPlan], scenario: _ScenarioContext) -> bool:
-        if len(plan) != scenario.num_days:
-            return False
-        if plan[0].distance_city != scenario.start_distance:
-            return False
-        if plan[-1].distance_city != scenario.end_distance:
-            return False
-        earliest = scenario.earliest_arrival_day
-        first_end = next((idx for idx, day in enumerate(plan) if day.distance_city == scenario.end_distance), len(plan) - 1)
-        if first_end + 1 < earliest:
-            return False
-        max_minutes = scenario.mtu_per_day * 60
-        prev_city = plan[0].distance_city
-        seen: Dict[str, bool] = {prev_city: True}
-        for idx in range(1, len(plan)):
-            city = plan[idx].distance_city
-            if city != prev_city and city in seen and city != scenario.end_distance:
-                return False
-            seen[city] = True
-            prev_city = city
-            minutes = plan[idx].travel_minutes
-            if not math.isfinite(minutes) or minutes > max_minutes:
-                return False
-        return True
-
-    def _is_valid_day(self, day: DayPlan, mtu: int) -> bool:
-        travel_tu = self._travel_time_units(day.travel_minutes)
-        activity_tu = sum(_activity_time_units(p) for p in day.pois)
-        return travel_tu + activity_tu <= mtu
-
-    @staticmethod
-    def _renumber_days(plan: List[DayPlan]) -> None:
-        for idx, day in enumerate(plan, start=1):
-            day.day = idx
-
-    @staticmethod
-    def _clone_day(day: DayPlan) -> DayPlan:
-        return deepcopy(day)
 
     def _min_days_to_reach(self, origin: str, destination: str, mtu_per_day: int) -> int:
         if origin == destination:

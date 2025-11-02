@@ -224,7 +224,7 @@ def evaluate_itinerary(
             unique_cities.append(dp.distance_city)
             seen.add(dp.distance_city)
     U = len(unique_cities)
-    target_cities = 1 + min(days, 8)
+    target_cities = 1 + math.ceil(days * 0.6)
     denom = max(1, target_cities - 1)
     s_city = (max(0, U - 1)) / denom
     s_city = min(1.0, s_city)
@@ -282,4 +282,3 @@ __all__ = [
     "ScoreBreakdown",
     "evaluate_itinerary",
 ]
-

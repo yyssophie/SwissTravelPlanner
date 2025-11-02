@@ -3,8 +3,6 @@ Simple command-line launcher for testing the POI selection logic.
 """
 
 from __future__ import annotations
-
-import random
 import sys
 from pathlib import Path
 from typing import Dict
@@ -137,7 +135,6 @@ def main() -> None:
     season = prompt_season(datastore)
     mtu = prompt_mtu()
 
-    rng = random.Random()
     try:
         itinerary = planner.plan_route(
             start_city=start_city,
@@ -145,7 +142,7 @@ def main() -> None:
             num_days=num_days,
             preference_weights=preferences,
             season=season,
-            rng=rng,
+            mtu_per_day=mtu,
         )
     except ValueError as exc:
         print(f"Could not build itinerary: {exc}", file=sys.stderr)

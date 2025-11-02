@@ -1,0 +1,155 @@
+[
+  {
+    "name": "loop_short_zurich_summer",
+    "start_city": "Zurich",
+    "end_city": "Zurich",
+    "num_days": 5,
+    "season": "summer",
+    "mtu_per_day": 8,
+    "preferences": {"nature": 0.4, "culture": 0.3, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "oneway_short_bern_geneva",
+    "start_city": "Bern",
+    "end_city": "Geneva",
+    "num_days": 4,
+    "season": "autumn",
+    "mtu_per_day": 7,
+    "preferences": {"nature": 0.3, "culture": 0.4, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "alps_medium_bern_zermatt",
+    "start_city": "Bern",
+    "end_city": "Zermatt",
+    "num_days": 10,
+    "season": "summer",
+    "mtu_per_day": 8,
+    "preferences": {"nature": 0.5, "culture": 0.2, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "grand_tour_geneva_lugano",
+    "start_city": "Geneva",
+    "end_city": "Lugano",
+    "num_days": 12,
+    "season": "spring",
+    "mtu_per_day": 9,
+    "preferences": {"nature": 0.35, "culture": 0.35, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "winter_loop_zurich",
+    "start_city": "Zurich",
+    "end_city": "Zurich",
+    "num_days": 7,
+    "season": "winter",
+    "mtu_per_day": 6,
+    "preferences": {"nature": 0.25, "culture": 0.35, "food": 0.25, "sport": 0.15}
+  },
+  {
+    "name": "fifteen_day_south_to_north",
+    "start_city": "Lugano",
+    "end_city": "Zurich",
+    "num_days": 15,
+    "season": "autumn",
+    "mtu_per_day": 8,
+    "preferences": {"nature": 0.3, "culture": 0.3, "food": 0.3, "sport": 0.1}
+  },
+  {
+    "name": "long_loop_21days",
+    "start_city": "Zurich",
+    "end_city": "Zurich",
+    "num_days": 21,
+    "season": "spring",
+    "mtu_per_day": 9,
+    "preferences": {"nature": 0.4, "culture": 0.3, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "lake_geneva_focus",
+    "start_city": "Lausanne",
+    "end_city": "Geneva",
+    "num_days": 7,
+    "season": "summer",
+    "mtu_per_day": 8,
+    "preferences": {"nature": 0.2, "culture": 0.4, "food": 0.3, "sport": 0.1}
+  },
+  {
+    "name": "alpine_grand_tour",
+    "start_city": "Lugano",
+    "end_city": "St. Moritz",
+    "num_days": 18,
+    "season": "summer",
+    "mtu_per_day": 8,
+    "preferences": {"nature": 0.5, "culture": 0.25, "food": 0.15, "sport": 0.1}
+  },
+  {
+    "name": "trans_switzerland",
+    "start_city": "Bern",
+    "end_city": "Lugano",
+    "num_days": 14,
+    "season": "autumn",
+    "mtu_per_day": 7,
+    "preferences": {"nature": 0.35, "culture": 0.35, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "short_nearby_loop",
+    "start_city": "Bern",
+    "end_city": "Bern",
+    "num_days": 7,
+    "season": "winter",
+    "mtu_per_day": 6,
+    "preferences": {"nature": 0.3, "culture": 0.4, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "glacier_express_chain",
+    "start_city": "Zurich",
+    "end_city": "Zermatt",
+    "num_days": 21,
+    "season": "summer",
+    "mtu_per_day": 8,
+    "preferences": {"nature": 0.45, "culture": 0.25, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "eastern_alps_loop",
+    "start_city": "St. Moritz",
+    "end_city": "St. Moritz",
+    "num_days": 18,
+    "season": "winter",
+    "mtu_per_day": 7,
+    "preferences": {"nature": 0.5, "culture": 0.2, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "southern_panorama",
+    "start_city": "Lugano",
+    "end_city": "St. Moritz",
+    "num_days": 16,
+    "season": "spring",
+    "mtu_per_day": 9,
+    "preferences": {"nature": 0.4, "culture": 0.3, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "central_heritage_tour",
+    "start_city": "Bern",
+    "end_city": "St. Moritz",
+    "num_days": 19,
+    "season": "autumn",
+    "mtu_per_day": 8,
+    "preferences": {"nature": 0.35, "culture": 0.35, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "lake_and_mountain_escape",
+    "start_city": "Geneva",
+    "end_city": "Lucerne",
+    "num_days": 17,
+    "season": "summer",
+    "mtu_per_day": 8,
+    "preferences": {"nature": 0.4, "culture": 0.3, "food": 0.2, "sport": 0.1}
+  },
+  {
+    "name": "northern_highland_route",
+    "start_city": "Zurich",
+    "end_city": "St. Moritz",
+    "num_days": 15,
+    "season": "winter",
+    "mtu_per_day": 7,
+    "preferences": {"nature": 0.45, "culture": 0.3, "food": 0.15, "sport": 0.1}
+  }
+]
