@@ -106,6 +106,8 @@ const PlannerPage = () => {
   const [days, setDays] = useState<number>(7);
   const [daysText, setDaysText] = useState<string>("7");
   const [season, setSeason] = useState("summer");
+  const [maxHours, setMaxHours] = useState<number>(8);
+  const [maxHoursText, setMaxHoursText] = useState<string>("8");
   const [rankOrder, setRankOrder] = useState<InterestKey[]>(DEFAULT_ORDER);
   const [interests, setInterests] = useState<Interests>({ ...DEFAULT_INTERESTS });
   const [balancedMode, setBalancedMode] = useState<boolean>(false);
@@ -136,6 +138,7 @@ const PlannerPage = () => {
         season?: string;
         interests?: Interests;
         rankOrder?: InterestKey[];
+        maxHours?: number;
       };
       if (data.from) setFrom(data.from);
       if (data.to) setTo(data.to);
@@ -144,6 +147,10 @@ const PlannerPage = () => {
         setDaysText(String(data.days));
       }
       if (data.season) setSeason(data.season);
+      if (data.maxHours) {
+        setMaxHours(data.maxHours);
+        setMaxHoursText(String(data.maxHours));
+      }
       if (data.interests) {
         setInterests(data.interests);
         const storedOrder =
@@ -374,6 +381,14 @@ const PlannerPage = () => {
       setSubmitError("Interest weights must total 100% before planning.");
       return;
     }
+    const parsedHours = Number(maxHoursText.trim());
+    if (!Number.isInteger(parsedHours) || parsedHours < 4 || parsedHours > 10) {
+      setSubmitError("Maximum hours per day must be an integer between 4 and 10.");
+      return;
+    }
+    if (parsedHours !== maxHours) {
+      setMaxHours(parsedHours);
+    }
 
     setSubmitError(null);
     setIsSubmitting(true);
@@ -391,6 +406,7 @@ const PlannerPage = () => {
       days,
       season,
       preferences: weights,
+      maxHoursPerDay: parsedHours,
     };
 
     try {
@@ -411,7 +427,7 @@ const PlannerPage = () => {
       // persist current inputs for Adjust Preferences
       sessionStorage.setItem(
         PLANNER_INPUTS_KEY,
-        JSON.stringify({ from, to, days, season, interests, rankOrder })
+        JSON.stringify({ from, to, days, season, interests, rankOrder, maxHours: parsedHours })
       );
       navigate("/planner/itinerary", { state: data });
     } catch (error) {
@@ -479,6 +495,35 @@ const PlannerPage = () => {
             <option value="autumn">Autumn</option>
             <option value="winter">Winter</option>
           </select>
+        </div>
+
+        <div className="row">
+          <label>Maximum hours for travel and activities each day</label>
+          <input
+            type="text"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            value={maxHoursText}
+            onChange={(e) => {
+              setMaxHoursText(e.target.value);
+              const trimmed = e.target.value.trim();
+              if (!trimmed) return;
+              const next = Number(trimmed);
+              if (Number.isInteger(next)) {
+                setMaxHours(next);
+              }
+            }}
+            onBlur={(e) => {
+              const trimmed = e.target.value.trim();
+              const next = Number(trimmed);
+              if (!Number.isInteger(next) || next < 4 || next > 10) {
+                setMaxHoursText(String(maxHours));
+              } else {
+                setMaxHours(next);
+                setMaxHoursText(String(next));
+              }
+            }}
+          />
         </div>
 
         <div className="row row--interests">

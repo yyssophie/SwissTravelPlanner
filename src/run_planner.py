@@ -3,8 +3,6 @@ Simple command-line launcher for testing the POI selection logic.
 """
 
 from __future__ import annotations
-
-import random
 import sys
 from pathlib import Path
 from typing import Dict
@@ -15,9 +13,11 @@ if __package__ is None or __package__ == "":
     sys.path.append(str(CURRENT_DIR.parent))
     from data_store import CATEGORIES, TravelDataStore  # type: ignore
     from route_planner import DayPlan, RoutePlanner  # type: ignore
+    from evaluator import evaluate_itinerary  # type: ignore
 else:
     from .data_store import CATEGORIES, TravelDataStore
     from .route_planner import DayPlan, RoutePlanner
+    from .evaluator import evaluate_itinerary
 
 
 def prompt_preferences() -> Dict[str, float]:
@@ -85,6 +85,20 @@ def prompt_days() -> int:
         return value
 
 
+def prompt_mtu() -> int:
+    while True:
+        raw = input("Maximum time units per day (4–10 hours): ").strip()
+        try:
+            mtu = int(raw)
+        except ValueError:
+            print("Please enter an integer between 4 and 10.", file=sys.stderr)
+            continue
+        if mtu < 4 or mtu > 10:
+            print("MTU must be between 4 and 10.", file=sys.stderr)
+            continue
+        return mtu
+
+
 def print_itinerary(itinerary: list[DayPlan]) -> None:
     print("\nSuggested itinerary:")
     for day in itinerary:
@@ -119,8 +133,8 @@ def main() -> None:
     num_days = prompt_days()
     preferences = prompt_preferences()
     season = prompt_season(datastore)
+    mtu = prompt_mtu()
 
-    rng = random.Random()
     try:
         itinerary = planner.plan_route(
             start_city=start_city,
@@ -128,13 +142,32 @@ def main() -> None:
             num_days=num_days,
             preference_weights=preferences,
             season=season,
-            rng=rng,
+            mtu_per_day=mtu,
         )
     except ValueError as exc:
         print(f"Could not build itinerary: {exc}", file=sys.stderr)
         sys.exit(1)
 
     print_itinerary(itinerary)
+
+    # Evaluate itinerary according to the scoring rules
+    score = evaluate_itinerary(
+        day_plans=itinerary,
+        start_city=start_city,
+        end_city=end_city,
+        interests=preferences,
+        mtu=mtu,
+        season=season,
+    )
+
+    print("\nEvaluation Results")
+    print(f"Total score: {score.total:.2f}/100")
+    for name, value in score.components.items():
+        print(f"  {name}: {value:.3f}")
+    if score.hard_violations:
+        print("Hard constraint violations detected:")
+        for issue in score.hard_violations:
+            print(f"  - {issue}")
 
 
 if __name__ == "__main__":

@@ -1,32 +1,36 @@
-"""
-Route planning logic for multi-day travel itineraries.
-"""
+"""Greedy route planner tuned for the new itinerary score system."""
 
 from __future__ import annotations
 
 import json
 import os
 import math
-import random
 import unicodedata
+from copy import deepcopy
 from dataclasses import dataclass
 from heapq import heappop, heappush
 from pathlib import Path
 from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
-if __package__ is None or __package__ == "":
+if __package__ is None or __package__ == "":  # pragma: no cover
     import sys
 
     CURRENT_DIR = Path(__file__).resolve().parent
     sys.path.append(str(CURRENT_DIR.parent))
     from data_store import CATEGORIES, POI, TravelDataStore  # type: ignore
-    from poi_selection import has_preferred_pois, select_pois_for_day  # type: ignore
+    from poi_selection import (  # type: ignore
+        _activity_time_units,
+        _is_in_season,
+        _primary_label,
+        select_pois_for_day,
+    )
 else:  # pragma: no cover
     from .data_store import CATEGORIES, POI, TravelDataStore
-    from .poi_selection import has_preferred_pois, select_pois_for_day
+    from .poi_selection import _activity_time_units, _is_in_season, _primary_label, select_pois_for_day
 
-DAILY_TRAVEL_LIMIT_MINUTES = 240.0
-LONG_TRAVEL_THRESHOLD_MINUTES = 180.0
+
+
+LONG_TRAVEL_COMFORT_MINUTES = 120.0
 
 CITY_DISTANCE_TO_POI = {
     "Appenzell, Switzerland": "appenzell",
@@ -80,8 +84,21 @@ class DayPlan:
     note: Optional[str] = None
 
 
+@dataclass
+class _ScenarioContext:
+    start_city: str
+    end_city: str
+    start_distance: str
+    end_distance: str
+    num_days: int
+    season: Optional[str]
+    mtu_per_day: int
+    preferences: Mapping[str, float]
+    earliest_arrival_day: int
+
+
 class RoutePlanner:
-    """Plan multi-day routes while respecting travel limits and encouraging exploration."""
+    """Greedy planner aligned with the new evaluation metrics."""
 
     def __init__(
         self,
@@ -96,8 +113,9 @@ class RoutePlanner:
             poi_city: distance_city for distance_city, poi_city in self._distance_to_poi.items()
         }
         self._alias_to_distance = self._build_aliases()
-        self._shortest_km = self._compute_shortest_paths(weight_key="distance_km")
-        self._shortest_minutes = self._compute_shortest_paths(weight_key="duration_minutes")
+        self._shortest_minutes = self._compute_shortest_paths()
+
+    # ------------------------------------------------------------------ public API
 
     def plan_route(
         self,
@@ -106,21 +124,21 @@ class RoutePlanner:
         num_days: int,
         preference_weights: Mapping[str, float],
         season: Optional[str],
-        rng: Optional[random.Random] = None,
+        mtu_per_day: int = 8,
     ) -> List[DayPlan]:
-        if num_days <= 0:
-            raise ValueError("Number of travel days must be positive.")
+        if num_days < 3:
+            raise ValueError("Number of travel days must be at least three.")
+        if mtu_per_day < 4 or mtu_per_day > 10:
+            raise ValueError("Maximum hours per day must be between 4 and 10.")
 
-        rng = rng or random.Random()
         start_distance, start_poi_city, start_display = self._resolve_city(start_city)
         end_distance, end_poi_city, end_display = self._resolve_city(end_city)
         same_start_end = start_distance == end_distance
 
-        if math.isinf(self._shortest_km[start_distance].get(end_distance, math.inf)):
+        if math.isinf(self._shortest_minutes[start_distance].get(end_distance, math.inf)):
             raise ValueError(f"No travel path between {start_display} and {end_display}.")
 
-        if start_distance != end_distance and num_days < 2:
-            raise ValueError("At least two days are required to travel between different cities.")
+        target_distribution = self._normalise_preferences(preference_weights)
 
         min_days_to_end = {
             city: (
@@ -149,32 +167,38 @@ class RoutePlanner:
         if min_days_to_end[start_distance] > max(0, num_days - required_end_stay_days):
             raise ValueError("Not enough days to reach the destination under the travel limit.")
 
-        distance_to_end = {
-            city: self._shortest_km[city].get(end_distance, math.inf) for city in self._distance_cities
-        }
+        available_pois: Dict[str, List[POI]] = {}
+        for poi_city in self._distance_to_poi.values():
+            all_pois = list(self._datastore.pois_for_city(poi_city, season))
+            filtered = [poi for poi in all_pois if season is None or _is_in_season(poi, season)]
+            available_pois[poi_city] = filtered
 
-        available_pois = {
-            poi_city: list(self._datastore.pois_for_city(poi_city, season))
-            for poi_city in self._distance_to_poi.values()
-        }
+        label_counts = {category: 0 for category in CATEGORIES}
+        total_pois = 0
+        interest_score = self._interest_score(label_counts, total_pois, target_distribution)
 
-        target_stay_days = 1 if num_days <= 10 else min(2, max(1, math.ceil(num_days / 10)))
+        visited_set = {start_distance}
+        unique_city_count = 1
+        city_score = self._city_efficiency(unique_city_count, num_days)
 
-        visit_counts: Dict[str, int] = {}
-        extra_stay_used = {city: False for city in self._distance_cities}
-        visited_cities = set()
+        coverage_sum = 0.0
+        coverage_count = 0
+        coverage_score = 0.0
 
-        current_distance_city = start_distance
-        current_poi_city = start_poi_city
-        previous_distance_city: Optional[str] = None
-        travel_from_distance: Optional[str] = None
-        travel_minutes_prev = 0.0
+        start_distances = self._shortest_minutes[start_distance]
+        max_distance = max(
+            (value for value in start_distances.values() if not math.isinf(value)),
+            default=1.0,
+        )
 
         day_plans: List[DayPlan] = []
+        current_city = start_distance
+
+        travel_streak = 0
+        stay_streak = 0
+        end_city_reached = False
 
         for day_index in range(1, num_days + 1):
-            visit_counts[current_distance_city] = visit_counts.get(current_distance_city, 0) + 1
-            visited_cities.add(current_distance_city)
             remaining_days = num_days - day_index
 
             travel_tu = _travel_time_units(travel_minutes_prev)
@@ -213,15 +237,33 @@ class RoutePlanner:
                 pois=pois,
             )
 
-            note_parts: List[str] = []
+            best_choice = None
+            best_score_gain = -math.inf
 
-            if day_index == num_days:
-                if current_distance_city != end_distance:
-                    raise ValueError("Itinerary did not reach the destination on the final day.")
-                note_parts.append("final day at destination")
-                day_plan.note = "; ".join(note_parts)
-                day_plans.append(day_plan)
-                break
+            for action in candidates:
+                simulation = self._simulate_day(
+                    action=action,
+                    day_index=day_index,
+                    mtu_per_day=mtu_per_day,
+                    target_distribution=target_distribution,
+                    label_counts=label_counts,
+                    total_pois=total_pois,
+                    interest_score=interest_score,
+                    city_score=city_score,
+                    coverage_sum=coverage_sum,
+                    coverage_count=coverage_count,
+                    coverage_score=coverage_score,
+                    unique_city_count=unique_city_count,
+                    available_pois=available_pois,
+                    start_distances=start_distances,
+                    max_distance=max_distance,
+                    num_days=num_days,
+                    start_city_key=start_distance,
+                    end_city=end_distance,
+                    remaining_days=remaining_days,
+                    travel_streak=travel_streak,
+                    stay_streak=stay_streak,
+                )
 
             should_stay = False
             if current_distance_city == end_distance:
@@ -370,10 +412,28 @@ class RoutePlanner:
                 current_distance_city = next_city
                 current_poi_city = self._distance_to_poi[current_distance_city]
 
-        return day_plans
+            # Enforce final-day arrival
+        if day_index == num_days and current_city != end_distance:
+            raise ValueError("Planner did not reach the destination on the final day.")
+
+        scenario = _ScenarioContext(
+            start_city=start_city,
+            end_city=end_city,
+            start_distance=start_distance,
+            end_distance=end_distance,
+            num_days=num_days,
+            season=season,
+            mtu_per_day=mtu_per_day,
+            preferences=target_distribution,
+            earliest_arrival_day=earliest_arrival_day,
+        )
+
+        optimised_plan = self._run_local_search(day_plans, scenario)
+        self._renumber_days(optimised_plan)
+        return optimised_plan
 
     def available_cities(self) -> List[str]:
-        return sorted({self._display_name(city) for city in self._distance_cities})
+        return sorted({self._display_name(distance_name) for distance_name in self._distance_to_poi.keys()})
 
     def is_known_city(self, name: str) -> bool:
         try:
@@ -386,12 +446,12 @@ class RoutePlanner:
         _, _, display = self._resolve_city(name)
         return display
 
-    # ------------------------------------------------------------------ helpers
+    # ------------------------------------------------------------------ core helpers
 
-    def _choose_next_city(
+    def _enumerate_candidates(
         self,
         current_city: str,
-        previous_city: Optional[str],
+        end_city: str,
         day_index: int,
         num_days: int,
         end_city: str,
@@ -413,20 +473,26 @@ class RoutePlanner:
         }
         visited_set = set(visited_cities)
 
+        # If we have reached the end city before the final day, remain there
+        if end_city_reached and current_city == end_city and day_index < num_days:
+            return candidates
+
+        # Option 2: move to a neighboring city (respecting unique-visit constraint)
         for dest, payload in self._graph[current_city].items():
             if dest == current_city:
                 continue
             duration = payload.get("duration_minutes")
-            if duration is None or duration > DAILY_TRAVEL_LIMIT_MINUTES:
+            if duration is None or math.isinf(duration):
                 continue
 
-            if dest in visited_set and dest != end_city:
+            if dest == end_city and day_index < earliest_arrival_day:
                 continue
 
-            dest_poi_city = self._distance_to_poi.get(dest)
-            if not dest_poi_city or not has_preferred_pois(
-                available_pois.get(dest_poi_city, []), preference_weights, season
-            ):
+            already_visited = dest in visited
+            allowed_revisit = False
+            if dest == end_city and day_index == num_days:
+                allowed_revisit = True
+            if already_visited and not allowed_revisit:
                 continue
 
             if dest == end_city:
@@ -444,35 +510,281 @@ class RoutePlanner:
                 moves_budget = remaining_days_after_move - max(0, required_end_stay_days - 1)
                 if moves_budget < min_days_to_end.get(dest, math.inf):
                     continue
+                if not self._is_valid_sequence(new_plan, scenario):
+                    continue
+                attempts += 1
+                yield new_plan
+                break
 
-            dist_to_end_value = distance_to_end.get(dest, math.inf)
-            if dest != end_city and math.isinf(dist_to_end_value):
+    def _insert_new_city(
+        self,
+        plan: List[DayPlan],
+        scenario: _ScenarioContext,
+        insert_limit: int,
+    ) -> Iterable[List[DayPlan]]:
+        if insert_limit <= 0:
+            return
+
+        existing_cities = {day.distance_city for day in plan}
+        candidate_cities = [
+            city for city in self._graph.keys() if city not in existing_cities and city != scenario.end_distance
+        ]
+        if not candidate_cities:
+            return
+
+        generated = 0
+        max_minutes = scenario.mtu_per_day * 60
+
+        for idx in range(1, len(plan) - 1):
+            if generated >= insert_limit:
+                break
+            current_city = plan[idx].distance_city
+            if current_city in {scenario.start_distance, scenario.end_distance}:
                 continue
+            prev_city = plan[idx - 1].distance_city
+            next_city = plan[idx + 1].distance_city
 
-            visits = visit_counts.get(dest, 0)
-            backtrack_penalty = 1 if previous_city and dest == previous_city else 0
-            if remaining_days_after_move > 3:
-                dist_component = -dist_to_end_value
-            else:
-                dist_component = dist_to_end_value
-            score = (visits, backtrack_penalty, dist_component, duration)
+            original_ids = {poi.identifier for poi in plan[idx].pois}
+            used_ids = {poi.identifier for day in plan for poi in day.pois if day.distance_city != current_city}
 
-            for threshold in thresholds:
-                if duration <= threshold:
-                    buckets[threshold].append((score, dest, duration))
+            for candidate_city in candidate_cities:
+                if generated >= insert_limit:
                     break
+                if candidate_city == scenario.end_distance and (idx + 1) < scenario.earliest_arrival_day - 1:
+                    continue
 
-        for threshold in thresholds:
-            bucket = buckets[threshold]
-            if not bucket:
+                payload_prev = self._graph.get(prev_city, {}).get(candidate_city)
+                payload_next = self._graph.get(candidate_city, {}).get(next_city)
+                if not payload_prev or not payload_next:
+                    continue
+                travel_prev = float(payload_prev.get("duration_minutes", math.inf))
+                travel_next = float(payload_next.get("duration_minutes", math.inf))
+                if any(math.isinf(t) or t > max_minutes for t in (travel_prev, travel_next)):
+                    continue
+
+                new_day = self._build_day(candidate_city, prev_city, travel_prev, scenario, used_ids)
+                if new_day is None:
+                    continue
+
+                new_plan = [self._clone_day(day) for day in plan]
+                new_plan[idx] = new_day
+                self._recompute_travel(new_plan)
+                if not self._is_valid_sequence(new_plan, scenario):
+                    continue
+                generated += 1
+                yield new_plan
+
+    def _build_day(
+        self,
+        distance_city: str,
+        prev_distance_city: str,
+        travel_minutes: float,
+        scenario: _ScenarioContext,
+        used_ids: set[str],
+    ) -> Optional[DayPlan]:
+        poi_city = self._distance_to_poi.get(distance_city)
+        if not poi_city:
+            return None
+
+        candidates = [
+            poi
+            for poi in self._datastore.pois_for_city(poi_city, season=scenario.season)
+            if poi.identifier not in used_ids
+        ]
+
+        travel_tu = self._travel_time_units(travel_minutes)
+        if travel_tu > scenario.mtu_per_day:
+            return None
+
+        selected: List[POI] = []
+        if candidates:
+            selected = select_pois_for_day(
+                candidates,
+                scenario.preferences,
+                travel_tu=travel_tu,
+                season=scenario.season,
+            )
+            total_tu = travel_tu + sum(_activity_time_units(p) for p in selected)
+            while selected and total_tu > scenario.mtu_per_day:
+                selected.pop()
+                total_tu = travel_tu + sum(_activity_time_units(p) for p in selected)
+            if total_tu > scenario.mtu_per_day:
+                return None
+
+        return DayPlan(
+            day=0,
+            distance_city=distance_city,
+            poi_city=poi_city,
+            display_city=self._display_name(distance_city),
+            travel_from=self._display_name(prev_distance_city),
+            travel_minutes=travel_minutes,
+            pois=selected,
+            note=None,
+        )
+
+    def _recompute_travel(self, plan: List[DayPlan]) -> None:
+        for idx, day in enumerate(plan):
+            if idx == 0:
+                day.travel_from = None
+                day.travel_minutes = 0.0
                 continue
-            bucket.sort()
-            best_score = bucket[0][0]
-            best = [candidate for candidate in bucket if candidate[0] == best_score]
-            chosen_score, chosen_dest, chosen_duration = rng.choice(best)
-            return chosen_dest, chosen_duration
+            prev_city = plan[idx - 1].distance_city
+            current_city = day.distance_city
+            payload = self._graph.get(prev_city, {}).get(current_city)
+            day.travel_from = self._display_name(prev_city)
+            day.travel_minutes = float(payload.get("duration_minutes", math.inf)) if payload else math.inf
 
-        return None
+    @staticmethod
+    def _city_blocks(plan: Sequence[DayPlan]) -> List[Tuple[int, str, int]]:
+        blocks: List[Tuple[int, str, int]] = []
+        start = 0
+        current_city = plan[0].distance_city
+        for idx in range(1, len(plan)):
+            if plan[idx].distance_city != current_city:
+                blocks.append((start, current_city, idx - 1))
+                start = idx
+                current_city = plan[idx].distance_city
+        blocks.append((start, current_city, len(plan) - 1))
+        return blocks
+
+    @staticmethod
+    def _label_counts(plan: Sequence[DayPlan]) -> Dict[str, int]:
+        counts = {label: 0 for label in CATEGORIES}
+        for day in plan:
+            for poi in day.pois:
+                label = _primary_label(poi)
+                if label in counts:
+                    counts[label] += 1
+        return counts
+
+    @staticmethod
+    def _is_valid_sequence(plan: List[DayPlan], scenario: _ScenarioContext) -> bool:
+        if len(plan) != scenario.num_days:
+            return False
+        if plan[0].distance_city != scenario.start_distance:
+            return False
+        if plan[-1].distance_city != scenario.end_distance:
+            return False
+        earliest = scenario.earliest_arrival_day
+        first_end = next((idx for idx, day in enumerate(plan) if day.distance_city == scenario.end_distance), len(plan) - 1)
+        if first_end + 1 < earliest:
+            return False
+        max_minutes = scenario.mtu_per_day * 60
+        prev_city = plan[0].distance_city
+        seen: Dict[str, bool] = {prev_city: True}
+        for idx in range(1, len(plan)):
+            city = plan[idx].distance_city
+            if city != prev_city and city in seen and city != scenario.end_distance:
+                return False
+            seen[city] = True
+            prev_city = city
+            minutes = plan[idx].travel_minutes
+            if not math.isfinite(minutes) or minutes > max_minutes:
+                return False
+        return True
+
+    def _is_valid_day(self, day: DayPlan, mtu: int) -> bool:
+        travel_tu = self._travel_time_units(day.travel_minutes)
+        activity_tu = sum(_activity_time_units(p) for p in day.pois)
+        return travel_tu + activity_tu <= mtu
+
+    @staticmethod
+    def _renumber_days(plan: List[DayPlan]) -> None:
+        for idx, day in enumerate(plan, start=1):
+            day.day = idx
+
+    @staticmethod
+    def _clone_day(day: DayPlan) -> DayPlan:
+        return deepcopy(day)
+
+    def _min_days_to_reach(self, origin: str, destination: str, mtu_per_day: int) -> int:
+        if origin == destination:
+            return 0
+        minutes = self._shortest_minutes.get(origin, {}).get(destination, math.inf)
+        if math.isinf(minutes):
+            return math.inf
+        mtu_minutes = max(1, mtu_per_day * 60)
+        return math.ceil(minutes / mtu_minutes)
+
+    # ------------------------------------------------------------------ selection logic
+
+    def _select_daily_pois(
+        self,
+        candidate_pois: Sequence[POI],
+        travel_tu: int,
+        mtu_per_day: int,
+        initial_counts: Mapping[str, int],
+        initial_total: int,
+        target_distribution: Mapping[str, float],
+    ) -> Optional["SelectionResult"]:
+        remaining_tu = mtu_per_day - travel_tu
+        if remaining_tu < 0:
+            return None
+
+        counts = {category: int(initial_counts.get(category, 0)) for category in CATEGORIES}
+        total_pois = int(initial_total)
+        selected: List[POI] = []
+        used_indices: set[int] = set()
+
+        current_interest = self._interest_score(counts, total_pois, target_distribution)
+        current_activity_tu = 0
+
+        while remaining_tu > 0:
+            best_index = None
+            best_gain = 0.0
+            best_interest = current_interest
+            best_activity_tu = current_activity_tu
+
+            for index, poi in enumerate(candidate_pois):
+                if index in used_indices:
+                    continue
+                activity_tu = _activity_time_units(poi)
+                if activity_tu <= 0 or activity_tu > remaining_tu:
+                    continue
+
+                label = _primary_label(poi)
+                new_counts = counts.copy()
+                if label in new_counts:
+                    new_counts[label] += 1
+                new_total = total_pois + 1
+                new_interest = self._interest_score(new_counts, new_total, target_distribution)
+                interest_gain = new_interest - current_interest
+
+                new_activity_tu = current_activity_tu + activity_tu
+                tu_gain = self._tu_score(travel_tu + new_activity_tu, mtu_per_day) - self._tu_score(
+                    travel_tu + current_activity_tu, mtu_per_day
+                )
+
+                incremental = 0.35 * interest_gain + 0.20 * max(tu_gain, 0.0)
+                if incremental > best_gain:
+                    best_gain = incremental
+                    best_index = index
+                    best_interest = new_interest
+                    best_activity_tu = new_activity_tu
+
+            if best_index is None or best_gain <= 0.0:
+                break
+
+            chosen = candidate_pois[best_index]
+            selected.append(chosen)
+            used_indices.add(best_index)
+
+            label = _primary_label(chosen)
+            if label in counts:
+                counts[label] += 1
+            total_pois += 1
+            current_interest = best_interest
+            current_activity_tu = best_activity_tu
+            remaining_tu = mtu_per_day - travel_tu - current_activity_tu
+
+        return SelectionResult(
+            selected=selected,
+            counts=counts,
+            total_pois=total_pois,
+            activity_tu=current_activity_tu,
+        )
+
+    # ------------------------------------------------------------------ distance helpers
 
     def _load_distance_graph(self, path: Path) -> Dict[str, Dict[str, Dict[str, float]]]:
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -486,23 +798,22 @@ class RoutePlanner:
                 }
         return graph
 
-    def _compute_shortest_paths(self, weight_key: str) -> Dict[str, Dict[str, float]]:
+    def _compute_shortest_paths(self) -> Dict[str, Dict[str, float]]:
         result: Dict[str, Dict[str, float]] = {}
-        for origin in self._distance_cities:
-            result[origin] = self._dijkstra(origin, weight_key)
+        for origin in self._distance_to_poi.keys():
+            result[origin] = self._dijkstra(origin)
         return result
 
-    def _dijkstra(self, origin: str, weight_key: str) -> Dict[str, float]:
-        distances = {city: math.inf for city in self._distance_cities}
+    def _dijkstra(self, origin: str) -> Dict[str, float]:
+        distances = {city: math.inf for city in self._graph.keys()}
         distances[origin] = 0.0
         heap: List[Tuple[float, str]] = [(0.0, origin)]
-
         while heap:
             current_dist, city = heappop(heap)
             if current_dist > distances[city]:
                 continue
             for neighbour, payload in self._graph[city].items():
-                weight = payload.get(weight_key)
+                weight = payload.get("duration_minutes")
                 if weight is None or math.isinf(weight):
                     continue
                 new_dist = current_dist + weight
@@ -510,6 +821,8 @@ class RoutePlanner:
                     distances[neighbour] = new_dist
                     heappush(heap, (new_dist, neighbour))
         return distances
+
+    # ------------------------------------------------------------------ city helpers
 
     def _resolve_city(self, name: str) -> Tuple[str, str, str]:
         key = self._normalise_name(name)
@@ -527,24 +840,57 @@ class RoutePlanner:
 
     def _build_aliases(self) -> Dict[str, str]:
         aliases: Dict[str, str] = {}
-        for distance_name, poi_city in self._distance_to_poi.items():
+        for distance_name in self._distance_to_poi.keys():
             for variant in (
-                poi_city,
                 distance_name,
                 distance_name.replace(", Switzerland", ""),
+                self._distance_to_poi[distance_name],
             ):
                 aliases[self._normalise_name(variant)] = distance_name
         for variant, distance_name in EXTRA_CITY_ALIASES.items():
             aliases[self._normalise_name(variant)] = distance_name
         return aliases
 
-    def _normalise_name(self, value: str) -> str:
+    @staticmethod
+    def _normalise_name(value: str) -> str:
         normalised = unicodedata.normalize("NFKD", value or "")
         ascii_value = normalised.encode("ascii", "ignore").decode("ascii")
         return ascii_value.strip().lower()
 
 
-def _travel_time_units(minutes: float) -> int:
-    if minutes <= 0:
-        return 0
-    return max(1, math.ceil(minutes / 60.0))
+# ---------------------------------------------------------------------- dataclasses for simulation
+
+
+@dataclass
+class CandidateAction:
+    destination: str
+    travel_minutes: float
+    travel_from: Optional[str]
+    added_new_city: bool
+
+
+@dataclass
+class SelectionResult:
+    selected: List[POI]
+    counts: Dict[str, int]
+    total_pois: int
+    activity_tu: int
+
+
+@dataclass
+class SimulationResult:
+    total_gain: float
+    day_plan: DayPlan
+    next_city: str
+    label_counts: Dict[str, int]
+    total_pois: int
+    interest_score: float
+    added_new_city: bool
+    unique_cities: int
+    city_score: float
+    coverage_sum: float
+    coverage_count: int
+    coverage_score: float
+    selected_ids: List[str]
+    travel_streak: int
+    stay_streak: int
