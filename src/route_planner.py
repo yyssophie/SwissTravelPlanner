@@ -613,6 +613,7 @@ class RoutePlanner:
         yield from self._swap_city_blocks(plan, scenario, config.get("swap_limit", 0))
         yield from self._substitute_pois(plan, scenario, config.get("poi_candidates", 0))
         yield from self._insert_new_city(plan, scenario, config.get("insert_limit", 0))
+        yield from self._convert_travel_day_to_stay(plan, scenario)
 
     def _swap_city_blocks(
         self,
@@ -901,6 +902,59 @@ class RoutePlanner:
     @staticmethod
     def _clone_day(day: DayPlan) -> DayPlan:
         return deepcopy(day)
+
+    def _convert_travel_day_to_stay(self, plan: List[DayPlan], scenario: _ScenarioContext) -> Iterable[List[DayPlan]]:
+        for idx in range(1, len(plan)):
+            day = plan[idx]
+            if day.travel_minutes <= 0.0:
+                continue
+
+            prev_city = plan[idx - 1].distance_city
+            poi_city = self._distance_to_poi.get(prev_city)
+            if not poi_city:
+                continue
+
+            all_pois = self._datastore.pois_for_city(poi_city, season=scenario.season)
+            if not all_pois:
+                continue
+
+            used_ids = {
+                poi.identifier
+                for j, other_day in enumerate(plan)
+                if j != idx
+                for poi in other_day.pois
+            }
+
+            available = [poi for poi in all_pois if poi.identifier not in used_ids]
+            # allow empty selection; stay-day with no POIs is still valid
+
+            new_plan = [self._clone_day(d) for d in plan]
+            replacement = new_plan[idx]
+            replacement.distance_city = prev_city
+            replacement.poi_city = poi_city
+            replacement.display_city = self._display_name(prev_city)
+            replacement.travel_from = self._display_name(prev_city)
+            replacement.travel_minutes = 0.0
+
+            if available:
+                replacement.pois = select_pois_for_day(
+                    available,
+                    scenario.preferences,
+                    travel_tu=0,
+                    rng=None,
+                    season=scenario.season,
+                )
+            else:
+                replacement.pois = []
+
+            self._recompute_travel(new_plan)
+            if not math.isfinite(new_plan[idx].travel_minutes):
+                continue
+            if not self._is_valid_day(new_plan[idx], scenario.mtu_per_day):
+                continue
+            if not self._is_valid_sequence(new_plan, scenario):
+                continue
+            yield new_plan
 
     def _min_days_to_reach(self, origin: str, destination: str, mtu_per_day: int) -> int:
         if origin == destination:

@@ -198,19 +198,22 @@ def evaluate_itinerary(
     else:
         target = {k: float(interests.get(k, 0.0)) / desired_total for k in CATEGORIES}
 
-    counts: Dict[str, int] = {k: 0 for k in CATEGORIES}
+    tu_by_label: Dict[str, float] = {k: 0.0 for k in CATEGORIES}
+    total_tu = 0.0
     for poi in all_pois:
+        tu = float(_activity_time_units(poi))
+        total_tu += tu
         label = _primary_label(poi)
-        if label in counts:
-            counts[label] += 1
+        if label in tu_by_label:
+            tu_by_label[label] += tu
 
-    if N <= 0:
+    if total_tu <= 0:
         s_interest = 0.0
     else:
         per_label_scores = []
         for c in CATEGORIES:
-            p_hat = counts[c] / N if N else 0.0
-            denom = max(target[c], 1.0 / N)
+            p_hat = tu_by_label[c] / total_tu if total_tu else 0.0
+            denom = max(target[c], 1.0 / total_tu)
             s_c = max(0.0, 1.0 - abs(p_hat - target[c]) / denom)
             per_label_scores.append(s_c)
         s_interest = sum(per_label_scores) / len(CATEGORIES)
@@ -266,13 +269,49 @@ def evaluate_itinerary(
     s_long = sum(long_scores) / len(long_scores) if long_scores else 0.0
     components["long_travel_penalty"] = s_long
 
+    # 6) Travel streak smoothness (reward breaks between travel days)
+    travel_streak_scores: List[float] = []
+    travel_streak = 0
+    LAMBDA = 0.6
+    for minutes in per_day_minutes:
+        if minutes > 0:
+            travel_streak += 1
+            raw = math.exp(-LAMBDA * (travel_streak - 1))
+        else:
+            travel_streak = 0
+            raw = 1.0
+        travel_streak_scores.append(raw)
+    s_travel_streak = sum(travel_streak_scores) / len(travel_streak_scores) if travel_streak_scores else 0.0
+    components["travel_streak_smoothness"] = s_travel_streak
+
+    # 7) Stay streak smoothness (small penalty for long stays)
+    stay_streak_scores: List[float] = []
+    stay_streak = 0
+    prev_city = None
+    for day in day_plans:
+        if prev_city is not None and day.distance_city == prev_city:
+            stay_streak += 1
+        else:
+            stay_streak = 1
+        prev_city = day.distance_city
+
+        if stay_streak <= 2:
+            raw = 1.0
+        else:
+            raw = max(0.0, 1.0 - (stay_streak - 2) / 4.0)
+        stay_streak_scores.append(raw)
+    s_stay_streak = sum(stay_streak_scores) / len(stay_streak_scores) if stay_streak_scores else 0.0
+    components["stay_streak_smoothness"] = s_stay_streak
+
     # Total score (0–100) with weights
     total = 100.0 * (
         0.35 * components["interest_matching"]
-        + 0.20 * components["tu_utilization"]
+        + 0.15 * components["tu_utilization"]
         + 0.15 * components["city_visit_efficiency"]
         + 0.15 * components["geographic_coverage"]
-        + 0.15 * components["long_travel_penalty"]
+        + 0.10 * components["long_travel_penalty"]
+        + 0.05 * components["travel_streak_smoothness"]
+        + 0.05 * components["stay_streak_smoothness"]
     )
 
     return ScoreBreakdown(total=total, components=components, hard_violations=tuple(violations))

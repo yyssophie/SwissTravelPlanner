@@ -68,6 +68,10 @@ class TravelDataStore:
         distances: Mapping[str, Mapping[str, DistanceRecord]],
     ) -> None:
         self._pois_by_city = {city.lower(): tuple(pois) for city, pois in pois_by_city.items()}
+        self._poi_by_id: Dict[str, POI] = {}
+        for city_pois in self._pois_by_city.values():
+            for poi in city_pois:
+                self._poi_by_id[poi.identifier] = poi
         self._distances = {
             origin.lower(): {dest.lower(): record for dest, record in destinations.items()}
             for origin, destinations in distances.items()
@@ -188,6 +192,10 @@ class TravelDataStore:
     def distance_between(self, origin: str, destination: str) -> Optional[DistanceRecord]:
         """Return distance details between the given cities, if known."""
         return self._distances.get(origin.lower(), {}).get(destination.lower())
+
+    def poi_by_id(self, identifier: str) -> Optional[POI]:
+        """Return a POI by identifier if it exists."""
+        return self._poi_by_id.get(identifier)
 
     @staticmethod
     def normalize_season(value: str | None) -> str:

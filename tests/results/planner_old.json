@@ -1,0 +1,244 @@
+[
+  {
+    "name": "loop_short_zurich_summer",
+    "total_score": 67.45593332900755,
+    "components": {
+      "interest_matching": 0.44819819819819817,
+      "city_visit_efficiency": 0.6666666666666666,
+      "geographic_coverage": 0.45126642613804124,
+      "tu_utilization": 1.0,
+      "long_travel_penalty": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.0054785840038675815
+  },
+  {
+    "name": "oneway_short_bern_geneva",
+    "total_score": 0.0,
+    "components": {},
+    "hard_violations": [
+      "day TU exceeds MTU: Bern TU=8 MTU=7",
+      "day TU exceeds MTU: Geneva TU=8 MTU=7"
+    ],
+    "runtime_seconds": 0.002550958000938408
+  },
+  {
+    "name": "alps_medium_bern_zermatt",
+    "total_score": 73.268062462371,
+    "components": {
+      "interest_matching": 0.44921875,
+      "city_visit_efficiency": 1.0,
+      "geographic_coverage": 0.651243792426131,
+      "tu_utilization": 0.9625,
+      "long_travel_penalty": 0.9017832883986024
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.006583916008821689
+  },
+  {
+    "name": "grand_tour_geneva_lugano",
+    "total_score": 66.91193173010404,
+    "components": {
+      "interest_matching": 0.42771084337349397,
+      "city_visit_efficiency": 0.75,
+      "geographic_coverage": 0.635625481671176,
+      "tu_utilization": 0.8703703703703703,
+      "long_travel_penalty": 0.9166841719704469
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.0080279999965569
+  },
+  {
+    "name": "winter_loop_zurich",
+    "total_score": 0.0,
+    "components": {},
+    "hard_violations": [
+      "day TU exceeds MTU: Zurich TU=8 MTU=6",
+      "day TU exceeds MTU: St. Gallen TU=8 MTU=6",
+      "day TU exceeds MTU: Appenzell TU=7 MTU=6",
+      "day TU exceeds MTU: Lucerne TU=8 MTU=6",
+      "day TU exceeds MTU: Schwyz TU=7 MTU=6",
+      "day TU exceeds MTU: Schwyz TU=8 MTU=6"
+    ],
+    "runtime_seconds": 0.0035580000112531707
+  },
+  {
+    "name": "fifteen_day_south_to_north",
+    "total_score": 72.82168544472546,
+    "components": {
+      "interest_matching": 0.449685534591195,
+      "city_visit_efficiency": 0.7777777777777778,
+      "geographic_coverage": 0.7597363381561141,
+      "tu_utilization": 0.9833333333333333,
+      "long_travel_penalty": 0.9568875552239067
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.006123541999841109
+  },
+  {
+    "name": "long_loop_21days",
+    "total_score": 68.35304624819464,
+    "components": {
+      "interest_matching": 0.432713963963964,
+      "city_visit_efficiency": 0.7692307692307693,
+      "geographic_coverage": 0.6675491148478685,
+      "tu_utilization": 0.8677248677248677,
+      "long_travel_penalty": 0.9534574595852647
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.011040292010875419
+  },
+  {
+    "name": "lake_geneva_focus",
+    "total_score": 63.33723391175019,
+    "components": {
+      "interest_matching": 0.24431818181818185,
+      "city_visit_efficiency": 1.0,
+      "geographic_coverage": 0.5076780456659032,
+      "tu_utilization": 0.9464285714285714,
+      "long_travel_penalty": 0.882823695636924
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.00485916699108202
+  },
+  {
+    "name": "alpine_grand_tour",
+    "total_score": 87.03779325103856,
+    "components": {
+      "interest_matching": 0.825268817204301,
+      "city_visit_efficiency": 0.8181818181818182,
+      "geographic_coverage": 0.7898249323798869,
+      "tu_utilization": 0.9861111111111112,
+      "long_travel_penalty": 0.9540707445493484
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.38916833300027065
+  },
+  {
+    "name": "trans_switzerland",
+    "total_score": 0.0,
+    "components": {},
+    "hard_violations": [
+      "day TU exceeds MTU: Bern TU=8 MTU=7",
+      "day TU exceeds MTU: Bern TU=8 MTU=7",
+      "day TU exceeds MTU: Kandersteg TU=8 MTU=7",
+      "day TU exceeds MTU: Interlaken TU=8 MTU=7",
+      "day TU exceeds MTU: Lausanne TU=8 MTU=7",
+      "day TU exceeds MTU: Lausanne TU=8 MTU=7",
+      "day TU exceeds MTU: Geneva TU=8 MTU=7",
+      "day TU exceeds MTU: Geneva TU=8 MTU=7",
+      "day TU exceeds MTU: Sion TU=8 MTU=7",
+      "day TU exceeds MTU: Sion TU=8 MTU=7",
+      "day TU exceeds MTU: Zermatt TU=8 MTU=7",
+      "day TU exceeds MTU: Lugano TU=8 MTU=7"
+    ],
+    "runtime_seconds": 0.007568290995550342
+  },
+  {
+    "name": "short_nearby_loop",
+    "total_score": 0.0,
+    "components": {},
+    "hard_violations": [
+      "day TU exceeds MTU: Bern TU=8 MTU=6",
+      "day TU exceeds MTU: Interlaken TU=7 MTU=6",
+      "day TU exceeds MTU: Montreux TU=8 MTU=6",
+      "day TU exceeds MTU: Lausanne TU=8 MTU=6",
+      "day TU exceeds MTU: Geneva TU=8 MTU=6",
+      "day TU exceeds MTU: Bern TU=8 MTU=6"
+    ],
+    "runtime_seconds": 0.0031165420077741146
+  },
+  {
+    "name": "glacier_express_chain",
+    "total_score": 68.30376392414523,
+    "components": {
+      "interest_matching": 0.38299086757990874,
+      "city_visit_efficiency": 0.7692307692307693,
+      "geographic_coverage": 0.6770701523905341,
+      "tu_utilization": 0.9761904761904762,
+      "long_travel_penalty": 0.9120506807146237
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.010763166996184736
+  },
+  {
+    "name": "eastern_alps_loop",
+    "total_score": 0.0,
+    "components": {},
+    "hard_violations": [
+      "day TU exceeds MTU: St. Moritz TU=8 MTU=7",
+      "day TU exceeds MTU: Lucerne TU=8 MTU=7",
+      "day TU exceeds MTU: Lucerne TU=8 MTU=7",
+      "day TU exceeds MTU: Zurich TU=8 MTU=7",
+      "day TU exceeds MTU: Zurich TU=8 MTU=7",
+      "day TU exceeds MTU: Schwyz TU=8 MTU=7",
+      "day TU exceeds MTU: Bern TU=8 MTU=7",
+      "day TU exceeds MTU: Bern TU=8 MTU=7",
+      "day TU exceeds MTU: Kandersteg TU=8 MTU=7",
+      "day TU exceeds MTU: Interlaken TU=8 MTU=7",
+      "day TU exceeds MTU: Lausanne TU=8 MTU=7",
+      "day TU exceeds MTU: Lausanne TU=8 MTU=7",
+      "day TU exceeds MTU: Montreux TU=8 MTU=7",
+      "day TU exceeds MTU: Appenzell TU=8 MTU=7"
+    ],
+    "runtime_seconds": 0.004244374998961575
+  },
+  {
+    "name": "southern_panorama",
+    "total_score": 69.20415025855722,
+    "components": {
+      "interest_matching": 0.4463213213213213,
+      "city_visit_efficiency": 0.8,
+      "geographic_coverage": 0.7307334021312049,
+      "tu_utilization": 0.8680555555555555,
+      "long_travel_penalty": 0.8840527912821193
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.008710874986718409
+  },
+  {
+    "name": "central_heritage_tour",
+    "total_score": 68.34813343148609,
+    "components": {
+      "interest_matching": 0.40476190476190477,
+      "city_visit_efficiency": 0.75,
+      "geographic_coverage": 0.6585409307980252,
+      "tu_utilization": 0.9736842105263158,
+      "long_travel_penalty": 0.9053112394881828
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.00881437498901505
+  },
+  {
+    "name": "lake_and_mountain_escape",
+    "total_score": 67.99243534952907,
+    "components": {
+      "interest_matching": 0.3835382513661202,
+      "city_visit_efficiency": 0.7272727272727273,
+      "geographic_coverage": 0.6067121408808125,
+      "tu_utilization": 0.9779411764705882,
+      "long_travel_penalty": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.009819708007853478
+  },
+  {
+    "name": "northern_highland_route",
+    "total_score": 0.0,
+    "components": {},
+    "hard_violations": [
+      "day TU exceeds MTU: Zurich TU=8 MTU=7",
+      "day TU exceeds MTU: Zurich TU=8 MTU=7",
+      "day TU exceeds MTU: Lucerne TU=8 MTU=7",
+      "day TU exceeds MTU: Lucerne TU=8 MTU=7",
+      "day TU exceeds MTU: Schwyz TU=8 MTU=7",
+      "day TU exceeds MTU: Bern TU=8 MTU=7",
+      "day TU exceeds MTU: Bern TU=8 MTU=7",
+      "day TU exceeds MTU: Kandersteg TU=8 MTU=7",
+      "day TU exceeds MTU: Interlaken TU=8 MTU=7",
+      "day TU exceeds MTU: Montreux TU=8 MTU=7",
+      "day TU exceeds MTU: Appenzell TU=8 MTU=7"
+    ],
+    "runtime_seconds": 0.003953334002289921
+  }
+]
