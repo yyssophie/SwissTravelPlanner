@@ -1,0 +1,8 @@
+{
+  "start_city": "Zurich, Switzerland",
+  "end_city": "St. Moritz, Switzerland",
+  "num_days": 15,
+  "season": "summer",
+  "mtu_per_day": 7,
+  "preferences": {"nature": 0.4, "culture": 0.3, "food": 0.2, "sport": 0.1}
+}

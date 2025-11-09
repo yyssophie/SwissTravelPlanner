@@ -1,1 +1,109 @@
-{"itinerary":[{"day":1,"distance_city":"Zurich, Switzerland","travel_from":null,"travel_minutes":0,"pois":[{"identifier":"ede8cfde-e316-4289-8c27-254b4914db30"}]}]}
+{
+"itinerary": [
+{
+"day": 1,
+"distance_city": "Zurich, Switzerland",
+"travel_from": null,
+"travel_minutes": 0,
+"pois": [{"identifier":"3d3e6350-29e9-4073-bdf9-be1a644a7000"},{"identifier":"ede8cfde-e316-4289-8c27-254b4914db30"},{"identifier":"78411dfd-350a-49c4-b1f7-7bee3db2c0f9"}]
+},
+{
+"day": 2,
+"distance_city": "Zurich, Switzerland",
+"travel_from": "Zurich, Switzerland",
+"travel_minutes": 0,
+"pois": [{"identifier":"fe55ef74-164d-4b4f-9101-38933bec6e9d"},{"identifier":"9fac93b8-e73a-4e47-8cb3-a88a3a8082a1"}]
+},
+{
+"day": 3,
+"distance_city": "Lucerne, Switzerland",
+"travel_from": "Zurich, Switzerland",
+"travel_minutes": 42.6,
+"pois": [{"identifier":"6c7e22ac-06cb-44b1-b18a-df36af3addd8"},{"identifier":"ab8012a4-c728-4869-87d9-7d00cdb9ce6e"},{"identifier":"3c4a83b1-a921-46b2-adde-d8d9b329541a"}]
+},
+{
+"day": 4,
+"distance_city": "Interlaken, Switzerland",
+"travel_from": "Lucerne, Switzerland",
+"travel_minutes": 62.7,
+"pois": [{"identifier":"14586645-e603-4e15-8b22-0bc88389cd06"},{"identifier":"90a82f6e-ab99-43d5-90a5-bebf3376669c"}]
+},
+{
+"day": 5,
+"distance_city": "Interlaken, Switzerland",
+"travel_from": "Interlaken, Switzerland",
+"travel_minutes": 0,
+"pois": [{"identifier":"db38447f-dcca-43c9-9426-62f6b594d038"}]
+},
+{
+"day": 6,
+"distance_city": "Bern, Switzerland",
+"travel_from": "Interlaken, Switzerland",
+"travel_minutes": 47.5,
+"pois": [{"identifier":"46c3cf67-13b6-4146-9ffc-534f3a00ca01"},{"identifier":"f27a5205-4885-4241-a18c-0f17270cbccb"},{"identifier":"916d049a-8aca-4f48-a1d2-c326f9365085"}]
+},
+{
+"day": 7,
+"distance_city": "Zermatt, Switzerland",
+"travel_from": "Bern, Switzerland",
+"travel_minutes": 151.7,
+"pois": [{"identifier":"c1fa3841-0bb7-4bc6-beed-b8af5bce3fb0"}]
+},
+{
+"day": 8,
+"distance_city": "Zermatt, Switzerland",
+"travel_from": "Zermatt, Switzerland",
+"travel_minutes": 0,
+"pois": [{"identifier":"e2285fd4-e11c-4a96-a980-988024aa3f70"}]
+},
+{
+"day": 9,
+"distance_city": "Montreux, Switzerland",
+"travel_from": "Zermatt, Switzerland",
+"travel_minutes": 110.9,
+"pois": [{"identifier":"79e79044-a366-4017-9b7b-5bf87e7d7225"},{"identifier":"853ab9ac-1f62-4318-8ded-e35bba9655cc"}]
+},
+{
+"day": 10,
+"distance_city": "Lausanne, Switzerland",
+"travel_from": "Montreux, Switzerland",
+"travel_minutes": 35.8,
+"pois": [{"identifier":"synthetic-collection-art-brut"},{"identifier":"6e24c630-a77d-4d28-b43c-d3a2d25d9f96"},{"identifier":"637abdd6-157c-45ef-beb9-3708046ce669"}]
+},
+{
+"day": 11,
+"distance_city": "Geneva, Switzerland",
+"travel_from": "Lausanne, Switzerland",
+"travel_minutes": 58.7,
+"pois": [{"identifier":"86c56832-f2f0-4978-a454-68aa1de84e97"},{"identifier":"7638ca2a-91e9-4152-bcd0-bd5eab4f6f9e"},{"identifier":"339d3c81-6737-4d12-9638-ec60a0bae755"}]
+},
+{
+"day": 12,
+"distance_city": "Lugano, Switzerland",
+"travel_from": "Geneva, Switzerland",
+"travel_minutes": 288.0,
+"pois": []
+},
+{
+"day": 13,
+"distance_city": "St. Moritz, Switzerland",
+"travel_from": "Lugano, Switzerland",
+"travel_minutes": 161.1,
+"pois": [{"identifier":"4a5f6c42-d17d-4dd7-b327-3d073fd53a75"}]
+},
+{
+"day": 14,
+"distance_city": "St. Moritz, Switzerland",
+"travel_from": "St. Moritz, Switzerland",
+"travel_minutes": 0,
+"pois": [{"identifier":"0fe0dbf7-b2c1-4577-b1b7-5ab96ecba570"}]
+},
+{
+"day": 15,
+"distance_city": "St. Moritz, Switzerland",
+"travel_from": "St. Moritz, Switzerland",
+"travel_minutes": 0,
+"pois": [{"identifier":"011a09bc-5706-4f34-b9fb-a228fb99ad7f"}]
+}
+]
+}

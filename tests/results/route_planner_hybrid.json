@@ -12,7 +12,7 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.06213245900289621
+    "runtime_seconds": 0.0625208750134334
   },
   {
     "name": "oneway_short_bern_geneva",
@@ -27,7 +27,7 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.01904699999431614
+    "runtime_seconds": 0.01908979198196903
   },
   {
     "name": "alps_medium_bern_zermatt",
@@ -42,7 +42,7 @@
       "stay_streak_smoothness": 0.975
     },
     "hard_violations": [],
-    "runtime_seconds": 0.2220579999993788
+    "runtime_seconds": 0.22931354102911428
   },
   {
     "name": "grand_tour_geneva_lugano",
@@ -57,7 +57,7 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.3574685419880552
+    "runtime_seconds": 0.39731195801869035
   },
   {
     "name": "winter_loop_zurich",
@@ -72,7 +72,7 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.07037470799696166
+    "runtime_seconds": 0.07501066703116521
   },
   {
     "name": "fifteen_day_south_to_north",
@@ -87,7 +87,7 @@
       "stay_streak_smoothness": 0.9833333333333333
     },
     "hard_violations": [],
-    "runtime_seconds": 0.41747579199727625
+    "runtime_seconds": 0.5132489159586839
   },
   {
     "name": "long_loop_21days",
@@ -102,7 +102,7 @@
       "stay_streak_smoothness": 0.9761904761904762
     },
     "hard_violations": [],
-    "runtime_seconds": 0.5818726669967873
+    "runtime_seconds": 0.6569820420118049
   },
   {
     "name": "lake_geneva_focus",
@@ -117,7 +117,7 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.05945800000336021
+    "runtime_seconds": 0.06049370800610632
   },
   {
     "name": "alpine_grand_tour",
@@ -132,7 +132,7 @@
       "stay_streak_smoothness": 0.9861111111111112
     },
     "hard_violations": [],
-    "runtime_seconds": 0.42835224998998456
+    "runtime_seconds": 0.45422899996628985
   },
   {
     "name": "trans_switzerland",
@@ -147,7 +147,7 @@
       "stay_streak_smoothness": 0.9821428571428571
     },
     "hard_violations": [],
-    "runtime_seconds": 0.3623362499929499
+    "runtime_seconds": 0.36771304201101884
   },
   {
     "name": "short_nearby_loop",
@@ -162,7 +162,7 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.07627512500039302
+    "runtime_seconds": 0.0771632919786498
   },
   {
     "name": "glacier_express_chain",
@@ -177,7 +177,7 @@
       "stay_streak_smoothness": 0.9404761904761905
     },
     "hard_violations": [],
-    "runtime_seconds": 0.5434826669952599
+    "runtime_seconds": 0.5559747910010628
   },
   {
     "name": "eastern_alps_loop",
@@ -192,7 +192,7 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.6479436669906136
+    "runtime_seconds": 0.57995695900172
   },
   {
     "name": "southern_panorama",
@@ -207,7 +207,7 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.2423120830062544
+    "runtime_seconds": 0.2438773749745451
   },
   {
     "name": "central_heritage_tour",
@@ -222,7 +222,7 @@
       "stay_streak_smoothness": 0.9868421052631579
     },
     "hard_violations": [],
-    "runtime_seconds": 0.543259666999802
+    "runtime_seconds": 0.7068429589853622
   },
   {
     "name": "lake_and_mountain_escape",
@@ -237,7 +237,7 @@
       "stay_streak_smoothness": 0.9558823529411765
     },
     "hard_violations": [],
-    "runtime_seconds": 0.773186666003312
+    "runtime_seconds": 0.8225166670163162
   },
   {
     "name": "northern_highland_route",
@@ -252,6 +252,6 @@
       "stay_streak_smoothness": 1.0
     },
     "hard_violations": [],
-    "runtime_seconds": 0.31814733300416265
+    "runtime_seconds": 0.3234550839988515
   }
 ]

@@ -63,9 +63,7 @@ PYTHONPATH=src python -m tests.planner_bench \
 1. Save the LLM JSON (per the prompt structure) to `plan.json`.
 2. Run:
 ```
-PYTHONPATH=src python tools/evaluate_llm_plan.py plan.json \
-  --start "Zurich" --end "St. Moritz" --days 15 --season winter --mtu 7 \
-  --preferences '{"nature":0.45,"culture":0.3,"food":0.15,"sport":0.1}'
+PYTHONPATH=src python tools/evaluate_llm_plan.py plan.json --start "Zurich" --end "St. Moritz" --days 15 --season winter --mtu 7 --preferences '{"nature":0.45,"culture":0.3,"food":0.15,"sport":0.1}'
 ```
 
 ## Starting the Web Application
