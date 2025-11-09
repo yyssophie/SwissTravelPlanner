@@ -402,14 +402,10 @@ class RoutePlanner:
 
         if action.travel_minutes > 0:
             new_travel_streak = travel_streak + 1
-            travel_penalty = -0.05 * (new_travel_streak**2)
             new_stay_streak = 0
-            stay_penalty = 0.0
         else:
             new_travel_streak = 0
-            travel_penalty = 0.0
             new_stay_streak = stay_streak + 1
-            stay_penalty = -0.04 * max(0, new_stay_streak - 1) ** 2
 
         total_gain = (
             0.35 * interest_gain
@@ -417,8 +413,6 @@ class RoutePlanner:
             + 0.15 * city_gain
             + 0.15 * coverage_gain
             + 0.20 * travel_score
-            + travel_penalty
-            + stay_penalty
         )
 
         day_plan = DayPlan(

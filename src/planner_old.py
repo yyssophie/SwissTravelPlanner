@@ -106,9 +106,12 @@ class RoutePlanner:
         preference_weights: Mapping[str, float],
         season: Optional[str],
         rng: Optional[random.Random] = None,
+        mtu_per_day: int = 8,
     ) -> List[DayPlan]:
         if num_days <= 0:
             raise ValueError("Number of travel days must be positive.")
+        if mtu_per_day <= 0:
+            raise ValueError("Maximum time units per day must be positive.")
 
         rng = rng or random.Random()
         start_distance, start_poi_city, start_display = self._resolve_city(start_city)
@@ -163,7 +166,7 @@ class RoutePlanner:
             pois = select_pois_for_day(
                 available_pois[current_poi_city],
                 preference_weights,
-                travel_tu=travel_tu,
+                travel_tu=min(travel_tu, mtu_per_day),
                 rng=rng,
                 season=season,
             )
