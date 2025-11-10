@@ -259,14 +259,22 @@ def evaluate_itinerary(
     s_tu = sum(util_scores) / len(util_scores) if util_scores else 0.0
     components["tu_utilization"] = s_tu
 
-    # 5) Heavy penalty for long travel days (> 120 minutes)
-    long_scores: List[float] = []
-    for m in per_day_minutes:
-        if m <= 120.0:
-            long_scores.append(1.0)
-        else:
-            long_scores.append(math.exp(-((m - 120.0) / 30.0) ** 2))
-    s_long = sum(long_scores) / len(long_scores) if long_scores else 0.0
+    # 5) Heavy penalty for long travel days (> 120 minutes), geometric mean over travel days only
+    # Sharpened decay: width=20 (was 30) to strongly penalize 3+ hour hops.
+    travel_days = [float(m or 0.0) for m in per_day_minutes if (m or 0.0) > 0.0]
+    if not travel_days:
+        s_long = 1.0
+    else:
+        eps = 1e-12
+        logs: List[float] = []
+        for m in travel_days:
+            if m <= 120.0:
+                score_day = 1.0
+            else:
+                score_day = math.exp(-((m - 120.0) / 20.0) ** 2)
+            # Geometric mean: average log, avoid -inf by clamping
+            logs.append(math.log(max(score_day, eps)))
+        s_long = math.exp(sum(logs) / len(logs))
     components["long_travel_penalty"] = s_long
 
     # 6) Travel streak smoothness (reward breaks between travel days)

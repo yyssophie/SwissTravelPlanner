@@ -165,8 +165,9 @@ class TravelDataStore:
     def pois_for_city(self, city: str, season: Optional[str] = None) -> List[POI]:
         """
         Return POIs for the provided city name (case-insensitive), optionally
-        filtering by season. When a specific season is requested, POIs that
-        explicitly list that season are prioritised by their order of suitability.
+        filtering by season. Season ranking has been removed: if a season is
+        given, we include only POIs that list that season (if any), otherwise
+        we return the full set without prioritisation.
         """
         city_key = city.lower()
         candidates = list(self._pois_by_city.get(city_key, ()))
@@ -174,20 +175,9 @@ class TravelDataStore:
             return candidates
 
         season_key = self.normalize_season(season)
-        prioritized: List[Tuple[int, POI]] = []
-        others: List[POI] = []
-
-        for poi in candidates:
-            priority = poi.season_priority(season_key)
-            if priority is not None:
-                prioritized.append((priority, poi))
-            else:
-                others.append(poi)
-
-        prioritized.sort(key=lambda item: item[0])
-        ordered = [poi for _, poi in prioritized]
-        ordered.extend(others)
-        return ordered
+        in_season = [poi for poi in candidates if season_key in poi.seasons]
+        # Hard constraint: if no in-season POIs, return empty (do not fall back).
+        return in_season
 
     def distance_between(self, origin: str, destination: str) -> Optional[DistanceRecord]:
         """Return distance details between the given cities, if known."""

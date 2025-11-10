@@ -169,6 +169,7 @@ class RoutePlanner:
                 travel_tu=min(travel_tu, mtu_per_day),
                 rng=rng,
                 season=season,
+                mtu_per_day=mtu_per_day,
             )
             selected_ids = {poi.identifier for poi in pois}
             if selected_ids:

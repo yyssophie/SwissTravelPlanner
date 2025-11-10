@@ -55,6 +55,7 @@ def select_pois_for_day(
     travel_tu: int,
     rng: random.Random | None = None,
     season: Optional[str] = None,
+    mtu_per_day: int = 8,
 ) -> List[POI]:
     """Pick up to two POIs that fit within the TU limits while respecting preferences."""
 
@@ -73,26 +74,26 @@ def select_pois_for_day(
 
     if season:
         season_info = [info for info in raw_info if _is_in_season(info[0], season)]
-        activity_info = season_info or raw_info
+        activity_info = season_info
     else:
         activity_info = raw_info
 
     if not activity_info:
         return []
 
-    max_tu = 8
+    max_tu = int(mtu_per_day)
     if travel_tu > max_tu:
         return []
 
     remaining_tu = max_tu - travel_tu
-    combos: List[Tuple[Tuple[POI, ...], int, float, float]] = []
+    combos: List[Tuple[Tuple[POI, ...], int, float]] = []
 
     if travel_tu <= max_tu:
-        combos.append((tuple(), travel_tu, 0.0, 0.0))
+        combos.append((tuple(), travel_tu, 0.0))
 
-    def dfs(start_idx: int, chosen: List[POI], used_tu: int, pref_sum: float, season_sum: float) -> None:
+    def dfs(start_idx: int, chosen: List[POI], used_tu: int, pref_sum: float) -> None:
         if chosen:
-            combos.append((tuple(chosen), travel_tu + used_tu, pref_sum, season_sum))
+            combos.append((tuple(chosen), travel_tu + used_tu, pref_sum))
         for i in range(start_idx, len(activity_info)):
             poi, label, tu = activity_info[i]
             if tu > remaining_tu - used_tu:
@@ -104,19 +105,19 @@ def select_pois_for_day(
                 chosen + [poi],
                 used_tu + tu,
                 pref_sum + preference_weights.get(label, 0.0),
-                season_sum + _season_score(poi, season),
             )
 
     if remaining_tu > 0 and activity_info:
-        dfs(0, [], 0, 0.0, 0.0)
+        dfs(0, [], 0, 0.0)
 
     if not combos:
         return []
 
-    def combo_key(item: Tuple[Tuple[POI, ...], int, float, float]) -> Tuple[int, int, float, float]:
-        combo, total, pref_score, season_score = item
-        meets_target = 1 if 8 <= total <= 10 else 0
-        return (meets_target, total, pref_score, -season_score)
+    def combo_key(item: Tuple[Tuple[POI, ...], int, float]) -> Tuple[float, float, int]:
+        combo, total, pref_score = item
+        # Prefer totals close to mtu_per_day, then higher preference weight, then larger total TU.
+        closeness = -abs(total - max_tu)
+        return (closeness, pref_score, total)
 
     best_key = None
     best_items: List[Tuple[Tuple[POI, ...], int, float, float]] = []
@@ -140,6 +141,7 @@ def select_pois_for_cities(
     preference_weights: Mapping[str, float],
     rng: random.Random | None = None,
     season: str | None = None,
+    mtu_per_day: int = 8,
 ) -> Dict[str, List[POI]]:
     """
     Apply the probabilistic selection to each requested city.
@@ -162,6 +164,7 @@ def select_pois_for_cities(
             travel_tu=0,
             rng=city_rng,
             season=season,
+            mtu_per_day=mtu_per_day,
         )
 
     return itinerary
@@ -230,15 +233,20 @@ def _activity_time_units(poi: POI) -> int:
 
 
 def _season_score(poi: POI, season: Optional[str]) -> float:
+    """Deprecated: season ranking removed. Kept for compatibility; not used in ranking.
+
+    Returns 0.0 for in-season (or when season is None), else a constant penalty.
+    """
     if season is None:
         return 0.0
-    priority = poi.season_priority(season)
-    if priority is None:
-        return 5.0
-    return float(priority)
+    return 0.0 if _is_in_season(poi, season) else 5.0
 
 
 def _is_in_season(poi: POI, season: Optional[str]) -> bool:
     if season is None:
         return True
-    return poi.season_priority(season) is not None
+    try:
+        season_key = str(season).strip().lower()
+    except Exception:
+        season_key = str(season)
+    return any((s or "").strip().lower() == season_key for s in getattr(poi, "seasons", ()))

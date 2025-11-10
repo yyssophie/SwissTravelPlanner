@@ -5,7 +5,7 @@ Simple command-line launcher for testing the POI selection logic.
 from __future__ import annotations
 import sys
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Optional
 
 if __package__ is None or __package__ == "":
     # Allow running via `python src/run_planner.py`
@@ -134,6 +134,15 @@ def main() -> None:
     preferences = prompt_preferences()
     season = prompt_season(datastore)
     mtu = prompt_mtu()
+    # Optional reproducibility seed
+    seed: Optional[int] = None
+    raw_seed = input("Optional random seed (press Enter for default 1337): ").strip()
+    if raw_seed:
+        try:
+            seed = int(raw_seed)
+        except ValueError:
+            print("Invalid seed; using default.", file=sys.stderr)
+            seed = None
 
     try:
         itinerary = planner.plan_route(
@@ -143,6 +152,7 @@ def main() -> None:
             preference_weights=preferences,
             season=season,
             mtu_per_day=mtu,
+            seed=seed,
         )
     except ValueError as exc:
         print(f"Could not build itinerary: {exc}", file=sys.stderr)

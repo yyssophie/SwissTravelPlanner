@@ -358,6 +358,9 @@ class RoutePlanner:
 
         poi_city = self._distance_to_poi[action.destination]
         city_pois = available_pois.get(poi_city, ())
+        # Hard rule: skip cities with no in-season POIs
+        if not city_pois:
+            return None
 
         selection = self._select_daily_pois(
             candidate_pois=city_pois,
@@ -493,7 +496,7 @@ class RoutePlanner:
 
     @staticmethod
     def _city_efficiency(unique_city_count: int, num_days: int) -> float:
-        target = 1 + min(num_days, 8)
+        target = 1 + math.ceil(0.6 * num_days)
         denom = max(1, target - 1)
         score = max(0.0, unique_city_count - 1) / denom
         return min(1.0, score)

@@ -1,4 +1,4 @@
-"""Greedy route planner tuned for the new itinerary score system."""
+"""Bidirectional Greedy route planner tuned for the new itinerary score system + local search."""
 
 from __future__ import annotations
 
@@ -9,6 +9,8 @@ from copy import deepcopy
 from dataclasses import dataclass
 from heapq import heappop, heappush
 from pathlib import Path
+import random
+import logging
 from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
 if __package__ is None or __package__ == "":  # pragma: no cover
@@ -30,6 +32,9 @@ else:  # pragma: no cover
 
 
 LONG_TRAVEL_COMFORT_MINUTES = 120.0
+
+# Use the project logger name so messages appear alongside existing backend logs
+LOGGER = logging.getLogger("alp_scheduler")
 
 CITY_DISTANCE_TO_POI = {
     "Appenzell, Switzerland": "appenzell",
@@ -94,6 +99,7 @@ class _ScenarioContext:
     mtu_per_day: int
     preferences: Mapping[str, float]
     earliest_arrival_day: int
+    rng: random.Random
 
 
 class RoutePlanner:
@@ -124,6 +130,7 @@ class RoutePlanner:
         preference_weights: Mapping[str, float],
         season: Optional[str],
         mtu_per_day: int = 8,
+        seed: Optional[int] = 1337,
     ) -> List[DayPlan]:
         if num_days < 3:
             raise ValueError("Number of travel days must be at least three.")
@@ -152,9 +159,9 @@ class RoutePlanner:
             filtered = [poi for poi in all_pois if season is None or _is_in_season(poi, season)]
             available_pois[poi_city] = filtered
 
-        label_counts = {category: 0 for category in CATEGORIES}
-        total_pois = 0
-        interest_score = self._interest_score(label_counts, total_pois, target_distribution)
+        tu_totals = {category: 0.0 for category in CATEGORIES}
+        total_tu = 0.0
+        interest_score = self._interest_score_tu(tu_totals, total_tu, target_distribution)
 
         visited_set = {start_distance}
         unique_city_count = 1
@@ -170,94 +177,8 @@ class RoutePlanner:
             default=1.0,
         )
 
-        day_plans: List[DayPlan] = []
-        current_city = start_distance
-
-        travel_streak = 0
-        stay_streak = 0
-        end_city_reached = False
-
-        for day_index in range(1, num_days + 1):
-            remaining_days = num_days - day_index
-
-            candidates = self._enumerate_candidates(
-                current_city=current_city,
-                end_city=end_distance,
-                day_index=day_index,
-                num_days=num_days,
-                visited_set=visited_set,
-                earliest_arrival_day=earliest_arrival_day,
-                end_city_reached=end_city_reached,
-            )
-
-            best_choice = None
-            best_score_gain = -math.inf
-
-            for action in candidates:
-                simulation = self._simulate_day(
-                    action=action,
-                    day_index=day_index,
-                    mtu_per_day=mtu_per_day,
-                    target_distribution=target_distribution,
-                    label_counts=label_counts,
-                    total_pois=total_pois,
-                    interest_score=interest_score,
-                    city_score=city_score,
-                    coverage_sum=coverage_sum,
-                    coverage_count=coverage_count,
-                    coverage_score=coverage_score,
-                    unique_city_count=unique_city_count,
-                    available_pois=available_pois,
-                    start_distances=start_distances,
-                    max_distance=max_distance,
-                    num_days=num_days,
-                    start_city_key=start_distance,
-                    end_city=end_distance,
-                    remaining_days=remaining_days,
-                    travel_streak=travel_streak,
-                    stay_streak=stay_streak,
-                )
-
-                if simulation is None:
-                    continue
-
-                if simulation.total_gain > best_score_gain:
-                    best_score_gain = simulation.total_gain
-                    best_choice = simulation
-
-            if best_choice is None:
-                raise ValueError("Unable to find a feasible next step that respects all constraints.")
-
-            # Commit chosen day
-            day_plans.append(best_choice.day_plan)
-            current_city = best_choice.next_city
-
-            label_counts = best_choice.label_counts
-            total_pois = best_choice.total_pois
-            interest_score = best_choice.interest_score
-            unique_city_count = best_choice.unique_cities
-            city_score = best_choice.city_score
-            coverage_sum = best_choice.coverage_sum
-            coverage_count = best_choice.coverage_count
-            coverage_score = best_choice.coverage_score
-            travel_streak = best_choice.travel_streak
-            stay_streak = best_choice.stay_streak
-            if not end_city_reached and best_choice.next_city == end_distance and best_choice.day_plan.travel_minutes > 0:
-                end_city_reached = True
-
-            if best_choice.added_new_city:
-                visited_set.add(best_choice.next_city)
-
-            # Remove consumed POIs from availability
-            if best_choice.selected_ids:
-                poi_city_key = self._distance_to_poi[best_choice.next_city]
-                available_pois[poi_city_key] = [
-                    poi for poi in available_pois[poi_city_key] if poi.identifier not in best_choice.selected_ids
-                ]
-
-            # Enforce final-day arrival
-        if day_index == num_days and current_city != end_distance:
-            raise ValueError("Planner did not reach the destination on the final day.")
+        # Forward greedy construction
+        rng = random.Random(seed) if seed is not None else random.Random(1337)
 
         scenario = _ScenarioContext(
             start_city=start_city,
@@ -269,11 +190,63 @@ class RoutePlanner:
             mtu_per_day=mtu_per_day,
             preferences=target_distribution,
             earliest_arrival_day=earliest_arrival_day,
+            rng=rng,
         )
 
-        optimised_plan = self._run_local_search(day_plans, scenario)
-        self._renumber_days(optimised_plan)
-        return optimised_plan
+        forward_plan = self._greedy_construct(scenario)
+
+        # Build backward-based variant (day 1 fixed), then run local search on both and pick best
+        backward_variant = self._build_backward_variant(scenario, forward_plan)
+
+        # Run local search on available candidates
+        try:
+            from .evaluator import evaluate_itinerary  # type: ignore
+        except ImportError:  # pragma: no cover
+            from evaluator import evaluate_itinerary  # type: ignore
+
+        # Run local search on both seeds (forward and backward if available) and keep the better by evaluator score
+        try:  # pragma: no cover - support both package and script imports
+            from .evaluator import evaluate_itinerary  # type: ignore
+        except ImportError:  # pragma: no cover
+            from evaluator import evaluate_itinerary  # type: ignore
+
+        LOGGER.info("RoutePlanner: refining forward greedy with local search")
+        forward_ls = self._run_local_search(forward_plan, scenario)
+        f_eval = evaluate_itinerary(
+            forward_ls,
+            start_city=scenario.start_city,
+            end_city=scenario.end_city,
+            interests=scenario.preferences,
+            mtu=scenario.mtu_per_day,
+            season=scenario.season,
+        )
+
+        best_plan = forward_ls
+        best_score = f_eval.total if not f_eval.hard_violations else -math.inf
+
+        if backward_variant is not None:
+            LOGGER.info("RoutePlanner: refining backward variant with local search")
+            backward_ls = self._run_local_search(backward_variant, scenario)
+            b_eval = evaluate_itinerary(
+                backward_ls,
+                start_city=scenario.start_city,
+                end_city=scenario.end_city,
+                interests=scenario.preferences,
+                mtu=scenario.mtu_per_day,
+                season=scenario.season,
+            )
+            b_score = b_eval.total if not b_eval.hard_violations else -math.inf
+            if b_score > best_score:
+                best_plan = backward_ls
+                best_score = b_score
+                LOGGER.info("RoutePlanner: selected backward-based result (score=%.5f)", best_score)
+            else:
+                LOGGER.info("RoutePlanner: kept forward-based result (score=%.5f vs backward %.5f)", best_score, b_score)
+        else:
+            LOGGER.info("RoutePlanner: backward variant unavailable; kept forward-based result (score=%.5f)", best_score)
+
+        self._renumber_days(best_plan)
+        return best_plan
 
     def available_cities(self) -> List[str]:
         return sorted({self._display_name(distance_name) for distance_name in self._distance_to_poi.keys()})
@@ -290,6 +263,227 @@ class RoutePlanner:
         return display
 
     # ------------------------------------------------------------------ core helpers
+
+    def _greedy_construct(self, scenario: _ScenarioContext) -> List[DayPlan]:
+        """Construct an itinerary greedily under the current heuristic."""
+        start_distance = scenario.start_distance
+        end_distance = scenario.end_distance
+        num_days = scenario.num_days
+        season = scenario.season
+        mtu_per_day = scenario.mtu_per_day
+        target_distribution = scenario.preferences
+        earliest_arrival_day = scenario.earliest_arrival_day
+
+        available_pois: Dict[str, List[POI]] = {}
+        for poi_city in self._distance_to_poi.values():
+            all_pois = list(self._datastore.pois_for_city(poi_city, season))
+            filtered = [poi for poi in all_pois if season is None or _is_in_season(poi, season)]
+            available_pois[poi_city] = filtered
+
+        tu_totals = {category: 0.0 for category in CATEGORIES}
+        total_tu = 0.0
+        interest_score = self._interest_score_tu(tu_totals, total_tu, target_distribution)
+
+        visited_set = {start_distance}
+        unique_city_count = 1
+        city_score = self._city_efficiency(unique_city_count, num_days)
+
+        coverage_sum = 0.0
+        coverage_count = 0
+        coverage_score = 0.0
+
+        start_distances = self._shortest_minutes[start_distance]
+        max_distance = max((v for v in start_distances.values() if not math.isinf(v)), default=1.0)
+
+        day_plans: List[DayPlan] = []
+        current_city = start_distance
+        travel_streak = 0
+        stay_streak = 0
+        end_city_reached = False
+
+        for day_index in range(1, num_days + 1):
+            remaining_days = num_days - day_index
+            candidates = self._enumerate_candidates(
+                current_city=current_city,
+                end_city=end_distance,
+                day_index=day_index,
+                num_days=num_days,
+                visited_set=visited_set,
+                earliest_arrival_day=earliest_arrival_day,
+                end_city_reached=end_city_reached,
+            )
+
+            best_choice = None
+            best_score_gain = -math.inf
+            for action in candidates:
+                simulation = self._simulate_day(
+                    action=action,
+                    day_index=day_index,
+                    mtu_per_day=mtu_per_day,
+                    target_distribution=target_distribution,
+                    tu_by_label=tu_totals,
+                    total_tu=total_tu,
+                    interest_score=interest_score,
+                    city_score=city_score,
+                    coverage_sum=coverage_sum,
+                    coverage_count=coverage_count,
+                    coverage_score=coverage_score,
+                    unique_city_count=unique_city_count,
+                    available_pois=available_pois,
+                    start_distances=start_distances,
+                    max_distance=max_distance,
+                    num_days=num_days,
+                    start_city_key=start_distance,
+                    end_city=end_distance,
+                    remaining_days=remaining_days,
+                    travel_streak=travel_streak,
+                    stay_streak=stay_streak,
+                    rng=scenario.rng,
+                )
+                if simulation is None:
+                    continue
+                if simulation.total_gain > best_score_gain:
+                    best_score_gain = simulation.total_gain
+                    best_choice = simulation
+
+            if best_choice is None:
+                raise ValueError("Unable to find a feasible next step that respects all constraints.")
+
+            day_plans.append(best_choice.day_plan)
+            current_city = best_choice.next_city
+            # Update TU totals with selected POIs for the committed day
+            day_tu_inc = 0.0
+            for p in best_choice.day_plan.pois:
+                tu = float(_activity_time_units(p))
+                lab = _primary_label(p)
+                if lab in tu_totals:
+                    tu_totals[lab] += tu
+                day_tu_inc += tu
+            total_tu += day_tu_inc
+            interest_score = best_choice.interest_score
+            unique_city_count = best_choice.unique_cities
+            city_score = best_choice.city_score
+            coverage_sum = best_choice.coverage_sum
+            coverage_count = best_choice.coverage_count
+            coverage_score = best_choice.coverage_score
+            travel_streak = best_choice.travel_streak
+            stay_streak = best_choice.stay_streak
+            if not end_city_reached and best_choice.next_city == end_distance and best_choice.day_plan.travel_minutes > 0:
+                end_city_reached = True
+            if best_choice.added_new_city:
+                visited_set.add(best_choice.next_city)
+            if best_choice.selected_ids:
+                poi_city_key = self._distance_to_poi[best_choice.next_city]
+                available_pois[poi_city_key] = [
+                    poi for poi in available_pois[poi_city_key] if poi.identifier not in best_choice.selected_ids
+                ]
+
+        if current_city != end_distance:
+            raise ValueError("Planner did not reach the destination on the final day.")
+        return day_plans
+
+    def _build_backward_variant(
+        self, scenario: _ScenarioContext, forward_plan: List[DayPlan]
+    ) -> Optional[List[DayPlan]]:
+        """Construct an alternate plan from a backward greedy and reverse it into days 2..N."""
+        LOGGER.info(
+            "RoutePlanner: attempting backward variant | start=%s end=%s days=%d",
+            scenario.start_city,
+            scenario.end_city,
+            scenario.num_days,
+        )
+        m = scenario.num_days - 1
+        if m <= 0:
+            LOGGER.info("RoutePlanner: backward variant aborted (m <= 0)")
+            return None
+        # Compute earliest arrival for the backward window
+        if m <= 7:
+            buffer = 1
+        elif m <= 15:
+            buffer = 2
+        else:
+            buffer = 3
+        earliest_back = max(1, m - buffer)
+        LOGGER.info(
+            "RoutePlanner: backward window m=%d earliest_back=%d (buffer=%d)",
+            m,
+            earliest_back,
+            buffer,
+        )
+        back_scenario = _ScenarioContext(
+            start_city=scenario.end_city,
+            end_city=scenario.start_city,
+            start_distance=scenario.end_distance,
+            end_distance=scenario.start_distance,
+            num_days=m,
+            season=scenario.season,
+            mtu_per_day=scenario.mtu_per_day,
+            preferences=scenario.preferences,
+            earliest_arrival_day=earliest_back,
+            rng=scenario.rng,
+        )
+        try:
+            back_plan = self._greedy_construct(back_scenario)
+        except Exception:
+            LOGGER.info("RoutePlanner: backward greedy failed to construct a plan")
+            return None
+        seq = [dp.distance_city for dp in back_plan]
+        if not seq or seq[-1] != scenario.start_distance:
+            LOGGER.info(
+                "RoutePlanner: backward plan invalid (seq empty or does not end at original start). seq_end=%s expected=%s",
+                (seq[-1] if seq else None),
+                scenario.start_distance,
+            )
+            return None
+        seq_rev = list(reversed(seq))  # length m, starts at start_distance, ends at end_distance
+        LOGGER.info("RoutePlanner: reversed city sequence for days 2..N: %s", [self._display_name(c) for c in seq_rev])
+
+        # Build full plan: keep forward day 1, then follow seq_rev[1..]
+        new_plan: List[DayPlan] = [self._clone_day(forward_plan[0])] if forward_plan else []
+        used_ids = {poi.identifier for dp in new_plan for poi in dp.pois}
+        prev = new_plan[0].distance_city if new_plan else seq_rev[0]
+        # Append exactly m days (days 2..N). Start from idx=0 to include a possible stay on day 2.
+        for idx in range(0, len(seq_rev)):
+            dest = seq_rev[idx]
+            # Allow stay days (prev == dest) with 0 travel minutes; otherwise require a finite edge
+            if dest == prev:
+                minutes = 0.0
+            else:
+                payload = self._graph.get(prev, {}).get(dest)
+                if not payload:
+                    LOGGER.info(
+                        "RoutePlanner: backward rebuild failed (no edge) %s -> %s",
+                        self._display_name(prev),
+                        self._display_name(dest),
+                    )
+                    return None
+                minutes = float(payload.get("duration_minutes") or math.inf)
+                if math.isinf(minutes):
+                    LOGGER.info(
+                        "RoutePlanner: backward rebuild failed (infinite minutes) %s -> %s",
+                        self._display_name(prev),
+                        self._display_name(dest),
+                    )
+                    return None
+            day = self._build_day(dest, prev, minutes, scenario, used_ids)
+            if day is None:
+                LOGGER.info(
+                    "RoutePlanner: backward rebuild failed (no in-season POIs or MTU violation) at %s",
+                    self._display_name(dest),
+                )
+                return None
+            new_plan.append(day)
+            used_ids.update(poi.identifier for poi in day.pois)
+            prev = dest
+
+        # Final sanity: recompute travel, validate sequence
+        self._recompute_travel(new_plan)
+        if not self._is_valid_sequence(new_plan, scenario):
+            LOGGER.info("RoutePlanner: backward variant failed validation")
+            return None
+        self._renumber_days(new_plan)
+        LOGGER.info("RoutePlanner: backward variant built successfully")
+        return new_plan
 
     def _enumerate_candidates(
         self,
@@ -357,8 +551,8 @@ class RoutePlanner:
         day_index: int,
         mtu_per_day: int,
         target_distribution: Mapping[str, float],
-        label_counts: Mapping[str, int],
-        total_pois: int,
+        tu_by_label: Mapping[str, float],
+        total_tu: float,
         interest_score: float,
         city_score: float,
         coverage_sum: float,
@@ -374,6 +568,7 @@ class RoutePlanner:
         remaining_days: int,
         travel_streak: int,
         stay_streak: int,
+        rng: Optional[random.Random] = None,
     ) -> Optional["SimulationResult"]:
         travel_tu = self._travel_time_units(action.travel_minutes)
         if travel_tu > mtu_per_day:
@@ -388,20 +583,21 @@ class RoutePlanner:
 
         poi_city = self._distance_to_poi[action.destination]
         city_pois = available_pois.get(poi_city, ())
-
-        selection = self._select_daily_pois(
-            candidate_pois=city_pois,
-            travel_tu=travel_tu,
-            mtu_per_day=mtu_per_day,
-            initial_counts=label_counts,
-            initial_total=total_pois,
-            target_distribution=target_distribution,
-        )
-
-        if selection is None:
+        # Hard rule: do not visit/stay in cities without in-season POIs.
+        if not city_pois:
             return None
 
-        day_activity_tu = selection.activity_tu
+        # Use shared POI selector for alignment
+        selected_list = select_pois_for_day(
+            city_pois,
+            target_distribution,
+            travel_tu=travel_tu,
+            season=None,
+            mtu_per_day=mtu_per_day,
+            rng=rng,
+        )
+
+        day_activity_tu = sum(_activity_time_units(p) for p in selected_list)
         day_total_tu = travel_tu + day_activity_tu
         if day_total_tu > mtu_per_day:
             return None
@@ -409,7 +605,18 @@ class RoutePlanner:
         tu_score = self._tu_score(day_total_tu, mtu_per_day)
         travel_score = self._long_travel_score(action.travel_minutes)
 
-        new_interest_score = self._interest_score(selection.counts, selection.total_pois, target_distribution)
+        # TU-based interest: compute day TU by label and update totals
+        day_tu_by_label: Dict[str, float] = {c: 0.0 for c in CATEGORIES}
+        day_total_tu_activities = 0.0
+        for p in selected_list:
+            tu = float(_activity_time_units(p))
+            lab = _primary_label(p)
+            if lab in day_tu_by_label:
+                day_tu_by_label[lab] += tu
+            day_total_tu_activities += tu
+        new_totals: Dict[str, float] = {k: float(tu_by_label.get(k, 0.0)) + day_tu_by_label.get(k, 0.0) for k in CATEGORIES}
+        new_total_tu = float(total_tu) + day_total_tu_activities
+        new_interest_score = self._interest_score_tu(new_totals, new_total_tu, target_distribution)
         interest_gain = new_interest_score - interest_score
 
         added_new_city = action.added_new_city
@@ -441,9 +648,6 @@ class RoutePlanner:
             new_stay_streak = stay_streak + 1
             stay_penalty = -0.04 * max(0, new_stay_streak - 1) ** 2
 
-        long_excess = max(0.0, action.travel_minutes - LONG_TRAVEL_COMFORT_MINUTES)
-        extra_long_penalty = -0.25 * (long_excess / 60.0) ** 2
-
         total_gain = (
             0.35 * interest_gain
             + 0.20 * tu_score
@@ -452,7 +656,6 @@ class RoutePlanner:
             + 0.20 * travel_score
             + travel_penalty
             + stay_penalty
-            + extra_long_penalty
         )
 
         day_plan = DayPlan(
@@ -462,7 +665,7 @@ class RoutePlanner:
             display_city=self._display_name(action.destination),
             travel_from=self._display_name(action.travel_from) if action.travel_from else None,
             travel_minutes=action.travel_minutes,
-            pois=selection.selected,
+            pois=selected_list,
             note=None,
         )
 
@@ -470,8 +673,8 @@ class RoutePlanner:
             total_gain=total_gain,
             day_plan=day_plan,
             next_city=action.destination,
-            label_counts=selection.counts,
-            total_pois=selection.total_pois,
+            label_counts={},
+            total_pois=0,
             interest_score=new_interest_score,
             added_new_city=added_new_city,
             unique_cities=new_unique_count,
@@ -479,7 +682,7 @@ class RoutePlanner:
             coverage_sum=new_coverage_sum,
             coverage_count=new_coverage_count,
             coverage_score=new_coverage_score,
-            selected_ids=[poi.identifier for poi in selection.selected],
+            selected_ids=[poi.identifier for poi in selected_list],
             travel_streak=new_travel_streak,
             stay_streak=new_stay_streak,
         )
@@ -494,18 +697,18 @@ class RoutePlanner:
         return {category: float(preference_weights.get(category, 0.0)) / total for category in CATEGORIES}
 
     @staticmethod
-    def _interest_score(
-        counts: Mapping[str, int],
-        total_pois: int,
+    def _interest_score_tu(
+        tu_by_label: Mapping[str, float],
+        total_tu: float,
         target_distribution: Mapping[str, float],
     ) -> float:
-        if total_pois <= 0:
+        if total_tu <= 0:
             return 0.0
         per_label_scores: List[float] = []
         for category in CATEGORIES:
-            desired = target_distribution.get(category, 0.0)
-            observed = counts.get(category, 0) / total_pois
-            denom = max(desired, 1.0 / total_pois)
+            desired = float(target_distribution.get(category, 0.0))
+            observed = float(tu_by_label.get(category, 0.0)) / total_tu if total_tu > 0 else 0.0
+            denom = max(desired, 1.0 / max(total_tu, 1.0))
             per_label_scores.append(max(0.0, 1.0 - abs(observed - desired) / denom))
         return sum(per_label_scores) / len(CATEGORIES)
 
@@ -533,7 +736,8 @@ class RoutePlanner:
 
     @staticmethod
     def _city_efficiency(unique_city_count: int, num_days: int) -> float:
-        target = 1 + min(num_days, 8)
+        # Align with evaluator: target unique cities = 1 + ceil(0.6 * num_days)
+        target = 1 + math.ceil(0.6 * num_days)
         denom = max(1, target - 1)
         score = max(0.0, unique_city_count - 1) / denom
         return min(1.0, score)
@@ -797,6 +1001,9 @@ class RoutePlanner:
             for poi in self._datastore.pois_for_city(poi_city, season=scenario.season)
             if poi.identifier not in used_ids
         ]
+        # If a city has no in-season POIs, do not create a day for it.
+        if not candidates:
+            return None
 
         travel_tu = self._travel_time_units(travel_minutes)
         if travel_tu > scenario.mtu_per_day:
@@ -809,6 +1016,8 @@ class RoutePlanner:
                 scenario.preferences,
                 travel_tu=travel_tu,
                 season=scenario.season,
+                mtu_per_day=scenario.mtu_per_day,
+                rng=scenario.rng,
             )
             total_tu = travel_tu + sum(_activity_time_units(p) for p in selected)
             while selected and total_tu > scenario.mtu_per_day:
@@ -836,9 +1045,12 @@ class RoutePlanner:
                 continue
             prev_city = plan[idx - 1].distance_city
             current_city = day.distance_city
-            payload = self._graph.get(prev_city, {}).get(current_city)
             day.travel_from = self._display_name(prev_city)
-            day.travel_minutes = float(payload.get("duration_minutes", math.inf)) if payload else math.inf
+            if prev_city == current_city:
+                day.travel_minutes = 0.0
+            else:
+                payload = self._graph.get(prev_city, {}).get(current_city)
+                day.travel_minutes = float(payload.get("duration_minutes", math.inf)) if payload else math.inf
 
     @staticmethod
     def _city_blocks(plan: Sequence[DayPlan]) -> List[Tuple[int, str, int]]:
@@ -941,11 +1153,13 @@ class RoutePlanner:
                     available,
                     scenario.preferences,
                     travel_tu=0,
-                    rng=None,
                     season=scenario.season,
+                    mtu_per_day=scenario.mtu_per_day,
+                    rng=scenario.rng,
                 )
             else:
-                replacement.pois = []
+                # Do not propose staying where there are no in-season POIs
+                continue
 
             self._recompute_travel(new_plan)
             if not math.isfinite(new_plan[idx].travel_minutes):

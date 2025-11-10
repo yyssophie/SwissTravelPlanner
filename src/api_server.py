@@ -49,6 +49,7 @@ class PlanRequest(BaseModel):
     season: str
     preferences: PreferenceWeights
     max_hours_per_day: int = Field(..., alias="maxHoursPerDay", ge=4, le=10)
+    seed: int | None = Field(default=None, description="Optional RNG seed for reproducible tie-breaks")
 
     @validator("from_city", "to_city", "season")
     def _strip(cls, value: str) -> str:
@@ -162,6 +163,7 @@ def plan_trip(request: PlanRequest) -> PlanResponse:
             preference_weights=request.preferences.normalised(),
             season=season,
             mtu_per_day=request.max_hours_per_day,
+            seed=request.seed,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc))
