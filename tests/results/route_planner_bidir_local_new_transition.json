@@ -1,0 +1,257 @@
+[
+  {
+    "name": "loop_short_zurich_summer",
+    "total_score": 72.13597069872438,
+    "components": {
+      "interest_matching": 0.5773809523809523,
+      "city_visit_efficiency": 0.6666666666666666,
+      "geographic_coverage": 0.49192171528646794,
+      "tu_utilization": 1.0,
+      "long_travel_penalty": 1.0,
+      "travel_streak_smoothness": 0.9097623272188052,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.11918695794884115
+  },
+  {
+    "name": "oneway_short_bern_geneva",
+    "total_score": 77.79413928270903,
+    "components": {
+      "interest_matching": 0.9464285714285714,
+      "city_visit_efficiency": 0.6666666666666666,
+      "geographic_coverage": 0.6801406975832253,
+      "tu_utilization": 0.9642857142857143,
+      "long_travel_penalty": 0.0002743104674934012,
+      "travel_streak_smoothness": 1.0,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.2715662500122562
+  },
+  {
+    "name": "alps_medium_bern_zermatt",
+    "total_score": 91.94232746189938,
+    "components": {
+      "interest_matching": 0.9576923076923077,
+      "city_visit_efficiency": 1.0,
+      "geographic_coverage": 0.6860296216369813,
+      "tu_utilization": 0.95,
+      "long_travel_penalty": 1.0,
+      "travel_streak_smoothness": 0.8015304736227815,
+      "stay_streak_smoothness": 0.975
+    },
+    "hard_violations": [],
+    "runtime_seconds": 3.225157333072275
+  },
+  {
+    "name": "grand_tour_geneva_lugano",
+    "total_score": 93.16576070094304,
+    "components": {
+      "interest_matching": 0.9642857142857144,
+      "city_visit_efficiency": 1.0,
+      "geographic_coverage": 0.7518291230934048,
+      "tu_utilization": 0.9629629629629629,
+      "long_travel_penalty": 1.0,
+      "travel_streak_smoothness": 0.7387758820195036,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 6.942378707928583
+  },
+  {
+    "name": "winter_loop_zurich",
+    "total_score": 75.44145247101449,
+    "components": {
+      "interest_matching": 0.6722689075630252,
+      "city_visit_efficiency": 0.6,
+      "geographic_coverage": 0.5489545406065724,
+      "tu_utilization": 1.0,
+      "long_travel_penalty": 1.0,
+      "travel_streak_smoothness": 0.9355445194420037,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.08368845900986344
+  },
+  {
+    "name": "fifteen_day_south_to_north",
+    "total_score": 87.1482279314135,
+    "components": {
+      "interest_matching": 0.9617737003058104,
+      "city_visit_efficiency": 0.5555555555555556,
+      "geographic_coverage": 0.7074098947140091,
+      "tu_utilization": 0.9916666666666667,
+      "long_travel_penalty": 1.0,
+      "travel_streak_smoothness": 1.0,
+      "stay_streak_smoothness": 0.9333333333333333
+    },
+    "hard_violations": [],
+    "runtime_seconds": 8.461574374930933
+  },
+  {
+    "name": "long_loop_21days",
+    "total_score": 74.86423316967036,
+    "components": {
+      "interest_matching": 0.592280163599182,
+      "city_visit_efficiency": 0.6923076923076923,
+      "geographic_coverage": 0.6706734559011182,
+      "tu_utilization": 0.9576719576719577,
+      "long_travel_penalty": 0.9384154665011267,
+      "travel_streak_smoothness": 1.0,
+      "stay_streak_smoothness": 0.9880952380952381
+    },
+    "hard_violations": [],
+    "runtime_seconds": 1.1276806669775397
+  },
+  {
+    "name": "lake_geneva_focus",
+    "total_score": 85.79710861543025,
+    "components": {
+      "interest_matching": 0.8697916666666667,
+      "city_visit_efficiency": 0.8,
+      "geographic_coverage": 0.5784451789924593,
+      "tu_utilization": 1.0,
+      "long_travel_penalty": 1.0,
+      "travel_streak_smoothness": 0.9355445194420037,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 2.524121207999997
+  },
+  {
+    "name": "alpine_grand_tour",
+    "total_score": 88.34771703355014,
+    "components": {
+      "interest_matching": 0.9768115942028986,
+      "city_visit_efficiency": 1.0,
+      "geographic_coverage": 0.7752676193869359,
+      "tu_utilization": 0.9652777777777778,
+      "long_travel_penalty": 0.41483476278616815,
+      "travel_streak_smoothness": 0.808334308001038,
+      "stay_streak_smoothness": 0.9722222222222222
+    },
+    "hard_violations": [],
+    "runtime_seconds": 12.83189791708719
+  },
+  {
+    "name": "trans_switzerland",
+    "total_score": 87.67165860277967,
+    "components": {
+      "interest_matching": 0.9377413127413127,
+      "city_visit_efficiency": 1.0,
+      "geographic_coverage": 0.7009294294784412,
+      "tu_utilization": 0.9489795918367347,
+      "long_travel_penalty": 0.6475002423575686,
+      "travel_streak_smoothness": 0.725414982706078,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 4.687753250007518
+  },
+  {
+    "name": "short_nearby_loop",
+    "total_score": 69.400316749563,
+    "components": {
+      "interest_matching": 0.6106770833333334,
+      "city_visit_efficiency": 0.4,
+      "geographic_coverage": 0.7156591745845283,
+      "tu_utilization": 0.9285714285714286,
+      "long_travel_penalty": 0.7541731214128414,
+      "travel_streak_smoothness": 1.0,
+      "stay_streak_smoothness": 0.9642857142857143
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.08302179200109094
+  },
+  {
+    "name": "glacier_express_chain",
+    "total_score": 90.57059277734535,
+    "components": {
+      "interest_matching": 0.9767884322678843,
+      "city_visit_efficiency": 0.8461538461538461,
+      "geographic_coverage": 0.7602661909277462,
+      "tu_utilization": 0.9880952380952381,
+      "long_travel_penalty": 0.7965550071721645,
+      "travel_streak_smoothness": 0.9237532135285836,
+      "stay_streak_smoothness": 0.9761904761904762
+    },
+    "hard_violations": [],
+    "runtime_seconds": 14.069644750095904
+  },
+  {
+    "name": "eastern_alps_loop",
+    "total_score": 67.44714080820509,
+    "components": {
+      "interest_matching": 0.5769230769230769,
+      "city_visit_efficiency": 0.7272727272727273,
+      "geographic_coverage": 0.840559668842378,
+      "tu_utilization": 0.8888888888888888,
+      "long_travel_penalty": 0.04040138408374764,
+      "travel_streak_smoothness": 1.0,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 0.4112913749413565
+  },
+  {
+    "name": "southern_panorama",
+    "total_score": 83.02770128338408,
+    "components": {
+      "interest_matching": 0.9772408963585435,
+      "city_visit_efficiency": 0.9,
+      "geographic_coverage": 0.7512587097098928,
+      "tu_utilization": 0.9513888888888888,
+      "long_travel_penalty": 0.04047732017821407,
+      "travel_streak_smoothness": 0.8759565460142384,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 10.79678633401636
+  },
+  {
+    "name": "central_heritage_tour",
+    "total_score": 90.75855689598717,
+    "components": {
+      "interest_matching": 0.9651227678571428,
+      "city_visit_efficiency": 0.9166666666666666,
+      "geographic_coverage": 0.6881611583296864,
+      "tu_utilization": 0.9671052631578947,
+      "long_travel_penalty": 0.894036129862233,
+      "travel_streak_smoothness": 0.8919804800102253,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 18.049284624983557
+  },
+  {
+    "name": "lake_and_mountain_escape",
+    "total_score": 88.99600298408673,
+    "components": {
+      "interest_matching": 0.990546218487395,
+      "city_visit_efficiency": 0.7272727272727273,
+      "geographic_coverage": 0.6067121408808125,
+      "tu_utilization": 0.9926470588235294,
+      "long_travel_penalty": 0.998622824178179,
+      "travel_streak_smoothness": 0.9323532851768369,
+      "stay_streak_smoothness": 0.9558823529411765
+    },
+    "hard_violations": [],
+    "runtime_seconds": 11.715174082899466
+  },
+  {
+    "name": "northern_highland_route",
+    "total_score": 87.88859873196327,
+    "components": {
+      "interest_matching": 0.9195906432748538,
+      "city_visit_efficiency": 1.0,
+      "geographic_coverage": 0.6891561574439601,
+      "tu_utilization": 0.9047619047619048,
+      "long_travel_penalty": 0.7758814387749655,
+      "travel_streak_smoothness": 0.8070681793011486,
+      "stay_streak_smoothness": 1.0
+    },
+    "hard_violations": [],
+    "runtime_seconds": 3.2769322500098497
+  }
+]

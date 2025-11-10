@@ -580,6 +580,8 @@ class RoutePlanner:
         max_iterations = 50
         improvement_threshold = 1e-5
         config = {
+            "gap_swaps": 20,
+            "gap_per_day_cap": 5,
             "poi_candidates": 1000,
             "insert_limit": 100,
         }
@@ -634,10 +636,99 @@ class RoutePlanner:
         scenario: _ScenarioContext,
         config: Mapping[str, int],
     ) -> Iterable[List[DayPlan]]:
+        # Try targeted TU label-gap rebalancing first
+        yield from self._rebalance_label_gap(
+            plan,
+            scenario,
+            gap_swaps=int(config.get("gap_swaps", 0)),
+            per_day_cap=int(config.get("gap_per_day_cap", 0)),
+        )
         # City-block swap removed; only POI substitution, insert-city, and convert-travel-day
         yield from self._substitute_pois(plan, scenario, config.get("poi_candidates", 0))
         yield from self._insert_new_city(plan, scenario, config.get("insert_limit", 0))
         yield from self._convert_travel_day_to_stay(plan, scenario)
+
+    def _rebalance_label_gap(
+        self,
+        plan: List[DayPlan],
+        scenario: _ScenarioContext,
+        gap_swaps: int,
+        per_day_cap: int,
+    ) -> Iterable[List[DayPlan]]:
+        if gap_swaps <= 0 or per_day_cap <= 0:
+            return
+
+        tu_by_label: Dict[str, float] = {k: 0.0 for k in CATEGORIES}
+        total_tu = 0.0
+        for day in plan:
+            for poi in day.pois:
+                tu = float(_activity_time_units(poi))
+                total_tu += tu
+                lab = _primary_label(poi)
+                if lab in tu_by_label:
+                    tu_by_label[lab] += tu
+
+        target_sum = sum(float(scenario.preferences.get(k, 0.0)) for k in CATEGORIES)
+        target = {k: (float(scenario.preferences.get(k, 0.0)) / target_sum) if target_sum > 0 else (1.0 / len(CATEGORIES)) for k in CATEGORIES}
+
+        if total_tu <= 0:
+            return
+
+        gaps: Dict[str, float] = {}
+        for k in CATEGORIES:
+            actual = tu_by_label[k] / total_tu if total_tu > 0 else 0.0
+            gaps[k] = target.get(k, 0.0) - actual
+
+        deficit_label = max(CATEGORIES, key=lambda k: gaps.get(k, 0.0))
+        if gaps.get(deficit_label, 0.0) <= 1e-9:
+            return
+        source_label = min(CATEGORIES, key=lambda k: gaps.get(k, 0.0))
+        if source_label == deficit_label:
+            return
+
+        generated = 0
+        all_ids = [ {poi.identifier for poi in day.pois} for day in plan ]
+
+        for idx, day in enumerate(plan):
+            if generated >= gap_swaps:
+                break
+
+            removable = [p for p in day.pois if _primary_label(p) == source_label]
+            if not removable:
+                continue
+            removable.sort(key=lambda p: _activity_time_units(p), reverse=True)
+
+            poi_city = day.poi_city
+            city_pois = list(self._datastore.pois_for_city(poi_city, season=scenario.season))
+            if not city_pois:
+                continue
+            used_elsewhere = set().union(*(all_ids[j] for j in range(len(plan)) if j != idx))
+            add_candidates = [p for p in city_pois if _primary_label(p) == deficit_label and p.identifier not in used_elsewhere]
+            if not add_candidates:
+                continue
+            add_candidates.sort(key=lambda p: _activity_time_units(p), reverse=True)
+
+            built_for_day = 0
+            for rem in removable:
+                if built_for_day >= per_day_cap or generated >= gap_swaps:
+                    break
+                for add in add_candidates:
+                    if built_for_day >= per_day_cap or generated >= gap_swaps:
+                        break
+                    new_plan = [self._clone_day(d) for d in plan]
+                    new_day = new_plan[idx]
+                    new_pois = [p for p in new_day.pois if p.identifier != rem.identifier]
+                    if any(p.identifier == add.identifier for p in new_pois):
+                        continue
+                    new_pois.append(add)
+                    new_day.pois = new_pois
+                    if not self._is_valid_day(new_day, scenario.mtu_per_day):
+                        continue
+                    if not self._is_valid_sequence(new_plan, scenario):
+                        continue
+                    yield new_plan
+                    built_for_day += 1
+                    generated += 1
 
     def _swap_city_blocks(
         self,
