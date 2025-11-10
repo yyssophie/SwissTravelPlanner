@@ -21,10 +21,7 @@ City Naming Conventions
 
 Hard constraints (must NOT be violated)
 1) Day 1 must be in the start city.
-2) The last day must be in the end city. Earliest arrival windows:
-   - if num_days ≤ 7: arrive no earlier than day N−1
-   - if 8 ≤ num_days ≤ 15: arrive no earlier than day N−2
-   - if 16 ≤ num_days ≤ 21: arrive no earlier than day N−3
+2) The last day must be in the end city.
 3) Unique-visit rule: visit each city at most once (consecutive stay days form one block). Exception only when start==end, where the start city may be the final block.
 4) Daily time units (MTU) must not be exceeded. Compute strictly:
    - Travel TU: 0 if travel_minutes == 0; else max(1, ceil(travel_minutes/60)).
@@ -33,12 +30,18 @@ Hard constraints (must NOT be violated)
 5) Season gating: only schedule POIs whose season list contains the requested season.
 6) Valid edges only: every inter-city travel must correspond to a known edge in data/out/google_city_distances.json; use its minutes exactly.
 
+Planner guidelines (not evaluator-enforced)
+- Earliest arrival windows (recommended for better plans, but not hard-checked by the evaluator):
+  - if num_days ≤ 7: arrive in end city no earlier than day N−1
+  - if 8 ≤ num_days ≤ 15: arrive in end city no earlier than day N−2
+  - if 16 ≤ num_days ≤ 21: arrive in end city no earlier than day N−3
+
 Scoring function (0–100, matches the evaluator)
 - Interest matching (35%): TU-based label distribution vs. preferences (per-label capped L1).
 - TU utilisation (15%): per day 1 - |TU_used - MTU| / MTU, averaged.
 - City visit efficiency (15%): score = min(1, (unique_cities - 1) / max(1, ceil(num_days * 0.6))).
 - Geographic coverage (15%): average of sqrt(normalised shortest-path minutes from start) over visited cities.
-- Long-travel penalty (10%): 1 if travel ≤120 min; else exp(-((minutes-120)/30)^2), averaged.
+- Long-travel penalty (10%): 1 if travel ≤120 min; else exp(-((minutes-120)/20)^2), averaged.
 - Travel streak smoothness (5%): per day score = exp(-0.6*(k-1)) for the k-th consecutive travel day; days without travel score 1.0; averaged.
 - Stay streak smoothness (5%): first two consecutive stay days score 1.0; then max(0, 1 - (k-2)/4) for the k-th day; averaged.
 - Final: total = 100 * (
@@ -53,7 +56,7 @@ Planning procedure
 3) Choose in-season POIs per day; compute TU_day and adjust to satisfy TU_day ≤ mtu_per_day.
 4) Prefer balanced stays (avoid long travel streaks and long stay streaks) while targeting a high score.
 
-Output format (JSON only)
+Output format (JSON only; return a single JSON object, no extra text)
 {
   "itinerary": [
     {
@@ -70,7 +73,9 @@ Output format (JSON only)
       "tu_utilization": <0..1>,
       "city_visit_efficiency": <0..1>,
       "geographic_coverage": <0..1>,
-      "long_travel_penalty": <0..1>
+      "long_travel_penalty": <0..1>,
+      "travel_streak_smoothness": <0..1>,
+      "stay_streak_smoothness": <0..1>
     },
     "total": <0..100 with 7 decimal places>
   }
@@ -80,6 +85,8 @@ Rules for generation
 - Use ONLY cities present in the distance matrix and ONLY POI identifiers from the POI dataset. Use canonical city strings in the itinerary.
 - Each day’s POIs must belong to that day’s canonical city and be valid for the season.
 - Enforce TU_day ≤ mtu_per_day using the TU rules above.
+- Geographic coverage: exclude the start city from the coverage average; normalize by the maximum finite shortest-path minutes from the start across the full graph.
+- Inter-city travel: each travel_minutes must match exactly the minutes in data/out/google_city_distances.json for that leg.
 - Verify all hard constraints before returning JSON. If any fail, adjust cities/POIs/travel within the allowed windows rather than returning an invalid plan.
 
 Important: LLM‑only execution

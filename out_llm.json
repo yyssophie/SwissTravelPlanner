@@ -1,0 +1,304 @@
+{
+  "itinerary": [
+    {
+      "day": 1,
+      "distance_city": "St. Moritz, Switzerland",
+      "travel_from": null,
+      "travel_minutes": 0,
+      "pois": [
+        {
+          "identifier": "e6b5a916-baf1-4dcb-bea7-ae8ec6c41d22"
+        },
+        {
+          "identifier": "4f3d2c55-820e-4ba2-8534-699ba3143107"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "distance_city": "St. Moritz, Switzerland",
+      "travel_from": "St. Moritz, Switzerland",
+      "travel_minutes": 0.0,
+      "pois": [
+        {
+          "identifier": "e26a013c-43c6-44bb-a425-8c002d693fb7"
+        },
+        {
+          "identifier": "4a5f6c42-d17d-4dd7-b327-3d073fd53a75"
+        },
+        {
+          "identifier": "e34041d6-7633-437a-9d9e-d47933306ca7"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "distance_city": "Lugano, Switzerland",
+      "travel_from": "St. Moritz, Switzerland",
+      "travel_minutes": 162.0,
+      "pois": [
+        {
+          "identifier": "737392b6-b310-4b98-9437-499db4ea2b8d"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "distance_city": "Schwyz, Switzerland",
+      "travel_from": "Lugano, Switzerland",
+      "travel_minutes": 114.0,
+      "pois": [
+        {
+          "identifier": "d78ba9f8-1465-43b9-9299-23fbc0cb073c"
+        },
+        {
+          "identifier": "9fa2bcd0-0742-4e38-9236-7606b8dedd98"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "distance_city": "Zurich, Switzerland",
+      "travel_from": "Schwyz, Switzerland",
+      "travel_minutes": 48.7,
+      "pois": [
+        {
+          "identifier": "2d9af042-f0d7-41a1-a64b-13fcf1290bc4"
+        },
+        {
+          "identifier": "f0a6e103-3352-44c5-a960-e7df67cbad80"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "distance_city": "St. Gallen, Switzerland",
+      "travel_from": "Zurich, Switzerland",
+      "travel_minutes": 59.7,
+      "pois": [
+        {
+          "identifier": "0b70494e-c8dd-4b30-b5f2-40b7ebe615a8"
+        },
+        {
+          "identifier": "synthetic-textile-museum-st-gallen"
+        },
+        {
+          "identifier": "2def9beb-4c79-427a-b0f7-07e4f95d075b"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "distance_city": "Appenzell, Switzerland",
+      "travel_from": "St. Gallen, Switzerland",
+      "travel_minutes": 21.6,
+      "pois": [
+        {
+          "identifier": "a025a671-f46f-40eb-8a61-fbe3142a88c5"
+        },
+        {
+          "identifier": "4b6d728f-f3ba-40b1-b6a0-c02daa721fd9"
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "distance_city": "Bern, Switzerland",
+      "travel_from": "Appenzell, Switzerland",
+      "travel_minutes": 149.9,
+      "pois": [
+        {
+          "identifier": "2a9e94cb-8b20-436d-9c99-93c94bb67bf6"
+        },
+        {
+          "identifier": "f27a5205-4885-4241-a18c-0f17270cbccb"
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "distance_city": "Interlaken, Switzerland",
+      "travel_from": "Bern, Switzerland",
+      "travel_minutes": 47.5,
+      "pois": [
+        {
+          "identifier": "825aed0c-5938-41d4-a61e-3eee58d5aa42"
+        },
+        {
+          "identifier": "db38447f-dcca-43c9-9426-62f6b594d038"
+        },
+        {
+          "identifier": "11dff398-b7bb-4654-b6ec-e58069c0fb3e"
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "distance_city": "Interlaken, Switzerland",
+      "travel_from": "Interlaken, Switzerland",
+      "travel_minutes": 0.0,
+      "pois": [
+        {
+          "identifier": "64e0bd39-1438-4a0b-ada3-2b8161a6e81a"
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "distance_city": "Kandersteg, Switzerland",
+      "travel_from": "Interlaken, Switzerland",
+      "travel_minutes": 43.2,
+      "pois": [
+        {
+          "identifier": "ba2f92ef-0770-44de-aa80-3e7d3cef762a"
+        },
+        {
+          "identifier": "36dae19d-bfe7-4574-aa27-0c767b4b0d57"
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "distance_city": "Sion, Switzerland",
+      "travel_from": "Kandersteg, Switzerland",
+      "travel_minutes": 81.9,
+      "pois": [
+        {
+          "identifier": "60005b26-79b0-43c9-ab54-f0f4c35e1e21"
+        },
+        {
+          "identifier": "synthetic-valere-basilica"
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "distance_city": "Montreux, Switzerland",
+      "travel_from": "Sion, Switzerland",
+      "travel_minutes": 48.6,
+      "pois": [
+        {
+          "identifier": "da511988-77b9-4861-8e52-e7234e016c89"
+        },
+        {
+          "identifier": "30296bb6-5906-4b88-8cc4-17602b9ae472"
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "distance_city": "Lausanne, Switzerland",
+      "travel_from": "Montreux, Switzerland",
+      "travel_minutes": 35.8,
+      "pois": [
+        {
+          "identifier": "1edf4aea-8453-4b54-ac97-b7f3f793d020"
+        },
+        {
+          "identifier": "637abdd6-157c-45ef-beb9-3708046ce669"
+        },
+        {
+          "identifier": "synthetic-collection-art-brut"
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "distance_city": "Geneva, Switzerland",
+      "travel_from": "Lausanne, Switzerland",
+      "travel_minutes": 58.7,
+      "pois": [
+        {
+          "identifier": "27440fd4-845b-4223-90b5-dfa44200e832"
+        },
+        {
+          "identifier": "44ec9f44-6762-4764-a388-9c58e3f7c154"
+        }
+      ]
+    },
+    {
+      "day": 16,
+      "distance_city": "Geneva, Switzerland",
+      "travel_from": "Geneva, Switzerland",
+      "travel_minutes": 0.0,
+      "pois": [
+        {
+          "identifier": "ab0e969d-5f90-460d-8b6a-614c7e3885df"
+        },
+        {
+          "identifier": "2037149e-12cf-48ae-99db-f3f721c5b2d5"
+        }
+      ]
+    },
+    {
+      "day": 17,
+      "distance_city": "Lucerne, Switzerland",
+      "travel_from": "Geneva, Switzerland",
+      "travel_minutes": 173.5,
+      "pois": [
+        {
+          "identifier": "39e11846-1ae9-4c9c-82e7-63d727085a62"
+        },
+        {
+          "identifier": "2a7b760a-c3ad-455d-82b7-4270d08481c1"
+        }
+      ]
+    },
+    {
+      "day": 18,
+      "distance_city": "Lucerne, Switzerland",
+      "travel_from": "Lucerne, Switzerland",
+      "travel_minutes": 0.0,
+      "pois": [
+        {
+          "identifier": "138de462-b0bc-45fb-a7ba-77cd959aa3d7"
+        }
+      ]
+    },
+    {
+      "day": 19,
+      "distance_city": "Zermatt, Switzerland",
+      "travel_from": "Lucerne, Switzerland",
+      "travel_minutes": 188.6,
+      "pois": [
+        {
+          "identifier": "8c9fb25a-7344-42f7-a129-67f152eebdb9"
+        }
+      ]
+    },
+    {
+      "day": 20,
+      "distance_city": "Zermatt, Switzerland",
+      "travel_from": "Zermatt, Switzerland",
+      "travel_minutes": 0.0,
+      "pois": [
+        {
+          "identifier": "57e2ab81-411c-4fa1-ae96-d67e7aaf492f"
+        }
+      ]
+    },
+    {
+      "day": 21,
+      "distance_city": "Zermatt, Switzerland",
+      "travel_from": "Zermatt, Switzerland",
+      "travel_minutes": 0.0,
+      "pois": [
+        {
+          "identifier": "1dfb3334-4bca-49f7-9e97-e7094e6c8df8"
+        }
+      ]
+    }
+  ],
+  "evaluation": {
+    "components": {
+      "interest_matching": 0.841259,
+      "tu_utilization": 0.888889,
+      "city_visit_efficiency": 1.0,
+      "geographic_coverage": 0.820744,
+      "long_travel_penalty": 0.815235,
+      "travel_streak_smoothness": 0.632817,
+      "stay_streak_smoothness": 1.0
+    },
+    "total": 86.404995
+  }
+}

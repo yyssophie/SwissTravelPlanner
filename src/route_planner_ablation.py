@@ -102,6 +102,15 @@ class _ScenarioContext:
     rng: random.Random
 
 
+# Transition labels for ablation
+TRANSITION_LABELS = {
+    1: "swap_city_blocks",
+    2: "substitute_pois",
+    3: "insert_new_city",
+    4: "convert_travel_day_to_stay",
+}
+
+
 class RoutePlanner:
     """Greedy planner aligned with the new evaluation metrics."""
 
@@ -109,6 +118,7 @@ class RoutePlanner:
         self,
         datastore: TravelDataStore,
         distance_path: Path = Path("data/out/google_city_distances.json"),
+        allowed_transitions: Optional[Sequence[int]] = None,
     ) -> None:
         self._datastore = datastore
         self._graph = self._load_distance_graph(distance_path)
@@ -119,6 +129,12 @@ class RoutePlanner:
         }
         self._alias_to_distance = self._build_aliases()
         self._shortest_minutes = self._compute_shortest_paths()
+        # Ablation configuration
+        self._allowed_transitions = set(allowed_transitions) if allowed_transitions else set(TRANSITION_LABELS.keys())
+        # Last-run metrics for experiments
+        self.last_base_score: Optional[float] = None
+        self.last_final_score: Optional[float] = None
+        self.last_gain: Optional[float] = None
 
     # ------------------------------------------------------------------ public API
 
@@ -198,17 +214,38 @@ class RoutePlanner:
         # Build backward-based variant (day 1 fixed), then run local search on both and pick best
         backward_variant = self._build_backward_variant(scenario, forward_plan)
 
-        # Run local search on available candidates
+        # Evaluate greedy seeds (base, before local search)
         try:
             from .evaluator import evaluate_itinerary  # type: ignore
         except ImportError:  # pragma: no cover
             from evaluator import evaluate_itinerary  # type: ignore
 
+        f_base_eval = evaluate_itinerary(
+            forward_plan,
+            start_city=scenario.start_city,
+            end_city=scenario.end_city,
+            interests=scenario.preferences,
+            mtu=scenario.mtu_per_day,
+            season=scenario.season,
+        )
+        b_base_total = -math.inf
+        if backward_variant is not None:
+            b_base_eval = evaluate_itinerary(
+                backward_variant,
+                start_city=scenario.start_city,
+                end_city=scenario.end_city,
+                interests=scenario.preferences,
+                mtu=scenario.mtu_per_day,
+                season=scenario.season,
+            )
+            b_base_total = b_base_eval.total if not b_base_eval.hard_violations else -math.inf
+        f_base_total = f_base_eval.total if not f_base_eval.hard_violations else -math.inf
+        base_best_score = max(f_base_total, b_base_total)
+        if base_best_score == -math.inf:
+            base_best_score = 0.0
+        self.last_base_score = base_best_score
+        
         # Run local search on both seeds (forward and backward if available) and keep the better by evaluator score
-        try:  # pragma: no cover - support both package and script imports
-            from .evaluator import evaluate_itinerary  # type: ignore
-        except ImportError:  # pragma: no cover
-            from evaluator import evaluate_itinerary  # type: ignore
 
         LOGGER.info("RoutePlanner: refining forward greedy with local search")
         forward_ls = self._run_local_search(forward_plan, scenario)
@@ -246,6 +283,9 @@ class RoutePlanner:
             LOGGER.info("RoutePlanner: backward variant unavailable; kept forward-based result (score=%.5f)", best_score)
 
         self._renumber_days(best_plan)
+        # Record last-final and gain vs base-best
+        self.last_final_score = best_score if math.isfinite(best_score) else 0.0
+        self.last_gain = self.last_final_score - (self.last_base_score or 0.0)
         return best_plan
 
     def available_cities(self) -> List[str]:
@@ -756,12 +796,12 @@ class RoutePlanner:
         except ImportError:  # pragma: no cover
             from evaluator import evaluate_itinerary  # type: ignore
 
-        max_iterations = 50
-        improvement_threshold = 1e-5
+        max_iterations = 10
+        improvement_threshold = 1e-7
         config = {
-            "swap_limit": 100,
-            "poi_candidates": 1000,
-            "insert_limit": 100,
+            "swap_limit": 8,
+            "poi_candidates": 4,
+            "insert_limit": 12,
         }
 
         best_plan = [self._clone_day(day) for day in initial_plan]
@@ -814,10 +854,14 @@ class RoutePlanner:
         scenario: _ScenarioContext,
         config: Mapping[str, int],
     ) -> Iterable[List[DayPlan]]:
-        yield from self._swap_city_blocks(plan, scenario, config.get("swap_limit", 0))
-        yield from self._substitute_pois(plan, scenario, config.get("poi_candidates", 0))
-        yield from self._insert_new_city(plan, scenario, config.get("insert_limit", 0))
-        yield from self._convert_travel_day_to_stay(plan, scenario)
+        if 1 in self._allowed_transitions:
+            yield from self._swap_city_blocks(plan, scenario, config.get("swap_limit", 0))
+        if 2 in self._allowed_transitions:
+            yield from self._substitute_pois(plan, scenario, config.get("poi_candidates", 0))
+        if 3 in self._allowed_transitions:
+            yield from self._insert_new_city(plan, scenario, config.get("insert_limit", 0))
+        if 4 in self._allowed_transitions:
+            yield from self._convert_travel_day_to_stay(plan, scenario)
 
     def _swap_city_blocks(
         self,

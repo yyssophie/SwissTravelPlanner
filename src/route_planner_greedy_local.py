@@ -577,12 +577,12 @@ class RoutePlanner:
         except ImportError:  # pragma: no cover
             from evaluator import evaluate_itinerary  # type: ignore
 
-        max_iterations = 10
-        improvement_threshold = 1e-7
+        max_iterations = 50
+        improvement_threshold = 1e-5
         config = {
-            "swap_limit": 8,
-            "poi_candidates": 4,
-            "insert_limit": 12,
+            "swap_limit": 100,
+            "poi_candidates": 1000,
+            "insert_limit": 100,
         }
 
         best_plan = [self._clone_day(day) for day in initial_plan]
