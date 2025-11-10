@@ -102,12 +102,11 @@ class _ScenarioContext:
     rng: random.Random
 
 
-# Transition labels for ablation
+# Transition labels for ablation (swap removed)
 TRANSITION_LABELS = {
-    1: "swap_city_blocks",
-    2: "substitute_pois",
-    3: "insert_new_city",
-    4: "convert_travel_day_to_stay",
+    1: "substitute_pois",
+    2: "insert_new_city",
+    3: "convert_travel_day_to_stay",
 }
 
 
@@ -854,13 +853,12 @@ class RoutePlanner:
         scenario: _ScenarioContext,
         config: Mapping[str, int],
     ) -> Iterable[List[DayPlan]]:
+        # City-block swap removed from ablation transitions
         if 1 in self._allowed_transitions:
-            yield from self._swap_city_blocks(plan, scenario, config.get("swap_limit", 0))
-        if 2 in self._allowed_transitions:
             yield from self._substitute_pois(plan, scenario, config.get("poi_candidates", 0))
-        if 3 in self._allowed_transitions:
+        if 2 in self._allowed_transitions:
             yield from self._insert_new_city(plan, scenario, config.get("insert_limit", 0))
-        if 4 in self._allowed_transitions:
+        if 3 in self._allowed_transitions:
             yield from self._convert_travel_day_to_stay(plan, scenario)
 
     def _swap_city_blocks(

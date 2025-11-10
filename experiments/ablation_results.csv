@@ -1,97 +1,73 @@
 transition_label,transition_name,start_city,end_city,days,season,mtu,pref_label,nature,culture,food,sport,base_score,final_score,gain,runtime_seconds,violations
-1,swap_city_blocks,"Interlaken, Switzerland","St. Moritz, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,70.4745503,70.4745503,0.0,0.015681,-
-1,swap_city_blocks,"Zurich, Switzerland","Zurich, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,64.9453029,64.9453029,0.0,0.021227,-
-1,swap_city_blocks,"Geneva, Switzerland","Lucerne, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,68.6964926,68.6964926,0.0,0.02334,-
-1,swap_city_blocks,"Interlaken, Switzerland","St. Moritz, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,67.3773871,67.3773871,0.0,0.009767,-
-1,swap_city_blocks,"Zurich, Switzerland","Zurich, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,60.4950714,60.4950714,0.0,0.010161,-
-1,swap_city_blocks,"Geneva, Switzerland","Lucerne, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,58.3261223,58.3261223,0.0,0.009969,-
-1,swap_city_blocks,"Interlaken, Switzerland","St. Moritz, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,76.4570073,76.4570073,0.0,0.063807,-
-1,swap_city_blocks,"Zurich, Switzerland","Zurich, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,65.4164146,65.4164146,0.0,0.064768,-
-1,swap_city_blocks,"Geneva, Switzerland","Lucerne, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,75.738496,75.738496,0.0,0.061843,-
-1,swap_city_blocks,"Interlaken, Switzerland","St. Moritz, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,71.0318192,71.0318192,0.0,0.032964,-
-1,swap_city_blocks,"Zurich, Switzerland","Zurich, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,63.1425075,63.1425075,0.0,0.041991,-
-1,swap_city_blocks,"Geneva, Switzerland","Lucerne, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,79.7934715,79.7934715,0.0,0.03871,-
-1,swap_city_blocks,"Interlaken, Switzerland","St. Moritz, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,79.4453673,79.4453673,0.0,0.133108,-
-1,swap_city_blocks,"Zurich, Switzerland","Zurich, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,69.6254289,69.6254289,0.0,0.140609,-
-1,swap_city_blocks,"Geneva, Switzerland","Lucerne, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,84.619931,84.619931,0.0,0.147174,-
-1,swap_city_blocks,"Interlaken, Switzerland","St. Moritz, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,81.63297,81.63297,0.0,0.086054,-
-1,swap_city_blocks,"Zurich, Switzerland","Zurich, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,77.9700568,77.9700568,0.0,0.052053,-
-1,swap_city_blocks,"Geneva, Switzerland","Lucerne, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,78.3742269,78.3742269,0.0,0.066745,-
-1,swap_city_blocks,"Interlaken, Switzerland","St. Moritz, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,83.3706149,83.3706149,0.0,0.172298,-
-1,swap_city_blocks,"Zurich, Switzerland","Zurich, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,77.2747106,77.2747106,0.0,0.14745,-
-1,swap_city_blocks,"Geneva, Switzerland","Lucerne, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,78.4184858,78.4184858,0.0,0.195881,-
-1,swap_city_blocks,"Interlaken, Switzerland","St. Moritz, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,78.9588538,78.9588538,0.0,0.171846,-
-1,swap_city_blocks,"Zurich, Switzerland","Zurich, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,76.1814,76.1814,0.0,0.083569,-
-1,swap_city_blocks,"Geneva, Switzerland","Lucerne, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,71.8721883,71.8721883,0.0,0.116425,-
-2,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,70.4745503,77.1785373,6.703987,0.061337,-
-2,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,64.9453029,64.9453029,0.0,0.042435,-
-2,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,68.6964926,80.3631593,11.6666667,0.079618,-
-2,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,67.3773871,67.3773871,0.0,0.027845,-
-2,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,60.4950714,60.4950714,0.0,0.01438,-
-2,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,58.3261223,62.8631593,4.537037,0.022779,-
-2,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,76.4570073,77.34468,0.8876727,0.23131,-
-2,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,65.4164146,65.4164146,0.0,0.10814,-
-2,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,75.738496,85.4770807,9.7385847,0.324036,-
-2,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,71.0318192,71.0318192,0.0,0.037217,-
-2,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,63.1425075,63.1425075,0.0,0.034059,-
-2,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,79.7934715,88.2612135,8.4677419,0.10959,-
-2,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,79.4453673,88.400501,8.9551336,0.633418,-
-2,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,69.6254289,69.6254289,0.0,0.21908,-
-2,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,84.619931,88.3125915,3.6926606,0.974491,-
-2,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,81.63297,82.2354328,0.6024629,0.494536,-
-2,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,77.9700568,77.9700568,0.0,0.15969,-
-2,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,78.3742269,83.5594121,5.1851852,0.369059,-
-2,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,83.3706149,85.3011366,1.9305218,1.474034,-
-2,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,77.2747106,77.2747106,0.0,0.362634,-
-2,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,78.4184858,86.5394008,8.120915,0.811034,-
-2,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,78.9588538,84.306076,5.3472222,0.327791,-
-2,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,76.1814,76.1814,0.0,0.0867,-
-2,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,71.8721883,81.4354123,9.5632239,0.41884,-
-3,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,70.4745503,70.4745503,0.0,0.050073,-
-3,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,64.9453029,64.9453029,0.0,0.045389,-
-3,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,68.6964926,68.6964926,0.0,0.04328,-
-3,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,67.3773871,67.3773871,0.0,0.04266,-
-3,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,60.4950714,60.4950714,0.0,0.027886,-
-3,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,58.3261223,58.3261223,0.0,0.031254,-
-3,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,76.4570073,76.4570073,0.0,0.164008,-
-3,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,65.4164146,65.4164146,0.0,0.170187,-
-3,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,75.738496,75.738496,0.0,0.08621,-
-3,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,71.0318192,71.0318192,0.0,0.035939,-
-3,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,63.1425075,63.1425075,0.0,0.107299,-
-3,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,79.7934715,85.5269108,5.7334393,0.104057,-
-3,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,79.4453673,79.4453673,0.0,0.16465,-
-3,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,69.6254289,69.6254289,0.0,0.331205,-
-3,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,84.619931,86.2342741,1.6143431,0.180786,-
-3,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,81.63297,81.63297,0.0,0.091343,-
-3,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,77.9700568,77.9700568,0.0,0.194901,-
-3,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,78.3742269,79.9967283,1.6225013,0.108249,-
-3,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,83.3706149,83.3706149,0.0,0.387057,-
-3,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,77.2747106,77.2747106,0.0,0.434146,-
-3,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,78.4184858,78.4184858,0.0,0.205872,-
-3,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,78.9588538,78.9588538,0.0,0.123078,-
-3,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,76.1814,76.1814,0.0,0.344322,-
-3,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,71.8721883,75.7275862,3.8553979,0.15555,-
-4,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,70.4745503,70.4745503,0.0,0.020803,-
-4,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,64.9453029,64.9453029,0.0,0.0251,-
-4,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,68.6964926,68.6964926,0.0,0.028293,-
-4,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,67.3773871,67.3773871,0.0,0.011193,-
-4,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,60.4950714,60.4950714,0.0,0.011352,-
-4,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,58.3261223,58.3261223,0.0,0.01235,-
-4,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,76.4570073,76.4570073,0.0,0.071049,-
-4,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,65.4164146,65.4164146,0.0,0.069403,-
-4,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,75.738496,75.738496,0.0,0.071205,-
-4,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,71.0318192,71.0318192,0.0,0.045627,-
-4,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,63.1425075,63.1425075,0.0,0.033457,-
-4,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,79.7934715,79.7934715,0.0,0.04234,-
-4,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,79.4453673,79.4453673,0.0,0.12337,-
-4,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,69.6254289,69.6254289,0.0,0.107068,-
-4,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,84.619931,84.619931,0.0,0.10786,-
-4,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,81.63297,81.63297,0.0,0.089674,-
-4,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,77.9700568,77.9700568,0.0,0.051056,-
-4,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,78.3742269,78.3742269,0.0,0.055958,-
-4,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,83.3706149,83.3706149,0.0,0.18181,-
-4,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,77.2747106,77.2747106,0.0,0.153623,-
-4,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,78.4184858,80.723562,2.3050762,0.228134,-
-4,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,78.9588538,81.0100213,2.0511675,0.267609,-
-4,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,76.1814,76.1814,0.0,0.079644,-
-4,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,71.8721883,71.8721883,0.0,0.096763,-
+1,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,70.4745503,77.1785373,6.703987,0.061582,-
+1,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,64.9453029,64.9453029,0.0,0.043241,-
+1,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,68.6964926,80.3631593,11.6666667,0.084275,-
+1,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,67.3773871,67.3773871,0.0,0.030883,-
+1,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,60.4950714,60.4950714,0.0,0.01516,-
+1,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,58.3261223,62.8631593,4.537037,0.024185,-
+1,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,76.4570073,77.34468,0.8876727,0.252121,-
+1,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,65.4164146,65.4164146,0.0,0.103384,-
+1,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,75.738496,85.4770807,9.7385847,0.29716,-
+1,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,71.0318192,71.0318192,0.0,0.044608,-
+1,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,63.1425075,63.1425075,0.0,0.038276,-
+1,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,79.7934715,88.2612135,8.4677419,0.109232,-
+1,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,79.4453673,88.400501,8.9551336,0.683013,-
+1,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,69.6254289,69.6254289,0.0,0.281193,-
+1,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,84.619931,88.3125915,3.6926606,0.480449,-
+1,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,81.63297,82.2354328,0.6024629,0.179977,-
+1,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,77.9700568,77.9700568,0.0,0.09558,-
+1,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,78.3742269,83.5594121,5.1851852,0.587634,-
+1,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,83.3706149,85.3011366,1.9305218,2.0309,-
+1,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,77.2747106,77.2747106,0.0,0.402443,-
+1,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,78.4184858,86.5394008,8.120915,1.104113,-
+1,substitute_pois,"Interlaken, Switzerland","St. Moritz, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,78.9588538,84.306076,5.3472222,0.365534,-
+1,substitute_pois,"Zurich, Switzerland","Zurich, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,76.1814,76.1814,0.0,0.106816,-
+1,substitute_pois,"Geneva, Switzerland","Lucerne, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,71.8721883,81.4354123,9.5632239,0.906272,-
+2,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,70.4745503,70.4745503,0.0,0.168788,-
+2,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,64.9453029,64.9453029,0.0,0.076356,-
+2,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,68.6964926,68.6964926,0.0,0.077805,-
+2,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,67.3773871,67.3773871,0.0,0.067062,-
+2,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,60.4950714,60.4950714,0.0,0.033825,-
+2,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,58.3261223,58.3261223,0.0,0.051886,-
+2,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,76.4570073,76.4570073,0.0,0.192228,-
+2,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,65.4164146,65.4164146,0.0,0.178307,-
+2,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,75.738496,75.738496,0.0,0.097554,-
+2,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,71.0318192,71.0318192,0.0,0.042458,-
+2,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,63.1425075,63.1425075,0.0,0.120669,-
+2,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,79.7934715,85.5269108,5.7334393,0.115794,-
+2,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,79.4453673,79.4453673,0.0,0.184901,-
+2,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,69.6254289,69.6254289,0.0,0.44585,-
+2,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,84.619931,86.2342741,1.6143431,0.263356,-
+2,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,81.63297,81.63297,0.0,0.112407,-
+2,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,77.9700568,77.9700568,0.0,0.228604,-
+2,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,78.3742269,79.9967283,1.6225013,0.132463,-
+2,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,83.3706149,83.3706149,0.0,0.4599,-
+2,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,77.2747106,77.2747106,0.0,0.455865,-
+2,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,78.4184858,78.4184858,0.0,0.244359,-
+2,insert_new_city,"Interlaken, Switzerland","St. Moritz, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,78.9588538,78.9588538,0.0,0.147373,-
+2,insert_new_city,"Zurich, Switzerland","Zurich, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,76.1814,76.1814,0.0,0.377859,-
+2,insert_new_city,"Geneva, Switzerland","Lucerne, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,71.8721883,75.7275862,3.8553979,0.185912,-
+3,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,70.4745503,70.4745503,0.0,0.021433,-
+3,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,64.9453029,64.9453029,0.0,0.025636,-
+3,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",4,summer,8,balanced,0.25,0.25,0.25,0.25,68.6964926,68.6964926,0.0,0.027916,-
+3,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,67.3773871,67.3773871,0.0,0.012658,-
+3,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,60.4950714,60.4950714,0.0,0.014134,-
+3,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",4,winter,8,balanced,0.25,0.25,0.25,0.25,58.3261223,58.3261223,0.0,0.017912,-
+3,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,76.4570073,76.4570073,0.0,0.079399,-
+3,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,65.4164146,65.4164146,0.0,0.081517,-
+3,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",9,summer,8,balanced,0.25,0.25,0.25,0.25,75.738496,75.738496,0.0,0.076623,-
+3,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,71.0318192,71.0318192,0.0,0.04626,-
+3,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,63.1425075,63.1425075,0.0,0.043915,-
+3,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",9,winter,8,balanced,0.25,0.25,0.25,0.25,79.7934715,79.7934715,0.0,0.051819,-
+3,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,79.4453673,79.4453673,0.0,0.152238,-
+3,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,69.6254289,69.6254289,0.0,0.146275,-
+3,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",15,summer,8,balanced,0.25,0.25,0.25,0.25,84.619931,84.619931,0.0,0.115839,-
+3,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,81.63297,81.63297,0.0,0.091689,-
+3,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,77.9700568,77.9700568,0.0,0.06881,-
+3,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",15,winter,8,balanced,0.25,0.25,0.25,0.25,78.3742269,78.3742269,0.0,0.079299,-
+3,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,83.3706149,83.3706149,0.0,0.208746,-
+3,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,77.2747106,77.2747106,0.0,0.155858,-
+3,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",21,summer,8,balanced,0.25,0.25,0.25,0.25,78.4184858,80.723562,2.3050762,0.194356,-
+3,convert_travel_day_to_stay,"Interlaken, Switzerland","St. Moritz, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,78.9588538,81.0100213,2.0511675,0.1464,-
+3,convert_travel_day_to_stay,"Zurich, Switzerland","Zurich, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,76.1814,76.1814,0.0,0.071872,-
+3,convert_travel_day_to_stay,"Geneva, Switzerland","Lucerne, Switzerland",21,winter,8,balanced,0.25,0.25,0.25,0.25,71.8721883,71.8721883,0.0,0.094084,-

@@ -580,7 +580,6 @@ class RoutePlanner:
         max_iterations = 50
         improvement_threshold = 1e-5
         config = {
-            "swap_limit": 100,
             "poi_candidates": 1000,
             "insert_limit": 100,
         }
@@ -635,7 +634,7 @@ class RoutePlanner:
         scenario: _ScenarioContext,
         config: Mapping[str, int],
     ) -> Iterable[List[DayPlan]]:
-        yield from self._swap_city_blocks(plan, scenario, config.get("swap_limit", 0))
+        # City-block swap removed; only POI substitution, insert-city, and convert-travel-day
         yield from self._substitute_pois(plan, scenario, config.get("poi_candidates", 0))
         yield from self._insert_new_city(plan, scenario, config.get("insert_limit", 0))
         yield from self._convert_travel_day_to_stay(plan, scenario)
