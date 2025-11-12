@@ -21,6 +21,13 @@ from evaluator import evaluate_itinerary
 from route_planner_ablation import RoutePlanner, TRANSITION_LABELS
 
 
+PREF_OPTIONS = {
+    "balanced": {"nature": 0.25, "culture": 0.25, "food": 0.25, "sport": 0.25},
+    "nature_food": {"nature": 0.4, "culture": 0.2, "food": 0.3, "sport": 0.3},
+    "culture_food": {"nature": 0.1, "culture": 0.4, "food": 0.3, "sport": 0.2},
+}
+
+
 def scenario_grid() -> Iterable[Dict[str, object]]:
     days_list = [4, 9, 15, 21]
     seasons = ["summer", "winter"]
@@ -29,21 +36,22 @@ def scenario_grid() -> Iterable[Dict[str, object]]:
         ("Zurich, Switzerland", "Zurich, Switzerland"),
         ("Geneva, Switzerland", "Lucerne, Switzerland"),
     ]
-    mtu = 8
-    prefs = {"nature": 0.25, "culture": 0.25, "food": 0.25, "sport": 0.25}
+    mtus = [6, 10]
 
     for d in days_list:
         for season in seasons:
             for (start_city, end_city) in pairs:
-                yield {
-                    "days": d,
-                    "season": season,
-                    "start": start_city,
-                    "end": end_city,
-                    "mtu": mtu,
-                    "pref_label": "balanced",
-                    "preferences": prefs,
-                }
+                for mtu in mtus:
+                    for label, prefs in PREF_OPTIONS.items():
+                        yield {
+                            "days": d,
+                            "season": season,
+                            "start": start_city,
+                            "end": end_city,
+                            "mtu": mtu,
+                            "pref_label": label,
+                            "preferences": prefs,
+                        }
 
 
 def main() -> None:
@@ -56,6 +64,16 @@ def main() -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     datastore = TravelDataStore.from_files()
+
+    component_cols = [
+        "interest_matching",
+        "tu_utilization",
+        "city_visit_efficiency",
+        "geographic_coverage",
+        "long_travel_penalty",
+        "travel_streak_smoothness",
+        "stay_streak_smoothness",
+    ]
 
     fieldnames = [
         "transition_label",
@@ -73,9 +91,10 @@ def main() -> None:
         "base_score",
         "final_score",
         "gain",
-        "runtime_seconds",
-        "violations",
     ]
+    for col in component_cols:
+        fieldnames.extend([f"{col}_base", f"{col}_final", f"{col}_gain"])
+    fieldnames.extend(["runtime_seconds", "violations"])
 
     with out_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -107,6 +126,13 @@ def main() -> None:
                     )
                 except Exception as exc:
                     elapsed = time.perf_counter() - t0
+                    empty_components = {
+                        f"{col}_base": 0.0
+                        for col in component_cols
+                    }
+                    empty_components.update({f"{col}_final": 0.0 for col in component_cols})
+                    empty_components.update({f"{col}_gain": 0.0 for col in component_cols})
+
                     writer.writerow(
                         {
                             "transition_label": label,
@@ -124,6 +150,7 @@ def main() -> None:
                             "base_score": 0.0,
                             "final_score": 0.0,
                             "gain": 0.0,
+                            **empty_components,
                             "runtime_seconds": round(elapsed, 6),
                             "violations": f"planner_error: {exc}",
                         }
@@ -144,6 +171,16 @@ def main() -> None:
                 final_score = eval_result.total if not eval_result.hard_violations else 0.0
                 gain = planner.last_gain if planner.last_gain is not None else (final_score - base_score)
 
+                base_components = getattr(planner, "last_base_components", {}) or {}
+                final_components = eval_result.components if not eval_result.hard_violations else {}
+                component_data = {}
+                for col in component_cols:
+                    base_val = float(base_components.get(col, 0.0))
+                    final_val = float(final_components.get(col, 0.0))
+                    component_data[f"{col}_base"] = round(base_val, 7)
+                    component_data[f"{col}_final"] = round(final_val, 7)
+                    component_data[f"{col}_gain"] = round(final_val - base_val, 7)
+
                 writer.writerow(
                     {
                         "transition_label": label,
@@ -161,6 +198,7 @@ def main() -> None:
                         "base_score": round(base_score, 7),
                         "final_score": round(final_score, 7),
                         "gain": round(gain, 7),
+                        **component_data,
                         "runtime_seconds": round(elapsed, 6),
                         "violations": "; ".join(eval_result.hard_violations) if eval_result.hard_violations else "-",
                     }

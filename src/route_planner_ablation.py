@@ -135,6 +135,7 @@ class RoutePlanner:
         self.last_base_score: Optional[float] = None
         self.last_final_score: Optional[float] = None
         self.last_gain: Optional[float] = None
+        self.last_base_components: Dict[str, float] = {}
 
     # ------------------------------------------------------------------ public API
 
@@ -241,9 +242,18 @@ class RoutePlanner:
             b_base_total = b_base_eval.total if not b_base_eval.hard_violations else -math.inf
         f_base_total = f_base_eval.total if not f_base_eval.hard_violations else -math.inf
         base_best_score = max(f_base_total, b_base_total)
+        base_components: Dict[str, float] = {}
+        if base_best_score == f_base_total and not f_base_eval.hard_violations:
+            base_components = dict(f_base_eval.components)
+        elif base_best_score == b_base_total and backward_variant is not None and not b_base_eval.hard_violations:
+            base_components = dict(b_base_eval.components)
+
         if base_best_score == -math.inf:
             base_best_score = 0.0
+            base_components = {}
+
         self.last_base_score = base_best_score
+        self.last_base_components = base_components
         
         # Run local search on both seeds (forward and backward if available) and keep the better by evaluator score
 

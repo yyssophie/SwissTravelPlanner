@@ -1,1 +1,1 @@
-{"start_city":"St. Moritz, Switzerland","end_city":"Zermatt, Switzerland","num_days":21,"season":"winter","mtu_per_day":9,"preferences":{"nature":0.3,"culture":0.1,"food":0.2,"sport":0.4}}
+{"start_city":"Zurich, Switzerland","end_city":"Zurich, Switzerland","num_days":12,"season":"summer","mtu_per_day":8,"preferences":{"nature":0.2,"culture":0.4,"food":0.3,"sport":0.1}}

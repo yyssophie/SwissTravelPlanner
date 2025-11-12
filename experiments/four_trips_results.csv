@@ -1,5 +1,5 @@
 label,start_city,end_city,days,season,mtu,nature,culture,food,sport,total_score,interest_matching,tu_utilization,city_visit_efficiency,geographic_coverage,long_travel_penalty,travel_streak_smoothness,stay_streak_smoothness,runtime_seconds,violations
-Zurich-Zurich Culture tour,"Zurich, Switzerland","Zurich, Switzerland",7,summer,8,0.2,0.4,0.3,0.1,59.0164352,0.3617021,1.0,0.6,0.8140955,0.0467706,0.9355445,1.0,0.180062,-
-Long winter sports tour,"St. Moritz, Switzerland","Zermatt, Switzerland",21,winter,9,0.3,0.1,0.2,0.4,88.266427,0.9036458,0.9365079,0.7692308,0.8124847,0.9199371,0.9570297,0.9761905,0.844291,-
-2-week nature tour,"Zurich, Switzerland","Lugano, Switzerland",15,summer,10,0.4,0.2,0.1,0.3,88.9281146,0.9545165,0.9733333,0.7777778,0.7928301,0.767798,0.9699208,0.9666667,1.876723,-
-Central winter food tour,"Geneva, Switzerland","Interlaken, Switzerland",9,winter,7,0.3,0.2,0.4,0.1,84.2855082,0.8576389,0.9365079,0.8333333,0.5929328,0.9466745,0.8997359,0.9722222,0.287388,-
+Zurich-Zurich Culture tour,"Zurich, Switzerland","Zurich, Switzerland",12,summer,8,0.2,0.4,0.3,0.1,73.7485012,0.5808824,1.0,0.625,0.8376818,0.6769553,0.962401,0.9791667,0.714885,-
+Long winter sports tour,"St. Moritz, Switzerland","Zermatt, Switzerland",21,winter,9,0.3,0.1,0.2,0.4,89.3035955,0.9101307,0.9100529,0.8461538,0.8243099,0.8956122,0.9570297,1.0,4.791218,-
+2-week nature tour,"Zurich, Switzerland","Lugano, Switzerland",15,summer,10,0.4,0.2,0.1,0.3,91.16745,0.9652778,0.9933333,0.8888889,0.6946995,0.9345963,0.8932545,0.9833333,8.380174,-
+Central winter food tour,"Geneva, Switzerland","Interlaken, Switzerland",9,winter,7,0.3,0.2,0.4,0.1,88.6039561,0.9078014,0.9365079,1.0,0.6079486,0.9553604,0.8220908,1.0,0.934848,-

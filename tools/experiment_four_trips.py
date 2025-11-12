@@ -24,7 +24,7 @@ def scenarios() -> Iterable[Dict[str, object]]:
             "label": "Zurich-Zurich Culture tour",
             "start": "Zurich, Switzerland",
             "end": "Zurich, Switzerland",
-            "days": 7,
+            "days": 12,
             "season": "summer",
             "mtu": 8,
             "preferences": {"nature": 0.2, "culture": 0.4, "food": 0.3, "sport": 0.1},

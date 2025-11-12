@@ -66,19 +66,7 @@ Output format (JSON only; return a single JSON object, no extra text)
       "travel_minutes": 0,
       "pois": [{"identifier":"<poi-id>"}, {"identifier":"<poi-id>"}]
     }
-  ],
-  "evaluation": {
-    "components": {
-      "interest_matching": <0..1>,
-      "tu_utilization": <0..1>,
-      "city_visit_efficiency": <0..1>,
-      "geographic_coverage": <0..1>,
-      "long_travel_penalty": <0..1>,
-      "travel_streak_smoothness": <0..1>,
-      "stay_streak_smoothness": <0..1>
-    },
-    "total": <0..100 with 7 decimal places>
-  }
+  ]
 }
 
 Rules for generation
