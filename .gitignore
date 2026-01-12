@@ -1,1 +1,7 @@
 **/__pycache__/
+
+tests/results/
+llm_input.txt
+llm_plan.json
+llm_prompt.txt
+out_llm.json

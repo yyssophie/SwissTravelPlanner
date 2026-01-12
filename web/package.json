@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run sync-data",
     "build": "vite build",
+    "sync-data": "node scripts/sync-data.mjs",
     "preview": "vite preview",
     "lint": "eslint . --ext .ts,.tsx"
   },
